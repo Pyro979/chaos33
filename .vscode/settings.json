@@ -1,0 +1,19 @@
+{
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80],
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100
+  },
+  "[html]": {
+    "editor.wordWrap": "on"
+  },
+  "[css]": {
+    "editor.wordWrap": "on"
+  },
+  "[javascript]": {
+    "editor.wordWrap": "on"
+  }
+}
+
