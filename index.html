@@ -13,10 +13,15 @@
 <body id="top">
     <header>
         <nav class="container">
+            <button class="menu-toggle" aria-label="Toggle menu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-brand">
                 <img src="images/MVE_logo_sml.png" alt="Mischievous Vibes Entertainment" class="logo">
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#how-to-play">How to Play</a></li>
                 <li><a href="#whats-inside">What's Inside</a></li>
                 <li><a href="#kickstarter">Kickstarter</a></li>
@@ -38,11 +43,11 @@
                     <hr/>
                     <div class="hero-main-content">
                         <div class="signup-form">
+                            <h3 class="cta-header">Get launch updates</h3>
                             <div class="logo-reassurance">
                                 <!-- TODO: Update src and alt text if logo filename changes -->
                                 <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="hero-logo">
                                 <div class="cta-text">
-                                    <h3 class="cta-header">Get launch updates</h3>
                                     <p class="form-reassurance">No spam. Just project <b>updates</b>, the occasional request for <b>feedback</b>, and a heads-up when we <b>launch on Kickstarter</b>.</p>
                                 </div>
                             </div>
@@ -50,16 +55,43 @@
                         </div>
                         
                         <div class="hero-cards">
-                            <div class="demo-card portrait-card" id="chaos-card">
-                                <div class="card-front">
-                                    <div class="card-label">Chaos Prompt</div>
-                                    <div class="card-content">
-                                        <h3 id="chaos-title">Loading...</h3>
-                                        <p id="chaos-description">Cards will flip automatically</p>
+                            <div class="game-box-info">
+                                <div class="game-info-item">
+                                    <span class="game-info-text">Style<div class="number">Party</div></span>
+                                </div>
+                                <div class="game-info-item">
+                                    <span class="game-info-text">Ages<div class="number">8+</div></span>
+                                </div>
+                                <div class="game-info-item">
+                                    <span class="game-info-text">Players<div class="number">3-8</div></span>
+                                </div>
+                                <div class="game-info-item">
+                                    <span class="game-info-text">Playtime<div class="number">30 Mins</div></span>
+                                </div>
+                            </div>
+                            <div class="cards-row">
+                                <div class="demo-card portrait-card" id="chaos-card">
+                                    <div class="card-front">
+                                        <div class="card-label">Chaos Prompt</div>
+                                        <div class="card-content">
+                                            <h3 id="chaos-title">Loading...</h3>
+                                            <p id="chaos-description">Cards will flip automatically</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
                                     </div>
                                 </div>
-                                <div class="card-back">
-                                    <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
+                                <div class="demo-card portrait-card" id="word-card">
+                                    <div class="card-front">
+                                        <div class="card-label">Word</div>
+                                        <div class="card-content">
+                                            <p id="word-text">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
+                                    </div>
                                 </div>
                             </div>
                             <div class="flip-timer-indicator" id="flip-timer">
@@ -68,17 +100,6 @@
                                     <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
                                 </svg>
                                 <span class="timer-countdown" id="timer-countdown">10</span>
-                            </div>
-                            <div class="demo-card portrait-card" id="word-card">
-                                <div class="card-front">
-                                    <div class="card-label">Word</div>
-                                    <div class="card-content">
-                                        <p id="word-text">Loading...</p>
-                                    </div>
-                                </div>
-                                <div class="card-back">
-                                    <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,20 +114,20 @@
             <div class="container">
                 <h2>How to Play</h2>
                 <p>
-                    33 Seconds of Chaos is a party game for 3-8 players that's easy to teach and wild to play. You draw Chaos cards that tell you how to give clues, and Word cards everyone tries to guess. Each round lasts 33 seconds, so turns stay fast, loud, and funny from start to finish.
+                    33 Seconds of Chaos is a party game for <strong>3-8 players</strong> that's <strong>easy to teach</strong> and wild to play. You draw <strong>Chaos cards</strong> that tell you how to give clues, and <strong>Word cards</strong> everyone tries to guess. Each round lasts <strong>33 seconds</strong>, so turns stay fast, loud, and funny from start to finish.
                 </p>
                 <ol class="steps-list">
                     <li>
-                        Draw a Chaos card to see how you're allowed to give clues.
+                        Draw a <strong>Chaos card</strong> to see how you're allowed to give clues.
                     </li>
                     <li>
-                        Draw a Word card and start the 33-second timer.
+                        Draw a <strong>Word card</strong> and start the <strong>33-second timer</strong>.
                     </li>
                     <li>
-                        Give clues using your weird Chaos challenge while everyone else shouts guesses.
+                        Give clues using the <strong>Prompt on the Chaos card</strong> while everyone else shouts guesses.
                     </li>
                     <li>
-                        The first player to guess it scores with you. After 10 rounds, the highest score wins.
+                        The first player to guess it <strong>scores with you</strong>. After <strong>10 rounds</strong>, the highest score wins.
                     </li>
                 </ol>
                 <p class="tldr">

@@ -52,19 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Word list from game data
     const wordList = [
-        "Airplane", "Alarm clock", "Alice in Wonderland", "Alligator", "Ambulance", "Amnesia",
-        "Ancient Pyramids", "Applause", "Apple", "Archaeologist", "Astronaut", "Baby", "Backpack",
+        "Airplane", "Alarm clock", "Alligator", "Ambulance", "Amnesia",
+        "Applause", "Apple", "Astronaut", "Baby", "Backpack",
         "Bacteria", "Baker", "Ball", "Bamboo", "Banana", "Banana peel", "Bandage", "Barbeque",
         "Barbie", "Bartender", "Baseball", "Basketball", "Bat", "Bays", "Beach", "Beauty queen",
         "Bed", "Bee", "Belly button", "Bike", "Binder", "Bird", "Birthday cake", "Blanket",
         "Blender", "Board game", "Boat", "Book", "Boomerang", "Boredom", "Bowl", "Bowling",
         "Bridge", "Broom", "Bubble", "Bubblegum", "Bucket", "Bull", "Bureaucracy", "Burp",
-        "Butterfly", "Buzz Lightyear", "CD", "Cake", "Cake/pie", "Calculator", "Calendar",
+        "Butterfly", "CD", "Cake", "Cake/pie", "Calculator", "Calendar",
         "Camera", "Camouflage", "Campfire", "Candle", "Candy", "Candy bar", "Car", "Car mechanic",
         "Cashier", "Cat", "Ceiling fan", "Celery", "Cell Phone", "Chair", "Chairs", "Chandelier",
-        "Chicken", "Chicken dance", "Chips and dip", "Chocolate", "Cinderella", "Clarinet/recorder",
+        "Chicken", "Chicken dance", "Chips and dip", "Chocolate", "Cinderella",
         "Clipboard", "Clock", "Clothes", "Clown car", "Coffee", "Coffee cup", "Computer coder",
-        "Confetti", "Constellation", "Corn on the Cob", "Cotton Candy", "Cotton candy",
+        "Confetti", "Constellation", "Cotton Candy", "Cotton candy",
         "Couch potato", "Cow", "Cowboy", "Cream", "Cup", "Cushion", "Desk", "Desk lamp",
         "Detective", "Diaper", "Dinosaur", "Doctor/nurse", "Dog", "Dog leash", "Door",
         "Drawbridge", "Drawing", "Dress", "Drum", "Drums", "Dynamite", "Easel", "Egg", "Einstein",
@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
         "Hammock", "Hand", "Handcuffs", "Harmonica", "Hat", "Home", "Horse", "Hot air balloon",
         "Hot dog", "House", "Hummingbird", "Hypnosis", "Ice", "Ice cream", "Ice cube", "Igloo",
         "Iguana", "Invisibility", "Jacket", "Jackhammer", "Jeans", "Jelly", "Jellyfish", "Judge",
-        "Jukebox", "Kaleidoscope", "Kangaroo", "Kayak", "Kermit the Frog", "Key", "Keyboard",
+        "Jukebox", "Kaleidoscope", "Kangaroo", "Kayak", "Key", "Keyboard",
         "Kiss", "Kitchen", "Kite", "Laptop", "Laundry", "Lawnmower", "Leaf", "Librarian",
         "Library", "Lifeguard", "Light", "Lighthouse", "Lion", "Llama", "Lollipop", "Lumberjack",
         "Mac-and-cheese", "Magician", "Magnetism", "Mailbox", "Makeup artist", "Mario",
-        "Mechanic", "Meditation", "Microscope", "Milk and cookies", "Mirage", "Monday", "Money",
-        "Monkey", "Moon", "Moonwalk", "Moose", "Mouse", "Mullet", "Mummy", "Music conductor",
+        "Mechanic", "Meditation", "Microscope", "Mirage", "Monday", "Money",
+        "Monkey", "Moon", "Moonwalk", "Moose", "Mouse", "Mullet", "Mummy",
         "Newspaper", "Noodle", "Nostalgia", "Notebook", "Notepad", "Octopus", "Orange",
         "Orchestra", "Ostrich", "Owl", "Painting", "Paintings", "Palace", "Pancakes", "Pants",
         "Paper", "Paperclips", "Paperwork", "Parachute", "Parrot", "Pay cheque", "Pen", "Pencil",
@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "Plane", "Plate", "Platypus", "Play-Doh", "Playground", "Polar bear", "Police officer",
         "Popcorn", "President", "Pro wrestler", "Pumpkin", "Quicksand", "Rabbit", "Race",
         "Rainbow", "Rapunzel", "Reflection", "Rickshaw", "Ring", "Robot", "Rocket ship",
-        "Roller coaster", "Rolling pin", "Romeo and Juliet", "Root beer", "Sailboat",
+        "Roller coaster", "Rolling pin", "Root beer", "Sailboat",
         "Sandcastle", "Sandwich", "Santa Claus", "Sasquatch", "Saxophone", "Scarecrow", "Scarf",
         "Schoolbag", "Scissors", "Scooby Doo", "Scratch", "Seaweed", "Secretary", "Seesaw",
-        "Shakespeare", "Sheet", "Sherlock Holmes", "Shirt", "Shoe", "Shoelace", "Skeleton",
+        "Shakespeare", "Sheet", "Shirt", "Shoe", "Shoelace", "Skeleton",
         "Skiing", "Skull", "Sky", "Skyscraper", "Sledding", "Smiley face", "Smoke", "Snake",
         "Sneeze", "Snowboarding", "Snowflake", "Snowman", "Socks", "Socrates", "Sofa",
-        "Sonic the Hedgehog", "Spaghetti", "Spaghetti and meatballs", "Spider", "Spider web",
+        "Spaghetti", "Spider", "Spider web",
         "Spiderweb", "Spoon", "Squirrel", "Staircase", "Stand-up bass", "Stapler", "Star",
         "Sticky Notes", "Submarine", "Sun", "Sundae", "Sunglasses", "Surfboard", "Sushi",
         "Symmetry", "T-shirt", "Table", "Taco", "Teacher", "Teddy bear", "Telepathy",
@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "Tooth", "Toothbrush", "Toothpaste", "Tornado", "Towel", "Traffic jam", "Train",
         "Trampoline", "Tree", "Trombone", "Trophy", "Trumpet", "Tuba", "Turkey", "Ukelele",
         "Umbrella", "Underpants", "Unicorn", "Unicycle", "Valet Driver", "Vanilla",
-        "Veterinarian", "Video camera", "Vincent Van Gogh", "Violin", "Volcano", "WIFI",
+        "Veterinarian", "Video camera", "Violin", "Volcano", "WIFI",
         "Waffle", "Waiter/server", "Waldo", "Watch", "Water Bottle", "Waterfall", "Watermelon",
-        "Windmill", "Windshield", "Winnie the Pooh", "Work", "Work computer", "Workload", "Worm",
+        "Windmill", "Windshield", "Work", "Work computer", "Workload", "Worm",
         "X-ray", "Xylophone", "Yo-yo", "Zebra", "Zipper", "Zombie", "apple pie", "astronaut",
         "badge", "bagel", "ballet", "barcode", "basket", "battery", "beach", "beard", "beaver",
         "bedbug", "beetle", "bikini", "black hole", "blacksmith", "blanket", "blimp", "blood",
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "sunflower", "sunglasses", "sunshine", "surfboard", "sword", "tall", "taxi", "teepee",
         "teleport", "text", "time machine", "tire", "tissue", "toast", "toes", "tongue", "towel",
         "trampoline", "trash can", "treasure", "tree branch", "tree stump", "turkey", "umbrella",
-        "usb", "vase", "vest", "video", "virtual reality", "wallet", "watch", "waterfall", "wax",
+        "usb", "vase", "vest", "video", "wallet", "watch", "waterfall", "wax",
         "webcam", "wedding cake", "wheelbarrow", "wind", "wing", "wood", "worm", "wreath",
         "writing", "zipper"
     ];
@@ -217,22 +217,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto-flip cards every 10 seconds with progress indicator
     if (chaosCard && wordCard) {
-        // Progress animation - start immediately
         let progress = 0;
-        const progressInterval = setInterval(function() {
-            progress += (100 / 100); // 100% in 10 seconds (100 * 100ms)
-            updateProgress(progress);
-            
-            if (progress >= 100) {
-                progress = 0;
+        let progressInterval = null;
+        
+        function startProgressTimer() {
+            // Clear any existing interval
+            if (progressInterval) {
+                clearInterval(progressInterval);
             }
-        }, 100); // Update every 100ms
+            
+            // Reset progress
+            progress = 0;
+            updateProgress(0);
+            
+            // Start new interval
+            progressInterval = setInterval(function() {
+                progress += (100 / 100); // 100% in 10 seconds (100 * 100ms)
+                updateProgress(progress);
+                
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    progressInterval = null;
+                }
+            }, 100); // Update every 100ms
+        }
+        
+        // Override resetProgress to restart timer
+        const originalResetProgress = resetProgress;
+        resetProgress = function() {
+            originalResetProgress();
+            startProgressTimer();
+        };
+        
+        // Start the timer
+        startProgressTimer();
         
         // Flip immediately on load
         flipCards();
         
         // Flip every 10 seconds
-        setInterval(flipCards, 10000);
+        setInterval(function() {
+            flipCards();
+        }, 10000);
+    }
+
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
     }
 
     // Smooth scroll for anchor links (fallback if CSS doesn't work)

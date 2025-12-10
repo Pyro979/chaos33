@@ -55,6 +55,40 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .nav-brand {
@@ -115,6 +149,7 @@ nav {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .logo-reassurance .cta-text {
@@ -122,20 +157,26 @@ nav {
     min-width: 200px;
 }
 
+.signup-form .cta-header {
+    margin-bottom: 1.5rem;
+}
+
 .cta-header {
     font-family: var(--font-header);
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--accent);
-    margin: 0 0 0.5rem 0;
-    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
 }
 
 .logo-reassurance .form-reassurance {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--muted);
     line-height: 1.4;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .hero h1 {
@@ -172,11 +213,13 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 /* Center and stack the second signup form */
 #get-updates .signup-form {
-    max-width: 500px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -210,7 +253,7 @@ nav {
 #get-updates .signup-form .formkit-submit {
     width: 100%;
     padding: 1rem 2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     border: none;
     border-radius: 8px;
@@ -222,7 +265,8 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 500px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto 0.5rem;
 }
 
@@ -242,9 +286,53 @@ nav {
 }
 
 .form-reassurance {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--muted);
     margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Game Box Info */
+.game-box-info {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.game-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border-radius: 8px;
+    border: 4px solid var(--accent);
+    box-shadow: 0 2px 8px var(--shadow);
+    min-width: 100px;
+}
+
+.game-info-text {
+    font-size: 0.75rem;
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.game-info-text .number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-header);
+    line-height: 1.2;
 }
 
 .launch-note {
@@ -388,11 +476,7 @@ nav {
 }
 
 .steps-list strong {
-    font-family: var(--font-body);
     color: var(--accent);
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -447,6 +531,13 @@ nav {
 
 /* Hero Cards */
 .hero-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cards-row {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -520,11 +611,12 @@ nav {
 
 .portrait-card {
     /* Poker card proportions: 2.5" x 3.5" ratio (approximately 5:7 or 0.714) */
-    width: 180px;
-    height: 252px;
+    width: 220px;
+    height: 308px;
     padding: 0;
     min-height: auto;
     overflow: hidden;
+    container-type: inline-size;
 }
 
 .demo-card.flipping {
@@ -670,6 +762,8 @@ nav {
     margin-bottom: 0.5rem;
     line-height: 1.3;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: normal; /* Don't break words */
     font-weight: 700;
     font-family: var(--font-header);
     color: var(--accent);
@@ -682,7 +776,7 @@ nav {
     font-weight: 400 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    word-break: break-word !important;
+    word-break: normal !important; /* Don't break words */
     hyphens: auto !important;
 }
 
@@ -697,19 +791,27 @@ nav {
     line-height: 1.4;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    word-break: normal; /* Don't break words */
     font-weight: 500;
 }
 
 /* Word card text - make it bigger but not too bold, uppercase */
 #word-text {
-    font-size: 1.4rem !important;
+    /* Fallback for browsers without container query support */
+    font-size: 1.2rem !important;
     font-weight: 500 !important;
     color: var(--text) !important;
     font-family: var(--font-header) !important;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all; /* Break long words aggressively */
+    overflow: hidden;
+    /* Container query: scales font size based on card width to prevent wrapping */
+    font-size: clamp(0.6rem, 8cqw, 1.4rem) !important;
 }
 
-/* Circular progress indicator between cards */
+/* Circular progress indicator below cards */
 .flip-timer-indicator {
     width: 40px;
     height: 40px;
@@ -718,6 +820,7 @@ nav {
     justify-content: center;
     opacity: 0.7;
     position: relative;
+    margin: 0 auto;
 }
 
 .timer-countdown {
@@ -790,6 +893,129 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 767px) {
+    header {
+        position: static;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        right: 1.5rem;
+        top: 1rem;
+        z-index: 1000;
+        background-color: var(--bg-alt);
+        padding: 0.5rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px var(--shadow);
+    }
+    
+    .nav-brand {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .logo {
+        margin-top: 0;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-alt);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        box-shadow: 0 4px 10px var(--shadow);
+        margin-top: 1rem;
+        z-index: 102;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    .nav-links a:hover {
+        background-color: var(--bg);
+    }
+    
+    .cards-row {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .portrait-card {
+        width: 171px;
+        height: 320px;
+    }
+    
+    .portrait-card .card-content {
+        padding: 0.6rem;
+    }
+    
+    .portrait-card .card-content h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
+    }
+    
+    #chaos-description {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .portrait-card .card-content p {
+        font-size: 0.9rem;
+    }
+    
+    .flip-timer-indicator {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .game-box-info {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .game-info-item {
+        min-width: 80px;
+        padding: 0.5rem 0.75rem;
+        flex: 1 1 calc(50% - 0.25rem);
+        max-width: calc(50% - 0.25rem);
+    }
+    
+    .game-info-text {
+        font-size: 0.7rem;
+    }
+    
+    .game-info-text .number {
+        font-size: 1.25rem;
+    }
+}
+
 @media (min-width: 768px) {
     .hero h1 {
         font-size: 4rem;
@@ -801,7 +1027,35 @@ footer p {
 
     .hero-main-content {
         grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+    
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .signup-form .cta-header {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-cards {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 0.5rem; /* Reduce gap between game-box-info and cards */
+    }
+    
+    .game-box-info {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    /* Align signup form with cards-row by adding padding equal to game-box-info height + gap */
+    .signup-form {
+        padding-top: calc(70px + 0.5rem); /* game-box-info height (~70px) + gap (0.5rem) */
     }
 
     .form-group {
@@ -821,8 +1075,8 @@ footer p {
     }
 
     .portrait-card {
-        width: 180px;
-        height: 252px;
+        width: 220px;
+        height: 308px;
     }
 }
 
@@ -858,10 +1112,18 @@ a:focus {
 /* Override kit.com button color */
 .formkit-form[data-uid="74161f0c83"] .formkit-submit {
     background-color: #FF881D !important;
+    color: #000000 !important;
+    font-size: 1.1rem !important;
 }
 
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:hover,
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:focus {
     background-color: #ff9933 !important;
+    color: #000000 !important;
+}
+
+/* Add exclamation mark to button text */
+.formkit-form[data-uid="74161f0c83"] .formkit-submit span:not(.formkit-spinner)::after {
+    content: "!";
 }
 
