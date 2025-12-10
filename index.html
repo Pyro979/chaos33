@@ -4,41 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>33 Seconds of Chaos | Mischievous Vibes Entertainment</title>
+    <meta name="description" content="A fast, chaotic party game where you race through weird clue-giving challenges and shouted guesses in 33-second bursts. Easy to learn, fast to play, and perfect when you want everyone laughing in under five minutes.">
+    <meta name="keywords" content="party game, board game, card game, 33 seconds of chaos, mischievous vibes entertainment, kickstarter game">
+    <meta name="author" content="Mischievous Vibes Entertainment">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="33 Seconds of Chaos | Mischievous Vibes Entertainment">
+    <meta property="og:description" content="A fast, chaotic party game where you race through weird clue-giving challenges and shouted guesses in 33-second bursts.">
+    <meta property="og:image" content="images/MVE_logo_sml.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="33 Seconds of Chaos | Mischievous Vibes Entertainment">
+    <meta name="twitter:description" content="A fast, chaotic party game where you race through weird clue-giving challenges and shouted guesses in 33-second bursts.">
+    <meta name="twitter:image" content="images/MVE_logo_sml.png">
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://f.convertkit.com">
+    <link rel="preconnect" href="https://app.kit.com">
+    
+    <!-- Fonts with display swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="kit.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "33 Seconds of Chaos",
+      "description": "A fast, chaotic party game where you race through weird clue-giving challenges and shouted guesses in 33-second bursts.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mischievous Vibes Entertainment"
+      },
+      "category": "Board Game",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Family, Party"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body id="top">
-    <header>
-        <nav class="container">
-            <button class="menu-toggle" aria-label="Toggle menu" id="menu-toggle">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <div class="nav-brand">
-                <img src="images/MVE_logo_sml.png" alt="Mischievous Vibes Entertainment" class="logo">
+                <img src="images/MVE_logo_sml.png" alt="Mischievous Vibes Entertainment" class="logo" width="120" height="40" loading="eager">
             </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#how-to-play">How to Play</a></li>
-                <li><a href="#whats-inside">What's Inside</a></li>
-                <li><a href="#kickstarter">Kickstarter</a></li>
-                <li><a href="#get-updates">Get Updates</a></li>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="#how-to-play" role="menuitem">How to Play</a></li>
+                <li role="none"><a href="#whats-inside" role="menuitem">What's Inside</a></li>
+                <li role="none"><a href="#kickstarter" role="menuitem">Kickstarter</a></li>
+                <li role="none"><a href="#get-updates" role="menuitem">Get Updates</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-heading">
             <div class="container">
                 <div class="hero-content">
-                    <h1>33 Seconds of Chaos</h1>
+                    <h1 id="hero-heading">33 Seconds of Chaos</h1>
                     <p class="tagline">A game of unhinged prompts and shouted guesses.</p>
                     <p class="hero-description">
-                        A fast, chaotic <b>party game</b> where you race through <b>weird clue-giving challenges and shouted guesses</b> in 33-second bursts. <b>Easy</b> to learn, <b></b>fast</b> to play, and perfect when you want everyone <b>laughing</b> in under five minutes.
+                        A fast, chaotic <strong>party game</strong> where you race through <strong>weird clue-giving challenges and shouted guesses</strong> in 33-second bursts. <strong>Easy</strong> to learn, <strong>fast</strong> to play, and perfect when you want everyone <strong>laughing</strong> in under five minutes.
                     </p>
                     <hr/>
                     <div class="hero-main-content">
@@ -46,7 +94,7 @@
                             <h3 class="cta-header">Get launch updates</h3>
                             <div class="logo-reassurance">
                                 <!-- TODO: Update src and alt text if logo filename changes -->
-                                <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="hero-logo">
+                                <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="hero-logo" width="200" height="100" loading="lazy">
                                 <div class="cta-text">
                                     <p class="form-reassurance">No spam. Just project <b>updates</b>, the occasional request for <b>feedback</b>, and a heads-up when we <b>launch on Kickstarter</b>.</p>
                                 </div>
@@ -79,7 +127,7 @@
                                         </div>
                                     </div>
                                     <div class="card-back">
-                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
+                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="demo-card portrait-card" id="word-card">
@@ -90,7 +138,7 @@
                                         </div>
                                     </div>
                                     <div class="card-back">
-                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo">
+                                        <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +162,7 @@
             <div class="container">
                 <h2>How to Play</h2>
                 <p>
-                    33 Seconds of Chaos is a party game for <strong>3-8 players</strong> that's <strong>easy to teach</strong> and wild to play. You draw <strong>Chaos cards</strong> that tell you how to give clues, and <strong>Word cards</strong> everyone tries to guess. Each round lasts <strong>33 seconds</strong>, so turns stay fast, loud, and funny from start to finish.
+                    33 Seconds of Chaos is a party game for <strong>3-8 players</strong> that's <strong>easy to teach</strong> and wild to play. You draw <strong>Chaos cards</strong> that tell you how to give clues, and <strong>Word cards</strong> everyone tries to guess. Each round lasts <strong>33 seconds</strong>, so turns stay <strong>fast, loud, and funny</strong> from start to finish.
                 </p>
                 <ol class="steps-list">
                     <li>
@@ -165,7 +213,7 @@
         <section id="meet-the-designer" class="section section-alt">
             <div class="container">
                 <div class="designer-content">
-                    <img src="images/designer.jpg" alt="Designer" class="designer-image">
+                    <img src="images/designer.jpg" alt="Game designer for 33 Seconds of Chaos" class="designer-image" width="200" height="200" loading="lazy">
                     <div class="designer-text">
                         <h2>Meet the Designer</h2>
                         <p>
@@ -200,7 +248,7 @@
             <div class="container">
                 <h2>Get launch updates</h2>
                 <p class="updates-description">
-                    Join the chaos list and we'll email you when the Kickstarter goes live and when big milestones happen - <b></b>no constant blasts, just the important stuff.</b>
+                    Join the chaos list and we'll email you when the Kickstarter goes live and when big milestones happen - <strong>no constant blasts, just the important stuff.</strong>
                 </p>
                 <div class="signup-form">
                     <form action="https://app.kit.com/forms/8860495/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8860495" data-uid="74161f0c83" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="true" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Join the chaos list</span></button></div><div class="formkit-powered-by-convertkit-container"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a></div></div></form>
@@ -209,14 +257,14 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; <span id="current-year"></span> Mischievous Vibes Entertainment.</p>
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
     </footer>
 
-    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 </html>

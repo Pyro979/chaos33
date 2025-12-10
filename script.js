@@ -267,8 +267,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
+            const isActive = menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
+            // Update ARIA attributes for accessibility
+            menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         });
         
         // Close menu when clicking on a link
@@ -276,7 +278,17 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 menuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
         });
     }
 
