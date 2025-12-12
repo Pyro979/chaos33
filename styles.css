@@ -749,17 +749,11 @@ nav {
     color: white;
     background-color: var(--accent);
     margin: 0;
-    padding: 0;
+    padding: 0.75rem 1rem;
     font-weight: 600;
     text-align: center;
     flex-shrink: 0;
     border-radius: 12px 12px 0 0;
-    height: 3rem; /* Fixed height to ensure alignment */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    line-height: 1.2;
 }
 
 .card-content {
@@ -926,7 +920,6 @@ footer p {
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 0.5rem 0;
     }
     
     .menu-toggle {
@@ -944,10 +937,6 @@ footer p {
     .nav-brand {
         margin: 0;
         padding: 0;
-        padding-right: 60px; /* Space for floating hamburger */
-        flex: 1;
-        display: flex;
-        justify-content: center;
     }
     
     .logo {
@@ -989,25 +978,14 @@ footer p {
     }
     
     .cards-row {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 0.5rem;
         justify-content: center;
-        width: 100%;
-        max-width: 100%;
     }
     
     .portrait-card {
-        width: calc(50% - 0.25rem);
-        max-width: 171px;
-        height: 260px;
-        flex-shrink: 0;
-    }
-    
-    .card-label {
-        height: 2.5rem;
-        padding: 0;
-        font-size: 0.75rem;
-        line-height: 1.2;
+        width: 171px;
+        height: 320px;
     }
     
     .portrait-card .card-content {
@@ -1052,34 +1030,6 @@ footer p {
     
     .game-info-text .number {
         font-size: 1.25rem;
-    }
-    
-    .logo-reassurance {
-        flex-wrap: nowrap;
-        gap: 1rem;
-        align-items: flex-start;
-    }
-    
-    .hero-logo {
-        height: 60px;
-        width: auto;
-        flex-shrink: 0;
-    }
-    
-    .logo-reassurance .cta-text {
-        min-width: 0;
-        flex: 1;
-    }
-}
-
-/* Extra small screens - hide logo next to reassurance text */
-@media (max-width: 480px) {
-    .logo-reassurance .hero-logo {
-        display: none;
-    }
-    
-    .logo-reassurance {
-        justify-content: center;
     }
 }
 
