@@ -255,6 +255,38 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure forms are full width within their containers */
+.signup-form form,
+.signup-form .formkit-form,
+.signup-form .seva-form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.signup-form .formkit-fields,
+.signup-form .seva-fields {
+    width: 100%;
+    max-width: 100%;
+}
+
+.signup-form .formkit-field {
+    width: 100%;
+    max-width: 100%;
+}
+
+.signup-form .formkit-input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.signup-form .formkit-submit {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 /* Center and stack the second signup form */
