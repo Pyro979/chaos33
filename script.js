@@ -151,6 +151,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const chaosTitle = document.getElementById('chaos-title');
     const chaosDescription = document.getElementById('chaos-description');
     const wordText = document.getElementById('word-text');
+    
+    // Track flip interval (10 seconds normally, 33 seconds after manual flip)
+    let flipInterval = 10000; // 10 seconds in milliseconds
+    let autoFlipInterval = null;
+    let progress = 0;
+    let progressInterval = null;
+    let startProgressTimer = null; // Will be defined in the card section
 
     function getRandomItem(array) {
         return array[Math.floor(Math.random() * array.length)];
@@ -161,34 +168,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const timerCircle = flipTimer ? flipTimer.querySelector('.timer-circle') : null;
     const timerCountdown = document.getElementById('timer-countdown');
 
-    function updateProgress(progress) {
+    function updateProgress(progress, totalSeconds) {
         if (timerCircle) {
             // stroke-dashoffset goes from 100 (empty) to 0 (full)
             const offset = 100 - progress;
             timerCircle.style.strokeDashoffset = offset;
         }
-        // Update countdown (10 seconds total)
+        // Update countdown
         if (timerCountdown) {
-            const secondsRemaining = Math.ceil((100 - progress) / (100 / 10));
-            timerCountdown.textContent = secondsRemaining > 0 ? secondsRemaining : 10;
+            const secondsRemaining = Math.ceil((100 - progress) / (100 / totalSeconds));
+            timerCountdown.textContent = secondsRemaining > 0 ? secondsRemaining : totalSeconds;
         }
     }
 
-    function resetProgress() {
+    function resetProgress(totalSeconds) {
         if (timerCircle) {
             timerCircle.style.strokeDashoffset = 100;
         }
         if (timerCountdown) {
-            timerCountdown.textContent = '10';
+            timerCountdown.textContent = totalSeconds.toString();
         }
     }
 
-    function flipCards() {
+    function flipCards(isManual = false) {
         // Only flip if cards exist (they're in the hero section)
         if (!chaosCard || !wordCard) return;
 
-        // Reset progress indicator
-        resetProgress();
+        // If manual flip, switch to 33 seconds and track the event
+        if (isManual) {
+            flipInterval = 33000; // Switch to 33 seconds
+            // Track the manual flip event
+            if (typeof gtag === 'function') {
+                gtag('event', 'card_demo_flip');
+            }
+            // Restart the auto-flip interval with new timing
+            if (autoFlipInterval) {
+                clearInterval(autoFlipInterval);
+            }
+            autoFlipInterval = setInterval(function() {
+                flipCards();
+            }, flipInterval);
+        }
+
+        // Start the timer immediately when flip begins
+        if (typeof startProgressTimer === 'function') {
+            startProgressTimer();
+        }
 
         // Add flipping class for animation
         chaosCard.classList.add('flipping');
@@ -215,50 +240,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1200); // Full transition duration
     }
 
-    // Auto-flip cards every 10 seconds with progress indicator
+    // Auto-flip cards with progress indicator
     if (chaosCard && wordCard) {
-        let progress = 0;
-        let progressInterval = null;
-        
-        function startProgressTimer() {
+        startProgressTimer = function() {
             // Clear any existing interval
             if (progressInterval) {
                 clearInterval(progressInterval);
             }
             
+            // Get current interval in seconds
+            const currentSeconds = flipInterval / 1000;
+            
             // Reset progress
             progress = 0;
-            updateProgress(0);
+            updateProgress(0, currentSeconds);
+            
+            // Calculate update interval (100ms for smooth animation)
+            const updateInterval = 100;
+            const totalUpdates = flipInterval / updateInterval;
             
             // Start new interval
             progressInterval = setInterval(function() {
-                progress += (100 / 100); // 100% in 10 seconds (100 * 100ms)
-                updateProgress(progress);
+                progress += (100 / totalUpdates);
+                updateProgress(progress, currentSeconds);
                 
                 if (progress >= 100) {
                     clearInterval(progressInterval);
                     progressInterval = null;
                 }
-            }, 100); // Update every 100ms
+            }, updateInterval);
         }
         
-        // Override resetProgress to restart timer
-        const originalResetProgress = resetProgress;
-        resetProgress = function() {
-            originalResetProgress();
-            startProgressTimer();
-        };
+        // Make cards clickable for manual flip
+        chaosCard.addEventListener('click', function() {
+            flipCards(true);
+        });
         
-        // Start the timer
-        startProgressTimer();
+        wordCard.addEventListener('click', function() {
+            flipCards(true);
+        });
         
-        // Flip immediately on load
+        // Flip immediately on load (timer will start after flip completes)
         flipCards();
         
-        // Flip every 10 seconds
-        setInterval(function() {
+        // Flip every 10 seconds initially (will change to 33 after manual flip)
+        autoFlipInterval = setInterval(function() {
             flipCards();
-        }, 10000);
+        }, flipInterval);
     }
 
     // Hamburger menu toggle

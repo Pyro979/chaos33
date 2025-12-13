@@ -13,6 +13,34 @@
       gtag('config', 'G-M8BX2363LX');
     </script>
     
+    <script>
+      function trackJoinChaosClicks() {
+        if (typeof gtag !== "function") return;
+
+        // Find submit buttons in forms (Kit forms use formkit-submit class)
+        const forms = document.querySelectorAll('.formkit-form');
+        
+        forms.forEach((form, index) => {
+          const submitButton = form.querySelector('button[data-element="submit"]');
+          if (submitButton) {
+            // Add ID based on location
+            const location = index === 0 ? 'hero' : 'footer';
+            submitButton.id = `${location}-join-chaos`;
+            
+            submitButton.addEventListener('click', function() {
+              gtag('event', 'join_list_click', { location: location });
+            });
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', trackJoinChaosClicks);
+      } else {
+        trackJoinChaosClicks();
+      }
+    </script>
+    
     <title>33 Seconds of Chaos | Mischievous Vibes Entertainment</title>
     <meta name="description" content="A fast, chaotic party game where you race through weird clue-giving challenges and shouted guesses in 33-second bursts. Easy to learn, fast to play, and perfect when you want everyone laughing in under five minutes.">
     <meta name="keywords" content="party game, board game, card game, 33 seconds of chaos, mischievous vibes entertainment, kickstarter game">
@@ -278,7 +306,7 @@
     <footer role="contentinfo">
         <div class="container">
             <p>&copy; <span id="current-year"></span> Mischievous Vibes Entertainment.</p>
-            <a href="#top" class="back-to-top">Back to top</a>
+            <a href="privacy.html">Privacy Policy</a> | <a href="#top" class="back-to-top">Back to top</a>
         </div>
     </footer>
 
