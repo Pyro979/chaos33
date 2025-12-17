@@ -329,12 +329,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (href === '#' || href === '#top') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.pushState(null, '', '#top');
                 return;
             }
             
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
+                // Update URL hash
+                window.history.pushState(null, '', href);
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
