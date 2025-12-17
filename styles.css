@@ -31,7 +31,6 @@ html {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--accent);
     color: white;
     padding: 8px;
     text-decoration: none;
@@ -189,37 +188,15 @@ nav {
     display: block;
 }
 
-.hero-logo-head {
-    height: 100px;
-    width: auto;
-    display: block;
-}
-
-.hero-logo-fox {
-    height: 80px;
-    width: auto;
-    display: block;
-}
-
-.hero-logo-text {
-    height: 80px;
-    width: auto;
-    display: block;
-}
-
 .logo-reassurance {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.logo-reassurance .hero-logo-head,
-.logo-reassurance .hero-logo-text {
-    margin: 0;
-}
 
 .logo-reassurance {
     display: flex;
@@ -255,6 +232,10 @@ nav {
     color: var(--muted);
     line-height: 1.4;
     font-weight: 600;
+}
+
+.hero h1 .nowrap {
+    white-space: nowrap;
 }
 
 .hero h1 {
@@ -672,14 +653,24 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
 }
 
 .cards-row {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     perspective: 1000px;
+    position: relative;
+    width: 100%;
+}
+
+.flip-timer-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-shrink: 0;
 }
 
 /* Card Demo Section */
@@ -757,8 +748,26 @@ nav {
     container-type: inline-size;
 }
 
+#word-card {
+    transform: rotate(-5deg);
+    order: 1;
+}
+
+#chaos-card {
+    transform: rotate(5deg);
+    order: 2;
+}
+
 .demo-card.flipping {
     animation: cardFlip 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+#word-card.flipping {
+    animation: cardFlipWord 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+#chaos-card.flipping {
+    animation: cardFlipChaos 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
 @keyframes cardFlip {
@@ -770,6 +779,30 @@ nav {
     }
     100% {
         transform: rotateY(360deg);
+    }
+}
+
+@keyframes cardFlipWord {
+    0% {
+        transform: rotate(-5deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotate(-5deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotate(-5deg) rotateY(360deg);
+    }
+}
+
+@keyframes cardFlipChaos {
+    0% {
+        transform: rotate(5deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotate(5deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotate(5deg) rotateY(360deg);
     }
 }
 
@@ -957,8 +990,7 @@ nav {
     align-items: center;
     justify-content: center;
     opacity: 0.7;
-    position: relative;
-    margin: 0 auto;
+    z-index: 10;
 }
 
 .timer-countdown {
@@ -1074,6 +1106,7 @@ footer a:hover {
     
     .logo {
         margin-top: 0;
+        height: 35px;
     }
     
     .nav-links {
@@ -1113,7 +1146,38 @@ footer a:hover {
     .cards-row {
         flex-wrap: wrap;
         gap: 0.5rem;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    #word-card {
+        margin-right: auto;
+    }
+    
+    #chaos-card {
+        margin-left: auto;
+        margin-top: -250px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cards-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    #word-card {
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+    
+    #chaos-card {
+        align-self: flex-end;
+        margin-right: 5px;
+        margin-top: -250px;
     }
     
     .portrait-card {
@@ -1144,6 +1208,16 @@ footer a:hover {
         width: 32px;
         height: 32px;
     }
+}
+
+@media (max-width: 375px) {
+    #word-card {
+        margin-left: -5px !important;
+    }
+    
+    #chaos-card {
+        margin-right: -5px !important;
+    }
     
     .game-box-info {
         gap: 0.5rem;
@@ -1173,6 +1247,19 @@ footer a:hover {
 
     .tagline {
         font-size: 1.75rem;
+    }
+
+    #chaos-card {
+        margin-top: 40px;
+    }
+    
+    #word-card {
+        margin-top: 5px;
+    }
+    
+    .flip-timer-indicator {
+        right: auto;
+        left: calc(50% + 180px);
     }
 
     .hero-main-content {
