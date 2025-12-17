@@ -640,6 +640,9 @@ nav {
     margin-bottom: 0.75rem;
     color: var(--accent);
     font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .component-card p {
@@ -946,6 +949,11 @@ nav {
     text-align: center;
     flex-shrink: 0;
     border-radius: 12px 12px 0 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .card-label.duel-label {
@@ -957,6 +965,11 @@ nav {
     text-align: center;
     flex-shrink: 0;
     border-radius: 12px 12px 0 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .card-content {
