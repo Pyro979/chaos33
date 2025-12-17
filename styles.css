@@ -143,6 +143,11 @@ nav {
     width: auto;
 }
 
+.logo-text {
+    height: 40px;
+    width: auto;
+}
+
 .company-name {
     font-family: var(--font-body);
     font-weight: 600;
@@ -182,6 +187,38 @@ nav {
     height: 100px;
     width: auto;
     display: block;
+}
+
+.hero-logo-head {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+.hero-logo-fox {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.hero-logo-text {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.logo-reassurance {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logo-reassurance .hero-logo-head,
+.logo-reassurance .hero-logo-text {
+    margin: 0;
 }
 
 .logo-reassurance {
@@ -495,6 +532,11 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.designer-content:last-child {
+    margin-bottom: 0;
 }
 
 .designer-image {
@@ -516,6 +558,10 @@ nav {
         flex-direction: row;
         align-items: flex-start;
         text-align: left;
+    }
+    
+    .designer-content-reverse {
+        flex-direction: row-reverse;
     }
     
     .designer-text {
