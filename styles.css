@@ -891,8 +891,46 @@ nav {
     }
 }
 
-.demo-card.flipping .card-label {
+@keyframes blendHeaderToDuel {
+    0% {
+        background-color: var(--accent);
+    }
+    45% {
+        background-color: var(--accent);
+    }
+    55% {
+        background-color: var(--accent);
+    }
+    100% {
+        background-color: #FF881D;
+    }
+}
+
+@keyframes blendHeaderFromDuel {
+    0% {
+        background-color: #FF881D;
+    }
+    45% {
+        background-color: #FF881D;
+    }
+    55% {
+        background-color: #FF881D;
+    }
+    100% {
+        background-color: var(--accent);
+    }
+}
+
+.demo-card.flipping .card-label:not(.duel-label) {
     animation: blendHeader 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+.demo-card.flipping .card-label.duel-label {
+    animation: blendHeaderToDuel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+.demo-card.is-duel.flipping .card-label:not(.duel-label) {
+    animation: blendHeaderFromDuel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
 .card-label {
@@ -902,6 +940,17 @@ nav {
     letter-spacing: 1px;
     color: white;
     background-color: var(--accent);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-label.duel-label {
+    color: white;
+    background-color: #FF881D;
     margin: 0;
     padding: 0.75rem 1rem;
     font-weight: 600;
@@ -935,9 +984,14 @@ nav {
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: normal; /* Don't break words */
-    font-weight: 700;
+    font-weight: 400;
     font-family: var(--font-header);
     color: var(--accent);
+}
+
+.portrait-card .card-content h3.duel-title {
+    color: #FF881D !important;
+    font-weight: 400;
 }
 
 /* Chaos card description */
@@ -949,6 +1003,7 @@ nav {
     overflow-wrap: break-word !important;
     word-break: normal !important; /* Don't break words */
     hyphens: auto !important;
+    white-space: pre-line;
 }
 
 .card-content p {
@@ -968,15 +1023,15 @@ nav {
 
 /* Word card text - make it bigger but not too bold, uppercase */
 #word-text {
+    word-wrap: normal !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
     /* Fallback for browsers without container query support */
     font-size: 1.2rem !important;
     font-weight: 500 !important;
     color: var(--text) !important;
     font-family: var(--font-header) !important;
     text-transform: uppercase;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-all; /* Break long words aggressively */
     overflow: hidden;
     /* Container query: scales font size based on card width to prevent wrapping */
     font-size: clamp(0.6rem, 8cqw, 1.4rem) !important;
