@@ -881,13 +881,14 @@ nav {
 /* Animate header color to match card-back during flip - change immediately */
 @keyframes blendHeader {
     0% {
-        background-color: var(--bg-alt);
+        /* Avoid a gray "flash" during prompt flips; keep the prompt header color stable */
+        background-color: var(--accent);
     }
     45% {
-        background-color: var(--bg-alt);
+        background-color: var(--accent);
     }
     55% {
-        background-color: var(--bg-alt);
+        background-color: var(--accent);
     }
     100% {
         background-color: var(--accent);
