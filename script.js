@@ -84,82 +84,82 @@ document.addEventListener("DOMContentLoaded", function () {
         "First back with a valid physical object or analog image wins. No screens.",
     },
     {
-      title: "Category Blitz Alphabetic: Animals",
+      title: "Alpha Blitz: Animals",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Tools",
+      title: "Alpha Blitz: Tools",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Places",
+      title: "Alpha Blitz: Places",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Foods",
+      title: "Alpha Blitz: Foods",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Sports",
+      title: "Alpha Blitz: Sports",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Colors",
+      title: "Alpha Blitz: Colors",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Body Parts",
+      title: "Alpha Blitz: Body Parts",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Alphabetic: Vehicles",
+      title: "Alpha Blitz: Vehicles",
       description:
         "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Farm animals",
+      title: "Theme Blitz: Farm animals",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Spices",
+      title: "Theme Blitz: Spices",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things in a toolbox",
+      title: "Theme Blitz: Things in a toolbox",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things that come in pairs",
+      title: "Theme Blitz: Things that come in pairs",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things you wear",
+      title: "Theme Blitz: Things you wear",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things in a kitchen",
+      title: "Theme Blitz: Things in a kitchen",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things that fly",
+      title: "Theme Blitz: Things that fly",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
     {
-      title: "Category Blitz Specific: Things that are round",
+      title: "Theme Blitz: Things that are round",
       description:
         "Neutral names a category. Race to name 3 items in it. No copying.",
     },
