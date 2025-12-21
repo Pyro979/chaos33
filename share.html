@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>33 Seconds of Chaos | Share</title>
+    <meta name="description" content="33 Seconds of Chaos - A fast, chaotic party game">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css?v=8c0a58d">
+    
+    <style>
+        /* Share page specific styles */
+        body {
+            padding: 1.5rem 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .share-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+        
+        .qr-section {
+            margin-bottom: 0rem;
+        }
+        
+        .qr-code-container {
+            display: inline-block;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow);
+            margin: 0.5rem 0;
+        }
+        
+        .qr-code-container img {
+            display: block;
+            width: 250px;
+            height: 250px;
+            max-width: 100%;
+        }
+        
+        .qr-label {
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .share-title {
+            font-family: var(--font-header);
+            font-size: 2rem;
+            color: var(--accent);
+            margin-top: 0;
+            font-weight: 700;
+        }
+        
+        .share-subtitle {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+        
+        .cards-section {
+            width: 100%;
+            margin-top: 0;
+        }
+        
+        /* Adjust cards for share page */
+        .share-container .hero-cards {
+            margin-top: 0;
+        }
+        
+        .share-container .game-box-info {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            
+            .share-title {
+                font-size: 1.5rem;
+            }
+            
+            .qr-label {
+                font-size: 1.2rem;
+            }
+            
+            .qr-code-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="share-container">
+        <h1 class="share-title">33 Seconds of Chaos</h1>
+        
+        <div class="qr-section">
+            <div class="qr-code-container">
+                <img src="images/qr.svg" alt="QR Code" id="qrcode">
+            </div>
+        </div>
+        
+        <div class="cards-section">
+            <div class="hero-cards">
+                <div class="cards-row">
+                    <div class="flip-timer-indicator" id="flip-timer">
+                        <svg class="timer-svg" viewBox="0 0 36 36">
+                            <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
+                            <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
+                        </svg>
+                        <span class="timer-countdown" id="timer-countdown">10</span>
+                    </div>
+                    <div class="demo-card portrait-card" id="chaos-card">
+                        <div class="card-front">
+                            <div class="card-label">Chaos Prompt</div>
+                            <div class="card-content">
+                                <h3 id="chaos-title">Loading...</h3>
+                                <p id="chaos-description">Cards will flip automatically</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="demo-card portrait-card" id="word-card">
+                        <div class="card-front">
+                            <div class="card-label">Word</div>
+                            <div class="card-content">
+                                <p id="word-text">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <img src="images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main script -->
+    <script src="script.js?v=8c0a58d" defer></script>
+</body>
+</html>
+
