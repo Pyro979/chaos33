@@ -1194,6 +1194,15 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.setAttribute("aria-expanded", "false");
       }
     });
+
+    // Close menu when scrolling
+    window.addEventListener("scroll", function () {
+      if (menuToggle.classList.contains("active")) {
+        menuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   // Smooth scroll for anchor links (fallback if CSS doesn't work)
