@@ -1,0 +1,16 @@
+# Large source files that shouldn't be in version control
+*.psd
+*.ai
+*.sketch
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
