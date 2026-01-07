@@ -14,28 +14,34 @@ const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
 async function loadGameData() {
     try {
+        // For GitHub Pages: /chaos33/passnplay/ -> /chaos33/data/ or ../data/
         // Try multiple possible paths for data files
         const possiblePaths = [
-            '../data/',           // Production: /passnplay/ -> /data/
+            '../data/',           // GitHub Pages: /chaos33/passnplay/ -> /chaos33/data/
             '../../data/',        // Local dev: /chaos33/passnplay/ -> /data/
-            '/data/',             // Absolute from root
+            '/chaos33/data/',     // GitHub Pages absolute path
             './data/'             // Same directory (fallback)
         ];
         
         // Helper to try fetching from multiple paths
         async function fetchWithFallback(filename) {
+            let lastError = null;
             for (const basePath of possiblePaths) {
                 try {
                     const response = await fetch(basePath + filename);
                     if (response.ok) {
+                        console.log(`Successfully loaded ${filename} from ${basePath}`);
                         return await response.json();
+                    } else {
+                        lastError = new Error(`Failed to load ${filename} from ${basePath}: ${response.status}`);
                     }
                 } catch (e) {
+                    lastError = e;
                     // Try next path
                     continue;
                 }
             }
-            throw new Error(`Failed to load ${filename} from any path`);
+            throw lastError || new Error(`Failed to load ${filename} from any path`);
         }
         
         // Load all data files
