@@ -14,12 +14,12 @@ const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
 async function loadGameData() {
     try {
-        // For GitHub Pages: /chaos33/passnplay/ -> /chaos33/data/ or ../data/
-        // Try multiple possible paths for data files
+        // Static path: From /passnplay/ to /data/ should be ../data/
+        // But GitHub Pages might serve from repo root, so try both
         const possiblePaths = [
-            '../data/',           // GitHub Pages: /chaos33/passnplay/ -> /chaos33/data/
-            '../../data/',        // Local dev: /chaos33/passnplay/ -> /data/
-            '/chaos33/data/',     // GitHub Pages absolute path
+            '../data/',           // From /passnplay/ -> /data/ (most likely for GitHub Pages)
+            '/data/',             // Absolute path from site root
+            '../../data/',        // Local dev fallback
             './data/'             // Same directory (fallback)
         ];
         
@@ -30,12 +30,14 @@ async function loadGameData() {
                 try {
                     const response = await fetch(basePath + filename);
                     if (response.ok) {
-                        console.log(`Successfully loaded ${filename} from ${basePath}`);
+                        console.log(`✓ Loaded ${filename} from ${basePath}`);
                         return await response.json();
                     } else {
+                        console.log(`✗ Failed ${filename} from ${basePath}: ${response.status}`);
                         lastError = new Error(`Failed to load ${filename} from ${basePath}: ${response.status}`);
                     }
                 } catch (e) {
+                    console.log(`✗ Error loading ${filename} from ${basePath}:`, e.message);
                     lastError = e;
                     // Try next path
                     continue;
