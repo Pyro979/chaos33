@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33 Seconds of Chaos - Pass & Play</title>
+    
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Next Player Screen -->
+        <div id="next-player-screen" class="screen active">
+            <div class="card-container">
+                <div class="game-card game-card-intro">
+                    <div class="card-content">
+                        <h1 class="card-title">Ready to play<br/>33 Seconds of Chaos?</h1>
+                        <div class="intro-text">
+                            <p>On your turn, you'll get a <strong>Word</strong> and a <strong>Chaos Prompt</strong> that tells you how to give clues. You have <strong>33 seconds</strong> to get someone to guess the word!</p>
+                            <p>Sometimes you'll trigger a <strong>Duel</strong> instead: a head-to-head challenge for 2 points.</p>
+                            <p>Pass the device to the next player after each turn.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Invisible timer section to prevent layout shift -->
+                <div class="timer-section timer-section-invisible">
+                    <div class="timer-display">33</div>
+                    <div class="timer-controls">
+                        <button class="btn-timer">Start</button>
+                        <button class="btn-timer">Reset</button>
+                    </div>
+                </div>
+                <a href="../" class="intro-logo-link">
+                    <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment" class="intro-logo" width="180" height="90">
+                </a>
+                
+                <button id="next-player-btn" class="btn-primary btn-next">Start!</button>
+            </div>
+        </div>
+
+        <!-- Normal Turn Screen -->
+        <div id="normal-turn-screen" class="screen">
+            <div class="card-container">
+                <div class="game-card">
+                    <button id="swap-btn" class="btn-swap"></button>
+                    
+                    <div class="card-label">Chaos Prompt</div>
+                    <div class="card-content">
+                        <h2 id="chaos-title" class="chaos-title"></h2>
+                        <p id="chaos-description" class="chaos-description"></p>
+                    </div>
+                    
+                    <div class="word-section card-bottom-section">
+                        <p id="word-text" class="word-text"></p>
+                    </div>
+                </div>
+                
+                <div class="timer-section">
+                    <div class="timer-controls">
+                        <button id="timer-start-btn" class="btn-timer">Start</button>
+                        <div class="timer-display-container">
+                            <div class="flip-timer-indicator" id="flip-timer">
+                                <svg class="timer-svg" viewBox="0 0 36 36">
+                                    <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
+                                    <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
+                                </svg>
+                                <span class="timer-countdown" id="timer-countdown">33</span>
+                            </div>
+                        </div>
+                        <button id="timer-reset-btn" class="btn-timer">Reset</button>
+                    </div>
+                </div>
+                
+                <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
+            </div>
+        </div>
+
+        <!-- Duel Screen -->
+        <div id="duel-screen" class="screen">
+            <div class="card-container">
+                <div class="game-card duel-card">
+                    <button id="swap-duel-btn" class="btn-swap"></button>
+                    
+                    <div class="card-label duel-label">Duel</div>
+                    <div class="card-content">
+                        <h2 id="duel-title" class="duel-title"></h2>
+                        <p id="duel-description" class="duel-description"></p>
+                    </div>
+                    
+                    <!-- Reveal Section -->
+                    <div id="duel-reveal-section" class="duel-reveal-section card-bottom-section">
+                        <button id="reveal-btn" class="btn-reveal-box">
+                            <span id="reveal-text">Tap to reveal</span>
+                            <div id="reveal-values" style="display: none;"></div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Invisible timer section to prevent layout shift -->
+                <div class="timer-section timer-section-invisible">
+                    <div class="timer-controls">
+                        <button class="btn-timer">Start</button>
+                        <div class="timer-display-container">
+                            <div class="flip-timer-indicator">
+                                <svg class="timer-svg" viewBox="0 0 36 36">
+                                    <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
+                                    <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
+                                </svg>
+                                <span class="timer-countdown">33</span>
+                            </div>
+                        </div>
+                        <button class="btn-timer">Reset</button>
+                    </div>
+                </div>
+                
+                <button id="next-player-duel-btn" class="btn-primary btn-next">Next Player →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swap Confirmation Modal -->
+    <div id="swap-modal" class="modal">
+        <div class="modal-content">
+            <p id="swap-modal-text" class="modal-text"></p>
+            <div class="modal-buttons">
+                <button id="swap-cancel-btn" class="btn-secondary">Cancel</button>
+                <button id="swap-confirm-btn" class="btn-primary">Swap</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data-loader.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
