@@ -14,58 +14,38 @@ const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
 async function loadGameData() {
     try {
-        // Static path: From /passnplay/ to /data/ should be ../data/
-        // But GitHub Pages might serve from repo root, so try both
-        const possiblePaths = [
-            '../data/',           // From /passnplay/ -> /data/ (most likely for GitHub Pages)
-            '/data/',             // Absolute path from site root
-            '../../data/',        // Local dev fallback
-            './data/'             // Same directory (fallback)
-        ];
+        // Data files are in chaos33/data/ (accessible as /data/ from site root)
+        // From /passnplay/ the relative path is ../data/
+        const basePath = '../data/';
         
-        // Helper to try fetching from multiple paths
-        async function fetchWithFallback(filename) {
-            let lastError = null;
-            for (const basePath of possiblePaths) {
-                try {
-                    const response = await fetch(basePath + filename);
-                    if (response.ok) {
-                        console.log(`✓ Loaded ${filename} from ${basePath}`);
-                        return await response.json();
-                    } else {
-                        console.log(`✗ Failed ${filename} from ${basePath}: ${response.status}`);
-                        lastError = new Error(`Failed to load ${filename} from ${basePath}: ${response.status}`);
-                    }
-                } catch (e) {
-                    console.log(`✗ Error loading ${filename} from ${basePath}:`, e.message);
-                    lastError = e;
-                    // Try next path
-                    continue;
-                }
-            }
-            throw lastError || new Error(`Failed to load ${filename} from any path`);
-        }
-        
-        // Load all data files
+        // Load all data files (already filtered for pnp tag by generate.js)
         const [challengesData, duelsData, wordsData, categoriesData] = await Promise.all([
-            fetchWithFallback('challenges.json'),
-            fetchWithFallback('duels.json'),
-            fetchWithFallback('words.json'),
-            fetchWithFallback('duel_categories.json')
+            fetch(basePath + 'challenges.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'duels.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'words.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'duel_categories.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
+                return r.json();
+            })
         ]);
 
-        // Filter challenges by pnp tag
-        gameData.chaosPrompts = challengesData.filter(item => 
-            item.tags && item.tags.includes('pnp') && !item.tags.includes('cut')
-        ).map(item => ({
+        // Data is already filtered for pnp tag by generate.js, just map to format
+        gameData.chaosPrompts = challengesData.map(item => ({
             title: item.title,
             description: item.text
         }));
 
-        // Filter duels by pnp tag
-        gameData.duels = duelsData.filter(item => 
-            item.tags && item.tags.includes('pnp') && !item.tags.includes('cut')
-        ).map(item => ({
+        // Data is already filtered for pnp tag by generate.js, just map to format
+        gameData.duels = duelsData.map(item => ({
             title: item.title,
             description: item.text || item.web_description || '',
             categories: item.categories || [],

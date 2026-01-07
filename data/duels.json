@@ -1,0 +1,296 @@
+[
+  {
+    "title": "Scavenge",
+    "categories": [
+      "Bring something soft",
+      "Bring something round",
+      "Bring something wearable",
+      "Bring a fish",
+      "Bring a red food"
+    ],
+    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Theme Blitz",
+    "alphabetic": false,
+    "categories": [
+      "Farm animals",
+      "Spices",
+      "Things in a toolbox",
+      "Things that come in pairs",
+      "Things you wear",
+      "Things in a kitchen",
+      "Things that fly",
+      "Things that are round"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Direction Chain",
+    "multiCard": false,
+    "text": "Duelers start facing straight ahead. Neutral calls out LEFT, RIGHT, UP, or DOWN direction per beat (about once per second). Duelers must follow direction, returning to center afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
+    "web_description": "Neutral calls directions each beat. Follow and return to center. Ends when one is wrong.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Direction Chain (Opposite Look)",
+    "multiCard": false,
+    "text": "Duelers start facing straight ahead. Neutral looks in LEFT, RIGHT, UP, or DOWN direction per beat (about once per second).\\n\\nDuelers must look the opposite direction, returning to center afterwards.\\n\\nContinues until exactly one dueler fails.",
+    "web_description": "Neutral looks a direction each beat. Look the opposite and return to center. Ends when one fails.",
+    "tags": [
+      "rules",
+      "main",
+      "pnp",
+      "web"
+    ]
+  },
+  {
+    "title": "Coin Spin",
+    "multiCard": false,
+    "text": "Both duelers spin a coin.\\n\\nLongest continuous spin wins.\\n\\nFalling off the table counts as stopping. All players must encourage the coins by shouting. Vibe: horse race.",
+    "web_description": "Both spin a coin. Longest spin wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Table Curling",
+    "multiCard": false,
+    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall -> redo.",
+    "web_description": "Neutral picks a rollable object. Roll together. Farthest without falling wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Table Cornhole",
+    "multiCard": false,
+    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall -> redo.",
+    "web_description": "Neutral picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Backhand Flip",
+    "multiCard": false,
+    "text": "Each dueler gets a similar small object (coin, pencil, etc.). Place it flat on the back of your hand.\\n\\nFlip it about 6-12 inches into the air and catch it in the same hand.\\n\\nRepeat 3 times without dropping. First to finish wins.",
+    "web_description": "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Tap Clap Cap",
+    "multiCard": false,
+    "text": "Neutral calls TAP, CLAP, or CAP in any order and at any pace.\\n\\nTAP = tap the table.\\nCLAP = clap once.\\nCAP = touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "web_description": "Neutral calls TAP/CLAP/CAP. Do the matching move. First mistake loses.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Monster Mash",
+    "multiCard": false,
+    "text": "Neutral calls a monster in any order and at any pace.\\n\\nVAMPIRE = cross your arms on your chest.\\nFRANKENSTEIN = hold your arms straight out.\\nWEREWOLF = hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "web_description": "Neutral calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Card Flip",
+    "multiCard": false,
+    "text": "Each dueler places a playing card face down, partly off the table edge.\\n\\nOn go, flick it upward so it flips face up onto the table.\\n\\nRepeat 3 times. First to finish wins.",
+    "web_description": "Flick a card from the table edge. First to land it face-up 3 times wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Scavenge",
+    "categories": [
+      "Bring something soft",
+      "Bring something round",
+      "Bring something wearable",
+      "Bring a fish",
+      "Bring a red food"
+    ],
+    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Scavenge",
+    "categories": [
+      "Bring something soft",
+      "Bring something round",
+      "Bring something wearable",
+      "Bring a fish",
+      "Bring a red food"
+    ],
+    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Theme Blitz",
+    "alphabetic": false,
+    "categories": [
+      "Farm animals",
+      "Spices",
+      "Things in a toolbox",
+      "Things that come in pairs",
+      "Things you wear",
+      "Things in a kitchen",
+      "Things that fly",
+      "Things that are round"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  },
+  {
+    "title": "Theme Blitz",
+    "alphabetic": false,
+    "categories": [
+      "Farm animals",
+      "Spices",
+      "Things in a toolbox",
+      "Things that come in pairs",
+      "Things you wear",
+      "Things in a kitchen",
+      "Things that fly",
+      "Things that are round"
+    ],
+    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "pnp"
+    ]
+  }
+]
