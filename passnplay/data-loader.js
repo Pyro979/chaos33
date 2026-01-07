@@ -14,29 +14,36 @@ const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
 async function loadGameData() {
     try {
-        // Determine base path - try absolute first (production), then relative (local dev)
-        const basePath = window.location.pathname.includes('/passnplay/') 
-            ? '/data/' 
-            : '../../data/';
+        // Try multiple possible paths for data files
+        const possiblePaths = [
+            '../data/',           // Production: /passnplay/ -> /data/
+            '../../data/',        // Local dev: /chaos33/passnplay/ -> /data/
+            '/data/',             // Absolute from root
+            './data/'             // Same directory (fallback)
+        ];
+        
+        // Helper to try fetching from multiple paths
+        async function fetchWithFallback(filename) {
+            for (const basePath of possiblePaths) {
+                try {
+                    const response = await fetch(basePath + filename);
+                    if (response.ok) {
+                        return await response.json();
+                    }
+                } catch (e) {
+                    // Try next path
+                    continue;
+                }
+            }
+            throw new Error(`Failed to load ${filename} from any path`);
+        }
         
         // Load all data files
         const [challengesData, duelsData, wordsData, categoriesData] = await Promise.all([
-            fetch(basePath + 'challenges.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'duels.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'words.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'duel_categories.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
-                return r.json();
-            })
+            fetchWithFallback('challenges.json'),
+            fetchWithFallback('duels.json'),
+            fetchWithFallback('words.json'),
+            fetchWithFallback('duel_categories.json')
         ]);
 
         // Filter challenges by pnp tag
