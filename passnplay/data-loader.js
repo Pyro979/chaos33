@@ -14,12 +14,29 @@ const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
 async function loadGameData() {
     try {
+        // Determine base path - try absolute first (production), then relative (local dev)
+        const basePath = window.location.pathname.includes('/passnplay/') 
+            ? '/data/' 
+            : '../../data/';
+        
         // Load all data files
         const [challengesData, duelsData, wordsData, categoriesData] = await Promise.all([
-            fetch('../../data/challenges.json').then(r => r.json()),
-            fetch('../../data/duels.json').then(r => r.json()),
-            fetch('../../data/words.json').then(r => r.json()),
-            fetch('../../data/duel_categories.json').then(r => r.json())
+            fetch(basePath + 'challenges.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'duels.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'words.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'duel_categories.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
+                return r.json();
+            })
         ]);
 
         // Filter challenges by pnp tag
