@@ -19,7 +19,7 @@ let currentWord = null;
 let currentDuel = null;
 let currentDuelCategory = null;
 let currentDuelLetter = null;
-let currentDuelTrigger = null;
+let currentDuelTrigger = null; // Object with full_text and card_text
 let duelCategoryRevealed = false;
 let duelLetterRevealed = false;
 
@@ -126,15 +126,16 @@ function startDuel() {
     
     // Get random duel trigger (Left, Right, or Your Choice)
     if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-        currentDuelTrigger = gameData.duelTriggers[Math.floor(Math.random() * gameData.duelTriggers.length)];
+        const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
+        currentDuelTrigger = gameData.duelTriggers[triggerIndex];
     } else {
-        currentDuelTrigger = 'Your Choice';
+        currentDuelTrigger = { full_text: 'Duel: Player of your choice', card_text: 'Your Choice' };
     }
     
     // Update UI
     const duelTriggerEl = document.getElementById('duel-trigger');
-    if (duelTriggerEl) {
-        duelTriggerEl.textContent = currentDuelTrigger;
+    if (duelTriggerEl && currentDuelTrigger) {
+        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Your Choice';
     }
     document.getElementById('duel-title').textContent = currentDuel.title;
     document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
@@ -267,14 +268,15 @@ function handleSwapConfirm() {
         
         // Get new random duel trigger
         if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-            currentDuelTrigger = gameData.duelTriggers[Math.floor(Math.random() * gameData.duelTriggers.length)];
+            const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
+            currentDuelTrigger = gameData.duelTriggers[triggerIndex];
         } else {
-            currentDuelTrigger = 'Your Choice';
+            currentDuelTrigger = { full_text: 'Duel: Player of your choice', card_text: 'Your Choice' };
         }
         
         const duelTriggerEl = document.getElementById('duel-trigger');
-        if (duelTriggerEl) {
-            duelTriggerEl.textContent = currentDuelTrigger;
+        if (duelTriggerEl && currentDuelTrigger) {
+            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Your Choice';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);

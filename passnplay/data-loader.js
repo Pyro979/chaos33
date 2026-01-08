@@ -66,7 +66,10 @@ async function loadGameData() {
         // Store duel triggers (filter for main tag)
         gameData.duelTriggers = triggersData
             .filter(item => item.tags && item.tags.includes('main') && !item.tags.includes('cut'))
-            .map(item => item.card_text || item.text.replace(/^Duel:\s*/, ''));
+            .map(item => ({
+                card_text: item.card_text || item.text.replace(/^Duel:\s*/, ''),
+                full_text: item.text || item.card_text || ''
+            }));
 
         console.log('Game data loaded:', {
             chaosPrompts: gameData.chaosPrompts.length,
