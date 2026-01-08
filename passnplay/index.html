@@ -39,9 +39,10 @@
                         <button class="btn-timer">Reset</button>
                     </div>
                 </div>
-                <a href="../" class="intro-logo-link">
-                    <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment" class="intro-logo" width="180" height="90">
-                </a>
+                
+                <div class="intro-logo-link">
+                    <img src="../images/MVE_Assets/lg/MVE_lg_transparent_black_font.png" alt="Mischievous Vibes Entertainment" class="intro-logo">
+                </div>
                 
                 <button id="next-player-btn" class="btn-primary btn-next">Start!</button>
             </div>
@@ -66,21 +67,18 @@
                 
                 <div class="timer-section">
                     <div class="timer-controls">
-                        <button id="timer-start-btn" class="btn-timer">Start</button>
                         <div class="timer-display-container">
                             <div class="flip-timer-indicator" id="flip-timer">
                                 <svg class="timer-svg" viewBox="0 0 36 36">
                                     <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
                                     <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
                                 </svg>
-                                <span class="timer-countdown" id="timer-countdown">33</span>
+                                <span class="timer-countdown" id="timer-countdown">⏳</span>
                             </div>
                         </div>
-                        <button id="timer-reset-btn" class="btn-timer">Reset</button>
+                        <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
                     </div>
                 </div>
-                
-                <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
             </div>
         </div>
 
@@ -92,6 +90,7 @@
                     
                     <div class="card-label duel-label">Duel</div>
                     <div class="card-content">
+                        <div id="duel-trigger" class="duel-trigger"></div>
                         <h2 id="duel-title" class="duel-title"></h2>
                         <p id="duel-description" class="duel-description"></p>
                     </div>
@@ -105,11 +104,10 @@
                     </div>
                 </div>
                 
-                <!-- Invisible timer section to prevent layout shift -->
-                <div class="timer-section timer-section-invisible">
-                    <div class="timer-controls">
-                        <button class="btn-timer">Start</button>
-                        <div class="timer-display-container">
+                <div class="timer-section">
+                    <div class="timer-controls timer-controls-duel">
+                        <button class="btn-timer" style="display: none;">Start</button>
+                        <div class="timer-display-container" style="display: none;">
                             <div class="flip-timer-indicator">
                                 <svg class="timer-svg" viewBox="0 0 36 36">
                                     <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
@@ -118,11 +116,9 @@
                                 <span class="timer-countdown">33</span>
                             </div>
                         </div>
-                        <button class="btn-timer">Reset</button>
+                        <button id="next-player-duel-btn" class="btn-primary btn-next btn-next-duel">Next Player →</button>
                     </div>
                 </div>
-                
-                <button id="next-player-duel-btn" class="btn-primary btn-next">Next Player →</button>
             </div>
         </div>
     </div>

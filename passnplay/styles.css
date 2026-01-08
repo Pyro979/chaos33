@@ -24,8 +24,9 @@
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -39,12 +40,11 @@ body {
 
 .app-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 1rem;
-    overflow: hidden;
 }
 
 /* Screen Management */
@@ -52,32 +52,27 @@ body {
     display: none;
     width: 100%;
     max-width: 600px;
-    height: 100%;
-    max-height: 90vh;
 }
 
 .screen.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    width: 100%;
 }
 
 /* Card Container */
 .card-container {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 1rem;
-    gap: 1rem;
+    gap: 0;
     position: relative;
 }
 
 #next-player-screen .card-container {
-    gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem; /* Padding at bottom */
 }
 
 /* Game Card - Poker card ratio (2.5" x 3.5" ≈ 0.714:1) */
@@ -96,9 +91,11 @@ body {
 }
 
 .game-card-intro {
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    min-height: 700px;
-    max-height: calc(490px + 250px); /* Overlap timer space, taller to avoid scrolling */
+    margin-bottom: -50px; /* Negative margin to allow logo overlap */
+    overflow: visible; /* Allow logo to overlap */
 }
 
 /* Card Label */
@@ -136,16 +133,24 @@ body {
 .game-card-intro .card-content {
     overflow-y: visible;
     justify-content: flex-start;
-    padding-top: 2rem;
+    padding: 1.5rem 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem; /* Extra padding at bottom so logo doesn't cover text */
 }
 
 .card-title {
     font-family: var(--font-header);
     font-size: 2rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
     font-weight: 700;
     text-align: center;
+}
+
+.game-card-intro .card-title {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
 .card-description {
@@ -157,34 +162,32 @@ body {
 
 /* Intro Screen */
 #next-player-screen .intro-logo-link {
-    position: absolute;
-    bottom: 60px; /* Position above the Start button, overlapping timer space */
-    left: 50%;
-    transform: translateX(-50%);
     display: block;
     text-align: center;
-    z-index: 10;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .intro-logo {
-    max-width: 180px;
+    max-width: 200px;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-    transition: opacity 0.2s ease;
 }
 
-.intro-logo-link:hover .intro-logo {
-    opacity: 0.8;
-}
 
 .intro-text {
     text-align: left;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
 }
 
 .intro-text p {
@@ -318,6 +321,19 @@ body {
 }
 
 /* Duel */
+.duel-trigger {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
 .duel-title {
     font-family: var(--font-header);
     font-size: 1.5rem;
@@ -347,7 +363,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0;
     width: 100%;
     max-width: 500px;
 }
@@ -377,8 +393,31 @@ body {
 .timer-controls {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
+    width: 100%;
+}
+
+.timer-controls .btn-timer {
+    flex-shrink: 0;
+}
+
+.timer-controls .timer-display-container {
+    flex-shrink: 0;
+}
+
+.timer-controls .btn-next {
+    flex-shrink: 0;
+}
+
+.timer-controls-duel {
+    justify-content: stretch;
+}
+
+.timer-controls-duel .btn-next-duel {
+    flex: 1;
+    width: 100%;
+    max-width: none;
 }
 
 .timer-display-container {
@@ -395,6 +434,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flip-timer-indicator:hover {
+    transform: scale(1.05);
+}
+
+.flip-timer-indicator.time-up {
+    background-color: rgba(198, 40, 40, 0.1);
+    border-radius: 50%;
 }
 
 .timer-countdown {
@@ -434,10 +484,7 @@ body {
 }
 
 .timer-section-invisible {
-    visibility: hidden;
-    height: auto;
-    margin: 0.5rem 0;
-    padding: 0;
+    display: none; /* Completely hide on intro screen */
 }
 
 /* Buttons */
@@ -471,6 +518,11 @@ body {
 .btn-next {
     background-color: #1677be !important;
     color: white !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: auto;
+    max-width: none;
 }
 
 .btn-next:hover,
@@ -614,6 +666,108 @@ body {
     text-align: center;
     color: #c62828;
     font-size: 1.2rem;
+}
+
+/* Desktop Styling */
+@media (min-width: 768px) {
+    .app-container {
+        padding: 2rem;
+    }
+    
+    .screen {
+        max-width: 500px;
+    }
+    
+    .game-card {
+        width: 400px;
+        height: 560px; /* 400 * 1.4 (poker card ratio) */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .game-card-intro {
+        width: 400px;
+        max-width: 400px;
+    }
+    
+    .game-card-intro .card-content {
+        padding-bottom: 6rem; /* More padding on desktop for logo overlap */
+    }
+    
+    #next-player-screen .intro-logo-link {
+        margin-top: -80px; /* More overlap on desktop */
+        width: 400px;
+        max-width: 400px;
+    }
+    
+    #next-player-screen .btn-next {
+        width: 400px;
+        max-width: 400px;
+    }
+    
+    .card-content {
+        padding: 2rem;
+        padding-top: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 2.25rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .chaos-title,
+    .duel-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .chaos-description,
+    .duel-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .word-text {
+        font-size: 2.25rem;
+    }
+    
+    .timer-section {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .flip-timer-indicator {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .timer-countdown {
+        font-size: 1.4rem;
+    }
+    
+    .btn-primary {
+        font-size: 1.2rem;
+        padding: 1.25rem 2.5rem;
+        max-width: 350px;
+    }
+    
+    .btn-timer {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .card-bottom-section {
+        padding: 1.25rem 2rem;
+        min-height: 120px;
+        height: 120px;
+    }
+    
+    .word-text {
+        padding: 0.75rem;
+    }
+    
+    #reveal-text {
+        font-size: 1.2rem;
+    }
 }
 
 /* Mobile Responsive */

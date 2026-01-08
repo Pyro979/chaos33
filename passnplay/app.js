@@ -19,6 +19,7 @@ let currentWord = null;
 let currentDuel = null;
 let currentDuelCategory = null;
 let currentDuelLetter = null;
+let currentDuelTrigger = null;
 let duelCategoryRevealed = false;
 let duelLetterRevealed = false;
 
@@ -46,14 +47,16 @@ function initializeApp() {
     document.getElementById('swap-cancel-btn').addEventListener('click', hideSwapModal);
     document.getElementById('swap-confirm-btn').addEventListener('click', handleSwapConfirm);
     
-    document.getElementById('timer-start-btn').addEventListener('click', startTimer);
-    document.getElementById('timer-reset-btn').addEventListener('click', resetTimer);
+    document.getElementById('flip-timer').addEventListener('click', startTimer);
     
     document.getElementById('reveal-btn').addEventListener('click', handleReveal);
     
     // Start with next player screen
     showScreen('next-player');
     lastScreenType = null; // Reset on initial load
+    
+    // Initialize timer with clock emoji
+    resetTimer();
 }
 
 function handleNextPlayer() {
@@ -110,9 +113,8 @@ function startNormalTurn() {
     document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
     document.getElementById('word-text').textContent = currentWord;
     
-    // Reset timer display
-    timerSeconds = 33;
-    updateTimerDisplay();
+    // Reset timer - this will show the clock emoji
+    resetTimer();
     
     showScreen('normal-turn');
 }
@@ -122,7 +124,18 @@ function startDuel() {
     currentDuel = getRandomItem(gameData.duels, lastDuel);
     lastDuel = currentDuel;
     
+    // Get random duel trigger (Left, Right, or Your Choice)
+    if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
+        currentDuelTrigger = gameData.duelTriggers[Math.floor(Math.random() * gameData.duelTriggers.length)];
+    } else {
+        currentDuelTrigger = 'Your Choice';
+    }
+    
     // Update UI
+    const duelTriggerEl = document.getElementById('duel-trigger');
+    if (duelTriggerEl) {
+        duelTriggerEl.textContent = currentDuelTrigger;
+    }
     document.getElementById('duel-title').textContent = currentDuel.title;
     document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
     
@@ -247,13 +260,22 @@ function handleSwapConfirm() {
         document.getElementById('word-text').textContent = currentWord;
         
         // Reset timer
-        stopTimer();
-        timerSeconds = 33;
-        updateTimerDisplay();
+        resetTimer();
     } else {
         // Swap duel
         currentDuel = getRandomItem(gameData.duels, currentDuel);
         
+        // Get new random duel trigger
+        if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
+            currentDuelTrigger = gameData.duelTriggers[Math.floor(Math.random() * gameData.duelTriggers.length)];
+        } else {
+            currentDuelTrigger = 'Your Choice';
+        }
+        
+        const duelTriggerEl = document.getElementById('duel-trigger');
+        if (duelTriggerEl) {
+            duelTriggerEl.textContent = currentDuelTrigger;
+        }
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
         
@@ -315,8 +337,22 @@ function startTimer() {
         return;
     }
     
+    // If timer hasn't started yet (showing sand timer emoji), initialize it
+    const countdownEl = document.getElementById('timer-countdown');
+    if (countdownEl && (countdownEl.textContent === '⏳' || countdownEl.textContent.trim() === '')) {
+        timerSeconds = 33;
+        progress = 0;
+        const timerCircle = document.querySelector('.timer-circle');
+        if (timerCircle) {
+            timerCircle.style.strokeDashoffset = 100;
+            timerCircle.style.stroke = 'var(--accent)';
+        }
+        if (countdownEl) {
+            countdownEl.textContent = '33';
+        }
+    }
+    
     timerRunning = true;
-    document.getElementById('timer-start-btn').textContent = 'Stop';
     
     // Start progress animation
     const totalSeconds = 33;
@@ -361,7 +397,6 @@ function stopTimer() {
         progressInterval = null;
     }
     timerRunning = false;
-    document.getElementById('timer-start-btn').textContent = 'Start';
 }
 
 function resetTimer() {
@@ -371,21 +406,31 @@ function resetTimer() {
     const timerCircle = document.querySelector('.timer-circle');
     if (timerCircle) {
         timerCircle.style.strokeDashoffset = 100;
+        timerCircle.style.stroke = 'var(--accent)';
     }
     const countdownEl = document.getElementById('timer-countdown');
     if (countdownEl) {
+        countdownEl.textContent = '⏳';
         countdownEl.style.color = 'var(--accent)';
         countdownEl.classList.remove('time-up');
     }
-    updateTimerDisplay();
+    const flipTimer = document.getElementById('flip-timer');
+    if (flipTimer) {
+        flipTimer.classList.remove('time-up');
+    }
 }
 
 function updateTimerDisplay() {
     const countdown = document.getElementById('timer-countdown');
     const timerCircle = document.querySelector('.timer-circle');
+    const flipTimer = document.getElementById('flip-timer');
     
     if (countdown) {
-        countdown.textContent = timerSeconds > 0 ? timerSeconds : 0;
+        if (timerSeconds > 0) {
+            countdown.textContent = timerSeconds;
+        } else {
+            countdown.textContent = '0';
+        }
     }
     
     if (timerCircle) {
@@ -396,18 +441,28 @@ function updateTimerDisplay() {
         timerCircle.style.strokeDashoffset = offset;
     }
     
-    // Add time-up styling
+    // Add time-up styling - turn whole circle red
     if (timerSeconds <= 0) {
-        const countdownEl = document.getElementById('timer-countdown');
-        if (countdownEl) {
-            countdownEl.style.color = '#c62828';
-            countdownEl.classList.add('time-up');
+        if (countdown) {
+            countdown.style.color = '#c62828';
+            countdown.classList.add('time-up');
+        }
+        if (timerCircle) {
+            timerCircle.style.stroke = '#c62828';
+        }
+        if (flipTimer) {
+            flipTimer.classList.add('time-up');
         }
     } else {
-        const countdownEl = document.getElementById('timer-countdown');
-        if (countdownEl) {
-            countdownEl.style.color = 'var(--accent)';
-            countdownEl.classList.remove('time-up');
+        if (countdown) {
+            countdown.style.color = 'var(--accent)';
+            countdown.classList.remove('time-up');
+        }
+        if (timerCircle) {
+            timerCircle.style.stroke = 'var(--accent)';
+        }
+        if (flipTimer) {
+            flipTimer.classList.remove('time-up');
         }
     }
 }

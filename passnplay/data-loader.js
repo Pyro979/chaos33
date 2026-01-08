@@ -5,7 +5,8 @@ let gameData = {
     chaosPrompts: [],
     duels: [],
     words: [],
-    duelCategories: null
+    duelCategories: null,
+    duelTriggers: []
 };
 
 // Letters to avoid for Alpha Blitz
@@ -19,7 +20,7 @@ async function loadGameData() {
         const basePath = '../data/';
         
         // Load all data files (already filtered for pnp tag by generate.js)
-        const [challengesData, duelsData, wordsData, categoriesData] = await Promise.all([
+        const [challengesData, duelsData, wordsData, categoriesData, triggersData] = await Promise.all([
             fetch(basePath + 'challenges.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
                 return r.json();
@@ -34,6 +35,10 @@ async function loadGameData() {
             }),
             fetch(basePath + 'duel_categories.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
+                return r.json();
+            }),
+            fetch(basePath + 'duel_triggers.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load duel_triggers.json: ${r.status}`);
                 return r.json();
             })
         ]);
@@ -57,6 +62,11 @@ async function loadGameData() {
 
         // Store duel categories
         gameData.duelCategories = categoriesData;
+        
+        // Store duel triggers (filter for main tag)
+        gameData.duelTriggers = triggersData
+            .filter(item => item.tags && item.tags.includes('main') && !item.tags.includes('cut'))
+            .map(item => item.card_text || item.text.replace(/^Duel:\s*/, ''));
 
         console.log('Game data loaded:', {
             chaosPrompts: gameData.chaosPrompts.length,

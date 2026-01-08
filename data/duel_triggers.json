@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Duel: Player to your left",
+    "card_text": "Duel: Left",
+    "tags": [
+      "main"
+    ]
+  },
+  {
+    "text": "Duel: Player to your right",
+    "card_text": "Duel: Right",
+    "tags": [
+      "main"
+    ]
+  },
+  {
+    "text": "Duel: Player of your choice",
+    "card_text": "Duel: Your Choice",
+    "tags": [
+      "main"
+    ]
+  }
+]
