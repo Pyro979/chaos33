@@ -27,7 +27,21 @@ async function loadGameData() {
             }),
             fetch(basePath + 'duels.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
+                console.log('Loading duels.json from:', r.url);
                 return r.json();
+            }).then(data => {
+                console.log('Raw duels.json loaded:', data.length, 'items');
+                console.log('Raw duel titles:', data.map(d => d.title));
+                // Double-check filtering - filter again in case file wasn't properly filtered
+                const filtered = data.filter(item => 
+                    item.tags && item.tags.includes('pnp') && !item.tags.includes('cut')
+                );
+                console.log('After client-side filter:', filtered.length, 'items');
+                console.log('Filtered duel titles:', filtered.map(d => d.title));
+                if (filtered.length !== data.length) {
+                    console.warn('⚠️ WARNING: Client-side filtering removed', data.length - filtered.length, 'duels that should not be in the file!');
+                }
+                return filtered;
             }),
             fetch(basePath + 'words.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
@@ -71,11 +85,18 @@ async function loadGameData() {
                 full_text: item.text || item.card_text || ''
             }));
 
-        console.log('Game data loaded:', {
-            chaosPrompts: gameData.chaosPrompts.length,
-            duels: gameData.duels.length,
-            words: gameData.words.length
-        });
+        console.log('=== GAME DATA LOADED ===');
+        console.log('Chaos Prompts:', gameData.chaosPrompts.length);
+        console.log('Chaos Prompts titles:', gameData.chaosPrompts.map(p => p.title));
+        console.log('\nDuels:', gameData.duels.length);
+        console.log('Duel titles:', gameData.duels.map(d => d.title));
+        console.log('All duel data:', gameData.duels);
+        console.log('\nWords:', gameData.words.length);
+        console.log('Sample words:', gameData.words.slice(0, 10));
+        console.log('\nDuel Categories:', gameData.duelCategories);
+        console.log('\nDuel Triggers:', gameData.duelTriggers.length);
+        console.log('Duel Trigger texts:', gameData.duelTriggers.map(t => t.full_text || t.card_text));
+        console.log('========================');
 
         return gameData;
     } catch (error) {
