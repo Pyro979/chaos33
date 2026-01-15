@@ -1,5 +1,5 @@
 // Data loader for pass-and-play app
-// Loads data from JSON files and filters by 'pnp' tag
+// Loads data from JSON files and filters by 'passnplay' tag
 
 let gameData = {
     chaosPrompts: [],
@@ -19,7 +19,7 @@ async function loadGameData() {
         // From /passnplay/ the relative path is ../data/
         const basePath = '../data/';
         
-        // Load all data files (already filtered for pnp tag by generate.js)
+        // Load all data files (already filtered for passnplay tag by generate.js)
         const [challengesData, duelsData, wordsData, categoriesData, triggersData] = await Promise.all([
             fetch(basePath + 'challenges.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
@@ -34,7 +34,7 @@ async function loadGameData() {
                 console.log('Raw duel titles:', data.map(d => d.title));
                 // Double-check filtering - filter again in case file wasn't properly filtered
                 const filtered = data.filter(item => 
-                    item.tags && item.tags.includes('pnp') && !item.tags.includes('cut')
+                    item.tags && item.tags.includes('passnplay') && !item.tags.includes('cut')
                 );
                 console.log('After client-side filter:', filtered.length, 'items');
                 console.log('Filtered duel titles:', filtered.map(d => d.title));
@@ -57,13 +57,13 @@ async function loadGameData() {
             })
         ]);
 
-        // Data is already filtered for pnp tag by generate.js, just map to format
+        // Data is already filtered for passnplay tag by generate.js, just map to format
         gameData.chaosPrompts = challengesData.map(item => ({
             title: item.title,
             description: item.text
         }));
 
-        // Data is already filtered for pnp tag by generate.js, just map to format
+        // Data is already filtered for passnplay tag by generate.js, just map to format
         gameData.duels = duelsData.map(item => ({
             title: item.title,
             description: item.text || item.web_description || '',

@@ -1,87 +1,178 @@
 [
   {
-    "number": 2,
+    "title": "Whisper",
+    "text": "Give all clues in a whisper.",
+    "example": "\"It squeaks... when you squeeze it... in the bath...\"",
+    "tags": [
+      "passnplay",
+      "main"
+    ]
+  },
+  {
     "title": "Robot Voice",
     "text": "Give clues in a stiff, robotic voice.",
     "example": "\"It. Is. Small. Yellow. Object.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 3,
     "title": "Deep Serious Voice",
     "text": "Use a low, overly serious tone.",
     "example": "\"This is... a small floating device... critical to all bathtub operations.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 4,
     "title": "High-Pitched Voice",
     "text": "Speak in a high, squeaky voice.",
     "example": "\"It's tiny! And it squeaks!\"",
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 7,
+    "title": "Angry Clues",
+    "text": "Sound angry or irritated by the object the whole time.",
+    "example": "\"Why does this silly thing squeak so much?!\"",
+    "tags": [
+      "passnplay",
+      "main"
+    ]
+  },
+  {
+    "title": "Describe Everything Around It",
+    "text": "Describe the things, places, or context near the object instead of describing the object itself.",
+    "example": "\"It sits near soap. Near bubbles. Near the faucet.\"",
+    "tags": [
+      "passnplay",
+      "rules",
+      "main"
+    ]
+  },
+  {
     "title": "Describe What It's Not",
     "text": "Give clues only by saying what it isn't.",
     "example": "\"It's not soap. It's not a boat. It doesn't sink.\"",
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 9,
+    "title": "Three-Word Clues",
+    "text": "Each clue must be exactly three words.",
+    "example": "\"Small floating toy.\" / \"Bright yellow squeaker.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Speak Only in Questions",
     "text": "Every clue must be phrased as a question.",
     "example": "\"Does it float in your bathtub?\"",
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 11,
+    "title": "One-Syllable Words Only",
+    "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
+    "example": "\"Small. Round. Bath friend.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Only Analogies",
     "text": "Every clue is \"It's like ___ but ___.\"",
     "example": "\"It's like a bath toy but squishier.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 13,
     "title": "Adjectives & Nouns Only",
     "text": "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
     "example": "\"Yellow toy. Floaty duck. Squishy bath friend.\"",
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 22,
+    "title": "Verbs & Nouns Only",
+    "text": "Give clues using only verbs (action words) and nouns (person, place, thing).",
+    "example": "\"Squeeze toy. Hear squeak. Watch float. Bath water.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Only Comparisons",
+    "text": "Every clue must compare it to something else.",
+    "example": "\"It's smaller than most bath toys, and it floats better than soap.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Hands Do the Talking",
+    "text": "Each time you say a word, your hands must be doing some deliberate gesture.",
+    "example": "\"It—(gesture)—floats—(gesture)—in—(gesture)—water!\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Two-Piece Clues",
+    "text": "Every clue must come in two parts with a brief pause.",
+    "example": "\"It squeaks / then it floats.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Laughing Clues",
+    "text": "Give all clues while laughing the entire time.",
+    "example": "\"It—haha—floats—haha—and squeaks!\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Tongue Out",
     "text": "Stick your tongue out and keep it out while giving clues.",
     "example": "\"Iff... a... yeh-woh... bahf... toy...\"",
@@ -89,45 +180,72 @@
       "web",
       "rules",
       "main",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
-    "number": 23,
     "title": "Jumping Jacks",
     "text": "Give clues while doing jumping jacks.",
     "example": "\"It—*jump*—is—*jump*—a—*jump*—floating toy!\"",
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 26,
+    "title": "Macarena Clues",
+    "text": "Give clues while doing the Macarena.",
+    "example": "\"This—(pose)—little—(pose)—floater—(pose)—squeaks—(pose).\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Story Time",
     "text": "Start your clues with \"Once upon a time...\" and tell it like a story.",
     "example": "\"Once upon a time... a tiny yellow toy floated proudly in the tub.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 27,
     "title": "Movie Announcer Voice",
     "text": "Use an over-the-top movie trailer voice. Start with: \"In a world...\"",
     "example": "\"In a world... where one squeaky toy rules the water...\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 30,
+    "title": "Singing Clues",
+    "text": "Sing all your clues. Pick any genre. It doesn't have to rhyme.",
+    "example": "\"This little squeaker floooats alooong...\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Meow After Every Word",
+    "text": "After every single word, add a \"meow.\"",
+    "example": "\"It—meow—floats—meow—in—meow—water—meow!\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Excited Kindergartener",
     "text": "Give clues like an overexcited kindergartener telling their parents about this thing.",
     "example": "\"And THEN it went in the bath and it was yellow and it squeaked and it FLOATED ON THE WATER and it was SO COOL!\"",
@@ -135,22 +253,22 @@
       "web",
       "rules",
       "main",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
-    "number": 31,
     "title": "Cutest Puppy Voice",
     "text": "Give clues like you're talking to the cutest puppy ever and it understands every word.",
     "example": "\"Who's a little floaty squeaky friend that sits in the bathtub, yes you are, yes you are!\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 32,
     "title": "Infomercial Host",
     "text": "Give clues like a late-night infomercial host who really needs this to sell.",
     "example": "\"Are YOU tired of boring baths? Try this amazing tiny yellow squeaker that floats on water!\"",
@@ -158,22 +276,31 @@
       "web",
       "rules",
       "main",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
-    "number": 33,
     "title": "Favorite Thing Ever",
     "text": "Give clues like this is your absolute favorite thing in the world.",
     "example": "\"It's the best—bright yellow, it squeaks, it rides the bathwater with me every single night.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 37,
+    "title": "Totally Unsure",
+    "text": "Give clues like you're very unsure, using words like maybe, probably, kinda, and sort of.",
+    "example": "\"It maybe kinda lives in the tub, probably floats on the water, and sort of squeaks when you squeeze it.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Villain Monologue",
     "text": "Give clues like a villain explaining their plan to the hero.",
     "example": "\"First, I put this harmless yellow thing in your tub. Then, every squeak reminds you I was here.\"",
@@ -181,11 +308,11 @@
       "web",
       "rules",
       "main",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
-    "number": 38,
     "title": "Clueless Tour Guide",
     "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it.",
     "example": "\"And here we see a rare yellow bath relic which, as you can tell, bravely floats beside the humble soap.\"",
@@ -193,117 +320,210 @@
       "web",
       "rules",
       "main",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
-    "number": 43,
+    "title": "Time Traveler from the Past",
+    "text": "Give clues like you're a time traveler from the past seeing this for the first time.",
+    "example": "\"In my village, no one owned a tiny yellow creature that rides on water and cries when you squeeze it!\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Time Traveler from the Future",
+    "text": "Give clues like you're a time traveler from the future who knows this will destroy (or save) everything.",
+    "example": "\"It begins as a harmless yellow toy that floats in the tub… but in my timeline, that squeak is the first warning.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Forbidden Secret",
+    "text": "Give clues like it's a huge secret you're absolutely not supposed to share.",
+    "example": "\"If anyone finds out I keep a tiny yellow squeaker hidden by the faucet, we're both in trouble.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Spy Instructions",
+    "text": "Give clues like you're in a spy movie, passing secret instructions in public.",
+    "example": "\"At 1900 hours, place the small yellow floater in the tub. If it squeaks twice, you know it's the right one.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Careful Mobster",
     "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening.",
     "example": "\"Look, I ain't sayin' nothin'. There's just this little yellow thing that hangs in the tub and makes noise, capisce?\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 45,
+    "title": "It's Like, But Not That",
+    "text": "Every clue must use a simile in the format \"It's like … but not that.\"",
+    "example": "\"It's like a tiny boat, but not that. It's like a squeaky horn, but not that. It's like a yellow lemon, but not that.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Guided Meditation",
     "text": "Give clues in a calm, soothing guided-meditation voice.",
     "example": "\"Breathe in... and notice the small object floating peacefully in warm water...\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 46,
     "title": "Nature Documentary",
     "text": "Narrate clues like a nature documentary observing a rare creature in the wild.",
     "example": "\"Here we observe it in its natural habitat... drifting silently near the bubbles...\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 47,
     "title": "5-Star Review",
     "text": "Give clues like you’re leaving an over-the-top glowing 5-star review.",
     "example": "\"Absolutely life-changing. The squeak is immaculate. Would bathe again.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 48,
     "title": "1-Star Review",
     "text": "Give clues like you’re leaving a brutal 1-star complaint review.",
     "example": "\"Terrible. Too squeaky. Floats like it owns the place. Do not recommend.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 52,
+    "title": "Safety Warnings",
+    "text": "Every clue must sound like a warning label or safety instruction.",
+    "example": "\"Warning: may cause loud squeaking. Keep away from toddlers and dramatic splashes.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Trade-Offs Only",
+    "text": "Every clue must be a trade-off in this format: “Great for ___, terrible for ___.”",
+    "example": "\"Great for bath time, terrible for silent environments.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
+    "title": "Sarcastic",
+    "text": "Give every clue dripping with sarcasm, like this object personally inconvenienced you.",
+    "example": "\"Oh yeah, it's SO subtle. Just the loudest squeak on earth.\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Bad Salesperson",
     "text": "Give clues like you’re trying to sell it, but you’re terrible at it.",
     "example": "\"Uh... it’s... yellow? It floats. I don't know, just buy it.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 54,
+    "title": "Influencer Unboxing",
+    "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it.",
+    "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW—listen to that squeak!\"",
+    "tags": [
+      "main",
+      "passnplay"
+    ]
+  },
+  {
     "title": "Cartoon or Video Game Character",
     "text": "Pick any character, then give clues in their voice and attitude. Stay in character.",
     "example": "\"Gee, I wonder what this yellow thing could be! It's a mystery, gang!\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 55,
     "title": "Your Favorite Impression",
     "text": "Do your go-to impression and keep it going while you give clues.",
     "example": "\"Well, well, well... what do we have here? A tiny yellow squeaker, I see!\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 56,
     "title": "Country Lawyer",
     "text": "Give clues like a small-town lawyer in a low-budget courtroom drama.",
     "example": "\"Ladies and gentlemen of the jury, I submit to you that this object is small, yellow, and makes a distinctive squeaking sound when compressed.\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
   {
-    "number": 57,
     "title": "Game Show Host",
     "text": "Talk like you're announcing what the contestant could win. Big energy.",
     "example": "\"What do we have for them, Johnny? It's SMALL! It's YELLOW! And it SQUEAKS when you squeeze it!\"",
     "tags": [
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
+    ]
+  },
+  {
+    "title": "Reality Show Judge",
+    "text": "Give clues like you're judging a contestant's submission. Confident, dramatic, and direct.",
+    "example": "\"I'm sorry, but this is just not working for me. It's small, it's yellow, and honestly? It's giving me nothing.\"",
+    "tags": [
+      "main",
+      "passnplay"
     ]
   }
 ]

@@ -8,13 +8,14 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
     "web_description": "First back with a valid physical object or analog image wins. No screens.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -30,13 +31,14 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -52,13 +54,25 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
+    ]
+  },
+  {
+    "title": "Simon Says",
+    "multiCard": false,
+    "text": "Neutral player runs real \"Simon Says\" commands.\\n\\nDuel continues until one fails and the other succeeds.",
+    "web_description": "Neutral runs Simon Says. Ends when one fails and the other succeeds.",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay"
     ]
   },
   {
@@ -70,7 +84,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -81,7 +96,8 @@
     "tags": [
       "rules",
       "main",
-      "pnp",
+      "passnplay",
+      "printnplay",
       "web"
     ]
   },
@@ -94,7 +110,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -106,7 +123,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -118,7 +136,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -130,7 +149,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -142,7 +162,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -154,7 +175,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -166,7 +188,8 @@
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -178,13 +201,14 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
     "web_description": "First back with a valid physical object or analog image wins. No screens.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -196,13 +220,14 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "Prompt is on the Word Card.\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
     "web_description": "First back with a valid physical object or analog image wins. No screens.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -218,13 +243,14 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -240,13 +266,14 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category that start with a random letter. Avoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -262,13 +289,14 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -284,13 +312,14 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Category is on the Word Card.\n\nDuelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
       "web",
-      "pnp"
+      "passnplay",
+      "printnplay"
     ]
   }
 ]

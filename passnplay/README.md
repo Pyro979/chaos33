@@ -92,17 +92,17 @@ The main entry point is:
 
 The app loads data from JSON files in the `/data/` directory at the repository root:
 
-- **Challenges** (`data/challenges.json`): Chaos prompts filtered by `pnp` tag
-- **Duels** (`data/duels.json`): Duel cards filtered by `pnp` tag
+- **Challenges** (`data/challenges.json`): Chaos prompts filtered by `passnplay` tag
+- **Duels** (`data/duels.json`): Duel cards filtered by `passnplay` tag
 - **Words** (`data/words.json`): Word list for normal turns
 - **Duel Categories** (`data/duel_categories.json`): Categories for Alpha Blitz, Theme Blitz, and Scavenge duels
 
 ### Data Filtering
 
-All content is filtered to only include items tagged with `pnp` (and excludes items tagged with `cut`):
+All content is filtered to only include items tagged with `passnplay` (and excludes items tagged with `cut`):
 
-- **Chaos Prompts**: Must have `pnp` tag
-- **Duels**: Must have `pnp` tag
+- **Chaos Prompts**: Must have `passnplay` tag
+- **Duels**: Must have `passnplay` tag
 - **Words**: All words from the word list are available
 
 ### Duel-Specific Data
