@@ -2,6 +2,7 @@
 
 let currentState = 'next-player'; // 'next-player', 'normal-turn', 'duel'
 let lastScreenType = null; // Track last screen to avoid back-to-back duels
+let screenHistory = []; // Track last 5 screen types to ensure duel at least every 6th card
 let lastChaosPrompt = null;
 let lastWord = null;
 let lastDuel = null;
@@ -54,6 +55,7 @@ function initializeApp() {
     // Start with next player screen
     showScreen('next-player');
     lastScreenType = null; // Reset on initial load
+    screenHistory = []; // Reset history on initial load
     
     // Initialize timer with clock emoji
     resetTimer();
@@ -68,14 +70,21 @@ function handleNextPlayer() {
     duelCategoryRevealed = false;
     duelLetterRevealed = false;
     
+    // Check if we need to force a duel (no duel in past 5 turns)
+    const hasDuelInLast5 = screenHistory.some(type => type === 'duel');
+    const mustForceDuel = screenHistory.length >= 5 && !hasDuelInLast5;
+    
     // Decide: 25% chance for duel, 75% for normal turn
-    // But avoid back-to-back duels and never start with a duel
+    // But avoid back-to-back duels, never start with a duel, and force duel if none in last 5
     let isDuel = false;
-    if (lastScreenType !== 'duel' && lastScreenType !== null) {
-        // Only allow duel if we've had at least one normal turn
+    if (mustForceDuel) {
+        // Force duel if we haven't seen one in the last 5 turns
+        isDuel = true;
+    } else if (lastScreenType !== 'duel' && lastScreenType !== null) {
+        // Only allow duel if we've had at least one normal turn and last wasn't a duel
         isDuel = Math.random() < 0.25;
     }
-    // If last was a duel or this is the first turn, force normal turn
+    // If last was a duel or this is the first turn (and not forcing), force normal turn
     
     if (isDuel) {
         startDuel();
@@ -83,6 +92,12 @@ function handleNextPlayer() {
     } else {
         startNormalTurn();
         lastScreenType = 'normal-turn';
+    }
+    
+    // Update history (keep only last 5)
+    screenHistory.push(lastScreenType);
+    if (screenHistory.length > 5) {
+        screenHistory.shift();
     }
 }
 
