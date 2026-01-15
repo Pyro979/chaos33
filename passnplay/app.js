@@ -124,7 +124,7 @@ function startDuel() {
     currentDuel = getRandomItem(gameData.duels, lastDuel);
     lastDuel = currentDuel;
     
-    // Get random duel trigger (Left, Right, or Your Choice)
+    // Get random Duel Cue (Left, Right, or Your Choice)
     if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
         const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
         currentDuelTrigger = gameData.duelTriggers[triggerIndex];
@@ -266,7 +266,7 @@ function handleSwapConfirm() {
         // Swap duel
         currentDuel = getRandomItem(gameData.duels, currentDuel);
         
-        // Get new random duel trigger
+        // Get new random Duel Cue
         if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
             const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
             currentDuelTrigger = gameData.duelTriggers[triggerIndex];

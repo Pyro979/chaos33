@@ -77,7 +77,7 @@ async function loadGameData() {
         // Store duel categories
         gameData.duelCategories = categoriesData;
         
-        // Store duel triggers (filter for main tag)
+        // Store Duel Cues (filter for main tag)
         gameData.duelTriggers = triggersData
             .filter(item => item.tags && item.tags.includes('main') && !item.tags.includes('cut'))
             .map(item => ({
@@ -94,8 +94,8 @@ async function loadGameData() {
         console.log('\nWords:', gameData.words.length);
         console.log('Sample words:', gameData.words.slice(0, 10));
         console.log('\nDuel Categories:', gameData.duelCategories);
-        console.log('\nDuel Triggers:', gameData.duelTriggers.length);
-        console.log('Duel Trigger texts:', gameData.duelTriggers.map(t => t.full_text || t.card_text));
+        console.log('\nDuel Cues:', gameData.duelTriggers.length);
+        console.log('Duel Cue texts:', gameData.duelTriggers.map(t => t.full_text || t.card_text));
         console.log('========================');
 
         return gameData;

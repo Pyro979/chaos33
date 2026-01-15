@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Track flip count to alternate between regular and duel flips
   let flipCount = 0;
 
-  // Shuffle arrays for duels and duel triggers
+  // Shuffle arrays for duels and Duel Cues
   function shuffleArray(array) {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -178,11 +178,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Wait for card to flip halfway (when it's facing away), then update content
     setTimeout(function () {
-      // Alternate between regular flips and duel/duel trigger flips
+      // Alternate between regular flips and duel/Duel Cue flips
       const isDuelFlip = flipCount % 2 === 1;
 
       if (isDuelFlip) {
-        // Use duel and duel trigger
+        // Use duel and Duel Cue
         const duel = getNextDuel();
         const duelTrigger = getNextDuelTrigger();
 
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
           chaosLabel.textContent = "Duel";
         }
         if (wordLabel) {
-          wordLabel.textContent = "Duel Trigger";
+          wordLabel.textContent = "Duel Cue";
         }
 
         // Update chaos card with duel
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
           chaosDescription.innerHTML = descriptionWithBreaks;
         }
 
-        // Update word card with duel trigger
+        // Update word card with Duel Cue
         if (wordText) wordText.textContent = duelTrigger;
       } else {
         // Remove duel class if it exists

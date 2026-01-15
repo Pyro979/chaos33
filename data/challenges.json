@@ -70,9 +70,9 @@
   },
   {
     "number": 13,
-    "title": "Adjectives Only",
-    "text": "Speak only in descriptive words.",
-    "example": "\"Yellow. Floaty. Squishy. Cute.\"",
+    "title": "Adjectives & Nouns Only",
+    "text": "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
+    "example": "\"Yellow toy. Floaty duck. Squishy bath friend.\"",
     "tags": [
       "rules",
       "main",

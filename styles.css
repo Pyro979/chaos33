@@ -1222,7 +1222,7 @@ footer a:hover {
         background-color: var(--bg);
     }
 
-    /* Mobile-only: move Word / Duel Trigger content upward within the card without affecting Chaos prompts */
+    /* Mobile-only: move Word / Duel Cue content upward within the card without affecting Chaos prompts */
     #word-card .card-content {
         justify-content: flex-start;
         /* place the word/duel-trigger text ~1/3 down the card, regardless of viewport scroll */
@@ -1369,7 +1369,7 @@ footer a:hover {
     }
 }
 
-/* Extra-small phones (e.g. 320px wide): push the Chaos/Duel card down to avoid overlapping the Word/Duel Trigger card */
+/* Extra-small phones (e.g. 320px wide): push the Chaos/Duel card down to avoid overlapping the Word/Duel Cue card */
 @media (max-width: 320px) {
     #chaos-card {
         /* Was -250px at larger small breakpoints; reduce the overlap so both cards stay readable */
