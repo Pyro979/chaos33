@@ -44,7 +44,10 @@
                     <img src="../images/MVE_Assets/lg/MVE_lg_transparent_black_font.png" alt="Mischievous Vibes Entertainment" class="intro-logo">
                 </div>
                 
-                <button id="next-player-btn" class="btn-primary btn-next">Start!</button>
+                <div class="intro-buttons">
+                    <button id="how-to-play-btn" class="btn-secondary btn-how-to-play">How to play</button>
+                    <button id="next-player-btn" class="btn-primary btn-next">Start!</button>
+                </div>
             </div>
         </div>
 
@@ -76,8 +79,11 @@
                                 <span class="timer-countdown" id="timer-countdown">⏳</span>
                             </div>
                         </div>
-                        <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
+                        <div class="button-row">
+                            <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
+                        </div>
                     </div>
+                    <a href="#" id="how-to-play-link-normal" class="how-to-play-link">How to play</a>
                 </div>
             </div>
         </div>
@@ -116,8 +122,11 @@
                                 <span class="timer-countdown">33</span>
                             </div>
                         </div>
-                        <button id="next-player-duel-btn" class="btn-primary btn-next btn-next-duel">Next Player →</button>
+                        <div class="button-row">
+                            <button id="next-player-duel-btn" class="btn-primary btn-next btn-next-duel">Next Player →</button>
+                        </div>
                     </div>
+                    <a href="#" id="how-to-play-link-duel" class="how-to-play-link">How to play</a>
                 </div>
             </div>
         </div>
@@ -130,6 +139,93 @@
             <div class="modal-buttons">
                 <button id="swap-cancel-btn" class="btn-secondary">Cancel</button>
                 <button id="swap-confirm-btn" class="btn-primary">Swap</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Play Modal -->
+    <div id="how-to-play-modal" class="modal">
+        <div class="modal-content modal-content-rules">
+            <button id="how-to-play-close-btn" class="modal-close-btn" aria-label="Close">×</button>
+            <div class="rules-content">
+                <h2>33 Seconds of Chaos, Pass and Play App Rules</h2>
+                <p class="rules-intro">A fast party game where you follow ridiculous prompts, shout wild guesses, and sometimes end up in surprise head-to-head duels. One device. Pass it around.</p>
+                
+                <h3>Quick Start</h3>
+                <ul>
+                    <li>Hand the device to the next player. Tap Start.</li>
+                    <li>The app gives you either a Word turn or a Duel.</li>
+                    <li>When you're done, tap Next Player and pass the device.</li>
+                </ul>
+                
+                <h3>Word Turn</h3>
+                <ol>
+                    <li>Read the Chaos Prompt out loud.</li>
+                    <li>Keep the Word secret.</li>
+                    <li>Tap the timer to start 33 seconds.</li>
+                    <li>Give clues that follow the prompt and the Basic Rules.</li>
+                    <li>Everyone else shouts unlimited guesses.</li>
+                </ol>
+                
+                <p><strong>When someone guesses the word:</strong></p>
+                <ul>
+                    <li>Stop the timer if it's still running.</li>
+                    <li>Reveal the word.</li>
+                    <li>Tap Next Player.</li>
+                </ul>
+                
+                <p><strong>If time runs out:</strong></p>
+                <ul>
+                    <li>Reveal the word.</li>
+                    <li>Tap Next Player.</li>
+                </ul>
+                
+                <p>Close enough counts. You decide if a guess counts. If it's close, give it to them and keep moving.</p>
+                
+                <h3>Duel</h3>
+                <ol>
+                    <li>The screen tells you who duels.</li>
+                    <li>Choose a Neutral Judge (someone not dueling).</li>
+                    <li>The Neutral Judge reads the duel out loud and runs it.</li>
+                    <li>Duel until the Neutral Judge declares a winner.</li>
+                    <li>Tap Next Player.</li>
+                </ol>
+                
+                <p>Judge's call is final.</p>
+                <p>Some duels (Alpha Blitz, Theme Blitz, Scavenge) hide key info until you tap <strong>Tap to reveal</strong> so nobody gets a head start.</p>
+                
+                <h3>Swap</h3>
+                <p>If a prompt, word, or duel is a bad fit, tap Swap and confirm.</p>
+                
+                <h3>Basic Rules</h3>
+                <p>Unless the prompt says otherwise, you may not:</p>
+                <ul>
+                    <li>Say any part of the word (including obvious root forms or plurals).</li>
+                    <li>Spell it, write it, or trace letters.</li>
+                    <li>Say "rhymes with."</li>
+                    <li>Show the object or an image of it.</li>
+                </ul>
+                
+                <p>Any player can call a rule break. If it's unclear, vote fast, then move on.</p>
+                
+                <h3>Optional Scoring</h3>
+                <p>If you want a winner, track points however you like.</p>
+                
+                <p><strong>Points</strong></p>
+                <ul>
+                    <li>Word turn (guessed in time): clue-giver +1, first correct guesser +1</li>
+                    <li>Word turn (no guess): nobody scores</li>
+                    <li>Duel: winner +2</li>
+                </ul>
+                
+                <p><strong>Rounds</strong></p>
+                <p>Play 3 rounds (each player takes one turn per round). High score wins.</p>
+                
+                <p><strong>Ties</strong></p>
+                <p>Run one more duel. Winner takes it.</p>
+            </div>
+            <div class="modal-buttons">
+                <button id="how-to-play-close-btn-bottom" class="btn-primary">Got it</button>
             </div>
         </div>
     </div>

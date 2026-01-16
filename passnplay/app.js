@@ -52,6 +52,26 @@ function initializeApp() {
     
     document.getElementById('reveal-btn').addEventListener('click', handleReveal);
     
+    // How to play modal
+    document.getElementById('how-to-play-btn').addEventListener('click', showHowToPlayModal);
+    document.getElementById('how-to-play-link-normal').addEventListener('click', (e) => {
+        e.preventDefault();
+        showHowToPlayModal();
+    });
+    document.getElementById('how-to-play-link-duel').addEventListener('click', (e) => {
+        e.preventDefault();
+        showHowToPlayModal();
+    });
+    document.getElementById('how-to-play-close-btn').addEventListener('click', hideHowToPlayModal);
+    document.getElementById('how-to-play-close-btn-bottom').addEventListener('click', hideHowToPlayModal);
+    
+    // Close modal when clicking outside
+    document.getElementById('how-to-play-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'how-to-play-modal') {
+            hideHowToPlayModal();
+        }
+    });
+    
     // Start with next player screen
     showScreen('next-player');
     lastScreenType = null; // Reset on initial load
@@ -260,6 +280,14 @@ function showSwapModal(screenType) {
 
 function hideSwapModal() {
     document.getElementById('swap-modal').classList.remove('active');
+}
+
+function showHowToPlayModal() {
+    document.getElementById('how-to-play-modal').classList.add('active');
+}
+
+function hideHowToPlayModal() {
+    document.getElementById('how-to-play-modal').classList.remove('active');
 }
 
 function handleSwapConfirm() {
