@@ -375,4 +375,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Track external link clicks (Kickstarter, etc.)
+  document.querySelectorAll('a[href*="kickstarter.com"]').forEach((link) => {
+    link.addEventListener('click', function(e) {
+      if (typeof gtag === "function") {
+        const url = this.getAttribute('href');
+        const urlParams = new URLSearchParams(url.split('?')[1] || '');
+        
+        gtag('event', 'kickstarter_click', {
+          'event_category': 'outbound',
+          'event_label': 'kickstarter_link',
+          'transport_type': 'beacon',
+          'utm_source': urlParams.get('utm_source') || '(not set)',
+          'utm_medium': urlParams.get('utm_medium') || '(not set)',
+          'utm_campaign': urlParams.get('utm_campaign') || 'kickstarter'
+        });
+      }
+    });
+  });
 });
