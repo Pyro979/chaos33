@@ -1516,3 +1516,34 @@ select:focus {
     content: "!";
 }
 
+/* ========================================
+   Shared ConvertKit Form Overrides
+   ======================================== */
+
+/* Hide "Built with Kit" branding */
+.formkit-powered-by-convertkit-container {
+    display: none !important;
+}
+
+/* Generic ConvertKit button styling - orange theme */
+.formkit-form .formkit-submit {
+    background-color: #FF881D !important;
+    color: #000000 !important;
+    font-size: 1.1rem !important;
+}
+
+.formkit-form .formkit-submit:hover,
+.formkit-form .formkit-submit:focus {
+    background-color: #ff9933 !important;
+    color: #000000 !important;
+}
+
+/* Override Kit.com padding above form */
+.formkit-form[data-style="clean"] {
+    padding-top: 0 !important;
+}
+
+.formkit-form[min-width~="700"][data-style="clean"],
+.formkit-form[min-width~="800"][data-style="clean"] {
+    padding-top: 0 !important;
+}
