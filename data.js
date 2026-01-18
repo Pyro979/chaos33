@@ -495,7 +495,6 @@ const wordList = [
     "Butter Knife",
     "Butter",
     "Butterfly",
-    "Button-Down Shirt",
     "CD",
     "Cabbage",
     "Cable Car",
