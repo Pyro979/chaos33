@@ -72,7 +72,8 @@
     "tags": [
       "rules",
       "main",
-      "passnplay"
+      "passnplay",
+      "printnplay"
     ]
   },
   {
@@ -89,7 +90,7 @@
     ]
   },
   {
-    "title": "Direction Chain (Opposite Look)",
+    "title": "Look Away",
     "multiCard": false,
     "text": "Duelers start facing straight ahead. Neutral looks in LEFT, RIGHT, UP, or DOWN direction per beat (about once per second).\\n\\nDuelers must look the opposite direction, returning to center afterwards.\\n\\nContinues until exactly one dueler fails.",
     "web_description": "Neutral looks a direction each beat. Look the opposite and return to center. Ends when one fails.",
@@ -98,7 +99,8 @@
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "cut"
     ]
   },
   {
