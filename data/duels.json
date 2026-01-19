@@ -90,20 +90,6 @@
     ]
   },
   {
-    "title": "Look Away",
-    "multiCard": false,
-    "text": "Duelers start facing straight ahead. Neutral looks in LEFT, RIGHT, UP, or DOWN direction per beat (about once per second).\\n\\nDuelers must look the opposite direction, returning to center afterwards.\\n\\nContinues until exactly one dueler fails.",
-    "web_description": "Neutral looks a direction each beat. Look the opposite and return to center. Ends when one fails.",
-    "tags": [
-      "rules",
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "cut"
-    ]
-  },
-  {
     "title": "Coin Spin",
     "multiCard": false,
     "text": "Both duelers spin a coin.\\n\\nLongest continuous spin wins.\\n\\nFalling off the table counts as stopping. All players must encourage the coins by shouting. Vibe: horse race.",
@@ -119,7 +105,7 @@
   {
     "title": "Table Curling",
     "multiCard": false,
-    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall -> redo.",
+    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall - redo.",
     "web_description": "Neutral picks a rollable object. Roll together. Farthest without falling wins.",
     "tags": [
       "rules",
@@ -132,7 +118,7 @@
   {
     "title": "Table Cornhole",
     "multiCard": false,
-    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall -> redo.",
+    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall - redo.",
     "web_description": "Neutral picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
     "tags": [
       "rules",
@@ -158,7 +144,7 @@
   {
     "title": "Tap Clap Cap",
     "multiCard": false,
-    "text": "Neutral calls TAP, CLAP, or CAP in any order and at any pace.\\n\\nTAP = tap the table.\\nCLAP = clap once.\\nCAP = touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "text": "Neutral calls TAP, CLAP, or CAP in any order and at any pace.\\n\\nTAP: tap the table.\\nCLAP: clap once.\\nCAP: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
     "web_description": "Neutral calls TAP/CLAP/CAP. Do the matching move. First mistake loses.",
     "tags": [
       "rules",
@@ -171,7 +157,7 @@
   {
     "title": "Monster Mash",
     "multiCard": false,
-    "text": "Neutral calls a monster in any order and at any pace.\\n\\nVAMPIRE = cross your arms on your chest.\\nFRANKENSTEIN = hold your arms straight out.\\nWEREWOLF = hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "text": "Neutral calls a monster in any order and at any pace.\\n\\nVAMPIRE: cross your arms on your chest.\\nFRANKENSTEIN: hold your arms straight out.\\nWEREWOLF: hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
     "web_description": "Neutral calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses.",
     "tags": [
       "rules",
