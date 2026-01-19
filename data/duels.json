@@ -31,7 +31,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -54,7 +54,7 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
@@ -105,7 +105,7 @@
   {
     "title": "Table Curling",
     "multiCard": false,
-    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall - redo.",
+    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall, redo.",
     "web_description": "Neutral picks a rollable object. Roll together. Farthest without falling wins.",
     "tags": [
       "rules",
@@ -118,7 +118,7 @@
   {
     "title": "Table Cornhole",
     "multiCard": false,
-    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall - redo.",
+    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall, redo.",
     "web_description": "Neutral picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
     "tags": [
       "rules",
@@ -170,7 +170,7 @@
   {
     "title": "Card Flip",
     "multiCard": false,
-    "text": "Each dueler places a playing card face down, partly off the table edge.\\n\\nOn go, flick it upward so it flips face up onto the table.\\n\\nRepeat 3 times. First to finish wins.",
+    "text": "Each dueler places a playing card face down, partly off the table edge.\\n\\nOn 'Go,' flick it upward so it flips face up onto the table.\\n\\nRepeat 3 times. First to finish wins.",
     "web_description": "Flick a card from the table edge. First to land it face-up 3 times wins.",
     "tags": [
       "rules",
@@ -231,7 +231,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -254,7 +254,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -277,7 +277,7 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
@@ -300,7 +300,7 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nCopying other person not allowed. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
     "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
