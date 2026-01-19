@@ -202,10 +202,6 @@ const chaosDuels = [
         description: "Neutral calls directions each beat. Follow and return to center. Ends when one is wrong."
     },
     {
-        title: "Look Away",
-        description: "Neutral looks a direction each beat. Look the opposite and return to center. Ends when one fails."
-    },
-    {
         title: "Coin Spin",
         description: "Both spin a coin. Longest spin wins."
     },
