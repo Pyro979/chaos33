@@ -1517,6 +1517,33 @@ select:focus {
     font-size: 1.1rem !important;
 }
 
+/* Kickstarter CTA Button */
+.kickstarter-cta-button {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.kickstarter-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.kickstarter-cta-button:active {
+    transform: translateY(0);
+}
+
+.kickstarter-cta-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .kickstarter-cta-image {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:hover,
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:focus {
     background-color: #ff9933 !important;
