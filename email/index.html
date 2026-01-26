@@ -6,76 +6,8 @@
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BX2363LX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M8BX2363LX');
-      
-      // Capture and track UTM parameters
-      (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmSource = urlParams.get('utm_source');
-        const utmMedium = urlParams.get('utm_medium');
-        const utmCampaign = urlParams.get('utm_campaign');
-        
-        if (utmSource || utmMedium || utmCampaign) {
-          // Track page view with UTM parameters
-          gtag('event', 'page_view', {
-            'utm_source': utmSource || '(not set)',
-            'utm_medium': utmMedium || '(not set)',
-            'utm_campaign': utmCampaign || '(not set)',
-            'page_location': window.location.href
-          });
-          
-          // Also set as custom dimensions if you have them configured
-          // gtag('config', 'G-M8BX2363LX', {
-          //   'custom_map': {
-          //     'dimension1': 'utm_source',
-          //     'dimension2': 'utm_medium',
-          //     'dimension3': 'utm_campaign'
-          //   },
-          //   'utm_source': utmSource,
-          //   'utm_medium': utmMedium,
-          //   'utm_campaign': utmCampaign
-          // });
-        }
-      })();
-    </script>
-    
-    <script>
-      // Track form submissions
-      function trackEmailSignup() {
-        if (typeof gtag !== "function") return;
-        
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmSource = urlParams.get('utm_source') || '(direct)';
-        const utmMedium = urlParams.get('utm_medium') || '(none)';
-        const utmCampaign = urlParams.get('utm_campaign') || 'email_signup';
-        
-        const form = document.querySelector('.formkit-form');
-        if (form) {
-          const submitButton = form.querySelector('button[data-element="submit"]');
-          if (submitButton) {
-            submitButton.addEventListener('click', function() {
-              gtag('event', 'email_signup', {
-                'event_category': 'engagement',
-                'event_label': 'email_landing_page',
-                'utm_source': utmSource,
-                'utm_medium': utmMedium,
-                'utm_campaign': utmCampaign
-              });
-            });
-          }
-        }
-      }
-      
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', trackEmailSignup);
-      } else {
-        trackEmailSignup();
-      }
-    </script>
+    <!-- Common JavaScript for email landing pages -->
+    <script src="../js/email-landing.js?v=c54b97c"></script>
     
     <title>Join the Chaos List | 33 Seconds of Chaos</title>
     <meta name="description" content="Join the email list for 33 Seconds of Chaos. Get launch updates, feedback requests, and a heads-up when we launch on Kickstarter.">
@@ -98,136 +30,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles.css?v=c54b97c">
     <link rel="stylesheet" href="../kit.css?v=c54b97c">
-    
-    <style>
-        body {
-            background-color: var(--bg);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .email-page {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 1.5rem 1.5rem;
-            min-height: 100vh;
-        }
-        
-        .email-container {
-            max-width: 600px;
-            width: 100%;
-        }
-        
-        .email-logo {
-            display: block;
-            margin: 0 auto 1.25rem;
-            max-width: 120px;
-            height: auto;
-        }
-        
-        .email-header {
-            font-family: var(--font-header);
-            font-size: 2rem;
-            color: var(--accent);
-            margin: 0 0 1rem 0;
-            font-weight: 700;
-            text-align: center;
-        }
-        
-        .email-text {
-            font-size: 1.1rem;
-            color: var(--muted);
-            margin-bottom: 1.5rem;
-            text-align: center;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-        
-        .email-text b {
-            color: var(--text);
-            font-weight: 700;
-        }
-        
-        .signup-form {
-            width: 100%;
-            margin: 0;
-        }
-
-        @media (min-width: 768px) {    
-            .signup-form {
-                padding-top: 0 !important;
-            }
-        }
-
-        /* Form styles are inherited from styles.css */
-        
-        .formkit-form > div {
-            padding-top: 0 !important;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            margin: 1.5rem 0 1rem 0;
-            color: var(--muted);
-            text-align: center;
-            line-height: 1.6;
-        }
-        
-        .hero-description strong {
-            color: var(--text);
-            font-weight: 700;
-        }
-        
-        .learn-more-link {
-            text-align: center;
-            margin-top: 1rem;
-        }
-        
-        .learn-more-link a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.2s ease, text-decoration 0.2s ease;
-        }
-        
-        .learn-more-link a:hover {
-            color: #0d5a8f;
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 480px) {
-            .email-page {
-                padding: 1rem 1rem;
-            }
-            
-            .email-header {
-                font-size: 1.75rem;
-            }
-            
-            .email-text {
-                font-size: 1rem;
-            }
-            
-            .email-logo {
-                max-width: 100px;
-            }
-            
-            .hero-description {
-                font-size: 1rem;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .email-header {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/email-landing.css?v=c54b97c">
 </head>
 <body>
     <div class="email-page">
@@ -237,7 +40,7 @@
             <h1 class="email-header">Get launch updates for<br/>33 Seconds of Chaos</h1>
             
             <p class="email-text">
-                No spam. Just project <b>updates</b>, the occasional request for <b>feedback</b>, and a heads-up when we <b>launch on Kickstarter</b>.
+                No spam. Just project <b>updates</b>, the occasional request for <b>feedback</b>, and a heads-up when we <b><a href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=homepage&utm_medium=link&utm_campaign=kickstarter" target="_blank" rel="noopener noreferrer" style="color: var(--text); text-decoration: underline;">launch on Kickstarter</a></b>. <br/><br/>You also get you access to the Print-n-Play PDFs, so you can try the game now!</p>
             </p>
             
             <div class="signup-form">
