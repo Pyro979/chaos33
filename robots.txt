@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /feedback/
 Disallow: /pnp/
+Disallow: /thank-you/
 

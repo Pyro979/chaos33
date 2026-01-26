@@ -613,6 +613,18 @@ nav {
     color: var(--accent);
 }
 
+.how-to-play-gif-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.how-to-play-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
 /* What's Inside Section */
 .components-grid {
     display: grid;
