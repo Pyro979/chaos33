@@ -34,34 +34,5 @@ gtag('config', 'G-M8BX2363LX');
     }
 })();
 
-// Track form submissions
-function trackEmailSignup() {
-    if (typeof gtag !== "function") return;
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const utmSource = urlParams.get('utm_source') || '(direct)';
-    const utmMedium = urlParams.get('utm_medium') || '(none)';
-    const utmCampaign = urlParams.get('utm_campaign') || 'email_signup';
-    
-    const form = document.querySelector('.formkit-form');
-    if (form) {
-        const submitButton = form.querySelector('button[data-element="submit"]');
-        if (submitButton) {
-            submitButton.addEventListener('click', function() {
-                gtag('event', 'email_signup', {
-                    'event_category': 'engagement',
-                    'event_label': 'email_landing_page',
-                    'utm_source': utmSource,
-                    'utm_medium': utmMedium,
-                    'utm_campaign': utmCampaign
-                });
-            });
-        }
-    }
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', trackEmailSignup);
-} else {
-    trackEmailSignup();
-}
+// Form submit tracking is handled by update-form-button.js / update-form-button-pnp.js
+// which run after the ConvertKit form loads (MutationObserver + retries)

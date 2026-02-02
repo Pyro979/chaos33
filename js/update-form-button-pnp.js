@@ -1,23 +1,39 @@
 /**
  * Updates ConvertKit form submit button text to "Sign up to download Print-n-Play PDFs"
+ * and tracks form submit clicks for analytics.
  * For the pnp-email landing page
  */
 
 (function() {
     'use strict';
-    
+
+    function attachTracking(button) {
+        if (button.dataset.gaBound === 'true') return;
+        button.dataset.gaBound = 'true';
+
+        button.addEventListener('click', function() {
+            if (typeof gtag !== 'function') return;
+            var urlParams = new URLSearchParams(window.location.search);
+            gtag('event', 'email_signup', {
+                event_category: 'engagement',
+                event_label: 'pnp_email_landing_page',
+                utm_source: urlParams.get('utm_source') || '(direct)',
+                utm_medium: urlParams.get('utm_medium') || '(none)',
+                utm_campaign: urlParams.get('utm_campaign') || 'pnp_email_signup'
+            });
+        });
+    }
+
     function updateButtonText() {
-        // Find the submit button with the specific structure
-        const submitButton = document.querySelector('button[data-element="submit"].formkit-submit');
-        
-        if (submitButton) {
-            // Find the span inside the button that contains the text
-            const textSpan = submitButton.querySelector('span');
-            
+        var buttons = document.querySelectorAll('button[data-element="submit"].formkit-submit');
+
+        buttons.forEach(function(button) {
+            var textSpan = button.querySelector('span');
             if (textSpan && textSpan.textContent.trim() === 'Subscribe') {
                 textSpan.textContent = 'Sign up to download Print-n-Play';
             }
-        }
+            attachTracking(button);
+        });
     }
     
     // Try to update immediately if DOM is already loaded

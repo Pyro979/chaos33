@@ -1,23 +1,46 @@
 /**
  * Updates ConvertKit form submit button text to "Join the Chaos List"
+ * and tracks form submit clicks for analytics.
  * Can be included on any page that uses ConvertKit forms
  */
 
 (function() {
     'use strict';
-    
+
+    function attachTracking(button, index) {
+        if (button.dataset.gaBound === 'true') return;
+        button.dataset.gaBound = 'true';
+
+        button.addEventListener('click', function() {
+            if (typeof gtag !== 'function') return;
+
+            var path = window.location.pathname || '';
+            if (path.indexOf('/email') !== -1) {
+                var urlParams = new URLSearchParams(window.location.search);
+                gtag('event', 'email_signup', {
+                    event_category: 'engagement',
+                    event_label: 'email_landing_page',
+                    utm_source: urlParams.get('utm_source') || '(direct)',
+                    utm_medium: urlParams.get('utm_medium') || '(none)',
+                    utm_campaign: urlParams.get('utm_campaign') || 'email_signup'
+                });
+            } else {
+                var location = index === 0 ? 'hero' : 'footer';
+                gtag('event', 'join_list_click', { location: location });
+            }
+        });
+    }
+
     function updateButtonText() {
-        // Find the submit button with the specific structure
-        const submitButton = document.querySelector('button[data-element="submit"].formkit-submit');
-        
-        if (submitButton) {
-            // Find the span inside the button that contains the text
-            const textSpan = submitButton.querySelector('span');
-            
+        var buttons = document.querySelectorAll('button[data-element="submit"].formkit-submit');
+
+        buttons.forEach(function(button, index) {
+            var textSpan = button.querySelector('span');
             if (textSpan && textSpan.textContent.trim() === 'Subscribe') {
                 textSpan.textContent = 'Join the Chaos List';
             }
-        }
+            attachTracking(button, index);
+        });
     }
     
     // Try to update immediately if DOM is already loaded
