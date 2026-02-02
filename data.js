@@ -7,6 +7,10 @@ const chaosPrompts = [
         description: "Give clues in a stiff, robotic voice."
     },
     {
+        title: "While Doing the Robot",
+        description: "Do the robot dance while giving clues."
+    },
+    {
         title: "Deep Serious Voice",
         description: "Use a low, overly serious tone."
     },

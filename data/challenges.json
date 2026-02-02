@@ -20,6 +20,17 @@
     ]
   },
   {
+    "title": "While Doing the Robot",
+    "text": "Do the robot dance while giving clues.",
+    "example": "\"It's... small... yellow...\" *jerky arm movements*",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web"
+    ]
+  },
+  {
     "title": "Deep Serious Voice",
     "text": "Use a low, overly serious tone.",
     "example": "\"This is... a small floating device... critical to all bathtub operations.\"",
