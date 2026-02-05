@@ -92,10 +92,10 @@ The main entry point is:
 
 The app loads data from JSON files in the `/data/` directory at the repository root:
 
-- **Challenges** (`data/challenges.json`): Chaos prompts filtered by `passnplay` tag
-- **Duels** (`data/duels.json`): Duel cards filtered by `passnplay` tag
-- **Words** (`data/words.json`): Word list for normal turns
-- **Duel Categories** (`data/duel_categories.json`): Categories for Alpha Blitz, Theme Blitz, and Scavenge duels
+- **Challenges** (source: `data/chaos33/challenges.json`; app uses `chaos33/data/challenges.json` after build): Chaos prompts filtered by `passnplay` tag
+- **Duels** (source: `data/chaos33/duels.json`): Duel cards filtered by `passnplay` tag
+- **Words** (source: `data/chaos33/words.json`): Word list for normal turns
+- **Duel Categories** (source: `data/chaos33/duel_categories.json`): Categories for Alpha Blitz, Theme Blitz, and Scavenge duels
 
 ### Data Filtering
 
