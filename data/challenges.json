@@ -159,7 +159,7 @@
   {
     "title": "Hands Do the Talking",
     "text": "Each time you say a word, your hands must be doing some deliberate gesture.",
-    "example": "\"It—(gesture)—floats—(gesture)—in—(gesture)—water!\"",
+    "example": "\"It - (gesture) - floats - (gesture) - in - (gesture) - water!\"",
     "tags": [
       "main",
       "passnplay"
@@ -177,7 +177,7 @@
   {
     "title": "Laughing Clues",
     "text": "Give all clues while laughing the entire time.",
-    "example": "\"It—haha—floats—haha—and squeaks!\"",
+    "example": "\"It - haha - floats - haha - and squeaks!\"",
     "tags": [
       "main",
       "passnplay"
@@ -198,7 +198,7 @@
   {
     "title": "Jumping Jacks",
     "text": "Give clues while doing jumping jacks.",
-    "example": "\"It—*jump*—is—*jump*—a—*jump*—floating toy!\"",
+    "example": "\"It - *jump* - is - *jump* - a - *jump* - floating toy!\"",
     "tags": [
       "rules",
       "main",
@@ -210,7 +210,7 @@
   {
     "title": "Macarena Clues",
     "text": "Give clues while doing the Macarena.",
-    "example": "\"This—(pose)—little—(pose)—floater—(pose)—squeaks—(pose).\"",
+    "example": "\"This - (pose) - little - (pose) - floater - (pose) - squeaks - (pose).\"",
     "tags": [
       "main",
       "passnplay"
@@ -250,7 +250,7 @@
   {
     "title": "Meow After Every Word",
     "text": "After every single word, add a \"meow.\"",
-    "example": "\"It—meow—floats—meow—in—meow—water—meow!\"",
+    "example": "\"It - meow - floats - meow - in - meow - water - meow!\"",
     "tags": [
       "main",
       "passnplay"
@@ -294,7 +294,7 @@
   {
     "title": "Favorite Thing Ever",
     "text": "Give clues like this is your absolute favorite thing in the world.",
-    "example": "\"It's the best—bright yellow, it squeaks, it rides the bathwater with me every single night.\"",
+    "example": "\"It's the best - bright yellow, it squeaks, it rides the bathwater with me every single night.\"",
     "tags": [
       "main",
       "passnplay",
@@ -478,7 +478,7 @@
   {
     "title": "Influencer Unboxing",
     "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it.",
-    "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW—listen to that squeak!\"",
+    "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW - listen to that squeak!\"",
     "tags": [
       "main",
       "passnplay"
