@@ -159,18 +159,17 @@ function startDuel() {
     currentDuel = getRandomItem(gameData.duels, lastDuel);
     lastDuel = currentDuel;
     
-    // Get random Duel Cue (Left, Right, or Your Choice)
+    // Duel Cue (single cue now)
     if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-        const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
-        currentDuelTrigger = gameData.duelTriggers[triggerIndex];
+        currentDuelTrigger = gameData.duelTriggers[0];
     } else {
-        currentDuelTrigger = { full_text: 'Duel: Player of your choice', card_text: 'Your Choice' };
+        currentDuelTrigger = { full_text: 'Duel Cue', card_text: 'Duel Cue' };
     }
-    
+
     // Update UI
     const duelTriggerEl = document.getElementById('duel-trigger');
     if (duelTriggerEl && currentDuelTrigger) {
-        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Your Choice';
+        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel Cue';
     }
     document.getElementById('duel-title').textContent = currentDuel.title;
     document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
@@ -309,17 +308,16 @@ function handleSwapConfirm() {
         // Swap duel
         currentDuel = getRandomItem(gameData.duels, currentDuel);
         
-        // Get new random Duel Cue
+        // Duel Cue (single cue now)
         if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-            const triggerIndex = Math.floor(Math.random() * gameData.duelTriggers.length);
-            currentDuelTrigger = gameData.duelTriggers[triggerIndex];
+            currentDuelTrigger = gameData.duelTriggers[0];
         } else {
-            currentDuelTrigger = { full_text: 'Duel: Player of your choice', card_text: 'Your Choice' };
+            currentDuelTrigger = { full_text: 'Duel Cue', card_text: 'Duel Cue' };
         }
-        
+
         const duelTriggerEl = document.getElementById('duel-trigger');
         if (duelTriggerEl && currentDuelTrigger) {
-            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Your Choice';
+            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel Cue';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
