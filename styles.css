@@ -996,6 +996,31 @@ nav {
     min-height: 0;
 }
 
+/* Chaos cue chip above title (outline style, text in cue color) */
+.chaos-cue-chip {
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    background: transparent;
+    border: 1.5px solid currentColor;
+}
+.chaos-cue-chip--voice { border-color: #1976D2; color: #1976D2; }
+.chaos-cue-chip--doing { border-color: #E65100; color: #E65100; }
+.chaos-cue-chip--attitude { border-color: #C2185B; color: #C2185B; }
+.chaos-cue-chip--describing { border-color: #2E7D32; color: #2E7D32; }
+.chaos-cue-chip--using-only { border-color: #512DA8; color: #512DA8; }
+.chaos-cue-chip--format { border-color: #00838F; color: #00838F; }
+.chaos-cue-chip--never-say { border-color: #C62828; color: #C62828; }
+.chaos-cue-chip--as-if { border-color: #00695C; color: #00695C; }
+.chaos-cue-chip--unknown { border-color: #455A64; color: #455A64; }
+
 .card-content h3 {
     font-family: var(--font-body);
     font-size: 1.5rem;

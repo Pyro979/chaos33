@@ -92,6 +92,36 @@ document.addEventListener("DOMContentLoaded", function () {
     return array[Math.floor(Math.random() * array.length)];
   }
 
+  const CUE_TO_SLUG = {
+    'Give clues in this voice': 'voice',
+    'Give clues while doing this': 'doing',
+    'Give clues with this attitude': 'attitude',
+    'Give clues by describing': 'describing',
+    'Give clues using only': 'using-only',
+    'Every clue must follow this format': 'format',
+    'Give clues but never say': 'never-say',
+    'Give clues as if you are': 'as-if'
+  };
+
+  function getCueSlug(cue) {
+    if (!cue || typeof cue !== 'string') return 'unknown';
+    const slug = CUE_TO_SLUG[cue.trim()];
+    return slug || 'unknown';
+  }
+
+  function updateChaosCueChip(prompt) {
+    const chipEl = document.getElementById('chaos-cue-chip');
+    if (!chipEl) return;
+    if (!prompt || !prompt.cue) {
+      chipEl.style.display = 'none';
+      chipEl.textContent = '';
+      return;
+    }
+    chipEl.textContent = prompt.cue + '...';
+    chipEl.className = 'chaos-cue-chip chaos-cue-chip--' + getCueSlug(prompt.cue);
+    chipEl.style.display = '';
+  }
+
   function getNextDuel() {
     const duel = shuffledDuels[duelIndex % shuffledDuels.length];
     duelIndex++;
@@ -197,6 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
           wordLabel.textContent = "Duel Cue";
         }
 
+        // Hide cue chip when showing duel
+        updateChaosCueChip(null);
+
         // Update chaos card with duel
         if (chaosTitle) {
           // Add line break after colon if present
@@ -246,6 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (chaosDescription) {
           chaosDescription.textContent = randomChaos.description;
         }
+        updateChaosCueChip(randomChaos);
 
         // Update word card
         if (wordText) wordText.textContent = randomWord;

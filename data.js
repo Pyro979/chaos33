@@ -3,116 +3,159 @@
 
 const chaosPrompts = [
     {
-        title: "Robot Voice",
-        description: "Give clues in a stiff, robotic voice."
+        title: "Robot",
+        description: "Give clues in a stiff, robotic voice.",
+        cue: "Give clues in this voice"
     },
     {
-        title: "While Doing the Robot",
-        description: "Do the robot dance while giving clues."
+        title: "The Robot Dance",
+        description: "Do the robot dance while giving clues.",
+        cue: "Give clues while doing this"
     },
     {
-        title: "Deep Serious Voice",
-        description: "Use a low, overly serious tone."
+        title: "Deep Serious",
+        description: "Use a low, overly serious tone.",
+        cue: "Give clues in this voice"
     },
     {
-        title: "High-Pitched Voice",
-        description: "Speak in a high, squeaky voice."
+        title: "High-Pitched",
+        description: "Speak in a high, squeaky voice.",
+        cue: "Give clues in this voice"
     },
     {
-        title: "Describe What It's Not",
-        description: "Give clues only by saying what it isn't."
+        title: "What It's Not",
+        description: "Give clues only by saying what it isn't.",
+        cue: "Give clues by describing"
     },
     {
-        title: "Speak Only in Questions",
-        description: "Every clue must be phrased as a question."
+        title: "Senses",
+        description: "Describe using only sight, sound, smell, taste, or touch.",
+        cue: "Give clues using only"
     },
     {
-        title: "Only Analogies",
-        description: "Every clue is \"It's like ___ but ___.\""
+        title: "You",
+        description: "You are the answer. Describe yourself.",
+        cue: "Give clues by describing"
+    },
+    {
+        title: "Adjective + Noun + Verb",
+        description: "Each clue is exactly 3 words: Adjective + Noun + Verb. Example: \"Tiny animal purring.\" / \"Sneaky pet stalking.\"",
+        cue: "Every clue must follow this format"
+    },
+    {
+        title: "Questions Only",
+        description: "Every clue must be phrased as a question?",
+        cue: "Every clue must follow this format"
+    },
+    {
+        title: "Analogies",
+        description: "Every clue is \"It's like ___ but ___.\"",
+        cue: "Every clue must follow this format"
     },
     {
         title: "Adjectives & Nouns Only",
-        description: "Give clues using only adjectives (describing words) and nouns (person, place, thing)."
+        description: "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
+        cue: "Give clues using only"
     },
     {
         title: "Tongue Out",
-        description: "Stick your tongue out and keep it out while giving clues."
+        description: "Stick your tongue out and keep it out while giving clues.",
+        cue: "Give clues while doing this"
     },
     {
         title: "Jumping Jacks",
-        description: "Give clues while doing jumping jacks."
+        description: "Give clues while doing jumping jacks.",
+        cue: "Give clues while doing this"
     },
     {
         title: "Story Time",
-        description: "Start your clues with \"Once upon a time...\" and tell it like a story."
+        description: "Start your clues with \"Once upon a time...\" and tell it like a story.",
+        cue: "Every clue must follow this format"
     },
     {
-        title: "Movie Announcer Voice",
-        description: "Use an over-the-top movie trailer voice. Start with: \"In a world...\""
+        title: "Movie Announcer",
+        description: "Use an over-the-top movie trailer voice. Start with: \"In a world...\"",
+        cue: "Give clues in this voice"
     },
     {
         title: "Excited Kindergartener",
-        description: "Give clues like an overexcited kindergartener telling their parents about this thing."
+        description: "Give clues like an overexcited kindergartener telling their parents about this thing. Start with: \"Look what I found...\"",
+        cue: "Give clues as if you are"
     },
     {
-        title: "Cutest Puppy Voice",
-        description: "Give clues like you're talking to the cutest puppy ever and it understands every word."
+        title: "Talking to the Cutest Puppy",
+        description: "Give clues like you're talking to the cutest puppy ever and it understands every word.",
+        cue: "Give clues as if you are"
     },
     {
         title: "Infomercial Host",
-        description: "Give clues like a late-night infomercial host who really needs this to sell."
+        description: "Give clues like a late-night infomercial host who really needs this to sell. Start with: \"But wait, there's more...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Favorite Thing Ever",
-        description: "Give clues like this is your absolute favorite thing in the world."
+        description: "Give clues like this is your absolute favorite thing in the world.",
+        cue: "Give clues with this attitude"
     },
     {
         title: "Villain Monologue",
-        description: "Give clues like a villain explaining their plan to the hero."
+        description: "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Clueless Tour Guide",
-        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it."
+        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. Start with: \"And on your left you'll see... uh...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Careful Mobster",
-        description: "Give clues like a mobster trying not to name the thing directly because the cops are listening."
+        description: "Give clues like a mobster trying not to name the thing directly because the cops are listening. Start with: \"Look, hypothetically speaking...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Guided Meditation",
-        description: "Give clues in a calm, soothing guided-meditation voice."
+        description: "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Nature Documentary",
-        description: "Narrate clues like a nature documentary observing a rare creature in the wild."
+        description: "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "5-Star Review",
-        description: "Give clues like you’re leaving an over-the-top glowing 5-star review."
+        description: "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "1-Star Review",
-        description: "Give clues like you’re leaving a brutal 1-star complaint review."
+        description: "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Bad Salesperson",
-        description: "Give clues like you’re trying to sell it, but you’re terrible at it."
+        description: "Give clues like you're trying to sell it, but you're terrible at it. Start with: \"So, uh... this model right here...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Cartoon or Video Game Character",
-        description: "Pick any character, then give clues in their voice and attitude. Stay in character."
+        description: "Pick any character, then give clues in their voice and attitude. Stay in character.",
+        cue: "Give clues as if you are"
     },
     {
         title: "Your Favorite Impression",
-        description: "Do your go-to impression and keep it going while you give clues."
+        description: "Do your go-to impression and keep it going while you give clues.",
+        cue: "Give clues as if you are"
     },
     {
         title: "Country Lawyer",
-        description: "Give clues like a small-town lawyer in a low-budget courtroom drama."
+        description: "Give clues like a small-town lawyer in a low-budget courtroom drama. Start with: \"Ladies and gentlemen of the jury...\"",
+        cue: "Give clues as if you are"
     },
     {
         title: "Game Show Host",
-        description: "Talk like you're announcing what the contestant could win. Big energy."
+        description: "Talk like you're announcing what the contestant could win. Big energy. Start with: \"Behind Door Number One, it's...\"",
+        cue: "Give clues as if you are"
     }
 ];
 
@@ -404,9 +447,7 @@ const chaosDuels = [
 ];
 
 const duelTriggers = [
-    "Player to your left",
-    "Player to your right",
-    "Player of your choice"
+    "Duel Cue"
 ];
 
 const wordList = [

@@ -60,7 +60,8 @@ async function loadGameData() {
         // Data is already filtered for passnplay tag by generate.js, just map to format
         gameData.chaosPrompts = challengesData.map(item => ({
             title: item.title,
-            description: item.text
+            description: item.text,
+            cue: item.cue
         }));
 
         // Data is already filtered for passnplay tag by generate.js, just map to format

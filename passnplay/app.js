@@ -24,6 +24,36 @@ let currentDuelTrigger = null; // Object with full_text and card_text
 let duelCategoryRevealed = false;
 let duelLetterRevealed = false;
 
+const CUE_TO_SLUG = {
+  'Give clues in this voice': 'voice',
+  'Give clues while doing this': 'doing',
+  'Give clues with this attitude': 'attitude',
+  'Give clues by describing': 'describing',
+  'Give clues using only': 'using-only',
+  'Every clue must follow this format': 'format',
+  'Give clues but never say': 'never-say',
+  'Give clues as if you are': 'as-if'
+};
+
+function getCueSlug(cue) {
+  if (!cue || typeof cue !== 'string') return 'unknown';
+  const slug = CUE_TO_SLUG[cue.trim()];
+  return slug || 'unknown';
+}
+
+function updateChaosCueChip(prompt) {
+  const chipEl = document.getElementById('chaos-cue-chip');
+  if (!chipEl) return;
+  if (!prompt || !prompt.cue) {
+    chipEl.style.display = 'none';
+    chipEl.textContent = '';
+    return;
+  }
+  chipEl.textContent = prompt.cue + '...';
+  chipEl.className = 'chaos-cue-chip chaos-cue-chip--' + getCueSlug(prompt.cue);
+  chipEl.style.display = '';
+}
+
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     // Load game data
@@ -147,6 +177,7 @@ function startNormalTurn() {
     document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
     document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
     document.getElementById('word-text').textContent = currentWord;
+    updateChaosCueChip(currentChaosPrompt);
     
     // Reset timer - this will show the clock emoji
     resetTimer();
@@ -301,6 +332,7 @@ function handleSwapConfirm() {
         document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
         document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
         document.getElementById('word-text').textContent = currentWord;
+        updateChaosCueChip(currentChaosPrompt);
         
         // Reset timer
         resetTimer();

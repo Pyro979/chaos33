@@ -1,48 +1,64 @@
 [
   {
     "title": "Whisper",
+    "cue": "Give clues in this voice",
     "text": "Give all clues in a whisper.",
     "example": "\"It squeaks... when you squeeze it... in the bath...\"",
     "tags": [
       "passnplay",
-      "main"
+      "main",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "Robot Voice",
+    "title": "Robot",
+    "cue": "Give clues in this voice",
     "text": "Give clues in a stiff, robotic voice.",
     "example": "\"It. Is. Small. Yellow. Object.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
-    "title": "While Doing the Robot",
+    "title": "The Robot Dance",
+    "cue": "Give clues while doing this",
     "text": "Do the robot dance while giving clues.",
     "example": "\"It's... small... yellow...\" *jerky arm movements*",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "physical",
+      "improv",
+      "prototype"
     ]
   },
   {
-    "title": "Deep Serious Voice",
+    "title": "Deep Serious",
+    "cue": "Give clues in this voice",
     "text": "Use a low, overly serious tone.",
     "example": "\"This is... a small floating device... critical to all bathtub operations.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "High-Pitched Voice",
+    "title": "High-Pitched",
+    "cue": "Give clues in this voice",
     "text": "Speak in a high, squeaky voice.",
     "example": "\"It's tiny! And it squeaks!\"",
     "tags": [
@@ -50,30 +66,40 @@
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "Angry Clues",
+    "title": "Angry",
+    "cue": "Give clues with this attitude",
     "text": "Sound angry or irritated by the object the whole time.",
     "example": "\"Why does this silly thing squeak so much?!\"",
     "tags": [
       "passnplay",
-      "main"
+      "main",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "Describe Everything Around It",
+    "title": "Everything Around It",
+    "cue": "Give clues by describing",
     "text": "Describe the things, places, or context near the object instead of describing the object itself.",
     "example": "\"It sits near soap. Near bubbles. Near the faucet.\"",
     "tags": [
       "passnplay",
       "rules",
-      "main"
+      "main",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
-    "title": "Describe What It's Not",
+    "title": "What It's Not",
+    "cue": "Give clues by describing",
     "text": "Give clues only by saying what it isn't.",
     "example": "\"It's not soap. It's not a boat. It doesn't sink.\"",
     "tags": [
@@ -81,53 +107,117 @@
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
-    "title": "Three-Word Clues",
+    "title": "Senses",
+    "cue": "Give clues using only",
+    "text": "Describe using only sight, sound, smell, taste, or touch.",
+    "example": "\"Yellow. Squeaks when squeezed. Rubber smell.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "mental"
+    ]
+  },
+  {
+    "title": "You",
+    "cue": "Give clues by describing",
+    "text": "You are the answer. Describe yourself.",
+    "example": "\"I float in the bath. I'm small and yellow. I squeak.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Adjective + Noun + Verb",
+    "cue": "Every clue must follow this format",
+    "text": "Each clue is exactly 3 words: Adjective + Noun + Verb. Example: \"Tiny animal purring.\" / \"Sneaky pet stalking.\"",
+    "example": "For \"Cat\": \"Tiny animal purring.\" / \"Sneaky pet stalking.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Three Words",
+    "cue": "Every clue must follow this format",
     "text": "Each clue must be exactly three words.",
     "example": "\"Small floating toy.\" / \"Bright yellow squeaker.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
-    "title": "Speak Only in Questions",
-    "text": "Every clue must be phrased as a question.",
+    "title": "Questions Only",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must be phrased as a question?",
     "example": "\"Does it float in your bathtub?\"",
     "tags": [
       "rules",
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
-    "title": "One-Syllable Words Only",
+    "title": "One-Syllable Words",
+    "cue": "Give clues using only",
     "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
     "example": "\"Small. Round. Bath friend.\"",
     "tags": [
       "rules",
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
-    "title": "Only Analogies",
+    "title": "Analogies",
+    "cue": "Every clue must follow this format",
     "text": "Every clue is \"It's like ___ but ___.\"",
     "example": "\"It's like a bath toy but squishier.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "mental"
     ]
   },
   {
     "title": "Adjectives & Nouns Only",
+    "cue": "Give clues using only",
     "text": "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
     "example": "\"Yellow toy. Floaty duck. Squishy bath friend.\"",
     "tags": [
@@ -135,56 +225,52 @@
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
     "title": "Verbs & Nouns Only",
+    "cue": "Give clues using only",
     "text": "Give clues using only verbs (action words) and nouns (person, place, thing).",
     "example": "\"Squeeze toy. Hear squeak. Watch float. Bath water.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental",
+      "prototype"
     ]
   },
   {
-    "title": "Only Comparisons",
-    "text": "Every clue must compare it to something else.",
+    "title": "Comparisons",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must compare it to something else. Example: \"It's like a spoon, but it has teeth.\"",
     "example": "\"It's smaller than most bath toys, and it floats better than soap.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
-    "title": "Hands Do the Talking",
-    "text": "Each time you say a word, your hands must be doing some deliberate gesture.",
-    "example": "\"It - (gesture) - floats - (gesture) - in - (gesture) - water!\"",
-    "tags": [
-      "main",
-      "passnplay"
-    ]
-  },
-  {
-    "title": "Two-Piece Clues",
+    "title": "Two Pieces",
+    "cue": "Every clue must follow this format",
     "text": "Every clue must come in two parts with a brief pause.",
     "example": "\"It squeaks / then it floats.\"",
     "tags": [
       "main",
-      "passnplay"
-    ]
-  },
-  {
-    "title": "Laughing Clues",
-    "text": "Give all clues while laughing the entire time.",
-    "example": "\"It - haha - floats - haha - and squeaks!\"",
-    "tags": [
-      "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
     "title": "Tongue Out",
+    "cue": "Give clues while doing this",
     "text": "Stick your tongue out and keep it out while giving clues.",
     "example": "\"Iff... a... yeh-woh... bahf... toy...\"",
     "tags": [
@@ -192,11 +278,15 @@
       "rules",
       "main",
       "passnplay",
-      "printnplay"
+      "printnplay",
+      "drivethru",
+      "physical",
+      "prototype"
     ]
   },
   {
     "title": "Jumping Jacks",
+    "cue": "Give clues while doing this",
     "text": "Give clues while doing jumping jacks.",
     "example": "\"It - *jump* - is - *jump* - a - *jump* - floating toy!\"",
     "tags": [
@@ -204,337 +294,480 @@
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "physical",
+      "prototype"
     ]
   },
   {
-    "title": "Macarena Clues",
+    "title": "Macarena",
+    "cue": "Give clues while doing this",
     "text": "Give clues while doing the Macarena.",
     "example": "\"This - (pose) - little - (pose) - floater - (pose) - squeaks - (pose).\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "physical",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Slow-Mo Dance",
+    "cue": "Give clues while doing this",
+    "text": "Pick any simple dance move and do it in slow motion while you clue.",
+    "example": "\"It - (slow move) - floats - (slow move) - in - water...\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "physical",
+      "prototype"
     ]
   },
   {
     "title": "Story Time",
+    "cue": "Every clue must follow this format",
     "text": "Start your clues with \"Once upon a time...\" and tell it like a story.",
     "example": "\"Once upon a time... a tiny yellow toy floated proudly in the tub.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
-    "title": "Movie Announcer Voice",
+    "title": "Movie Announcer",
+    "cue": "Give clues in this voice",
     "text": "Use an over-the-top movie trailer voice. Start with: \"In a world...\"",
     "example": "\"In a world... where one squeaky toy rules the water...\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
-    "title": "Singing Clues",
+    "title": "Singing",
+    "cue": "Give clues while doing this",
     "text": "Sing all your clues. Pick any genre. It doesn't have to rhyme.",
     "example": "\"This little squeaker floooats alooong...\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Meow After Every Word",
+    "cue": "Every clue must follow this format",
     "text": "After every single word, add a \"meow.\"",
     "example": "\"It - meow - floats - meow - in - meow - water - meow!\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Excited Kindergartener",
-    "text": "Give clues like an overexcited kindergartener telling their parents about this thing.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like an overexcited kindergartener telling their parents about this thing. Start with: \"Look what I found...\"",
     "example": "\"And THEN it went in the bath and it was yellow and it squeaked and it FLOATED ON THE WATER and it was SO COOL!\"",
     "tags": [
       "web",
       "rules",
       "main",
       "passnplay",
-      "printnplay"
+      "printnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "Cutest Puppy Voice",
+    "title": "Talking to the Cutest Puppy",
+    "cue": "Give clues as if you are",
     "text": "Give clues like you're talking to the cutest puppy ever and it understands every word.",
     "example": "\"Who's a little floaty squeaky friend that sits in the bathtub, yes you are, yes you are!\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Infomercial Host",
-    "text": "Give clues like a late-night infomercial host who really needs this to sell.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like a late-night infomercial host who really needs this to sell. Start with: \"But wait, there's more...\"",
     "example": "\"Are YOU tired of boring baths? Try this amazing tiny yellow squeaker that floats on water!\"",
     "tags": [
       "web",
       "rules",
       "main",
       "passnplay",
-      "printnplay"
+      "printnplay",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Favorite Thing Ever",
+    "cue": "Give clues with this attitude",
     "text": "Give clues like this is your absolute favorite thing in the world.",
     "example": "\"It's the best - bright yellow, it squeaks, it rides the bathwater with me every single night.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Totally Unsure",
+    "cue": "Give clues with this attitude",
     "text": "Give clues like you're very unsure, using words like maybe, probably, kinda, and sort of.",
     "example": "\"It maybe kinda lives in the tub, probably floats on the water, and sort of squeaks when you squeeze it.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Villain Monologue",
-    "text": "Give clues like a villain explaining their plan to the hero.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
     "example": "\"First, I put this harmless yellow thing in your tub. Then, every squeak reminds you I was here.\"",
     "tags": [
       "web",
       "rules",
       "main",
       "passnplay",
-      "printnplay"
+      "printnplay",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Clueless Tour Guide",
-    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. Start with: \"And on your left you'll see... uh...\"",
     "example": "\"And here we see a rare yellow bath relic which, as you can tell, bravely floats beside the humble soap.\"",
     "tags": [
       "web",
       "rules",
       "main",
       "passnplay",
-      "printnplay"
+      "printnplay",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
-    "title": "Time Traveler from the Past",
-    "text": "Give clues like you're a time traveler from the past seeing this for the first time.",
+    "title": "Time Traveler: Past",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're a time traveler from the past seeing this for the first time. Start with: \"What manner of witchcraft is this?\"",
     "example": "\"In my village, no one owned a tiny yellow creature that rides on water and cries when you squeeze it!\"",
     "tags": [
       "rules",
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
-    "title": "Time Traveler from the Future",
-    "text": "Give clues like you're a time traveler from the future who knows this will destroy (or save) everything.",
-    "example": "\"It begins as a harmless yellow toy that floats in the tub… but in my timeline, that squeak is the first warning.\"",
+    "title": "Time Traveler: Future",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're a time traveler from the future who knows this will destroy (or save) everything. Start with: \"In my timeline, it's always...\"",
+    "example": "\"It begins as a harmless yellow toy that floats in the tub... but in my timeline, that squeak is the first warning.\"",
     "tags": [
       "rules",
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Forbidden Secret",
+    "cue": "Give clues as if you are",
     "text": "Give clues like it's a huge secret you're absolutely not supposed to share.",
     "example": "\"If anyone finds out I keep a tiny yellow squeaker hidden by the faucet, we're both in trouble.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Spy Instructions",
-    "text": "Give clues like you're in a spy movie, passing secret instructions in public.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're in a spy movie, passing secret instructions in public. Start with: \"Mission update: the target is...\"",
     "example": "\"At 1900 hours, place the small yellow floater in the tub. If it squeaks twice, you know it's the right one.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Careful Mobster",
-    "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening. Start with: \"Look, hypothetically speaking...\"",
     "example": "\"Look, I ain't sayin' nothin'. There's just this little yellow thing that hangs in the tub and makes noise, capisce?\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Checklist Inspection",
+    "cue": "Every clue must follow this format",
+    "text": "Clue like you're inspecting it. Say \"___, check\" for every clue. Use parts, materials, or features.",
+    "example": "\"Yellow, check. Rubber, check. Floats, check.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
     "title": "It's Like, But Not That",
-    "text": "Every clue must use a simile in the format \"It's like … but not that.\"",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must use a simile in the format \"It's like ... but not that.\"",
     "example": "\"It's like a tiny boat, but not that. It's like a squeaky horn, but not that. It's like a yellow lemon, but not that.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
     "title": "Guided Meditation",
-    "text": "Give clues in a calm, soothing guided-meditation voice.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
     "example": "\"Breathe in... and notice the small object floating peacefully in warm water...\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Nature Documentary",
-    "text": "Narrate clues like a nature documentary observing a rare creature in the wild.",
+    "cue": "Give clues as if you are",
+    "text": "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
     "example": "\"Here we observe it in its natural habitat... drifting silently near the bubbles...\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "5-Star Review",
-    "text": "Give clues like you’re leaving an over-the-top glowing 5-star review.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
     "example": "\"Absolutely life-changing. The squeak is immaculate. Would bathe again.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "1-Star Review",
-    "text": "Give clues like you’re leaving a brutal 1-star complaint review.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
     "example": "\"Terrible. Too squeaky. Floats like it owns the place. Do not recommend.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Safety Warnings",
+    "cue": "Every clue must follow this format",
     "text": "Every clue must sound like a warning label or safety instruction.",
     "example": "\"Warning: may cause loud squeaking. Keep away from toddlers and dramatic splashes.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Trade-Offs Only",
-    "text": "Every clue must be a trade-off in this format: “Great for ___, terrible for ___.”",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must be a trade-off in this format: \"Great for ___, terrible for ___.\" Example: \"Great for protecting your head, terrible for your hair.\"",
     "example": "\"Great for bath time, terrible for silent environments.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
     "title": "Sarcastic",
-    "text": "Give every clue dripping with sarcasm, like this object personally inconvenienced you.",
+    "cue": "Give clues with this attitude",
+    "text": "Give every clue dripping with sarcasm, like this object personally inconvenienced you. Start with: \"Oh perfect. Exactly what I always wanted.\"",
     "example": "\"Oh yeah, it's SO subtle. Just the loudest squeak on earth.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   },
   {
     "title": "Bad Salesperson",
-    "text": "Give clues like you’re trying to sell it, but you’re terrible at it.",
-    "example": "\"Uh... it’s... yellow? It floats. I don't know, just buy it.\"",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're trying to sell it, but you're terrible at it. Start with: \"So, uh... this model right here...\"",
+    "example": "\"Uh... it's... yellow? It floats. I don't know, just buy it.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Influencer Unboxing",
-    "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it. Start with: \"Alright guys, we've got a new one today...\"",
     "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW - listen to that squeak!\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Cartoon or Video Game Character",
+    "cue": "Give clues as if you are",
     "text": "Pick any character, then give clues in their voice and attitude. Stay in character.",
     "example": "\"Gee, I wonder what this yellow thing could be! It's a mystery, gang!\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Your Favorite Impression",
+    "cue": "Give clues as if you are",
     "text": "Do your go-to impression and keep it going while you give clues.",
     "example": "\"Well, well, well... what do we have here? A tiny yellow squeaker, I see!\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Country Lawyer",
-    "text": "Give clues like a small-town lawyer in a low-budget courtroom drama.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like a small-town lawyer in a low-budget courtroom drama. Start with: \"Ladies and gentlemen of the jury...\"",
     "example": "\"Ladies and gentlemen of the jury, I submit to you that this object is small, yellow, and makes a distinctive squeaking sound when compressed.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Game Show Host",
-    "text": "Talk like you're announcing what the contestant could win. Big energy.",
+    "cue": "Give clues as if you are",
+    "text": "Talk like you're announcing what the contestant could win. Big energy. Start with: \"Behind Door Number One, it's...\"",
     "example": "\"What do we have for them, Johnny? It's SMALL! It's YELLOW! And it SQUEAKS when you squeeze it!\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
-      "web"
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
     ]
   },
   {
     "title": "Reality Show Judge",
-    "text": "Give clues like you're judging a contestant's submission. Confident, dramatic, and direct.",
+    "cue": "Give clues as if you are",
+    "text": "Give clues like you're judging a contestant's submission. Confident, dramatic, and direct. Start with: \"Right away, I'm noticing...\"",
     "example": "\"I'm sorry, but this is just not working for me. It's small, it's yellow, and honestly? It's giving me nothing.\"",
     "tags": [
       "main",
-      "passnplay"
+      "passnplay",
+      "drivethru",
+      "improv"
     ]
   }
 ]
