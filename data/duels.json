@@ -160,10 +160,10 @@
     ]
   },
   {
-    "title": "Tap Clap Cap",
+    "title": "Drum Chicken Hat",
     "multiCard": false,
-    "text": "Neutral calls TAP, CLAP, or CAP in any order and at any pace.\\n\\nTAP: tap the table.\\nCLAP: clap once.\\nCAP: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
-    "web_description": "Neutral calls TAP/CLAP/CAP. Do the matching move. First mistake loses.",
+    "text": "Neutral calls DRUM, CHICKEN, or HAT in any order and at any pace.\\n\\nDRUM: two quick table taps.\\nCHICKEN: flap elbows twice (arms tucked).\\nHAT:  touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "web_description": "Neutral calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses.",
     "tags": [
       "rules",
       "main",

@@ -265,8 +265,8 @@ const chaosDuels = [
         description: "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins."
     },
     {
-        title: "Tap Clap Cap",
-        description: "Neutral calls TAP/CLAP/CAP. Do the matching move. First mistake loses."
+        title: "Drum Chicken Hat",
+        description: "Neutral calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses."
     },
     {
         title: "Monster Mash",
