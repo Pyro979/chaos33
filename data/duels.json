@@ -87,7 +87,7 @@
   {
     "title": "Direction Chain",
     "multiCard": false,
-    "text": "Duelers start facing straight ahead. Neutral calls out LEFT, RIGHT, UP, or DOWN direction per beat (about once per second). Duelers must follow direction, returning to center afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
+    "text": "Duelers start facing straight ahead. Neutral calls out **LEFT**, **RIGHT**, **UP**, or **DOWN** direction per beat (about once per second). Duelers must follow direction, returning to center afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
     "web_description": "Neutral calls directions each beat. Follow and return to center. Ends when one is wrong.",
     "tags": [
       "rules",
@@ -162,7 +162,7 @@
   {
     "title": "Drum Chicken Hat",
     "multiCard": false,
-    "text": "Neutral calls DRUM, CHICKEN, or HAT in any order and at any pace.\\n\\nDRUM: two quick table taps.\\nCHICKEN: flap elbows twice (arms tucked).\\nHAT:  touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "text": "Neutral calls **DRUM**, **CHICKEN**, or **HAT** in any order and at any pace.\\n\\n**DRUM**: two quick table taps.\\n**CHICKEN**: flap elbows twice (arms tucked).\\n**HAT**: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
     "web_description": "Neutral calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses.",
     "tags": [
       "rules",
@@ -177,7 +177,7 @@
   {
     "title": "Monster Mash",
     "multiCard": false,
-    "text": "Neutral calls a monster in any order and at any pace.\\n\\nVAMPIRE: cross your arms on your chest.\\nFRANKENSTEIN: hold your arms straight out.\\nWEREWOLF: hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "text": "Neutral calls a monster in any order and at any pace.\\n\\n**VAMPIRE**: cross your arms on your chest.\\n**FRANKENSTEIN**: hold your arms straight out.\\n**WEREWOLF**: hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
     "web_description": "Neutral calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses.",
     "tags": [
       "rules",
