@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /feedback/
 Disallow: /pnp/
+Disallow: /convention/
 Disallow: /thank-you/
 

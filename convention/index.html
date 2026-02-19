@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BX2363LX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M8BX2363LX');
+      
+      // Track thank you page view and conversion
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source') || 'deck';
+        const utmMedium = urlParams.get('utm_medium') || '(none)';
+        const utmCampaign = urlParams.get('utm_campaign') || 'deck_download';
+        
+        // Track page view with UTM parameters
+        gtag('event', 'page_view', {
+          'utm_source': utmSource,
+          'utm_medium': utmMedium,
+          'utm_campaign': utmCampaign,
+          'page_location': window.location.href
+        });
+        
+        // Track conversion event
+        gtag('event', 'conversion', {
+          'event_category': 'email_signup',
+          'event_label': 'thank_you_page',
+          'value': 1,
+          'utm_source': utmSource,
+          'utm_medium': utmMedium,
+          'utm_campaign': utmCampaign
+        });
+      })();
+    </script>
+    <script>
+      window.goatcounter = {
+        no_onload: ('doNotTrack' in navigator && navigator.doNotTrack === '1'),
+      };
+    </script>
+    <script data-goatcounter="https://mve.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+    <script src="https://js.sentry-cdn.com/fc5b30fc8071de2056c08d37cd6491f0.min.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vb4uryqwiw");
+    </script>
+    
+    <title>Thank You! | 33 Seconds of Chaos</title>
+    <meta name="description" content="Thank you for signing up! You'll be redirected to the Print & Play download shortly.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles.css?v=c54b97c">
+    
+    <style>
+        body {
+            background-color: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .thank-you-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+        }
+        
+        .thank-you-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .thank-you-logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .thank-you-header {
+            font-family: var(--font-header);
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+        
+        .thank-you-message {
+            font-size: 1.2rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .redirect-message {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .redirect-countdown {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .manual-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        
+        .manual-link:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow-hover);
+            text-decoration: none;
+        }
+        
+        .manual-link:active {
+            transform: translateY(0);
+        }
+        
+        .fallback-text {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        
+        @media (max-width: 480px) {
+            .thank-you-page {
+                padding: 1.5rem 1rem;
+            }
+            
+            .thank-you-header {
+                font-size: 2rem;
+            }
+            
+            .thank-you-message {
+                font-size: 1.1rem;
+            }
+            
+            .redirect-message {
+                font-size: 0.95rem;
+            }
+            
+            .thank-you-logo {
+                max-width: 120px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .thank-you-header {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-page">
+        <div class="thank-you-container">
+            <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="thank-you-logo" width="150" height="75" loading="eager">
+            
+            <h1 class="thank-you-header">Thank You!</h1>
+            
+            <p class="thank-you-message">
+                You're all set! We're redirecting you to your <strong>Print & Play download</strong> now.
+            </p>
+            
+            <div class="redirect-message">
+                <p class="redirect-countdown" id="countdown">Redirecting in <span id="countdown-number">5</span> seconds...</p>
+            </div>
+            
+            <a href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=deck&utm_medium=link&utm_campaign=deck_download" class="manual-link" id="redirect-link">
+                Go to Print & Play Download
+            </a>
+            
+            <p class="fallback-text">
+                If you're not redirected automatically, click the button above.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Redirect URL
+        const redirectUrl = 'https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=deck&utm_medium=redirect&utm_campaign=deck_download';
+        
+        // Countdown timer (5 seconds for proper GA tracking)
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown-number');
+        const countdownContainer = document.getElementById('countdown');
+        
+        // Update countdown display
+        function updateCountdown() {
+            if (countdown > 0) {
+                countdownElement.textContent = countdown;
+                countdown--;
+            } else {
+                countdownContainer.textContent = 'Redirecting now...';
+                // Track redirect event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'redirect', {
+                        'event_category': 'thank_you_page',
+                        'event_label': 'auto_redirect',
+                        'value': 1
+                    });
+                }
+                // Perform redirect
+                window.location.href = redirectUrl;
+            }
+        }
+        
+        // Start countdown
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Track manual link click
+        const redirectLink = document.getElementById('redirect-link');
+        redirectLink.addEventListener('click', function(e) {
+            // Clear the countdown interval
+            clearInterval(countdownInterval);
+            
+            // Track manual click
+            if (typeof gtag === 'function') {
+                gtag('event', 'redirect', {
+                    'event_category': 'thank_you_page',
+                    'event_label': 'manual_click',
+                    'value': 1
+                });
+            }
+        });
+        
+        // Fallback: redirect after 6 seconds even if countdown fails
+        setTimeout(function() {
+            if (window.location.href.indexOf('convention') !== -1) {
+                window.location.href = redirectUrl;
+            }
+        }, 6000);
+    </script>
+</body>
+</html>
