@@ -100,7 +100,7 @@ const chaosPrompts = [
     {
         title: "Villain Monologue",
         description: "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if delivering a"
     },
     {
         title: "Clueless Tour Guide",
@@ -115,22 +115,22 @@ const chaosPrompts = [
     {
         title: "Guided Meditation",
         description: "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if leading a"
     },
     {
         title: "Nature Documentary",
         description: "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if narrating a"
     },
     {
         title: "5-Star Review",
         description: "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if giving a"
     },
     {
         title: "1-Star Review",
         description: "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if giving a"
     },
     {
         title: "Bad Salesperson",
@@ -145,7 +145,7 @@ const chaosPrompts = [
     {
         title: "Your Favorite Impression",
         description: "Do your go-to impression and keep it going while you give clues.",
-        cue: "Give clues as if you are"
+        cue: "Give clues as if doing"
     },
     {
         title: "Country Lawyer",
