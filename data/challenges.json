@@ -455,7 +455,7 @@
   },
   {
     "title": "Villain Monologue",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if delivering a",
     "text": "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
     "example": "\"First, I put this harmless yellow thing in your tub. Then, every squeak reminds you I was here.\"",
     "tags": [
@@ -524,7 +524,7 @@
     ]
   },
   {
-    "title": "Spy Instructions",
+    "title": "Spy",
     "cue": "Give clues as if you are",
     "text": "Give clues like you're in a spy movie, passing secret instructions in public. Start with: \"Mission update: the target is...\"",
     "example": "\"At 1900 hours, place the small yellow floater in the tub. If it squeaks twice, you know it's the right one.\"",
@@ -576,7 +576,7 @@
   },
   {
     "title": "Guided Meditation",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if leading a",
     "text": "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
     "example": "\"Breathe in... and notice the small object floating peacefully in warm water...\"",
     "tags": [
@@ -590,7 +590,7 @@
   },
   {
     "title": "Nature Documentary",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if narrating a",
     "text": "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
     "example": "\"Here we observe it in its natural habitat... drifting silently near the bubbles...\"",
     "tags": [
@@ -605,7 +605,7 @@
   },
   {
     "title": "5-Star Review",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if giving a",
     "text": "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
     "example": "\"Absolutely life-changing. The squeak is immaculate. Would bathe again.\"",
     "tags": [
@@ -620,7 +620,7 @@
   },
   {
     "title": "1-Star Review",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if giving a",
     "text": "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
     "example": "\"Terrible. Too squeaky. Floats like it owns the place. Do not recommend.\"",
     "tags": [
@@ -687,7 +687,7 @@
   },
   {
     "title": "Influencer Unboxing",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if doing",
     "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it. Start with: \"Alright guys, we've got a new one today...\"",
     "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW - listen to that squeak!\"",
     "tags": [
@@ -715,7 +715,7 @@
   },
   {
     "title": "Your Favorite Impression",
-    "cue": "Give clues as if you are",
+    "cue": "Give clues as if doing",
     "text": "Do your go-to impression and keep it going while you give clues.",
     "example": "\"Well, well, well... what do we have here? A tiny yellow squeaker, I see!\"",
     "tags": [

@@ -100,7 +100,13 @@ document.addEventListener("DOMContentLoaded", function () {
     'Give clues using only': 'using-only',
     'Every clue must follow this format': 'format',
     'Give clues but never say': 'never-say',
-    'Give clues as if you are': 'as-if'
+    'Give clues as if you are': 'as-if',
+    'Give clues as if sharing a': 'as-if',
+    'Give clues as if leading a': 'as-if',
+    'Give clues as if narrating a': 'as-if',
+    'Give clues as if giving a': 'as-if',
+    'Give clues as if doing': 'as-if',
+    'Give clues as if delivering a': 'as-if'
   };
 
   function getCueSlug(cue) {
