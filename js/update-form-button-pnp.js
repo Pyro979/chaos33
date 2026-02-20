@@ -1,11 +1,13 @@
 /**
- * Updates ConvertKit form submit button text to "Sign up to download Print-n-Play PDFs"
- * and tracks form submit clicks for analytics.
- * For the pnp-email landing page
+ * Updates ConvertKit form submit button text (per-page CTA) and tracks form submit clicks for analytics.
+ * Used by pnp-email and convention landing pages.
  */
 
 (function() {
     'use strict';
+
+    var isConvention = typeof window !== 'undefined' && window.location.pathname.indexOf('/convention') !== -1;
+    var buttonLabel = isConvention ? 'Submit Name & Sign Up' : 'Sign up to download Print-n-Play';
 
     function attachTracking(button) {
         if (button.dataset.gaBound === 'true') return;
@@ -16,10 +18,10 @@
             var urlParams = new URLSearchParams(window.location.search);
             gtag('event', 'email_signup', {
                 event_category: 'engagement',
-                event_label: 'pnp_email_landing_page',
+                event_label: isConvention ? 'convention_landing_page' : 'pnp_email_landing_page',
                 utm_source: urlParams.get('utm_source') || '(direct)',
                 utm_medium: urlParams.get('utm_medium') || '(none)',
-                utm_campaign: urlParams.get('utm_campaign') || 'pnp_email_signup'
+                utm_campaign: urlParams.get('utm_campaign') || (isConvention ? 'convention_signup' : 'pnp_email_signup')
             });
         });
     }
@@ -30,7 +32,7 @@
         buttons.forEach(function(button) {
             var textSpan = button.querySelector('span');
             if (textSpan && textSpan.textContent.trim() === 'Subscribe') {
-                textSpan.textContent = 'Sign up to download Print-n-Play';
+                textSpan.textContent = buttonLabel;
             }
             attachTracking(button);
         });

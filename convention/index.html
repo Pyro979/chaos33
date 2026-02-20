@@ -3,42 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BX2363LX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M8BX2363LX');
-      
-      // Track thank you page view and conversion
-      (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmSource = urlParams.get('utm_source') || 'deck';
-        const utmMedium = urlParams.get('utm_medium') || '(none)';
-        const utmCampaign = urlParams.get('utm_campaign') || 'deck_download';
-        
-        // Track page view with UTM parameters
-        gtag('event', 'page_view', {
-          'utm_source': utmSource,
-          'utm_medium': utmMedium,
-          'utm_campaign': utmCampaign,
-          'page_location': window.location.href
-        });
-        
-        // Track conversion event
-        gtag('event', 'conversion', {
-          'event_category': 'email_signup',
-          'event_label': 'thank_you_page',
-          'value': 1,
-          'utm_source': utmSource,
-          'utm_medium': utmMedium,
-          'utm_campaign': utmCampaign
-        });
-      })();
-    </script>
     <script>
       window.goatcounter = {
         no_onload: ('doNotTrack' in navigator && navigator.doNotTrack === '1'),
@@ -55,13 +22,17 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "vb4uryqwiw");
     </script>
+    <!-- Common JavaScript for email landing pages -->
+    <script src="../js/email-landing.js?v=c54b97c"></script>
     
-    <title>Thank You! | 33 Seconds of Chaos</title>
-    <meta name="description" content="Thank you for signing up! You'll be redirected to the Print & Play download shortly.">
+    <title>Name That Goblin!!! | 33 Seconds of Chaos</title>
+    <meta name="description" content="We're making a fast, chaotic party game—help us name our mascot goblin!">
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://f.convertkit.com">
+    <link rel="preconnect" href="https://app.kit.com">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -74,206 +45,81 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles.css?v=c54b97c">
-    
+    <link rel="stylesheet" href="../kit.css?v=c54b97c">
+    <link rel="stylesheet" href="../css/email-landing.css?v=c54b97c">
     <style>
-        body {
-            background-color: var(--bg);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        .email-page {
+            padding: 1rem 1.5rem;
         }
-        
-        .thank-you-page {
+        .email-header {
+            margin: 0 0 0.5rem 0;
+        }
+        .convention-hero-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 1rem;
+            margin: 0.5rem 0 0.75rem 0;
+        }
+        .convention-hero-row .hero-description {
+            margin: 0;
+            line-height: 1.5;
+        }
+        .convention-hero-text {
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1.5rem;
-            min-height: 100vh;
+            min-width: 0;
         }
-        
-        .thank-you-container {
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .thank-you-logo {
-            display: block;
-            margin: 0 auto 1.5rem;
-            max-width: 150px;
+        .convention-goblin {
+            flex-shrink: 0;
+            width: 200px;
             height: auto;
         }
-        
-        .thank-you-header {
-            font-family: var(--font-header);
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin: 0 0 1rem 0;
-            font-weight: 700;
+        .signup-form {
+            margin-top: 0.25rem;
         }
-        
-        .thank-you-message {
-            font-size: 1.2rem;
-            color: var(--muted);
-            margin-bottom: 2rem;
-            font-weight: 600;
-            line-height: 1.6;
+        .learn-more-link {
+            margin-top: 0.5rem;
         }
-        
-        .redirect-message {
-            font-size: 1rem;
-            color: var(--muted);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        
-        .redirect-countdown {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .manual-link {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 8px var(--shadow);
-        }
-        
-        .manual-link:hover {
-            background-color: var(--accent-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px var(--shadow-hover);
-            text-decoration: none;
-        }
-        
-        .manual-link:active {
-            transform: translateY(0);
-        }
-        
-        .fallback-text {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-        
         @media (max-width: 480px) {
-            .thank-you-page {
-                padding: 1.5rem 1rem;
+            .email-page {
+                padding: 0.75rem 1rem;
             }
-            
-            .thank-you-header {
-                font-size: 2rem;
+            .convention-hero-row {
+                flex-direction: column;
+                align-items: center;
             }
-            
-            .thank-you-message {
-                font-size: 1.1rem;
-            }
-            
-            .redirect-message {
-                font-size: 0.95rem;
-            }
-            
-            .thank-you-logo {
-                max-width: 120px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .thank-you-header {
-                font-size: 3rem;
+            .convention-goblin {
+                width: 160px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="thank-you-page">
-        <div class="thank-you-container">
-            <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="thank-you-logo" width="150" height="75" loading="eager">
-            
-            <h1 class="thank-you-header">Thank You!</h1>
-            
-            <p class="thank-you-message">
-                You're all set! We're redirecting you to your <strong>Print & Play download</strong> now.
-            </p>
-            
-            <div class="redirect-message">
-                <p class="redirect-countdown" id="countdown">Redirecting in <span id="countdown-number">5</span> seconds...</p>
+    <div class="email-page">
+        <div class="email-container">
+            <h1 class="email-header">Name That Goblin!!!</h1>
+            <div class="convention-hero-row">
+                <div class="convention-hero-text">
+                    <p class="hero-description">
+                        We're making a <strong>fast, chaotic party game</strong> where you race through <strong>weird clue-giving challenges, shouted guesses, and sudden duels</strong> in <strong>33-second bursts</strong>.
+                        We got this little guy to be our mascot, but we're not sure what to name him. Can you help?
+                    </p>
+                </div>
+                <img src="../images/gobbo/gobbo_chaos_nohood.png" alt="33 Seconds of Chaos mascot goblin" class="convention-goblin" width="200" height="200" loading="lazy">
             </div>
             
-            <a href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=deck&utm_medium=link&utm_campaign=deck_download" class="manual-link" id="redirect-link">
-                Go to Print & Play Download
-            </a>
+            <div class="signup-form">
+                <script async data-uid="c0f6ae3644" src="https://pyroprints.kit.com/c0f6ae3644/index.js"></script>
+                <p class="form-reassurance">No spam. Just updates about the game & launch announcements.</p>
+            </div>
             
-            <p class="fallback-text">
-                If you're not redirected automatically, click the button above.
-            </p>
+            <div class="learn-more-link">
+                <a href="https://www.mischievousvibes.com/">Learn more</a>
+            </div>
         </div>
     </div>
     
-    <script>
-        // Redirect URL
-        const redirectUrl = 'https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=deck&utm_medium=redirect&utm_campaign=deck_download';
-        
-        // Countdown timer (5 seconds for proper GA tracking)
-        let countdown = 5;
-        const countdownElement = document.getElementById('countdown-number');
-        const countdownContainer = document.getElementById('countdown');
-        
-        // Update countdown display
-        function updateCountdown() {
-            if (countdown > 0) {
-                countdownElement.textContent = countdown;
-                countdown--;
-            } else {
-                countdownContainer.textContent = 'Redirecting now...';
-                // Track redirect event
-                if (typeof gtag === 'function') {
-                    gtag('event', 'redirect', {
-                        'event_category': 'thank_you_page',
-                        'event_label': 'auto_redirect',
-                        'value': 1
-                    });
-                }
-                // Perform redirect
-                window.location.href = redirectUrl;
-            }
-        }
-        
-        // Start countdown
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        
-        // Track manual link click
-        const redirectLink = document.getElementById('redirect-link');
-        redirectLink.addEventListener('click', function(e) {
-            // Clear the countdown interval
-            clearInterval(countdownInterval);
-            
-            // Track manual click
-            if (typeof gtag === 'function') {
-                gtag('event', 'redirect', {
-                    'event_category': 'thank_you_page',
-                    'event_label': 'manual_click',
-                    'value': 1
-                });
-            }
-        });
-        
-        // Fallback: redirect after 6 seconds even if countdown fails
-        setTimeout(function() {
-            if (window.location.href.indexOf('convention') !== -1) {
-                window.location.href = redirectUrl;
-            }
-        }, 6000);
-    </script>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+    <script src="../js/update-form-button-pnp.js?v=c54b97c"></script>
 </body>
 </html>

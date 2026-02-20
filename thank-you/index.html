@@ -147,11 +147,17 @@
             gap: 1.5rem;
             box-shadow: 0 4px 12px var(--shadow);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
         }
         
         .action-box:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 16px var(--shadow-hover);
+        }
+        
+        .action-box:visited {
+            color: inherit;
         }
         
         .action-box-header {
@@ -162,24 +168,16 @@
             margin: 0;
         }
         
-        .action-box-header a {
-            color: var(--text) !important;
-        }
-        
-        .action-box-header a:visited {
-            color: var(--text) !important;
-        }
-        
         .kickstarter-button {
             display: inline-block;
             transition: transform 0.2s ease;
         }
         
-        .kickstarter-button:hover {
+        .action-box:hover .kickstarter-button {
             transform: translateY(-2px);
         }
         
-        .kickstarter-button:active {
+        .action-box:active .kickstarter-button {
             transform: translateY(0);
         }
         
@@ -204,14 +202,13 @@
             box-shadow: 0 2px 8px var(--shadow);
         }
         
-        .pnp-button:hover {
+        .action-box:hover .pnp-button {
             background-color: #2a2a2a;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px var(--shadow-hover);
-            text-decoration: none;
         }
         
-        .pnp-button:active {
+        .action-box:active .pnp-button {
             transform: translateY(0);
         }
         
@@ -294,30 +291,34 @@
             <h1 class="thank-you-header">Thank You!</h1>
             
             <div class="action-boxes">
-                <!-- Kickstarter Section (Left) -->
-                <div class="action-box">
+                <!-- Kickstarter Section (Left) - whole box is clickable -->
+                <a class="action-box" 
+                   id="kickstarter-link"
+                   href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=thank_you&utm_medium=link&utm_campaign=kickstarter" 
+                   target="_blank"
+                   rel="noopener noreferrer">
                     <h2 class="action-box-header">Wanna eventually play this with your friends and family?<br/>Follow Us on <span style="color: var(--accent);">Kickstarter</span>!</h2>
-                    <a href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=thank_you&utm_medium=link&utm_campaign=kickstarter" 
-                       class="kickstarter-button" 
-                       id="kickstarter-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <span class="kickstarter-button">
                         <img src="../images/notify_me_button.png" 
                              alt="Notify me on launch - Kickstarter" 
                              class="kickstarter-image"
                              width="400"
                              height="auto">
-                    </a>
-                </div>
+                    </span>
+                </a>
                 
-                <!-- Print & Play Download Section (Right) -->
-                <div class="action-box">
+                <!-- Print & Play Download Section (Right) - whole box is clickable -->
+                <a class="action-box" 
+                   id="pnp-link"
+                   href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
                     <h2 class="action-box-header">Want to play now?<br/>Download the Print and Play</h2>
-                    <a href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download" class="pnp-button" id="pnp-link" target="_blank" rel="noopener noreferrer">
+                    <span class="pnp-button">
                         <i class="fa-solid fa-file-pdf"></i>
                         <span>Download PDFs</span>
-                    </a>
-                </div>
+                    </span>
+                </a>
             </div>
             
             <!-- Homepage Link -->
