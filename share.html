@@ -70,10 +70,14 @@
             margin: 0.5rem 0;
         }
         
-        .qr-code-container img {
+        .qr-code-container img,
+        .qr-code-container canvas,
+        .qr-code-container table {
             display: block;
             height: 200px;
+            width: 200px;
             max-width: 100%;
+            margin: 0 auto;
         }
         
         .qr-label {
@@ -112,6 +116,67 @@
             margin-top: 0;
         }
         
+        .qr-links-section {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .qr-link-block {
+            padding: 0.75rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow);
+            text-align: center;
+        }
+        .qr-link-block .qr-label {
+            display: block;
+            font-family: var(--font-header);
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .qr-link-block .qr-link-qr canvas,
+        .qr-link-block .qr-link-qr table {
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+        }
+        .share-pages-list {
+            margin-top: 1.75rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--shadow, rgba(0,0,0,0.08));
+        }
+        .share-pages-list h2 {
+            font-family: var(--font-header);
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin: 0 0 0.5rem;
+            font-weight: 700;
+        }
+        .share-pages-list ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 1.25rem;
+            justify-content: center;
+        }
+        .share-pages-list a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .share-pages-list a:hover {
+            text-decoration: underline;
+            color: var(--accent);
+        }
+        
         @media (max-width: 767px) {
             body {
                 padding: 0.01rem 0.5rem;
@@ -135,8 +200,8 @@
     <div class="share-container">
         <div class="qr-section">
             <div class="qr-code-container">
-                <a href="/email/?utm_source=share&utm_medium=qr_code&utm_campaign=email_signup">
-                    <img src="images/qr.svg" alt="QR Code" id="qrcode">
+                <a href="/email/?utm_source=share&utm_medium=qr_code&utm_campaign=email_signup_share" id="qr-link-email">
+                    <div id="qrcode" aria-hidden="true"></div>
                 </a>
             </div>
         </div>
@@ -178,12 +243,86 @@
                 </div>
             </div>
         </div>
+        
+        <div class="qr-links-section" id="qr-links-section">
+            <div class="qr-link-block">
+                <span class="qr-label">Home</span>
+                <a href="/?utm_source=share&utm_medium=qr_code&utm_campaign=home_share">
+                    <div class="qr-link-qr" data-href="/?utm_source=share&utm_medium=qr_code&utm_campaign=home_share" aria-hidden="true"></div>
+                </a>
+            </div>
+            <div class="qr-link-block">
+                <span class="qr-label">PnP email</span>
+                <a href="/pnp-email/?utm_source=share&utm_medium=qr_code&utm_campaign=pnp_signup_share">
+                    <div class="qr-link-qr" data-href="/pnp-email/?utm_source=share&utm_medium=qr_code&utm_campaign=pnp_signup_share" aria-hidden="true"></div>
+                </a>
+            </div>
+            <div class="qr-link-block">
+                <span class="qr-label">Feedback</span>
+                <a href="/feedback/?utm_source=share&utm_medium=qr_code&utm_campaign=feedback_share">
+                    <div class="qr-link-qr" data-href="/feedback/?utm_source=share&utm_medium=qr_code&utm_campaign=feedback_share" aria-hidden="true"></div>
+                </a>
+            </div>
+            <div class="qr-link-block">
+                <span class="qr-label">Convention</span>
+                <a href="/convention/?utm_source=share&utm_medium=qr_code&utm_campaign=convention_share">
+                    <div class="qr-link-qr" data-href="/convention/?utm_source=share&utm_medium=qr_code&utm_campaign=convention_share" aria-hidden="true"></div>
+                </a>
+            </div>
+            <div class="qr-link-block">
+                <span class="qr-label">Discord</span>
+                <a href="https://discord.gg/YOUR_INVITE_CODE?utm_source=share&utm_medium=qr_code&utm_campaign=discord_share" target="_blank" rel="noopener noreferrer">
+                    <div class="qr-link-qr" data-href="https://discord.gg/YOUR_INVITE_CODE?utm_source=share&utm_medium=qr_code&utm_campaign=discord_share" aria-hidden="true"></div>
+                </a>
+            </div>
+            <div class="qr-link-block">
+                <span class="qr-label">Kickstarter</span>
+                <a href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=share&utm_medium=qr_code&utm_campaign=kickstarter_share" target="_blank" rel="noopener noreferrer">
+                    <div class="qr-link-qr" data-href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=share&utm_medium=qr_code&utm_campaign=kickstarter_share" aria-hidden="true"></div>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="share-pages-list" aria-label="Site pages">
+            <h2>All pages</h2>
+            <ul>
+                <li><a href="/?utm_source=share&utm_medium=link&utm_campaign=home_share">Home</a></li>
+                <li><a href="/email/?utm_source=share&utm_medium=link&utm_campaign=email_signup_share">Email signup</a></li>
+                <li><a href="/pnp-email/?utm_source=share&utm_medium=link&utm_campaign=pnp_signup_share">PnP email</a></li>
+                <li><a href="/feedback/?utm_source=share&utm_medium=link&utm_campaign=feedback_share">Feedback</a></li>
+                <li><a href="/convention/?utm_source=share&utm_medium=link&utm_campaign=convention_share">Convention</a></li>
+                <li><a href="https://discord.gg/YOUR_INVITE_CODE?utm_source=share&utm_medium=link&utm_campaign=discord_share" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                <li><a href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=share&utm_medium=link&utm_campaign=kickstarter_share" target="_blank" rel="noopener noreferrer">Kickstarter</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- Data script (must be loaded before script.js) -->
     <script src="data.js?v=8c0a58d"></script>
     <!-- Main script -->
     <script src="script.js?v=8c0a58d" defer></script>
+    <!-- QR code generation (share page) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous"></script>
+    <script>
+      (function() {
+        if (typeof QRCode === 'undefined') return;
+        var opts = { colorDark: '#000000', colorLight: '#ffffff' };
+        var mainLink = document.getElementById('qr-link-email');
+        var mainContainer = document.getElementById('qrcode');
+        if (mainLink && mainContainer) {
+          new QRCode(mainContainer, { text: mainLink.href, width: 200, height: 200, colorDark: opts.colorDark, colorLight: opts.colorLight });
+        }
+        var section = document.getElementById('qr-links-section');
+        if (section) {
+          var baseUrl = window.location.origin;
+          section.querySelectorAll('.qr-link-qr[data-href]').forEach(function(div) {
+            var url = div.getAttribute('data-href');
+            if (url && url.indexOf('http') !== 0) url = baseUrl + url;
+            if (url) new QRCode(div, { text: url, width: 160, height: 160, colorDark: opts.colorDark, colorLight: opts.colorLight });
+          });
+        }
+      })();
+    </script>
 </body>
 </html>
 

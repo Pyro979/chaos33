@@ -1004,7 +1004,6 @@ nav {
     font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
@@ -1301,7 +1300,7 @@ footer a:hover {
         align-self: flex-end;
         margin-right: 5px;
         /* Gentle overlap (375–425 especially). Smaller breakpoints can override if needed. */
-        margin-top: -210px;
+        margin-top: -250px;
     }
     
     .portrait-card {
