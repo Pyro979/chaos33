@@ -53,7 +53,12 @@
         <div class="email-container">
             <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="email-logo" width="120" height="60" loading="eager">
             
-            <h1 class="email-header">Get the "33 Seconds of Chaos" Print and Play</h1>
+            <h1 class="email-header">"33 Seconds of Chaos"</h1>
+            
+            <div class="card-spread-photo">
+                <img src="../images/photos/card_spread.jpg" alt="33 Seconds of Chaos card spread" class="card-spread-img" loading="lazy" width="800" height="533">
+            </div>
+            
             <p class="hero-description">
                 A fast, chaotic <strong>party game</strong> where you race through <strong>weird clue-giving challenges, shouted guesses, and sudden duels</strong> in 33-second bursts. <strong>Easy</strong> to learn, <strong>fast</strong> to play, and perfect when you want everyone <strong>laughing</strong> in under five minutes.
                 <br/><br/>Sign up below to get the download links right away. A4/Letter size, Regular/Gutterfold layouts, and Low Ink options.
@@ -66,10 +71,44 @@
                 <p class="form-reassurance">No spam. Just updates about the game & launch announcements.</p>
             </div>
             
-            <div class="how-to-play-gif-container">
-                <img src="../images/how_to_play.webp" alt="Learn how to play 33 Seconds of Chaos in 66 seconds - animated guide showing the three card types: Duel, Word, and Chaos decks" class="how-to-play-gif" loading="lazy" width="800" height="600">
+            <div class="cards-section">
+                <div class="hero-cards">
+                    <div class="cards-row">
+                        <div class="flip-timer-indicator" id="flip-timer">
+                            <svg class="timer-svg" viewBox="0 0 36 36">
+                                <circle class="timer-circle-bg" cx="18" cy="18" r="16"></circle>
+                                <circle class="timer-circle" cx="18" cy="18" r="16"></circle>
+                            </svg>
+                            <span class="timer-countdown" id="timer-countdown">10</span>
+                        </div>
+                        <div class="demo-card portrait-card" id="chaos-card">
+                            <div class="card-front">
+                                <div class="card-label">Chaos Prompt</div>
+                                <div class="card-content">
+                                    <div id="chaos-cue-chip" class="chaos-cue-chip" style="display: none;"></div>
+                                    <h3 id="chaos-title">Loading...</h3>
+                                    <p id="chaos-description">Cards will flip automatically</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="demo-card portrait-card" id="word-card">
+                            <div class="card-front">
+                                <div class="card-label">Word</div>
+                                <div class="card-content">
+                                    <p id="word-text">Loading...</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="card-back-logo" width="180" height="90" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="learn-more-link">
                 <a href="https://www.mischievousvibes.com/">Learn more</a>
             </div>
@@ -78,5 +117,8 @@
     
     <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     <script src="../js/update-form-button-pnp.js?v=c54b97c"></script>
+    <!-- Card demo: data must load before script.js -->
+    <script src="../data.js?v=c54b97c"></script>
+    <script src="../script.js?v=c54b97c" defer></script>
 </body>
 </html>
