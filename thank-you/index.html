@@ -131,7 +131,7 @@
         
         .action-boxes {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 2rem;
             margin: 2rem 0;
         }
@@ -307,7 +307,7 @@
                     </span>
                 </a>
                 
-                <!-- Print & Play Download Section (Right) - whole box is clickable -->
+                <!-- Print & Play Download Section - whole box is clickable -->
                 <a class="action-box" 
                    id="pnp-link"
                    href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download" 
@@ -317,6 +317,18 @@
                     <span class="pnp-button">
                         <i class="fa-solid fa-file-pdf"></i>
                         <span>Download PDFs</span>
+                    </span>
+                </a>
+                
+                <!-- Pass & Play Section - whole box is clickable -->
+                <a class="action-box" 
+                   id="passnplay-link"
+                   href="/passnplay/?utm_source=thank_you&utm_medium=link&utm_campaign=passnplay" 
+                   rel="noopener noreferrer">
+                    <h2 class="action-box-header">Want to play right now on one device?<br/>Pass & Play</h2>
+                    <span class="pnp-button">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>Play Pass & Play</span>
                     </span>
                 </a>
             </div>
@@ -350,6 +362,20 @@
                 });
             }
         });
+        
+        // Track Pass & Play link click
+        const passnplayLink = document.getElementById('passnplay-link');
+        if (passnplayLink) {
+            passnplayLink.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'click', {
+                        'event_category': 'thank_you_page',
+                        'event_label': 'passnplay',
+                        'value': 1
+                    });
+                }
+            });
+        }
     </script>
 </body>
 </html>

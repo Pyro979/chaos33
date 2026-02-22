@@ -1,13 +1,26 @@
 /**
  * Updates ConvertKit form submit button text (per-page CTA) and tracks form submit clicks for analytics.
- * Used by pnp-email and convention landing pages.
+ * Used by pnp-email, passnplay-email, and convention landing pages.
  */
 
 (function() {
     'use strict';
 
-    var isConvention = typeof window !== 'undefined' && window.location.pathname.indexOf('/convention') !== -1;
-    var buttonLabel = isConvention ? 'Submit Name & Sign Up' : 'Sign up to download Print-n-Play';
+    var path = typeof window !== 'undefined' ? window.location.pathname : '';
+    var isConvention = path.indexOf('/convention') !== -1;
+    var isPassnplayEmail = path.indexOf('/passnplay-email') !== -1;
+    var buttonLabel = isConvention ? 'Submit Name & Sign Up' : (isPassnplayEmail ? 'Sign up to get free Pass & Play' : 'Sign up to download free Print-n-Play');
+
+    function getEventLabel() {
+        if (isConvention) return 'convention_landing_page';
+        if (isPassnplayEmail) return 'passnplay_email_landing_page';
+        return 'pnp_email_landing_page';
+    }
+    function getUtmCampaign() {
+        if (isConvention) return 'convention_signup';
+        if (isPassnplayEmail) return 'passnplay_email_signup';
+        return 'pnp_email_signup';
+    }
 
     function attachTracking(button) {
         if (button.dataset.gaBound === 'true') return;
@@ -18,10 +31,10 @@
             var urlParams = new URLSearchParams(window.location.search);
             gtag('event', 'email_signup', {
                 event_category: 'engagement',
-                event_label: isConvention ? 'convention_landing_page' : 'pnp_email_landing_page',
+                event_label: getEventLabel(),
                 utm_source: urlParams.get('utm_source') || '(direct)',
                 utm_medium: urlParams.get('utm_medium') || '(none)',
-                utm_campaign: urlParams.get('utm_campaign') || (isConvention ? 'convention_signup' : 'pnp_email_signup')
+                utm_campaign: urlParams.get('utm_campaign') || getUtmCampaign()
             });
         });
     }
