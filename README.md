@@ -1,6 +1,6 @@
 # 33 Seconds of Chaos
 
-A fast, chaotic party game where players race through weird clue-giving challenges and shouted guesses in 33 second bursts.
+33 Seconds of Chaos is a fast-paced social party game where you give clues under weird constraints. Movie announcer one turn, adjectives and nouns the next, or duels like Flip Card and racing to name three breakfast items.
 
 ## Live Site
 

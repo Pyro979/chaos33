@@ -162,7 +162,7 @@
         
         .action-box-header {
             font-family: var(--font-header);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--text) !important;
             font-weight: 700;
             margin: 0;
@@ -192,8 +192,8 @@
             align-items: center;
             gap: 0.75rem;
             padding: 1.25rem 2.5rem;
-            background-color: #000000;
-            color: white;
+            background-color: #FF881D;
+            color: #000000;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -203,7 +203,7 @@
         }
         
         .action-box:hover .pnp-button {
-            background-color: #2a2a2a;
+            background-color: #ff9933;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px var(--shadow-hover);
         }
@@ -236,6 +236,10 @@
         
         .homepage-link:visited:hover {
             color: var(--accent) !important;
+        }
+        
+        .nowrap {
+            white-space: nowrap;
         }
         
         @media (max-width: 768px) {
@@ -313,7 +317,7 @@
                    href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download" 
                    target="_blank" 
                    rel="noopener noreferrer">
-                    <h2 class="action-box-header">Want to play now?<br/>Download the Print and Play</h2>
+                    <h2 class="action-box-header">Want to play now?<br/>Download the free preview <span class="nowrap">Print & Play</span><br>(multiple formats)</h2>
                     <span class="pnp-button">
                         <i class="fa-solid fa-file-pdf"></i>
                         <span>Download PDFs</span>
@@ -324,11 +328,12 @@
                 <a class="action-box" 
                    id="passnplay-link"
                    href="/passnplay/?utm_source=thank_you&utm_medium=link&utm_campaign=passnplay" 
+                   target="_blank"
                    rel="noopener noreferrer">
-                    <h2 class="action-box-header">Want to play right now on one device?<br/>Pass & Play</h2>
+                    <h2 class="action-box-header">Want to play right now but have no printer?<br/>Use the free mobile <span class="nowrap">Pass & Play</span></h2>
                     <span class="pnp-button">
                         <i class="fa-solid fa-mobile-screen"></i>
-                        <span>Play Pass & Play</span>
+                        <span>Play <span class="nowrap">Pass & Play</span></span>
                     </span>
                 </a>
             </div>
