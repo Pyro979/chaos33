@@ -447,7 +447,7 @@ const chaosDuels = [
 ];
 
 const duelTriggers = [
-    "Duel Cue"
+    "Duel!"
 ];
 
 const wordList = [

@@ -196,17 +196,17 @@ function startDuel() {
     currentDuel = getRandomItem(gameData.duels, lastDuel);
     lastDuel = currentDuel;
     
-    // Duel Cue (single cue now)
+    // Duel! (single cue now)
     if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
         currentDuelTrigger = gameData.duelTriggers[0];
     } else {
-        currentDuelTrigger = { full_text: 'Duel Cue', card_text: 'Duel Cue' };
+        currentDuelTrigger = { full_text: 'Duel!', card_text: 'Duel!' };
     }
 
     // Update UI
     const duelTriggerEl = document.getElementById('duel-trigger');
     if (duelTriggerEl && currentDuelTrigger) {
-        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel Cue';
+        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel!';
     }
     document.getElementById('duel-title').textContent = currentDuel.title;
     document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
@@ -346,16 +346,16 @@ function handleSwapConfirm() {
         // Swap duel
         currentDuel = getRandomItem(gameData.duels, currentDuel);
         
-        // Duel Cue (single cue now)
+        // Duel! (single cue now)
         if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
             currentDuelTrigger = gameData.duelTriggers[0];
         } else {
-            currentDuelTrigger = { full_text: 'Duel Cue', card_text: 'Duel Cue' };
+            currentDuelTrigger = { full_text: 'Duel!', card_text: 'Duel!' };
         }
 
         const duelTriggerEl = document.getElementById('duel-trigger');
         if (duelTriggerEl && currentDuelTrigger) {
-            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel Cue';
+            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel!';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
