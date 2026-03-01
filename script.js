@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const wordText = document.getElementById("word-text");
   const chaosLabel = chaosCard ? chaosCard.querySelector(".card-label") : null;
   const wordLabel = wordCard ? wordCard.querySelector(".card-label") : null;
+  const chaosBackImg = chaosCard ? chaosCard.querySelector(".card-back img") : null;
+  const wordBackImg = wordCard ? wordCard.querySelector(".card-back img") : null;
+  const imageBase = (window.location.pathname.indexOf("pnp-email") !== -1 || window.location.pathname.indexOf("passnplay-email") !== -1) ? "../images/" : "images/";
 
   // Track flip interval (10 seconds normally, 33 seconds after manual flip)
   let flipInterval = 10000; // 10 seconds in milliseconds
@@ -206,6 +209,27 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (!willBeDuelFlip && chaosLabel) {
       chaosLabel.classList.remove("duel-label");
       if (wordLabel) wordLabel.classList.remove("duel-label");
+    }
+
+    // Set card back images before flip so the correct back is visible during the animation
+    if (willBeDuelFlip) {
+      if (chaosBackImg) {
+        chaosBackImg.src = imageBase + "gobbo/gobbo_duel_nohood.png";
+        chaosBackImg.alt = "Goblin mascot – Duel";
+      }
+      if (wordBackImg) {
+        wordBackImg.src = imageBase + "gobbo/gobbo_duel_nohood.png";
+        wordBackImg.alt = "Goblin mascot – Duel";
+      }
+    } else {
+      if (chaosBackImg) {
+        chaosBackImg.src = imageBase + "gobbo/gobbo_chaos_nohood.png";
+        chaosBackImg.alt = "Goblin mascot – Chaos";
+      }
+      if (wordBackImg) {
+        wordBackImg.src = imageBase + "gobbo/gobbo_word_nohood.png";
+        wordBackImg.alt = "Goblin mascot – Word";
+      }
     }
 
     // Add flipping class for animation
