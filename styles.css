@@ -613,16 +613,27 @@ nav {
     color: var(--accent);
 }
 
-.how-to-play-gif-container {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.how-to-play-gif {
+.instructions-img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow);
+    display: block;
+}
+
+.visual-explainer-heading {
+    margin-top: 2rem;
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Hide Visual Explainer and its nav item on mobile only */
+@media (max-width: 767px) {
+    .visual-explainer-block,
+    .visual-explainer-nav-item {
+        display: none !important;
+    }
 }
 
 /* What's Inside Section */
