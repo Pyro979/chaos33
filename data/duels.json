@@ -8,8 +8,8 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
     "tags": [
       "rules",
       "main",
@@ -33,8 +33,8 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -58,8 +58,8 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -73,8 +73,8 @@
   {
     "title": "Simon Says",
     "multiCard": false,
-    "text": "Neutral player runs real \"Simon Says\" commands.\\n\\nDuel continues until one fails and the other succeeds.",
-    "web_description": "Neutral runs Simon Says. Ends when one fails and the other succeeds.",
+    "text": "The Judge player calls out \"Simon Says\" (or not) commands at whatever **pace** they want.\\n\\nDuel continues until one player fails and the other succeeds.",
+    "web_description": "The Judge runs Simon Says. Ends when one fails and the other succeeds.",
     "tags": [
       "rules",
       "main",
@@ -87,8 +87,8 @@
   {
     "title": "Direction Chain",
     "multiCard": false,
-    "text": "Duelers start facing straight ahead. Neutral calls out **LEFT**, **RIGHT**, **UP**, or **DOWN** direction per beat (about once per second). Duelers must follow direction, returning to center afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
-    "web_description": "Neutral calls directions each beat. Follow and return to center. Ends when one is wrong.",
+    "text": "Duelers start facing straight ahead. The Judge calls out **LEFT**, **RIGHT**, **UP**, or **DOWN** in **any order** and at **any pace**. Duelers must **turn their head** in that **direction**, returning to **center** afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
+    "web_description": "The Judge calls directions each beat. Follow and return to center. Ends when one is wrong.",
     "tags": [
       "rules",
       "main",
@@ -102,7 +102,7 @@
   {
     "title": "Coin Spin",
     "multiCard": false,
-    "text": "Both duelers spin a coin.\\n\\nLongest continuous spin wins.\\n\\nFalling off the table counts as stopping. All players must encourage the coins by shouting. Vibe: horse race.",
+    "text": "Both duelers spin a coin.\\n\\n**Longest continuous spin wins**.\\n\\nFalling off the table counts as stopping. All players must encourage the coins by shouting. Vibe: horse race.",
     "web_description": "Both spin a coin. Longest spin wins.",
     "tags": [
       "rules",
@@ -117,8 +117,8 @@
   {
     "title": "Table Curling",
     "multiCard": false,
-    "text": "Neutral picks any rollable object (pen, marker, chapstick, etc.).\\n\\nDuelers roll simultaneously.\\n\\nFarthest roll without falling off the table wins.\\n\\nIf both fall, redo.",
-    "web_description": "Neutral picks a rollable object. Roll together. Farthest without falling wins.",
+    "text": "The Judge picks any **rollable object** (pen, marker, chapstick, etc.).\\n\\nDuelers roll **simultaneously**.\\n\\n**Farthest** roll without **falling off the table** wins.\\n\\nIf both fall, redo.",
+    "web_description": "The Judge picks a rollable object. Roll together. Farthest without falling wins.",
     "tags": [
       "rules",
       "main",
@@ -132,8 +132,8 @@
   {
     "title": "Table Cornhole",
     "multiCard": false,
-    "text": "Neutral picks any 2 of the same tossable small object (coin, eraser, chip, etc.).\\n\\nDuelers stand 2-3 feet from the table.\\n\\nBoth toss at the same time.\\n\\nObject closest to the far table edge without falling off wins.\\n\\nIf both fall, redo.",
-    "web_description": "Neutral picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
+    "text": "The Judge picks any pair of the same **tossable small objects** (coin, eraser, chip, etc.).\\n\\nDuelers stand **2-3 feet from the table**. Both toss the object at the **same time**.\\n\\nObject closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
+    "web_description": "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
     "tags": [
       "rules",
       "main",
@@ -147,7 +147,7 @@
   {
     "title": "Backhand Flip",
     "multiCard": false,
-    "text": "Each dueler gets a similar small object (coin, pencil, etc.). Place it flat on the back of your hand.\\n\\nFlip it about 6-12 inches into the air and catch it in the same hand.\\n\\nRepeat 3 times without dropping. First to finish wins.",
+    "text": "Each dueler gets a **pair of similar small objects** (coin, pencil, etc.). Place it flat on the **back of your hand**. \\n\\n**Fling** it about **6-12 inches** into the air, **flip that same hand and catch it**.\\n\\nRepeat **3 times** without dropping. Drops reset count.First to finish wins.",
     "web_description": "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins.",
     "tags": [
       "rules",
@@ -162,8 +162,8 @@
   {
     "title": "Drum Chicken Hat",
     "multiCard": false,
-    "text": "Neutral calls **DRUM**, **CHICKEN**, or **HAT** in any order and at any pace.\\n\\n**DRUM**: two quick table taps.\\n**CHICKEN**: flap elbows twice (arms tucked).\\n**HAT**: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
-    "web_description": "Neutral calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses.",
+    "text": "The Judge calls **DRUM**, **CHICKEN**, or **HAT** in **any order** and at **any pace**.\\n\\n**DRUM**: two quick table taps.\\n**CHICKEN**: flap elbows twice (arms tucked).\\n**HAT**: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "web_description": "The Judge calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses.",
     "tags": [
       "rules",
       "main",
@@ -177,8 +177,8 @@
   {
     "title": "Monster Mash",
     "multiCard": false,
-    "text": "Neutral calls a monster in any order and at any pace.\\n\\n**VAMPIRE**: cross your arms on your chest.\\n**FRANKENSTEIN**: hold your arms straight out.\\n**WEREWOLF**: hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
-    "web_description": "Neutral calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses.",
+    "text": "The Judge calls a monster in **any order** and at **any pace**.\\n\\n**VAMPIRE**: cross your arms on your chest.\\n**FRANKENSTEIN**: hold your arms straight out.\\n**WEREWOLF**: hands up like claws.\\n\\nWrong move, flinching, or waiting too long loses.",
+    "web_description": "The Judge calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses.",
     "tags": [
       "rules",
       "main",
@@ -192,7 +192,7 @@
   {
     "title": "Card Flip",
     "multiCard": false,
-    "text": "Each dueler places a playing card face down, partly off the table edge.\\n\\nOn 'Go,' flick it upward so it flips face up onto the table.\\n\\nRepeat 3 times. First to finish wins.",
+    "text": "Each dueler places a **card face down, partly off the table edge**.\\n\\nOn 'Go,' flick it upward so it **flips face up onto the table**.\\n\\nRepeat **3 times** without dropping. Drops reset count. First to finish wins.",
     "web_description": "Flick a card from the table edge. First to land it face-up 3 times wins.",
     "tags": [
       "rules",
@@ -213,8 +213,8 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
     "tags": [
       "rules",
       "main",
@@ -234,8 +234,8 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image wins. No screens.",
+    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
+    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
     "tags": [
       "rules",
       "main",
@@ -259,8 +259,8 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -284,8 +284,8 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category that start with a random letter.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -309,8 +309,8 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -334,8 +334,8 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name 3 unique, valid items in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Neutral names a category. Race to name 3 items in it. No copying.",
+    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",

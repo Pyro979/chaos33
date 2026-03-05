@@ -190,7 +190,7 @@
   {
     "title": "One-Syllable Words",
     "cue": "Give clues using only",
-    "text": "You may only use one-syllable words.",
+    "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
     "example": "\"Small. Round. Bath friend.\"",
     "tags": [
       "rules",
@@ -199,21 +199,6 @@
       "drivethru",
       "mental",
       "prototype"
-    ]
-  },
-  {
-    "title": "Analogies",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue is \"It's like ___ but ___.\" \"It's like a cat but bigger.\" \"It's like a lion, but striped.\"",
-    "example": "\"It's like a bath toy but squishier.\" / \"It's like a tiny boat but it squeaks.\" / \"It's like a cat but bigger.\" / \"It's like a house cat but wild.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "mental",
-      "cut"
     ]
   },
   {
@@ -309,6 +294,7 @@
     "tags": [
       "main",
       "passnplay",
+      "printnplay",
       "drivethru",
       "physical",
       "prototype"
@@ -592,7 +578,7 @@
   {
     "title": "Nature Documentary",
     "cue": "Give clues as if narrating a",
-    "text": "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
+    "text": "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat...\"",
     "example": "\"Here we observe it in its natural habitat... drifting silently near the bubbles...\"",
     "tags": [
       "main",

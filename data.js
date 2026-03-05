@@ -48,11 +48,6 @@ const chaosPrompts = [
         cue: "Every clue must follow this format"
     },
     {
-        title: "Analogies",
-        description: "Every clue is \"It's like ___ but ___.\"",
-        cue: "Every clue must follow this format"
-    },
-    {
         title: "Adjectives & Nouns Only",
         description: "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
         cue: "Give clues using only"
@@ -119,7 +114,7 @@ const chaosPrompts = [
     },
     {
         title: "Nature Documentary",
-        description: "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat.\"",
+        description: "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat...\"",
         cue: "Give clues as if narrating a"
     },
     {
@@ -162,91 +157,91 @@ const chaosPrompts = [
 const chaosDuels = [
     {
         title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Alpha Blitz: Animals",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Tools",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Places",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Foods",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Sports",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Colors",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Body Parts",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Vehicles",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Theme Blitz: Farm animals",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Spices",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a toolbox",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that come in pairs",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things you wear",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a kitchen",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that fly",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that are round",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Direction Chain",
-        description: "Neutral calls directions each beat. Follow and return to center. Ends when one is wrong."
+        description: "The Judge calls directions each beat. Follow and return to center. Ends when one is wrong."
     },
     {
         title: "Coin Spin",
@@ -254,11 +249,11 @@ const chaosDuels = [
     },
     {
         title: "Table Curling",
-        description: "Neutral picks a rollable object. Roll together. Farthest without falling wins."
+        description: "The Judge picks a rollable object. Roll together. Farthest without falling wins."
     },
     {
         title: "Table Cornhole",
-        description: "Neutral picks 2 matching tossables. Toss together. Closest to far edge without falling wins."
+        description: "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins."
     },
     {
         title: "Backhand Flip",
@@ -266,11 +261,11 @@ const chaosDuels = [
     },
     {
         title: "Drum Chicken Hat",
-        description: "Neutral calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses."
+        description: "The Judge calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses."
     },
     {
         title: "Monster Mash",
-        description: "Neutral calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses."
+        description: "The Judge calls VAMPIRE/FRANKENSTEIN/WEREWOLF. Do the matching pose. First mistake loses."
     },
     {
         title: "Card Flip",
@@ -278,171 +273,171 @@ const chaosDuels = [
     },
     {
         title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image wins. No screens."
+        description: "First back with a valid physical object or analog image from that category wins. No screens."
     },
     {
         title: "Alpha Blitz: Animals",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Tools",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Places",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Foods",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Sports",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Colors",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Body Parts",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Vehicles",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Animals",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Tools",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Places",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Foods",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Sports",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Colors",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Body Parts",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Vehicles",
-        description: "Neutral picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Theme Blitz: Farm animals",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Spices",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a toolbox",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that come in pairs",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things you wear",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a kitchen",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that fly",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that are round",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Farm animals",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Spices",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a toolbox",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that come in pairs",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things you wear",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a kitchen",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that fly",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that are round",
-        description: "Neutral names a category. Race to name 3 items in it. No copying."
+        description: "The Judge names a category. Race to name 3 items in it. No copying."
     }
 ];
 
