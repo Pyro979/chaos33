@@ -190,7 +190,7 @@
   {
     "title": "One-Syllable Words",
     "cue": "Give clues using only",
-    "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
+    "text": "You may only use one-syllable words.",
     "example": "\"Small. Round. Bath friend.\"",
     "tags": [
       "rules",
@@ -204,15 +204,16 @@
   {
     "title": "Analogies",
     "cue": "Every clue must follow this format",
-    "text": "Every clue is \"It's like ___ but ___.\"",
-    "example": "\"It's like a bath toy but squishier.\"",
+    "text": "Every clue is \"It's like ___ but ___.\" \"It's like a cat but bigger.\" \"It's like a lion, but striped.\"",
+    "example": "\"It's like a bath toy but squishier.\" / \"It's like a tiny boat but it squeaks.\" / \"It's like a cat but bigger.\" / \"It's like a house cat but wild.\"",
     "tags": [
       "main",
       "passnplay",
       "printnplay",
       "web",
       "drivethru",
-      "mental"
+      "mental",
+      "cut"
     ]
   },
   {
