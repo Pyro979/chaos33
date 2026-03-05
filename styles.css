@@ -1572,6 +1572,18 @@ select:focus {
     display: block;
 }
 
+/* Inline Kickstarter logo in hero form text */
+.kickstarter-inline-link {
+    text-decoration: none;
+    vertical-align: middle;
+}
+.kickstarter-inline-logo {
+    height: 1.25em;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 @media (max-width: 480px) {
     .kickstarter-cta-image {
         max-width: 100%;
