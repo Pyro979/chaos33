@@ -34,5 +34,5 @@ gtag('config', 'G-M8BX2363LX');
     }
 })();
 
-// Form submit tracking is handled by update-form-button.js / update-form-button-pnp.js
+// Form submit tracking is handled by update-form-button.js
 // which run after the ConvertKit form loads (MutationObserver + retries)
