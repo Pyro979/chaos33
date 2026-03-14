@@ -1,28 +1,15 @@
 [
   {
-    "title": "Whisper",
-    "cue": "Give clues in this voice",
-    "text": "Give all clues in a whisper.",
-    "example": "\"It squeaks... when you squeeze it... in the bath...\"",
+    "title": "Everything Around It",
+    "cue": "Give clues by describing",
+    "text": "Describe the things, places, or context near the object instead of describing the object itself.",
+    "example": "\"It sits near soap. Near bubbles. Near the faucet.\"",
     "tags": [
       "passnplay",
+      "rules",
       "main",
       "drivethru",
-      "improv"
-    ]
-  },
-  {
-    "title": "Robot",
-    "cue": "Give clues in this voice",
-    "text": "Give clues in a stiff, robotic voice.",
-    "example": "\"It. Is. Small. Yellow. Object.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "improv",
+      "mental",
       "prototype"
     ]
   },
@@ -43,58 +30,15 @@
     ]
   },
   {
-    "title": "Deep Serious",
+    "title": "Whisper",
     "cue": "Give clues in this voice",
-    "text": "Use a low, overly serious tone.",
-    "example": "\"This is... a small floating device... critical to all bathtub operations.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "improv"
-    ]
-  },
-  {
-    "title": "High-Pitched",
-    "cue": "Give clues in this voice",
-    "text": "Speak in a high, squeaky voice.",
-    "example": "\"It's tiny! And it squeaks!\"",
-    "tags": [
-      "rules",
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "improv"
-    ]
-  },
-  {
-    "title": "Angry",
-    "cue": "Give clues with this attitude",
-    "text": "Sound angry or irritated by the object the whole time.",
-    "example": "\"Why does this silly thing squeak so much?!\"",
+    "text": "Give all clues in a whisper.",
+    "example": "\"It squeaks... when you squeeze it... in the bath...\"",
     "tags": [
       "passnplay",
       "main",
       "drivethru",
       "improv"
-    ]
-  },
-  {
-    "title": "Everything Around It",
-    "cue": "Give clues by describing",
-    "text": "Describe the things, places, or context near the object instead of describing the object itself.",
-    "example": "\"It sits near soap. Near bubbles. Near the faucet.\"",
-    "tags": [
-      "passnplay",
-      "rules",
-      "main",
-      "drivethru",
-      "mental",
-      "prototype"
     ]
   },
   {
@@ -114,6 +58,21 @@
     ]
   },
   {
+    "title": "Robot",
+    "cue": "Give clues in this voice",
+    "text": "Give clues in a stiff, robotic voice.",
+    "example": "\"It. Is. Small. Yellow. Object.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
+    ]
+  },
+  {
     "title": "Senses",
     "cue": "Give clues using only",
     "text": "Describe using only sight, sound, smell, taste, or touch.",
@@ -126,6 +85,20 @@
       "web",
       "drivethru",
       "mental"
+    ]
+  },
+  {
+    "title": "Deep Serious",
+    "cue": "Give clues in this voice",
+    "text": "Use a low, overly serious tone.",
+    "example": "\"This is... a small floating device... critical to all bathtub operations.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "improv"
     ]
   },
   {
@@ -145,6 +118,21 @@
     ]
   },
   {
+    "title": "High-Pitched",
+    "cue": "Give clues in this voice",
+    "text": "Speak in a high, squeaky voice.",
+    "example": "\"It's tiny! And it squeaks!\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "improv"
+    ]
+  },
+  {
     "title": "Adjective + Noun + Verb",
     "cue": "Every clue must follow this format",
     "text": "Each clue is exactly 3 words: Adjective + Noun + Verb. Example: \"Tiny animal purring.\" / \"Sneaky pet stalking.\"",
@@ -160,93 +148,22 @@
     ]
   },
   {
+    "title": "Angry",
+    "cue": "Give clues with this attitude",
+    "text": "Sound angry or irritated by the object the whole time.",
+    "example": "\"Why does this silly thing squeak so much?!\"",
+    "tags": [
+      "passnplay",
+      "main",
+      "drivethru",
+      "improv"
+    ]
+  },
+  {
     "title": "Three Words",
     "cue": "Every clue must follow this format",
     "text": "Each clue must be exactly three words.",
     "example": "\"Small floating toy.\" / \"Bright yellow squeaker.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental"
-    ]
-  },
-  {
-    "title": "Questions Only",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue must be phrased as a question?",
-    "example": "\"Does it float in your bathtub?\"",
-    "tags": [
-      "rules",
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "mental",
-      "prototype"
-    ]
-  },
-  {
-    "title": "One-Syllable Words",
-    "cue": "Give clues using only",
-    "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
-    "example": "\"Small. Round. Bath friend.\"",
-    "tags": [
-      "rules",
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Adjectives & Nouns Only",
-    "cue": "Give clues using only",
-    "text": "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
-    "example": "\"Yellow toy. Floaty duck. Squishy bath friend.\"",
-    "tags": [
-      "rules",
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "mental",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Verbs & Nouns Only",
-    "cue": "Give clues using only",
-    "text": "Give clues using only verbs (action words) and nouns (person, place, thing).",
-    "example": "\"Squeeze toy. Hear squeak. Watch float. Bath water.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Comparisons",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue must compare it to something else. Example: \"It's like a spoon, but it has teeth.\"",
-    "example": "\"It's smaller than most bath toys, and it floats better than soap.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental"
-    ]
-  },
-  {
-    "title": "Two Pieces",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue must come in two parts with a brief pause.",
-    "example": "\"It squeaks / then it floats.\"",
     "tags": [
       "main",
       "passnplay",
@@ -271,6 +188,37 @@
     ]
   },
   {
+    "title": "Story Time",
+    "cue": "Every clue must follow this format",
+    "text": "Start your clues with \"Once upon a time...\" and tell it like a story.",
+    "example": "\"Once upon a time... a tiny yellow toy floated proudly in the tub.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "improv",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Questions Only",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must be phrased as a question?",
+    "example": "\"Does it float in your bathtub?\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
     "title": "Jumping Jacks",
     "cue": "Give clues while doing this",
     "text": "Give clues while doing jumping jacks.",
@@ -283,48 +231,6 @@
       "web",
       "drivethru",
       "physical",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Macarena",
-    "cue": "Give clues while doing this",
-    "text": "Give clues while doing the Macarena.",
-    "example": "\"This - (pose) - little - (pose) - floater - (pose) - squeaks - (pose).\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "physical",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Slow-Mo Dance",
-    "cue": "Give clues while doing this",
-    "text": "Pick any simple dance move and do it in slow motion while you clue.",
-    "example": "\"It - (slow move) - floats - (slow move) - in - water...\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "physical",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Story Time",
-    "cue": "Every clue must follow this format",
-    "text": "Start your clues with \"Once upon a time...\" and tell it like a story.",
-    "example": "\"Once upon a time... a tiny yellow toy floated proudly in the tub.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "web",
-      "drivethru",
-      "improv",
       "prototype"
     ]
   },
@@ -344,6 +250,20 @@
     ]
   },
   {
+    "title": "One-Syllable Words",
+    "cue": "Give clues using only",
+    "text": "You may only use one-syllable words. If you're not sure whether a word is one syllable, the table votes quickly to keep it moving.",
+    "example": "\"Small. Round. Bath friend.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
     "title": "Singing",
     "cue": "Give clues while doing this",
     "text": "Sing all your clues. Pick any genre. It doesn't have to rhyme.",
@@ -356,6 +276,20 @@
     ]
   },
   {
+    "title": "Macarena",
+    "cue": "Give clues while doing this",
+    "text": "Give clues while doing the Macarena.",
+    "example": "\"This - (pose) - little - (pose) - floater - (pose) - squeaks - (pose).\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "physical",
+      "prototype"
+    ]
+  },
+  {
     "title": "Meow After Every Word",
     "cue": "Every clue must follow this format",
     "text": "After every single word, add a \"meow.\"",
@@ -365,6 +299,35 @@
       "passnplay",
       "drivethru",
       "improv"
+    ]
+  },
+  {
+    "title": "Adjectives & Nouns Only",
+    "cue": "Give clues using only",
+    "text": "Give clues using only adjectives (describing words) and nouns (person, place, thing).",
+    "example": "\"Yellow toy. Floaty duck. Squishy bath friend.\"",
+    "tags": [
+      "rules",
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Slow-Mo Dance",
+    "cue": "Give clues while doing this",
+    "text": "Pick any simple dance move and do it in slow motion while you clue.",
+    "example": "\"It - (slow move) - floats - (slow move) - in - water...\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "physical",
+      "prototype"
     ]
   },
   {
@@ -383,6 +346,19 @@
     ]
   },
   {
+    "title": "Verbs & Nouns Only",
+    "cue": "Give clues using only",
+    "text": "Give clues using only verbs (action words) and nouns (person, place, thing).",
+    "example": "\"Squeeze toy. Hear squeak. Watch float. Bath water.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental",
+      "prototype"
+    ]
+  },
+  {
     "title": "Talking to the Cutest Puppy",
     "cue": "Give clues as if you are",
     "text": "Give clues like you're talking to the cutest puppy ever and it understands every word.",
@@ -395,6 +371,18 @@
       "drivethru",
       "improv",
       "prototype"
+    ]
+  },
+  {
+    "title": "Comparisons",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must compare it to something else. Example: \"It's like a spoon, but it has teeth.\"",
+    "example": "\"It's smaller than most bath toys, and it floats better than soap.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
@@ -411,6 +399,18 @@
       "drivethru",
       "improv",
       "prototype"
+    ]
+  },
+  {
+    "title": "Two Pieces",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must come in two parts with a brief pause.",
+    "example": "\"It squeaks / then it floats.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
@@ -441,6 +441,30 @@
     ]
   },
   {
+    "title": "Checklist Inspection",
+    "cue": "Every clue must follow this format",
+    "text": "Clue like you're inspecting it. Say \"___, check\" for every clue. Use parts, materials, or features.",
+    "example": "\"Yellow, check. Rubber, check. Floats, check.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
+    ]
+  },
+  {
+    "title": "It's Like, But Not That",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must use a simile in the format \"It's like ... but not that.\"",
+    "example": "\"It's like a tiny boat, but not that. It's like a squeaky horn, but not that. It's like a yellow lemon, but not that.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
+    ]
+  },
+  {
     "title": "Villain Monologue",
     "cue": "Give clues as if delivering a",
     "text": "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
@@ -454,6 +478,18 @@
       "drivethru",
       "improv",
       "prototype"
+    ]
+  },
+  {
+    "title": "Trade-Offs Only",
+    "cue": "Every clue must follow this format",
+    "text": "Every clue must be a trade-off in this format: \"Great for ___, terrible for ___.\" Example: \"Great for protecting your head, terrible for your hair.\"",
+    "example": "\"Great for bath time, terrible for silent environments.\"",
+    "tags": [
+      "main",
+      "passnplay",
+      "drivethru",
+      "mental"
     ]
   },
   {
@@ -538,30 +574,6 @@
     ]
   },
   {
-    "title": "Checklist Inspection",
-    "cue": "Every clue must follow this format",
-    "text": "Clue like you're inspecting it. Say \"___, check\" for every clue. Use parts, materials, or features.",
-    "example": "\"Yellow, check. Rubber, check. Floats, check.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental"
-    ]
-  },
-  {
-    "title": "It's Like, But Not That",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue must use a simile in the format \"It's like ... but not that.\"",
-    "example": "\"It's like a tiny boat, but not that. It's like a squeaky horn, but not that. It's like a yellow lemon, but not that.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental"
-    ]
-  },
-  {
     "title": "Guided Meditation",
     "cue": "Give clues as if leading a",
     "text": "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
@@ -631,18 +643,6 @@
       "drivethru",
       "improv",
       "prototype"
-    ]
-  },
-  {
-    "title": "Trade-Offs Only",
-    "cue": "Every clue must follow this format",
-    "text": "Every clue must be a trade-off in this format: \"Great for ___, terrible for ___.\" Example: \"Great for protecting your head, terrible for your hair.\"",
-    "example": "\"Great for bath time, terrible for silent environments.\"",
-    "tags": [
-      "main",
-      "passnplay",
-      "drivethru",
-      "mental"
     ]
   },
   {
