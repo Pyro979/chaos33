@@ -674,6 +674,73 @@ nav {
     margin: 0;
 }
 
+/* Social Media Cards */
+.socials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px var(--shadow-hover);
+    text-decoration: none;
+}
+
+.social-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.25s ease;
+}
+
+.social-card:hover .social-icon {
+    transform: scale(1.15);
+}
+
+.social-card h3 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+.social-card p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.875rem;
+    word-break: break-word;
+}
+
+.social-instagram .social-icon { color: #E1306C; }
+.social-instagram:hover { border-color: #E1306C; }
+
+.social-facebook .social-icon { color: #1877F2; }
+.social-facebook:hover { border-color: #1877F2; }
+
+.social-youtube .social-icon { color: #FF0000; }
+.social-youtube:hover { border-color: #FF0000; }
+
+.social-discord .social-icon { color: #5865F2; }
+.social-discord:hover { border-color: #5865F2; }
+
 /* Hero Cards */
 .hero-cards {
     display: flex;
@@ -1487,7 +1554,8 @@ footer a:hover {
         flex: 1;
     }
 
-    .components-grid {
+    .components-grid,
+    .socials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1502,7 +1570,8 @@ footer a:hover {
 }
 
 @media (min-width: 1024px) {
-    .components-grid {
+    .components-grid,
+    .socials-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
