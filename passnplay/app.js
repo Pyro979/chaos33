@@ -18,6 +18,8 @@ let progress = 0;
 let currentChaosPrompt = null;
 let currentWord = null;
 let currentDuel = null;
+let currentGoblinMode = null;
+let lastGoblinMode = null;
 let currentDuelCategory = null;
 let currentDuelLetter = null;
 let currentDuelTrigger = null; // Object with full_text and card_text
@@ -77,6 +79,7 @@ function initializeApp() {
     document.getElementById('next-player-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-normal-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-duel-btn').addEventListener('click', handleNextPlayer);
+    document.getElementById('next-player-goblin-btn').addEventListener('click', handleNextPlayer);
     
     document.getElementById('swap-btn').addEventListener('click', () => showSwapModal('normal'));
     document.getElementById('swap-duel-btn').addEventListener('click', () => showSwapModal('duel'));
@@ -95,6 +98,10 @@ function initializeApp() {
         showHowToPlayModal();
     });
     document.getElementById('how-to-play-link-duel').addEventListener('click', (e) => {
+        e.preventDefault();
+        showHowToPlayModal();
+    });
+    document.getElementById('how-to-play-link-goblin').addEventListener('click', (e) => {
         e.preventDefault();
         showHowToPlayModal();
     });
@@ -132,17 +139,25 @@ function handleNextPlayer() {
     
     // Decide: 25% chance for duel, 75% for normal turn
     // But avoid back-to-back duels, never start with a duel, and force duel if none in last 5
+    // Goblin Mode: ~10% chance, never back-to-back, never on first turn
     let isDuel = false;
+    let isGoblinMode = false;
+    const hasGoblinCards = gameData.goblinModes && gameData.goblinModes.length > 0;
     if (mustForceDuel) {
-        // Force duel if we haven't seen one in the last 5 turns
         isDuel = true;
     } else if (lastScreenType !== 'duel' && lastScreenType !== null) {
-        // Only allow duel if we've had at least one normal turn and last wasn't a duel
-        isDuel = Math.random() < 0.25;
+        const roll = Math.random();
+        if (hasGoblinCards && lastScreenType !== 'goblin-mode' && roll < 0.10) {
+            isGoblinMode = true;
+        } else if (roll < (hasGoblinCards ? 0.35 : 0.25)) {
+            isDuel = true;
+        }
     }
-    // If last was a duel or this is the first turn (and not forcing), force normal turn
     
-    if (isDuel) {
+    if (isGoblinMode) {
+        startGoblinMode();
+        lastScreenType = 'goblin-mode';
+    } else if (isDuel) {
         startDuel();
         lastScreenType = 'duel';
     } else {
@@ -221,9 +236,9 @@ function startDuel() {
     const revealBtn = document.getElementById('reveal-btn');
     const revealSection = document.getElementById('duel-reveal-section');
     
-    // Determine what to reveal based on duel type
-    if (currentDuel.title === 'Alpha Blitz') {
-        // Alpha Blitz: needs category and letter
+    // Determine what to reveal based on duel data fields (not title) so all blitz variants work.
+    if (currentDuel.alphabetic) {
+        // Alpha Blitz family (alphabetic:true): needs category + letter
         currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
             ? currentDuel.categories 
             : gameData.duelCategories.alphaBlitz);
@@ -233,20 +248,20 @@ function startDuel() {
         revealValues.innerHTML = '';
         revealBtn.style.cursor = 'pointer';
         revealSection.style.display = 'block';
-    } else if (currentDuel.title === 'Theme Blitz') {
-        // Theme Blitz: needs category only
-        currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-            ? currentDuel.categories 
-            : gameData.duelCategories.themeBlitz);
+    } else if (currentDuel.title === 'Scavenge') {
+        // Scavenge: needs category from the scavenge pool
+        currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
         currentDuelLetter = null;
         revealText.style.display = 'block';
         revealValues.style.display = 'none';
         revealValues.innerHTML = '';
         revealBtn.style.cursor = 'pointer';
         revealSection.style.display = 'block';
-    } else if (currentDuel.title === 'Scavenge') {
-        // Scavenge: needs category from scavenge list
-        currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
+    } else if (currentDuel.categories && currentDuel.categories.length > 0) {
+        // Theme Blitz family (non-alphabetic, has categories): needs category only
+        currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
+            ? currentDuel.categories 
+            : gameData.duelCategories.themeBlitz);
         currentDuelLetter = null;
         revealText.style.display = 'block';
         revealValues.style.display = 'none';
@@ -265,6 +280,16 @@ function startDuel() {
     }
     
     showScreen('duel');
+}
+
+function startGoblinMode() {
+    currentGoblinMode = getRandomItem(gameData.goblinModes, lastGoblinMode);
+    lastGoblinMode = currentGoblinMode;
+
+    document.getElementById('goblin-title').textContent = currentGoblinMode.title;
+    document.getElementById('goblin-description').innerHTML = formatText(currentGoblinMode.text);
+
+    showScreen('goblin-mode');
 }
 
 function handleReveal() {
@@ -370,7 +395,7 @@ function handleSwapConfirm() {
         const revealBtn = document.getElementById('reveal-btn');
         const revealSection = document.getElementById('duel-reveal-section');
         
-        if (currentDuel.title === 'Alpha Blitz') {
+        if (currentDuel.alphabetic) {
             currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
                 ? currentDuel.categories 
                 : gameData.duelCategories.alphaBlitz);
@@ -380,18 +405,18 @@ function handleSwapConfirm() {
             revealValues.innerHTML = '';
             revealBtn.style.cursor = 'pointer';
             revealSection.style.display = 'block';
-        } else if (currentDuel.title === 'Theme Blitz') {
-            currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-                ? currentDuel.categories 
-                : gameData.duelCategories.themeBlitz);
+        } else if (currentDuel.title === 'Scavenge') {
+            currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
             currentDuelLetter = null;
             revealText.style.display = 'block';
             revealValues.style.display = 'none';
             revealValues.innerHTML = '';
             revealBtn.style.cursor = 'pointer';
             revealSection.style.display = 'block';
-        } else if (currentDuel.title === 'Scavenge') {
-            currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
+        } else if (currentDuel.categories && currentDuel.categories.length > 0) {
+            currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
+                ? currentDuel.categories 
+                : gameData.duelCategories.themeBlitz);
             currentDuelLetter = null;
             revealText.style.display = 'block';
             revealValues.style.display = 'none';

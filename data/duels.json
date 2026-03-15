@@ -33,7 +33,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
     "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -155,7 +155,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
     "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -170,7 +170,7 @@
   {
     "title": "Table Curling",
     "multiCard": false,
-    "text": "The Judge picks any **rollable object** (pen, marker, chapstick, etc.).\\n\\nDuelers roll **simultaneously**.\\n\\n**Farthest** roll without **falling off the table** wins.\\n\\nIf both fall, redo.",
+    "text": "The Judge picks any **rollable object** (plastic cylinder, pen, marker, chapstick, etc.).\\n\\nDuelers roll **simultaneously**.\\n\\n**Farthest** roll without **falling off the table** wins.\\n\\nIf both fall, redo.",
     "web_description": "The Judge picks a rollable object. Roll together. Farthest without falling wins.",
     "tags": [
       "rules",
@@ -195,7 +195,7 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
     "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
@@ -210,12 +210,25 @@
   {
     "title": "Table Cornhole",
     "multiCard": false,
-    "text": "The Judge picks any pair of the same **tossable small objects** (coin, eraser, chip, etc.).\\n\\nDuelers stand **2-3 feet from the table**. Both toss the object at the **same time**.\\n\\nObject closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
+    "text": "The Judge picks any pair of the same **tossable small objects** (bean bag, coin, eraser, chip, etc.).\\n\\nDuelers stand **2-3 feet from the table**. Both toss the object at the **same time**.\\n\\nObject closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
     "web_description": "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
     "tags": [
       "rules",
       "main",
       "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Table Bowling",
+    "multiCard": false,
+    "text": "Stand a **cylinder** upright at the far end of the table.\n\nDuelers alternate turns tossing a **bean bag** to knock it down from **2-3 feet away**.\n\nMiss - retrieve the bean bag and return to the same spot. If both knock it down in the same round, reset and take a step back. First to knock it down wins.",
+    "web_description": "Take turns tossing a bean bag to knock down a standing cylinder. Step back each tie. First to knock it down wins.",
+    "tags": [
+      "main",
       "passnplay",
       "printnplay",
       "drivethru",
@@ -322,6 +335,182 @@
     "multiCard": false,
     "text": "Each dueler places a **card face down, partly off the table edge**.\\n\\nOn 'Go,' flick it upward so it **flips face up onto the table**.\\n\\nRepeat **3 times** without dropping. Drops reset count. First to finish wins.",
     "web_description": "Flick a card from the table edge. First to land it face-up 3 times wins.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Dead Center",
+    "multiCard": false,
+    "text": "The Judge places a **coin in the center** of the table and hands each Dueler a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nDuelers stand **a few feet from the table**. Both toss at the **same time**.\n\nClosest to the coin wins.\n\nIf tied, redo.",
+    "web_description": "Toss a small object closest to the coin. Simultaneous throws. Closest wins. Ties redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Coin Flip",
+    "multiCard": false,
+    "text": "Place a coin on the **back of your hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins.",
+    "web_description": "Flick a coin off the back of your hand with your thumb and catch it. First to 3 wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Theme Blitz",
+    "alphabetic": false,
+    "categories": [
+      "Farm animals",
+      "Spices",
+      "Things in a toolbox",
+      "Things that come in pairs",
+      "Things you wear",
+      "Things in a kitchen",
+      "Things that fly",
+      "Things that are round"
+    ],
+    "text": "Duelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "Take turns naming items in the category. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Theme Blitz",
+    "alphabetic": false,
+    "categories": [
+      "Farm animals",
+      "Spices",
+      "Things in a toolbox",
+      "Things that come in pairs",
+      "Things you wear",
+      "Things in a kitchen",
+      "Things that fly",
+      "Things that are round"
+    ],
+    "text": "Duelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "Take turns naming items in the category. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "The Judge picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "The Judge picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alpha² Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "Duelers take turns naming items - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
+    "web_description": "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alpha² Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "Duelers take turns naming items - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
+    "web_description": "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",

@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Coin Spin",
+    "minPlayers": 3,
+    "text": "Each player spins a coin simultaneously.\n\nLast coin still spinning wins. Falling off the table counts as stopping.\n\nAll players must cheer their coin on.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Direction Chain",
+    "minPlayers": 3,
+    "text": "Going clockwise starting with the player who drew this card, each player calls a direction - **LEFT**, **RIGHT**, **UP**, or **DOWN** - and everyone turns their head in that direction simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Dead Center",
+    "minPlayers": 3,
+    "text": "Place a **coin in the center** of the table. Each player gets a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nAll players stand **a few feet from the table** and toss at the **same time**.\n\nClosest to the coin wins. If tied, redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Coin Flip",
+    "minPlayers": 3,
+    "text": "Each player places a coin on the **back of their hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Chain Theme Blitz",
+    "minPlayers": 3,
+    "themeCategory": true,
+    "text": "Draw a Word Card and read the **category** aloud.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from that category.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Chain Alpha Blitz",
+    "minPlayers": 3,
+    "alphabetic": true,
+    "text": "Draw a Word Card and read the **category** aloud. The player who drew picks a **letter**. Avoid: J, K, Q, V, X, Y, Z.\n\nStarting with that player and going **clockwise**, each player names one item from that category starting with that letter.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alpha² Blitz",
+    "minPlayers": 3,
+    "alphabetic": true,
+    "text": "Draw a Word Card and read the **category** aloud.\n\n**Clockwise** from the player who drew this card, players take turns naming items from **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Mass Confusion Scavenge",
+    "minPlayers": 3,
+    "scavenge": true,
+    "text": "Draw a Word Card and read the **category** aloud.\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from that category.\n\nNo digital screens. First back wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Monster Mash",
+    "minPlayers": 3,
+    "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest.\n**FRANKENSTEIN**: arms out.\n**WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Drum Chicken Hat",
+    "minPlayers": 3,
+    "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps.\n**CHICKEN**: flap elbows twice.\n**HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Table Cornhole",
+    "minPlayers": 3,
+    "text": "Each player gets a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nAll players stand **2-3 feet from the table** and toss at the **same time**.\n\nClosest to the **far edge** without falling off wins. If all fall, redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Table Curling",
+    "minPlayers": 3,
+    "text": "Each player gets a **rollable object** (plastic cylinder, pen, marker, chapstick, etc.).\n\nAll players roll **simultaneously**.\n\n**Farthest** roll without **falling off the table** wins. If all fall, redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Backhand Flip",
+    "minPlayers": 3,
+    "text": "Each player places a **small flat object** (bean bag, coin, chip, etc.) on the **back of their hand**.\n\nFling it **6-12 inches** into the air, flip that same hand, and catch it.\n\nDrops reset your count. First to **3** wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  }
+]

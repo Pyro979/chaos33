@@ -14,6 +14,8 @@
     --font-header: 'Fredoka', cursive;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --duel-color: #FF881D;
+    --goblin-color: #7b1fa2;
+    --goblin-bg: #f3e5f5;
 }
 
 /* Reset and Base Styles */
@@ -410,6 +412,47 @@ body {
 }
 
 .duel-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--text);
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    white-space: pre-line;
+}
+
+/* Goblin Mode Card */
+.game-card.goblin-card {
+    border-color: var(--goblin-color);
+}
+
+.card-label.goblin-label {
+    background-color: var(--goblin-color);
+}
+
+.goblin-subtitle-banner {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--goblin-color);
+    background-color: var(--goblin-bg);
+    text-align: center;
+    padding: 0.4rem 1rem;
+    border-bottom: 1px solid var(--goblin-color);
+    flex-shrink: 0;
+}
+
+.goblin-title {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    color: var(--goblin-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.goblin-description {
     font-size: 1rem;
     line-height: 1.4;
     color: var(--text);

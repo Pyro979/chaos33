@@ -6,7 +6,8 @@ let gameData = {
     duels: [],
     words: [],
     duelCategories: null,
-    duelTriggers: []
+    duelTriggers: [],
+    goblinModes: []
 };
 
 // Letters to avoid for Alpha Blitz
@@ -20,7 +21,7 @@ async function loadGameData() {
         const basePath = '../data/';
         
         // Load all data files (already filtered for passnplay tag by generate.js)
-        const [challengesData, duelsData, wordsData, categoriesData, triggersData] = await Promise.all([
+        const [challengesData, duelsData, wordsData, categoriesData, triggersData, goblinModeData] = await Promise.all([
             fetch(basePath + 'challenges.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
                 return r.json();
@@ -54,6 +55,10 @@ async function loadGameData() {
             fetch(basePath + 'duel_triggers.json').then(r => {
                 if (!r.ok) throw new Error(`Failed to load duel_triggers.json: ${r.status}`);
                 return r.json();
+            }),
+            fetch(basePath + 'goblin_mode.json').then(r => {
+                if (!r.ok) throw new Error(`Failed to load goblin_mode.json: ${r.status}`);
+                return r.json();
             })
         ]);
 
@@ -84,6 +89,14 @@ async function loadGameData() {
             .map(item => ({
                 card_text: item.card_text || item.text.replace(/^Duel:\s*/, ''),
                 full_text: item.text || item.card_text || ''
+            }));
+
+        // Store Goblin Mode cards (filter for passnplay tag)
+        gameData.goblinModes = goblinModeData
+            .filter(item => item.tags && item.tags.includes('passnplay') && !item.tags.includes('cut'))
+            .map(item => ({
+                title: item.title,
+                text: item.text
             }));
 
         console.log('=== GAME DATA LOADED ===');
