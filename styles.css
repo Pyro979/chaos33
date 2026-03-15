@@ -1,10 +1,15 @@
 /* CSS Variables */
+/* THEME: A1 — KS Green Dominant + Warm off-white BG */
 :root {
     --bg: #faf8f5;
     --bg-alt: #f5f3f0;
-    --accent: #0FB85A;
-    --accent-soft: #14E06E;
-    --accent-dark: #0A9A4A;
+    --accent: #05CE78;
+    --accent-soft: #07f090;
+    --accent-dark: #04a860;
+    --accent-bg: #05CE78;
+    --accent-bg-hover: #04a860;
+    --accent-duel: #DB2B17;
+    --accent-duel-dark: #b02210;
     --text: #2a2a2a;
     --muted: #5a5a5a;
     --card-bg: #ffffff;
@@ -55,13 +60,13 @@ body {
 
 /* General link styling */
 a {
-    color: #1677be;
+    color: #11ABE5;
     text-decoration: none;
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {
-    color: #0d5a8f;
+    color: #0d8fbc;
     text-decoration: underline;
 }
 
@@ -466,15 +471,15 @@ nav {
 }
 
 .btn-primary {
-    background-color: var(--accent);
-    color: white;
+    background-color: var(--accent-bg);
+    color: #000000;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--accent-dark);
+    background-color: var(--accent-bg-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 184, 90, 0.3);
+    box-shadow: 0 4px 12px rgba(17, 171, 229, 0.3);
 }
 
 .btn-secondary {
@@ -485,10 +490,10 @@ nav {
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-    background-color: var(--accent);
-    color: white;
+    background-color: var(--accent-bg);
+    color: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 184, 90, 0.3);
+    box-shadow: 0 4px 12px rgba(17, 171, 229, 0.3);
 }
 
 /* Sections */
@@ -583,8 +588,8 @@ nav {
     position: absolute;
     left: 1rem;
     top: 1.5rem;
-    background-color: var(--accent);
-    color: white;
+    background-color: var(--accent-bg);
+    color: #000000;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -973,46 +978,46 @@ nav {
 @keyframes blendHeader {
     0% {
         /* Avoid a gray "flash" during prompt flips; keep the prompt header color stable */
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     45% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     55% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     100% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
 }
 
 @keyframes blendHeaderToDuel {
     0% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     45% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     55% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
     100% {
-        background-color: #FF881D;
+        background-color: var(--accent-duel);
     }
 }
 
 @keyframes blendHeaderFromDuel {
     0% {
-        background-color: #FF881D;
+        background-color: var(--accent-duel);
     }
     45% {
-        background-color: #FF881D;
+        background-color: var(--accent-duel);
     }
     55% {
-        background-color: #FF881D;
+        background-color: var(--accent-duel);
     }
     100% {
-        background-color: var(--accent);
+        background-color: var(--accent-bg);
     }
 }
 
@@ -1033,8 +1038,8 @@ nav {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: white;
-    background-color: var(--accent);
+    color: #000000;
+    background-color: var(--accent-bg);
     margin: 0;
     padding: 0.75rem 1rem;
     font-weight: 600;
@@ -1050,7 +1055,7 @@ nav {
 
 .card-label.duel-label {
     color: white;
-    background-color: #FF881D;
+    background-color: var(--accent-duel);
     margin: 0;
     padding: 0.75rem 1rem;
     font-weight: 600;
@@ -1119,7 +1124,7 @@ nav {
 }
 
 .portrait-card .card-content h3.duel-title {
-    color: #FF881D !important;
+    color: var(--accent-duel) !important;
     font-weight: 400;
 }
 
@@ -1301,7 +1306,7 @@ footer a:hover {
         left: 0;
         right: 0;
         /* Slightly more distinct than the header so the open menu reads as a panel */
-        background-color: #ffd5b0;
+        background-color: #e0faf0;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         border: 1px solid var(--border);
@@ -1616,7 +1621,7 @@ select:focus {
 
 /* Override kit.com button color */
 .formkit-form[data-uid="74161f0c83"] .formkit-submit {
-    background-color: #FF881D !important;
+    background-color: var(--accent-bg) !important;
     color: #000000 !important;
     font-size: 1.1rem !important;
 }
@@ -1662,7 +1667,7 @@ select:focus {
 
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:hover,
 .formkit-form[data-uid="74161f0c83"] .formkit-submit:focus {
-    background-color: #ff9933 !important;
+    background-color: var(--accent-dark) !important;
     color: #000000 !important;
 }
 
@@ -1680,16 +1685,16 @@ select:focus {
     display: none !important;
 }
 
-/* Generic ConvertKit button styling - orange theme */
+/* Generic ConvertKit button styling */
 .formkit-form .formkit-submit {
-    background-color: #FF881D !important;
+    background-color: var(--accent-bg) !important;
     color: #000000 !important;
     font-size: 1.1rem !important;
 }
 
 .formkit-form .formkit-submit:hover,
 .formkit-form .formkit-submit:focus {
-    background-color: #ff9933 !important;
+    background-color: var(--accent-dark) !important;
     color: #000000 !important;
 }
 
