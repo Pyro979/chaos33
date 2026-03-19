@@ -10,6 +10,8 @@
     --accent-bg-hover: #04a860;
     --accent-duel: #DB2B17;
     --accent-duel-dark: #b02210;
+    --accent-goblin: #7B1FA2;
+    --accent-goblin-dark: #6A1B9A;
     --text: #2a2a2a;
     --muted: #5a5a5a;
     --card-bg: #ffffff;
@@ -1021,7 +1023,37 @@ nav {
     }
 }
 
-.demo-card.flipping .card-label:not(.duel-label) {
+@keyframes blendHeaderFromDuelToGoblin {
+    0% {
+        background-color: var(--accent-duel);
+    }
+    45% {
+        background-color: var(--accent-duel);
+    }
+    55% {
+        background-color: var(--accent-duel);
+    }
+    100% {
+        background-color: var(--accent-goblin);
+    }
+}
+
+@keyframes blendHeaderFromGoblinToGreen {
+    0% {
+        background-color: var(--accent-goblin);
+    }
+    45% {
+        background-color: var(--accent-goblin);
+    }
+    55% {
+        background-color: var(--accent-goblin);
+    }
+    100% {
+        background-color: var(--accent-bg);
+    }
+}
+
+.demo-card.flipping .card-label:not(.duel-label):not(.goblin-label) {
     animation: blendHeader 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
@@ -1029,8 +1061,19 @@ nav {
     animation: blendHeaderToDuel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
-.demo-card.is-duel.flipping .card-label:not(.duel-label) {
+/* duel → goblin */
+.demo-card.is-duel.flipping .card-label.goblin-label {
+    animation: blendHeaderFromDuelToGoblin 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+/* duel → regular (edge-case safety) */
+.demo-card.is-duel.flipping .card-label:not(.duel-label):not(.goblin-label) {
     animation: blendHeaderFromDuel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+/* goblin → regular */
+.demo-card.is-goblin-mode.flipping .card-label:not(.duel-label):not(.goblin-label) {
+    animation: blendHeaderFromGoblinToGreen 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
 .card-label {
@@ -1056,6 +1099,22 @@ nav {
 .card-label.duel-label {
     color: white;
     background-color: var(--accent-duel);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.card-label.goblin-label {
+    color: white;
+    background-color: var(--accent-goblin);
     margin: 0;
     padding: 0.75rem 1rem;
     font-weight: 600;
@@ -1128,6 +1187,17 @@ nav {
     font-weight: 400;
 }
 
+.portrait-card .card-content h3.goblin-title {
+    color: var(--accent-goblin) !important;
+    font-weight: 400;
+}
+
+/* Goblin Mode cards have longer text — scale it down to fit */
+.portrait-card.is-goblin-mode #chaos-description {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+}
+
 /* Chaos card description */
 #chaos-description {
     font-size: 0.95rem !important;
@@ -1169,6 +1239,15 @@ nav {
     overflow: hidden;
     /* Container query: scales font size based on card width to prevent wrapping */
     font-size: clamp(0.6rem, 8cqw, 1.4rem) !important;
+}
+
+.goblin-word-sub {
+    display: block;
+    font-size: 0.65em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--accent-goblin);
+    margin-top: 0.2em;
 }
 
 /* Circular progress indicator below cards */

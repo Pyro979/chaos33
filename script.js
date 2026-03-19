@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
   // Validate that data.js was loaded
   if (typeof chaosPrompts === 'undefined' || typeof chaosDuels === 'undefined' || 
-      typeof duelTriggers === 'undefined' || typeof wordList === 'undefined') {
+      typeof duelTriggers === 'undefined' || typeof wordList === 'undefined' ||
+      typeof goblinModeCards === 'undefined') {
     console.error('Error: data.js must be loaded before script.js. Please ensure data.js is included in index.html before script.js');
     return;
   }
@@ -91,6 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let duelIndex = 0;
   let duelTriggerIndex = 0;
 
+  const shuffledGoblinMode = shuffleArray(goblinModeCards);
+  let goblinModeIndex = 0;
+
   function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
@@ -135,6 +139,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const duel = shuffledDuels[duelIndex % shuffledDuels.length];
     duelIndex++;
     return duel;
+  }
+
+  function getNextGoblinMode() {
+    const card = shuffledGoblinMode[goblinModeIndex % shuffledGoblinMode.length];
+    goblinModeIndex++;
+    return card;
   }
 
   function getNextDuelTrigger() {
@@ -201,14 +211,21 @@ document.addEventListener("DOMContentLoaded", function () {
       startProgressTimer();
     }
 
-    // Check if this will be a duel flip to swap header color during flip
-    const willBeDuelFlip = flipCount % 2 === 1;
-    if (willBeDuelFlip && chaosLabel) {
-      chaosLabel.classList.add("duel-label");
-      if (wordLabel) wordLabel.classList.add("duel-label");
-    } else if (!willBeDuelFlip && chaosLabel) {
-      chaosLabel.classList.remove("duel-label");
-      if (wordLabel) wordLabel.classList.remove("duel-label");
+    // Determine next flip type: 0 = regular, 1 = duel, 2 = goblin mode
+    const nextFlipType = flipCount % 3;
+    const willBeDuelFlip = nextFlipType === 1;
+    const willBeGoblinFlip = nextFlipType === 2;
+
+    // Set label classes before flip so CSS transition animations fire correctly
+    if (willBeDuelFlip) {
+      if (chaosLabel) { chaosLabel.classList.add("duel-label"); chaosLabel.classList.remove("goblin-label"); }
+      if (wordLabel) { wordLabel.classList.add("duel-label"); wordLabel.classList.remove("goblin-label"); }
+    } else if (willBeGoblinFlip) {
+      if (chaosLabel) { chaosLabel.classList.add("goblin-label"); chaosLabel.classList.remove("duel-label"); }
+      if (wordLabel) { wordLabel.classList.add("goblin-label"); wordLabel.classList.remove("duel-label"); }
+    } else {
+      if (chaosLabel) { chaosLabel.classList.remove("duel-label"); chaosLabel.classList.remove("goblin-label"); }
+      if (wordLabel) { wordLabel.classList.remove("duel-label"); wordLabel.classList.remove("goblin-label"); }
     }
 
     // Set card back images before flip so the correct back is visible during the animation
@@ -220,6 +237,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (wordBackImg) {
         wordBackImg.src = imageBase + "gobbo/gobbo_duel_nohood.png";
         wordBackImg.alt = "Goblin mascot – Duel";
+      }
+    } else if (willBeGoblinFlip) {
+      // Goblin Mode uses word card backs on both cards
+      if (chaosBackImg) {
+        chaosBackImg.src = imageBase + "gobbo/gobbo_word_nohood.png";
+        chaosBackImg.alt = "Goblin mascot – Word";
+      }
+      if (wordBackImg) {
+        wordBackImg.src = imageBase + "gobbo/gobbo_word_nohood.png";
+        wordBackImg.alt = "Goblin mascot – Word";
       }
     } else {
       if (chaosBackImg) {
@@ -238,31 +265,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Wait for card to flip halfway (when it's facing away), then update content
     setTimeout(function () {
-      // Alternate between regular flips and duel/Duel! flips
-      const isDuelFlip = flipCount % 2 === 1;
+      const flipType = flipCount % 3; // 0 = regular, 1 = duel, 2 = goblin mode
 
-      if (isDuelFlip) {
-        // Use duel and Duel!
+      if (flipType === 1) {
+        // Duel flip
         const duel = getNextDuel();
         const duelTrigger = getNextDuelTrigger();
 
-        // Add duel class to chaos card for styling
         chaosCard.classList.add("is-duel");
+        chaosCard.classList.remove("is-goblin-mode");
 
-        // Update labels (class already added before flip)
-        if (chaosLabel) {
-          chaosLabel.textContent = "Duel";
-        }
-        if (wordLabel) {
-          wordLabel.textContent = "Duel!";
-        }
+        if (chaosLabel) chaosLabel.textContent = "Duel";
+        if (wordLabel) wordLabel.textContent = "Duel!";
 
-        // Hide cue chip when showing duel
         updateChaosCueChip(null);
 
-        // Update chaos card with duel
         if (chaosTitle) {
-          // Add line break after colon if present
           let titleText = duel.title;
           if (titleText.includes(":")) {
             titleText = titleText.replace(":", ":<br>");
@@ -271,10 +289,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chaosTitle.textContent = titleText;
           }
           chaosTitle.classList.add("duel-title");
+          chaosTitle.classList.remove("goblin-title");
         }
         if (chaosDescription) {
-          // Handle newlines by converting \n to <br>
-          // Handle markdown bold by converting **text** to <strong>text</strong>
           let descriptionWithBreaks = duel.description.replace(/\\n/g, "<br>");
           descriptionWithBreaks = descriptionWithBreaks.replace(
             /\*\*(.*?)\*\*/g,
@@ -283,35 +300,54 @@ document.addEventListener("DOMContentLoaded", function () {
           chaosDescription.innerHTML = descriptionWithBreaks;
         }
 
-        // Update word card with Duel!
         if (wordText) wordText.textContent = duelTrigger;
-      } else {
-        // Remove duel class if it exists
+
+      } else if (flipType === 2) {
+        // Goblin Mode flip — all-play challenge
+        const goblinCard = getNextGoblinMode();
+
+        chaosCard.classList.add("is-goblin-mode");
         chaosCard.classList.remove("is-duel");
 
-        // Update labels back to normal (class already removed before flip)
-        if (chaosLabel) {
-          chaosLabel.textContent = "Chaos Prompt";
+        if (chaosLabel) chaosLabel.textContent = "Goblin Mode";
+        if (wordLabel) wordLabel.textContent = "Goblin Mode!";
+
+        updateChaosCueChip(null);
+
+        if (chaosTitle) {
+          chaosTitle.textContent = goblinCard.title;
+          chaosTitle.classList.add("goblin-title");
+          chaosTitle.classList.remove("duel-title");
         }
-        if (wordLabel) {
-          wordLabel.textContent = "Word";
+        if (chaosDescription) {
+          let descText = goblinCard.text.replace(/\n/g, "<br>");
+          descText = descText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+          chaosDescription.innerHTML = descText;
         }
 
-        // Use regular chaos prompt and word
+        if (wordText) wordText.innerHTML = "Goblin Mode!<br><span class=\"goblin-word-sub\">everyone plays</span>";
+
+      } else {
+        // Regular flip
+        chaosCard.classList.remove("is-duel");
+        chaosCard.classList.remove("is-goblin-mode");
+
+        if (chaosLabel) chaosLabel.textContent = "Chaos Prompt";
+        if (wordLabel) wordLabel.textContent = "Word";
+
         const randomChaos = getRandomItem(chaosPrompts);
         const randomWord = getRandomItem(wordList);
 
-        // Update chaos card
         if (chaosTitle) {
           chaosTitle.textContent = randomChaos.title;
           chaosTitle.classList.remove("duel-title");
+          chaosTitle.classList.remove("goblin-title");
         }
         if (chaosDescription) {
           chaosDescription.textContent = randomChaos.description;
         }
         updateChaosCueChip(randomChaos);
 
-        // Update word card
         if (wordText) wordText.textContent = randomWord;
       }
 

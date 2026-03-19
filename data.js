@@ -441,6 +441,65 @@ const chaosDuels = [
     }
 ];
 
+const goblinModeCards = [
+    {
+        title: "Coin Spin",
+        text: "Each player spins a coin simultaneously.\n\nLast coin still spinning wins. Falling off the table counts as stopping.\n\nAll players must cheer their coin on."
+    },
+    {
+        title: "Direction Chain",
+        text: "Going clockwise from the player who drew this card, each player calls a direction — **LEFT**, **RIGHT**, **UP**, or **DOWN** — and everyone turns their head simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating — you're out. Last player standing wins."
+    },
+    {
+        title: "Card Flip",
+        text: "Each player takes a **Word Card** and places it **face down, partly off the table edge**.\n\nOn 'Go,' flick it upward so it **flips face up onto the table**.\n\nDrops reset your count. First to **3** wins. Return cards to the deck after."
+    },
+    {
+        title: "Dead Center",
+        text: "Place a **coin in the center** of the table. Each player gets a **small tossable object**.\n\nAll players stand **a few feet away** and toss at the **same time**.\n\nClosest to the coin wins. If tied, redo."
+    },
+    {
+        title: "Coin Flip",
+        text: "Each player places a coin on the **back of their hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins."
+    },
+    {
+        title: "Chain Theme Blitz",
+        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise from the player who drew this card, each player names one item from that category.\n\nHesitate, repeat, or blank — you're out. Last player standing wins."
+    },
+    {
+        title: "Chain Alpha Blitz",
+        text: "Draw a **Word Card** and read the **category** aloud. The player who drew picks a **letter**. Avoid: J, K, Q, V, X, Y, Z.\n\nClockwise, each player names one item from that category starting with that letter.\n\nHesitate, repeat, or blank — you're out. Last player standing wins."
+    },
+    {
+        title: "Alpha² Blitz",
+        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise, players name items from that category in **alphabetical order** — A, then B, and so on.\n\n**5 seconds** per turn. Too slow and you're out. Last player standing wins."
+    },
+    {
+        title: "Mass Confusion Scavenge",
+        text: "Draw a **Word Card** and read the **category** aloud.\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from that category.\n\nNo digital screens. First back wins."
+    },
+    {
+        title: "Monster Mash",
+        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest. **FRANKENSTEIN**: arms out. **WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating — you're out. Last player standing wins."
+    },
+    {
+        title: "Drum Chicken Hat",
+        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps. **CHICKEN**: flap elbows twice. **HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating — you're out. Last player standing wins."
+    },
+    {
+        title: "Table Cornhole",
+        text: "Each player gets a **small tossable object**.\n\nAll players stand **2–3 feet from the table** and toss at the **same time**.\n\nClosest to the **far edge** without falling off wins. If all fall, redo."
+    },
+    {
+        title: "Table Curling",
+        text: "Each player gets a **rollable object** (pen, marker, chapstick, etc.).\n\nAll players roll **simultaneously**.\n\n**Farthest** roll without **falling off the table** wins. If all fall, redo."
+    },
+    {
+        title: "Backhand Flip",
+        text: "Each player places a **small flat object** on the **back of their hand**.\n\nFling it **6–12 inches** into the air, flip that same hand, and catch it.\n\nDrops reset your count. First to **3** wins."
+    }
+];
+
 const duelTriggers = [
     "Duel!"
 ];
