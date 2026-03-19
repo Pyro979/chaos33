@@ -448,7 +448,7 @@ const goblinModeCards = [
     },
     {
         title: "Direction Chain",
-        text: "Going clockwise from the player who drew this card, each player calls a direction — **LEFT**, **RIGHT**, **UP**, or **DOWN** — and everyone turns their head simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating — you're out. Last player standing wins."
+        text: "Going clockwise from the player who drew this card, each player calls a direction - **LEFT**, **RIGHT**, **UP**, or **DOWN** - and everyone turns their head simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating - you're out. Last player standing wins."
     },
     {
         title: "Card Flip",
@@ -464,15 +464,15 @@ const goblinModeCards = [
     },
     {
         title: "Chain Theme Blitz",
-        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise from the player who drew this card, each player names one item from that category.\n\nHesitate, repeat, or blank — you're out. Last player standing wins."
+        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise from the player who drew this card, each player names one item from that category.\n\nHesitate, repeat, or blank - you're out. Last player standing wins."
     },
     {
         title: "Chain Alpha Blitz",
-        text: "Draw a **Word Card** and read the **category** aloud. The player who drew picks a **letter**. Avoid: J, K, Q, V, X, Y, Z.\n\nClockwise, each player names one item from that category starting with that letter.\n\nHesitate, repeat, or blank — you're out. Last player standing wins."
+        text: "Draw a **Word Card** and read the **category** aloud. The player who drew picks a **letter**. Avoid: J, K, Q, V, X, Y, Z.\n\nClockwise, each player names one item from that category starting with that letter.\n\nHesitate, repeat, or blank - you're out. Last player standing wins."
     },
     {
         title: "Alpha² Blitz",
-        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise, players name items from that category in **alphabetical order** — A, then B, and so on.\n\n**5 seconds** per turn. Too slow and you're out. Last player standing wins."
+        text: "Draw a **Word Card** and read the **category** aloud.\n\nClockwise, players name items from that category in **alphabetical order** - A, then B, and so on.\n\n**5 seconds** per turn. Too slow and you're out. Last player standing wins."
     },
     {
         title: "Mass Confusion Scavenge",
@@ -480,11 +480,11 @@ const goblinModeCards = [
     },
     {
         title: "Monster Mash",
-        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest. **FRANKENSTEIN**: arms out. **WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating — you're out. Last player standing wins."
+        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest. **FRANKENSTEIN**: arms out. **WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins."
     },
     {
         title: "Drum Chicken Hat",
-        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps. **CHICKEN**: flap elbows twice. **HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating — you're out. Last player standing wins."
+        text: "Clockwise from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps. **CHICKEN**: flap elbows twice. **HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins."
     },
     {
         title: "Table Cornhole",

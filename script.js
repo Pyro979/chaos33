@@ -197,6 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (typeof gtag === "function") {
         gtag("event", "card_demo_flip");
       }
+      if (typeof fbq === "function") {
+        fbq("trackCustom", "CardDemoFlip");
+      }
       // Restart the auto-flip interval with new timing
       if (autoFlipInterval) {
         clearInterval(autoFlipInterval);
@@ -303,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (wordText) wordText.textContent = duelTrigger;
 
       } else if (flipType === 2) {
-        // Goblin Mode flip — all-play challenge
+        // Goblin Mode flip - all-play challenge
         const goblinCard = getNextGoblinMode();
 
         chaosCard.classList.add("is-goblin-mode");
