@@ -1061,8 +1061,8 @@ nav {
     animation: blendHeaderToDuel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
-/* duel → goblin */
-.demo-card.is-duel.flipping .card-label.goblin-label {
+/* → goblin (applies to both cards; is-duel only lives on #chaos-card) */
+.demo-card.flipping .card-label.goblin-label {
     animation: blendHeaderFromDuelToGoblin 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards, hideLabel 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
