@@ -813,11 +813,24 @@ body {
     }
 }
 
+/* Flex chain so .rules-content can shrink and scroll inside max-height modal */
+.modal-content-rules .rules-variant {
+    flex: 1 1 0%;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content-rules .modal-buttons {
+    flex-shrink: 0;
+}
+
 .modal-content-rules .rules-content {
     margin-bottom: 1.5rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    flex: 1;
+    flex: 1 1 auto;
     min-height: 0;
     padding-right: 0.5rem;
     margin-right: -0.5rem;
@@ -1279,6 +1292,379 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Passnplay session UX */
+.pnp-hidden {
+    display: none !important;
+}
+
+.share-fab {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 60;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--muted);
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 10px var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.share-fab i {
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.share-fab:hover {
+    color: var(--text);
+    box-shadow: 0 4px 14px var(--shadow-hover);
+}
+
+.modal-title {
+    font-family: var(--font-header);
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.modal-content-player-count {
+    max-width: 360px;
+    width: min(100%, 360px);
+}
+
+.player-count-hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.45;
+}
+
+/* 2×4 grid (tall): two columns, four rows; equal cells */
+.player-count-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.65rem;
+    align-items: stretch;
+    min-height: 22rem;
+}
+
+.btn-player-count {
+    font-family: var(--font-header);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 0.4rem 0.35rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition:
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.12s ease;
+}
+
+.btn-player-count:hover {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #ffffff 0%, #e8faf0 100%);
+    box-shadow: 0 4px 14px rgba(15, 184, 90, 0.18);
+}
+
+.btn-player-count:active {
+    transform: scale(0.97);
+}
+
+.btn-player-count:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.btn-player-count .btn-sub {
+    display: block;
+    font-size: 0.62rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+}
+
+.player-count-actions {
+    margin-top: 1rem;
+    padding-top: 0.25rem;
+}
+
+.btn-player-count-cancel {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.handoff-screen {
+    background: var(--bg);
+}
+
+.handoff-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.handoff-title {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.handoff-spin-wrap {
+    margin: 1rem 0;
+}
+
+/* Same 3D flip rhythm as chaos33 demo cards (rotateY, perspective) */
+.handoff-spin-wrap--goblin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.handoff-flip-3d {
+    transform-style: preserve-3d;
+    /* Same duration / easing as chaos33 .demo-card.flipping (cardFlip keyframes) */
+    animation: handoff-card-flip-y 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.handoff-mascot {
+    display: block;
+    margin: 0 auto;
+    animation: handoff-spin 2.5s linear infinite;
+}
+
+/* Mirror on the image; Y rotation lives on .handoff-flip-3d */
+.handoff-mascot--goblin {
+    animation: none;
+    transform: scaleX(-1);
+}
+
+@keyframes handoff-card-flip-y {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes handoff-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.handoff-countdown {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-top: 0.5rem;
+}
+
+.done-screen .game-card-done {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    min-height: 280px;
+}
+
+.done-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+.done-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.btn-done,
+.btn-done-link {
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    border: 2px solid var(--border);
+    background: var(--bg-alt);
+    color: var(--text);
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-done-link {
+    display: block;
+}
+
+.btn-done-tie {
+    background: #fef2f2;
+    border-color: #f5c2c2;
+    color: var(--text);
+}
+
+.btn-done-tie:hover,
+.btn-done-tie:focus-visible {
+    background: #fde4e4;
+    border-color: #e89999;
+    box-shadow: 0 3px 10px rgba(220, 80, 80, 0.15);
+    transform: translateY(-1px);
+}
+
+.btn-done-restart {
+    background: #eff8ff;
+    border-color: #9ec9ee;
+    color: var(--text);
+}
+
+.btn-done-restart:hover,
+.btn-done-restart:focus-visible {
+    background: #dff0fc;
+    border-color: #6ab0e6;
+    box-shadow: 0 3px 10px rgba(22, 119, 190, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Thank-you style Kickstarter CTA: green frame, card surface, lift on hover */
+.btn-done-kickstarter {
+    border: 3px solid var(--accent);
+    border-radius: 12px;
+    background: var(--card-bg);
+    font-weight: 600;
+    padding: 0.5rem 0.65rem 0.75rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+}
+
+.btn-done-kickstarter-img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.btn-done-kickstarter-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.35;
+    color: var(--text);
+}
+
+.btn-done-kickstarter:hover,
+.btn-done-kickstarter:focus-visible {
+    color: var(--text);
+    box-shadow: 0 6px 16px var(--shadow-hover);
+    transform: translateY(-2px);
+    border-color: var(--accent-dark);
+}
+
+.btn-done-kickstarter:visited {
+    color: var(--text);
+}
+
+.modal-content-share {
+    max-width: 340px;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.share-modal-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.share-qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    min-height: 212px;
+    align-items: center;
+}
+
+.session-progress {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0.75rem;
+    padding: 0 0.25rem;
+}
+
+.session-progress-track {
+    height: 6px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.35rem;
+}
+
+.session-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    border-radius: 4px;
+    transition: width 0.25s ease;
+}
+
+.session-progress-label {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
 /* Accessibility */
 button:focus,
 a:focus {
@@ -1294,6 +1680,20 @@ a:focus {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .handoff-mascot {
+        animation: none !important;
+    }
+
+    .handoff-flip-3d {
+        animation: none !important;
+        transform: none;
+    }
+
+    /* Still mirrored left–right when motion is reduced */
+    .handoff-mascot--goblin {
+        transform: scaleX(-1);
     }
 }
 

@@ -38,6 +38,21 @@ let goblinCategoryRevealed = false;
 /** Snapshots of completed turns for Back navigation (LIFO). */
 let turnHistoryStack = [];
 
+/** Session: unset until player count picked */
+let sessionMode = 'unset'; // 'unset' | 'infinity' | 'twoP' | 'finite'
+let playerCount = null; // null infinity; 2–8 otherwise
+let turnsCompleted = 0; // finished play turns (Next from a play screen)
+let tieBreakerActive = false;
+let handoffTimeoutId = null;
+let handoffTickIntervalId = null;
+let shareQrInited = false;
+let lastFocusBeforeModal = null;
+let modalStack = [];
+
+const KS_URL =
+  'https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=passnplay&utm_medium=done_cta&utm_campaign=kickstarter';
+const META_CAPI_PATH = '/api/meta-capi';
+
 const CUE_TO_SLUG = {
   'Give clues in this voice': 'voice',
   'Give clues while doing this': 'doing',
@@ -61,6 +76,357 @@ function getCueSlug(cue) {
   return slug || 'unknown';
 }
 
+function newEventId() {
+  try {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+      return crypto.randomUUID();
+    }
+  } catch (e) { /* ignore */ }
+  return 'pnp-' + Date.now() + '-' + Math.random().toString(36).slice(2, 11);
+}
+
+function trackKeyEvent(name, params) {
+  const p = params && typeof params === 'object' ? params : {};
+  const eventId = newEventId();
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, p);
+  }
+  if (typeof window.fbq === 'function') {
+    window.fbq('trackCustom', name, p, { eventID: eventId });
+  }
+  if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+    try {
+      window.goatcounter.count({
+        path: String(name).toLowerCase().replace(/_/g, '-'),
+        title: name,
+        event: true
+      });
+    } catch (e) { /* ignore */ }
+  }
+  if (typeof window.clarity === 'function') {
+    try {
+      window.clarity('set', 'passnplay_event', name);
+    } catch (e) { /* ignore */ }
+  }
+  if (typeof fetch === 'function') {
+    fetch(META_CAPI_PATH, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event_name: name, event_id: eventId, custom_data: p })
+    }).catch(function () {});
+  }
+}
+
+function sessionStarted() {
+  return sessionMode !== 'unset';
+}
+
+function maxTurnsForSession() {
+  if (sessionMode === 'finite' || sessionMode === 'twoP') {
+    return playerCount * 3;
+  }
+  return Infinity;
+}
+
+function formatDuelDescriptionForSession(description) {
+  let text = description || '';
+  if (sessionMode === 'twoP') {
+    text = text
+      .replace(/\*\*letter chosen by the Judge\*\*/gi, '**the letter shown below**')
+      .replace(/letter chosen by the Judge/gi, 'the letter shown below')
+      .replace(/The Judge picks a letter\.?/gi, 'The letter is shown below.')
+      .replace(/The Judge picks a letter/gi, 'The letter is shown below');
+  }
+  return text;
+}
+
+/** Tie-breaker duel after Done, or last duel of a finite / 2P session (next tap goes to Done). */
+function isFinalDuelChrome() {
+  if (currentState !== 'duel') return false;
+  if (tieBreakerActive) return true;
+  if (sessionMode !== 'finite' && sessionMode !== 'twoP') return false;
+  const maxT = maxTurnsForSession();
+  if (!Number.isFinite(maxT)) return false;
+  return turnsCompleted === maxT - 1;
+}
+
+function hideModalByTop(top) {
+  if (top === 'player-count') {
+    const el = document.getElementById('player-count-modal');
+    if (el) el.classList.remove('active');
+  } else if (top === 'how-to') {
+    const el = document.getElementById('how-to-play-modal');
+    if (el) el.classList.remove('active');
+  } else if (top === 'share') {
+    const el = document.getElementById('share-modal');
+    if (el) el.classList.remove('active');
+  } else if (top === 'swap') {
+    document.getElementById('swap-modal').classList.remove('active');
+  } else if (top === 'end-session') {
+    const el = document.getElementById('end-session-modal');
+    if (el) el.classList.remove('active');
+  }
+  if (lastFocusBeforeModal && typeof lastFocusBeforeModal.focus === 'function') {
+    lastFocusBeforeModal.focus();
+    lastFocusBeforeModal = null;
+  }
+}
+
+function modalPush(name) {
+  modalStack.push(name);
+  history.pushState({ pnpModal: name }, '');
+}
+
+function updateSessionChrome() {
+  const maxT = maxTurnsForSession();
+  const infinity = !Number.isFinite(maxT);
+  ['normal', 'duel', 'goblin'].forEach(function (suffix) {
+    const wrap = document.getElementById('session-progress-' + suffix);
+    if (!wrap) return;
+    if (
+      infinity ||
+      currentState === 'next-player' ||
+      currentState === 'handoff' ||
+      currentState === 'done' ||
+      isFinalDuelChrome()
+    ) {
+      wrap.classList.add('pnp-hidden');
+      return;
+    }
+    wrap.classList.remove('pnp-hidden');
+    const fill = document.getElementById('session-progress-fill-' + suffix);
+    const label = document.getElementById('session-progress-label-' + suffix);
+    const pct = Math.min(100, (turnsCompleted / maxT) * 100);
+    if (fill) fill.style.width = pct + '%';
+    const playN = playerCount > 0 ? (turnsCompleted % playerCount) + 1 : 1;
+    const rnd = playerCount > 0 ? Math.floor(turnsCompleted / playerCount) + 1 : 1;
+    if (label) {
+      label.textContent = 'Player ' + playN + ' of ' + playerCount + ' · Round ' + rnd + '/3';
+    }
+    wrap.setAttribute('aria-valuemax', String(maxT));
+    wrap.setAttribute('aria-valuenow', String(Math.min(turnsCompleted + 1, maxT)));
+  });
+
+  const duelNextBtn = document.getElementById('next-player-duel-btn');
+  if (duelNextBtn) {
+    if (isFinalDuelChrome()) {
+      duelNextBtn.textContent = 'Done!';
+      duelNextBtn.setAttribute('aria-label', 'Done — end session');
+    } else {
+      duelNextBtn.textContent = 'Next Player →';
+      duelNextBtn.setAttribute('aria-label', 'Next player');
+    }
+  }
+}
+
+function updateIntroModeVisibility() {
+  const def = document.getElementById('intro-text-default');
+  const t2 = document.getElementById('intro-text-2p');
+  if (!def || !t2) return;
+  if (sessionMode === 'twoP' && currentState === 'next-player') {
+    def.classList.add('pnp-hidden');
+    t2.classList.remove('pnp-hidden');
+  } else {
+    t2.classList.add('pnp-hidden');
+    def.classList.remove('pnp-hidden');
+  }
+}
+
+function openPlayerCountModal() {
+  const m = document.getElementById('player-count-modal');
+  if (!m) return;
+  lastFocusBeforeModal = document.activeElement;
+  m.classList.add('active');
+  modalPush('player-count');
+  const first = m.querySelector('.btn-player-count');
+  if (first) first.focus();
+}
+
+function closePlayerCountModalCommit() {
+  const m = document.getElementById('player-count-modal');
+  if (m) m.classList.remove('active');
+  if (modalStack.length && modalStack[modalStack.length - 1] === 'player-count') {
+    modalStack.pop();
+    history.replaceState({ pnpLaunch: true }, '');
+  }
+  if (lastFocusBeforeModal && typeof lastFocusBeforeModal.focus === 'function') {
+    lastFocusBeforeModal.focus();
+    lastFocusBeforeModal = null;
+  }
+}
+
+function closePlayerCountModal() {
+  if (modalStack.length && modalStack[modalStack.length - 1] === 'player-count') {
+    history.back();
+  } else {
+    closePlayerCountModalCommit();
+  }
+}
+
+function applySessionChoice(mode, count) {
+  sessionMode = mode;
+  playerCount = mode === 'infinity' ? null : count;
+  turnsCompleted = 0;
+  tieBreakerActive = false;
+  turnHistoryStack = [];
+  lastScreenType = null;
+  screenHistory = [];
+  resetShuffleDecks();
+  closePlayerCountModalCommit();
+  trackKeyEvent('passnplay_session_start', {
+    session_mode: mode,
+    player_count: playerCount || 0
+  });
+  if (typeof window.clarity === 'function') {
+    try {
+      window.clarity('set', 'passnplay_session_mode', mode);
+    } catch (e) { /* ignore */ }
+  }
+  history.pushState({ pnpSession: true }, '');
+  dealNextTurn();
+  updateSessionChrome();
+  updateIntroModeVisibility();
+}
+
+function getSharePnpEmailUrl() {
+  return new URL(
+    '/pnp-email/?utm_source=passnplay&utm_medium=share_icon&utm_campaign=pnp_qr',
+    window.location.origin
+  ).href;
+}
+
+function openShareModal() {
+  const m = document.getElementById('share-modal');
+  if (!m) return;
+  lastFocusBeforeModal = document.activeElement;
+  const url = getSharePnpEmailUrl();
+  const shareBtn = document.getElementById('share-link-btn');
+  if (shareBtn) {
+    const canShare = typeof navigator.share === 'function';
+    shareBtn.textContent = canShare ? 'Share' : 'Copy link';
+    shareBtn.setAttribute(
+      'aria-label',
+      canShare ? 'Share link with your device' : 'Copy link to clipboard'
+    );
+  }
+  if (typeof QRCode !== 'undefined' && !shareQrInited) {
+    const container = document.getElementById('share-qrcode');
+    if (container) {
+      container.innerHTML = '';
+      // eslint-disable-next-line no-new
+      new QRCode(container, {
+        text: url,
+        width: 200,
+        height: 200,
+        colorDark: '#000000',
+        colorLight: '#ffffff'
+      });
+      shareQrInited = true;
+    }
+  } else if (typeof QRCode !== 'undefined' && shareQrInited) {
+    const container = document.getElementById('share-qrcode');
+    if (container && !container.firstChild) {
+      // eslint-disable-next-line no-new
+      new QRCode(container, {
+        text: url,
+        width: 200,
+        height: 200,
+        colorDark: '#000000',
+        colorLight: '#ffffff'
+      });
+    }
+  }
+  m.classList.add('active');
+  modalPush('share');
+  trackKeyEvent('passnplay_share_open', {});
+  document.getElementById('share-modal-close').focus();
+}
+
+function closeShareModal() {
+  if (modalStack.length && modalStack[modalStack.length - 1] === 'share') {
+    history.back();
+  } else {
+    document.getElementById('share-modal').classList.remove('active');
+  }
+}
+
+function handleDoneTieDuel() {
+  trackKeyEvent('passnplay_done_tie_duel', {});
+  tieBreakerActive = true;
+  startDuel();
+  lastScreenType = 'duel';
+  screenHistory.push('duel');
+  if (screenHistory.length > 5) screenHistory.shift();
+  showScreen('duel');
+  updateSessionChrome();
+}
+
+function handleDoneRestart() {
+  trackKeyEvent('passnplay_done_restart', {});
+  resetShuffleDecks();
+  sessionMode = 'unset';
+  playerCount = null;
+  turnsCompleted = 0;
+  tieBreakerActive = false;
+  turnHistoryStack = [];
+  lastScreenType = null;
+  screenHistory = [];
+  lastWord = null;
+  history.replaceState({ pnpLaunch: true }, '');
+  modalStack = [];
+  showScreen('next-player');
+  updateSessionChrome();
+  updateIntroModeVisibility();
+  openPlayerCountModal();
+}
+
+function confirmEndSession() {
+  trackKeyEvent('passnplay_end_session', {});
+  stopTimer();
+  clearHandoffTimers();
+  document.getElementById('end-session-modal').classList.remove('active');
+  const hadEndModal =
+    modalStack.length && modalStack[modalStack.length - 1] === 'end-session';
+  if (hadEndModal) {
+    modalStack.pop();
+  }
+  sessionMode = 'unset';
+  playerCount = null;
+  turnsCompleted = 0;
+  tieBreakerActive = false;
+  turnHistoryStack = [];
+  lastScreenType = null;
+  screenHistory = [];
+  lastWord = null;
+  resetShuffleDecks();
+  if (hadEndModal) {
+    history.back();
+  }
+  history.replaceState({ pnpLaunch: true }, '');
+  showScreen('next-player');
+  updateSessionChrome();
+  updateIntroModeVisibility();
+}
+
+function cancelEndSession() {
+  if (modalStack.length && modalStack[modalStack.length - 1] === 'end-session') {
+    history.back();
+  } else {
+    document.getElementById('end-session-modal').classList.remove('active');
+  }
+}
+
+function rebuildDuelDeck() {
+  const all = gameData.duels || [];
+  let pool =
+    sessionMode === 'twoP' ? all.filter(function (d) { return !d.requiresJudge; }) : all;
+  if (sessionMode === 'twoP' && pool.length === 0 && all.length > 0) {
+    console.warn('Passnplay: no judge-free duels in data; using full duel deck');
+    pool = all;
+  }
+  duelDeck = createDeck(pool);
+}
+
 function updateChaosCueChip(prompt) {
   const chipEl = document.getElementById('chaos-cue-chip');
   if (!chipEl) return;
@@ -75,7 +441,7 @@ function updateChaosCueChip(prompt) {
 }
 
 function resetShuffleDecks() {
-    duelDeck = createDeck(gameData.duels);
+    rebuildDuelDeck();
     goblinDeck = createDeck(gameData.goblinModes);
     chaosDeck = createDeck(gameData.chaosPrompts);
     const dc = gameData.duelCategories || {};
@@ -217,7 +583,9 @@ function applyTurnSnapshot(snap) {
             duelTriggerEl.textContent = 'Choose who you\'re dueling';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
-        document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
+        document.getElementById('duel-description').innerHTML = formatText(
+            formatDuelDescriptionForSession(currentDuel.description)
+        );
         const revealText = document.getElementById('reveal-text');
         const revealValues = document.getElementById('reveal-values');
         const revealBtn = document.getElementById('reveal-btn');
@@ -269,6 +637,9 @@ function applyTurnSnapshot(snap) {
 
 function handleBack() {
     hideSwapModal();
+    if (currentState === 'handoff') {
+        return;
+    }
     if (turnHistoryStack.length === 0) {
         if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
             stopTimer();
@@ -276,6 +647,7 @@ function handleBack() {
             lastScreenType = null;
             screenHistory = [];
             showScreen('next-player');
+            updateIntroModeVisibility();
         }
         return;
     }
@@ -298,86 +670,184 @@ document.addEventListener('DOMContentLoaded', async () => {
 function initializeApp() {
     resetShuffleDecks();
 
-    // Set up event listeners
-    document.getElementById('next-player-btn').addEventListener('click', handleNextPlayer);
+    history.replaceState({ pnpLaunch: true }, '');
+
+    window.addEventListener('popstate', function () {
+        if (modalStack.length > 0) {
+            const top = modalStack.pop();
+            hideModalByTop(top);
+            return;
+        }
+        if (
+            sessionStarted() &&
+            currentState !== 'next-player' &&
+            currentState !== 'done' &&
+            currentState !== 'handoff'
+        ) {
+            document.getElementById('end-session-modal').classList.add('active');
+            history.pushState({ pnpModal: 'end-session' }, '');
+            modalStack.push('end-session');
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        if (modalStack.length > 0) {
+            const top = modalStack[modalStack.length - 1];
+            if (top === 'how-to') hideHowToPlayModal();
+            else if (top === 'share') closeShareModal();
+            else if (top === 'swap') hideSwapModal();
+            else if (top === 'player-count') {
+                closePlayerCountModal();
+            } else if (top === 'end-session') {
+                cancelEndSession();
+            }
+        }
+    });
+
+    document.getElementById('next-player-btn').addEventListener('click', function () {
+        openPlayerCountModal();
+    });
+    document.getElementById('player-count-cancel').addEventListener('click', closePlayerCountModal);
     document.getElementById('next-player-normal-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-duel-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-goblin-btn').addEventListener('click', handleNextPlayer);
 
-    document.querySelectorAll('.btn-turn-back').forEach((btn) => {
+    document.querySelectorAll('.btn-player-count').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const mode = btn.getAttribute('data-mode');
+            const count = parseInt(btn.getAttribute('data-count'), 10) || 0;
+            if (mode === 'infinity') {
+                applySessionChoice('infinity', null);
+            } else if (mode === 'twoP') {
+                applySessionChoice('twoP', 2);
+            } else {
+                applySessionChoice('finite', count);
+            }
+        });
+    });
+
+    document.querySelectorAll('.btn-turn-back').forEach(function (btn) {
         btn.addEventListener('click', handleBack);
     });
-    
-    document.getElementById('swap-btn').addEventListener('click', () => showSwapModal('normal'));
-    document.getElementById('swap-duel-btn').addEventListener('click', () => showSwapModal('duel'));
-    
+
+    document.getElementById('swap-btn').addEventListener('click', function () {
+        showSwapModal('normal');
+    });
+    document.getElementById('swap-duel-btn').addEventListener('click', function () {
+        showSwapModal('duel');
+    });
+
     document.getElementById('swap-cancel-btn').addEventListener('click', hideSwapModal);
     document.getElementById('swap-confirm-btn').addEventListener('click', handleSwapConfirm);
-    
+
     document.getElementById('flip-timer').addEventListener('click', startTimer);
-    
+
     document.getElementById('reveal-btn').addEventListener('click', handleReveal);
     document.getElementById('goblin-reveal-btn').addEventListener('click', handleGoblinReveal);
-    
-    // How to play modal
+
     document.getElementById('how-to-play-btn').addEventListener('click', showHowToPlayModal);
-    document.getElementById('how-to-play-link-normal').addEventListener('click', (e) => {
+    document.getElementById('how-to-play-link-normal').addEventListener('click', function (e) {
         e.preventDefault();
         showHowToPlayModal();
     });
-    document.getElementById('how-to-play-link-duel').addEventListener('click', (e) => {
+    document.getElementById('how-to-play-link-duel').addEventListener('click', function (e) {
         e.preventDefault();
         showHowToPlayModal();
     });
-    document.getElementById('how-to-play-link-goblin').addEventListener('click', (e) => {
+    document.getElementById('how-to-play-link-goblin').addEventListener('click', function (e) {
         e.preventDefault();
         showHowToPlayModal();
     });
     document.getElementById('how-to-play-close-btn').addEventListener('click', hideHowToPlayModal);
     document.getElementById('how-to-play-close-btn-bottom').addEventListener('click', hideHowToPlayModal);
-    
-    // Close modal when clicking outside
-    document.getElementById('how-to-play-modal').addEventListener('click', (e) => {
+
+    document.getElementById('how-to-play-modal').addEventListener('click', function (e) {
         if (e.target.id === 'how-to-play-modal') {
             hideHowToPlayModal();
         }
     });
-    
-    // Start with next player screen
-    showScreen('next-player');
-    lastScreenType = null; // Reset on initial load
-    screenHistory = []; // Reset history on initial load
-    turnHistoryStack = [];
-    
-    // Initialize timer with clock emoji
-    resetTimer();
-}
 
-function handleNextPlayer() {
-    if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
-        turnHistoryStack.push(buildTurnSnapshot());
+    document.getElementById('done-tie-duel-btn').addEventListener('click', handleDoneTieDuel);
+    document.getElementById('done-restart-btn').addEventListener('click', handleDoneRestart);
+    document.getElementById('done-kickstarter-btn').addEventListener('click', function () {
+        trackKeyEvent('passnplay_done_kickstarter', {});
+    });
+
+    document.getElementById('share-fab').addEventListener('click', openShareModal);
+    document.getElementById('share-modal-close').addEventListener('click', closeShareModal);
+    document.getElementById('share-modal').addEventListener('click', function (e) {
+        if (e.target.id === 'share-modal') {
+            closeShareModal();
+        }
+    });
+    document.getElementById('share-link-btn').addEventListener('click', function () {
+        const url = getSharePnpEmailUrl();
+        const titleEl = document.getElementById('share-modal-title');
+        const title = titleEl ? titleEl.textContent.trim() : 'Pass & Play';
+
+        function fallbackCopy() {
+            trackKeyEvent('passnplay_share_action', { method: 'clipboard' });
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).catch(function () {});
+            }
+        }
+
+        if (typeof navigator.share === 'function') {
+            navigator
+                .share({
+                    title: title,
+                    text: 'Chaos 33 — PnP email page',
+                    url: url
+                })
+                .then(function () {
+                    trackKeyEvent('passnplay_share_action', { method: 'web_share' });
+                })
+                .catch(function (err) {
+                    if (err && err.name === 'AbortError') {
+                        return;
+                    }
+                    fallbackCopy();
+                });
+        } else {
+            fallbackCopy();
+        }
+    });
+
+    document.getElementById('end-session-cancel').addEventListener('click', cancelEndSession);
+    document.getElementById('end-session-confirm').addEventListener('click', confirmEndSession);
+
+    const ksBtn = document.getElementById('done-kickstarter-btn');
+    if (ksBtn) {
+        ksBtn.href = KS_URL;
     }
 
-    // Stop timer if running
-    stopTimer();
-    resetTimer();
-    
-    // Reset duel reveals
-    duelCategoryRevealed = false;
-    duelLetterRevealed = false;
+    showScreen('next-player');
+    lastScreenType = null;
+    screenHistory = [];
+    turnHistoryStack = [];
+    sessionMode = 'unset';
+    playerCount = null;
+    turnsCompleted = 0;
+    tieBreakerActive = false;
+    modalStack = [];
 
-    // Reset goblin reveals
-    goblinCategoryRevealed = false;
-    currentGoblinCategory = null;
-    currentGoblinLetter = null;
-    
-    // Check if we need to force a duel (no duel in past 5 turns)
-    const hasDuelInLast5 = screenHistory.some(type => type === 'duel');
+    resetTimer();
+    updateSessionChrome();
+    updateIntroModeVisibility();
+}
+
+function dealNextTurn() {
+    if (sessionMode === 'twoP') {
+        startDuel();
+        lastScreenType = 'duel';
+        screenHistory.push('duel');
+        if (screenHistory.length > 5) screenHistory.shift();
+        return;
+    }
+
+    const hasDuelInLast5 = screenHistory.some(function (type) { return type === 'duel'; });
     const mustForceDuel = screenHistory.length >= 5 && !hasDuelInLast5;
-    
-    // Decide: 25% chance for duel, 75% for normal turn
-    // But avoid back-to-back duels, never start with a duel, and force duel if none in last 5
-    // Goblin Mode: ~10% chance, never back-to-back, never on first turn
     let isDuel = false;
     let isGoblinMode = false;
     const hasGoblinCards = gameData.goblinModes && gameData.goblinModes.length > 0;
@@ -385,7 +855,7 @@ function handleNextPlayer() {
         isDuel = true;
     } else if (lastScreenType !== 'duel' && lastScreenType !== null) {
         const roll = Math.random();
-        if (hasGoblinCards && lastScreenType !== 'goblin-mode' && roll < 0.10) {
+        if (hasGoblinCards && lastScreenType !== 'goblin-mode' && roll < 0.1) {
             isGoblinMode = true;
         } else if (roll < (hasGoblinCards ? 0.35 : 0.25)) {
             isDuel = true;
@@ -402,12 +872,98 @@ function handleNextPlayer() {
         startNormalTurn();
         lastScreenType = 'normal-turn';
     }
-    
-    // Update history (keep only last 5)
     screenHistory.push(lastScreenType);
     if (screenHistory.length > 5) {
         screenHistory.shift();
     }
+}
+
+function clearHandoffTimers() {
+    if (handoffTimeoutId) {
+        clearTimeout(handoffTimeoutId);
+        handoffTimeoutId = null;
+    }
+    if (handoffTickIntervalId) {
+        clearInterval(handoffTickIntervalId);
+        handoffTickIntervalId = null;
+    }
+}
+
+function runHandoffThen(callback) {
+    clearHandoffTimers();
+    const secEl = document.getElementById('handoff-seconds');
+    if (secEl) secEl.textContent = '3';
+    showScreen('handoff');
+    let n = 2;
+    handoffTickIntervalId = setInterval(function () {
+        if (secEl) secEl.textContent = String(n);
+        n--;
+        if (n < 0 && handoffTickIntervalId) {
+            clearInterval(handoffTickIntervalId);
+            handoffTickIntervalId = null;
+        }
+    }, 1000);
+    handoffTimeoutId = setTimeout(function () {
+        clearHandoffTimers();
+        callback();
+    }, 3000);
+}
+
+function handleNextPlayer() {
+    hideSwapModal();
+    if (currentState === 'handoff') {
+        return;
+    }
+
+    if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
+        turnHistoryStack.push(buildTurnSnapshot());
+    }
+
+    stopTimer();
+    resetTimer();
+
+    duelCategoryRevealed = false;
+    duelLetterRevealed = false;
+
+    goblinCategoryRevealed = false;
+    currentGoblinCategory = null;
+    currentGoblinLetter = null;
+
+    if (tieBreakerActive && currentState === 'duel') {
+        tieBreakerActive = false;
+        showScreen('done');
+        updateSessionChrome();
+        return;
+    }
+
+    const fromPlay =
+        currentState === 'normal-turn' ||
+        currentState === 'duel' ||
+        currentState === 'goblin-mode';
+
+    if (fromPlay) {
+        turnsCompleted++;
+    }
+
+    if (
+        (sessionMode === 'finite' || sessionMode === 'twoP') &&
+        turnsCompleted >= maxTurnsForSession()
+    ) {
+        showScreen('done');
+        updateSessionChrome();
+        return;
+    }
+
+    const deal = function () {
+        dealNextTurn();
+        updateSessionChrome();
+    };
+
+    if (sessionStarted() && fromPlay && turnsCompleted > 0) {
+        runHandoffThen(deal);
+        return;
+    }
+    deal();
 }
 
 // Helper function to convert \n to <br> and **text** to <strong>text</strong>
@@ -442,14 +998,21 @@ function startNormalTurn() {
 
 function startDuel() {
     currentDuel = getNextFromDeck(duelDeck);
-    
+    if (!currentDuel) {
+        console.error('Passnplay: duel deck is empty');
+        showScreen('next-player');
+        return;
+    }
+
     // Update UI
     const duelTriggerEl = document.getElementById('duel-trigger');
     if (duelTriggerEl) {
         duelTriggerEl.textContent = 'Choose who you\'re dueling';
     }
     document.getElementById('duel-title').textContent = currentDuel.title;
-    document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
+    document.getElementById('duel-description').innerHTML = formatText(
+        formatDuelDescriptionForSession(currentDuel.description)
+    );
     
     // Reset reveals
     duelCategoryRevealed = false;
@@ -605,27 +1168,56 @@ function handleGoblinReveal() {
 function showSwapModal(screenType) {
     const modal = document.getElementById('swap-modal');
     const modalText = document.getElementById('swap-modal-text');
-    
+
     if (screenType === 'normal') {
         modalText.textContent = 'Swap this prompt?';
     } else {
         modalText.textContent = 'Swap this duel?';
     }
-    
+
+    lastFocusBeforeModal = document.activeElement;
     modal.classList.add('active');
     modal.dataset.screenType = screenType;
+    modalPush('swap');
+    document.getElementById('swap-cancel-btn').focus();
 }
 
 function hideSwapModal() {
-    document.getElementById('swap-modal').classList.remove('active');
+    if (modalStack.length && modalStack[modalStack.length - 1] === 'swap') {
+        history.back();
+    } else {
+        document.getElementById('swap-modal').classList.remove('active');
+    }
 }
 
 function showHowToPlayModal() {
-    document.getElementById('how-to-play-modal').classList.add('active');
+    const multi = document.getElementById('rules-multi');
+    const r2 = document.getElementById('rules-2p');
+    const modalEl = document.getElementById('how-to-play-modal');
+    if (!modalEl) return;
+    if (multi && r2) {
+        if (sessionMode === 'twoP') {
+            multi.classList.add('pnp-hidden');
+            r2.classList.remove('pnp-hidden');
+            modalEl.setAttribute('aria-labelledby', 'how-to-play-heading-2p');
+        } else {
+            r2.classList.add('pnp-hidden');
+            multi.classList.remove('pnp-hidden');
+            modalEl.setAttribute('aria-labelledby', 'how-to-play-heading');
+        }
+    }
+    lastFocusBeforeModal = document.activeElement;
+    modalEl.classList.add('active');
+    modalPush('how-to');
+    document.getElementById('how-to-play-close-btn').focus();
 }
 
 function hideHowToPlayModal() {
-    document.getElementById('how-to-play-modal').classList.remove('active');
+    if (modalStack.length && modalStack[modalStack.length - 1] === 'how-to') {
+        history.back();
+    } else {
+        document.getElementById('how-to-play-modal').classList.remove('active');
+    }
 }
 
 function handleSwapConfirm() {
@@ -653,8 +1245,10 @@ function handleSwapConfirm() {
             duelTriggerEl.textContent = 'Choose who you\'re dueling';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
-        document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
-        
+        document.getElementById('duel-description').innerHTML = formatText(
+            formatDuelDescriptionForSession(currentDuel.description)
+        );
+
         // Reset category/letter and re-setup based on new duel
         duelCategoryRevealed = false;
         duelLetterRevealed = false;
@@ -840,13 +1434,14 @@ function updateTimerDisplay() {
 }
 
 function showScreen(screenName) {
-    // Hide all screens
-    document.querySelectorAll('.screen').forEach(screen => {
+    document.querySelectorAll('.screen').forEach(function (screen) {
         screen.classList.remove('active');
     });
-    
-    // Show requested screen
-    document.getElementById(`${screenName}-screen`).classList.add('active');
+    const el = document.getElementById(screenName + '-screen');
+    if (el) {
+        el.classList.add('active');
+    }
     currentState = screenName;
+    updateSessionChrome();
 }
 

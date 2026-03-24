@@ -74,7 +74,8 @@ async function loadGameData() {
             title: item.title,
             description: item.text || item.web_description || '',
             categories: item.categories || [],
-            alphabetic: item.alphabetic || false
+            alphabetic: item.alphabetic || false,
+            requiresJudge: Boolean(item.requiresJudge)
         }));
 
         // Extract words (single word list)

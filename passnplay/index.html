@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BX2363LX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M8BX2363LX');
+    </script>
     <script>
       window.goatcounter = {
         no_onload: ('doNotTrack' in navigator && navigator.doNotTrack === '1'),
@@ -48,10 +56,15 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome (share FAB icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button type="button" id="share-fab" class="share-fab" aria-label="Share Pass and Play link and QR" title="Share"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></button>
+
     <div class="app-container">
         <!-- Next Player Screen -->
         <div id="next-player-screen" class="screen active">
@@ -59,10 +72,14 @@
                 <div class="game-card game-card-intro">
                     <div class="card-content">
                         <h1 class="card-title">Ready to play<br/>33 Seconds of Chaos?</h1>
-                        <div class="intro-text">
+                        <div id="intro-text-default" class="intro-text">
                             <p>On your turn, you'll get a <strong>Word</strong> and a <strong>Chaos Prompt</strong> that tells you how to give clues. You have <strong>33 seconds</strong> to get someone to guess the word!</p>
                             <p>Sometimes you get a head-to-head <strong>Duel</strong> or a <strong>Mass Duel</strong> where everyone plays. Winner gets <strong>2 points</strong> either way.</p>
                             <p>Pass the device to the next player after each turn.</p>
+                        </div>
+                        <div id="intro-text-2p" class="intro-text pnp-hidden">
+                            <p><strong>2 players:</strong> every turn is a head-to-head <strong>Duel</strong>. The app shows categories or letters when needed—no neutral judge required.</p>
+                            <p>Pass the device to the other player after each duel. Play <strong>6 duels</strong> (3 rounds × 2 players), then you’re done.</p>
                         </div>
                     </div>
                 </div>
@@ -122,6 +139,10 @@
                         </div>
                     </div>
                     <a href="#" id="how-to-play-link-normal" class="how-to-play-link">How to play</a>
+                    <div id="session-progress-normal" class="session-progress pnp-hidden" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" aria-label="Session progress">
+                        <div class="session-progress-track"><div id="session-progress-fill-normal" class="session-progress-fill"></div></div>
+                        <span id="session-progress-label-normal" class="session-progress-label"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,6 +187,10 @@
                         </div>
                     </div>
                     <a href="#" id="how-to-play-link-duel" class="how-to-play-link">How to play</a>
+                    <div id="session-progress-duel" class="session-progress pnp-hidden" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" aria-label="Session progress">
+                        <div class="session-progress-track"><div id="session-progress-fill-duel" class="session-progress-fill"></div></div>
+                        <span id="session-progress-label-duel" class="session-progress-label"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,13 +221,93 @@
                         </div>
                     </div>
                     <a href="#" id="how-to-play-link-goblin" class="how-to-play-link">How to play</a>
+                    <div id="session-progress-goblin" class="session-progress pnp-hidden" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" aria-label="Session progress">
+                        <div class="session-progress-track"><div id="session-progress-fill-goblin" class="session-progress-fill"></div></div>
+                        <span id="session-progress-label-goblin" class="session-progress-label"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Handoff screen -->
+        <div id="handoff-screen" class="screen handoff-screen">
+            <div class="handoff-inner" aria-live="polite">
+                <p class="handoff-title">Hand the phone to the next player!</p>
+                <div class="handoff-spin-wrap handoff-spin-wrap--goblin">
+                    <div class="handoff-flip-3d" aria-hidden="true">
+                        <img src="../images/gobbo/green-goblin-head-tile_sq256.png" alt="" class="handoff-mascot handoff-mascot--goblin" width="128" height="128">
+                    </div>
+                </div>
+                <p class="handoff-countdown"><span id="handoff-seconds">3</span></p>
+            </div>
+        </div>
+
+        <!-- Done screen -->
+        <div id="done-screen" class="screen done-screen">
+            <div class="card-container">
+                <div class="game-card game-card-done">
+                    <div class="card-content">
+                        <h1 class="card-title">Done!</h1>
+                        <p class="done-sub">That’s 3 rounds. Count your points, or just play again.</p>
+                        <div class="done-actions">
+                            <button type="button" id="done-tie-duel-btn" class="btn-done btn-done-tie">Tie? Show me a duel</button>
+                            <button type="button" id="done-restart-btn" class="btn-done btn-done-restart">Again? Restart!</button>
+                            <a id="done-kickstarter-btn" class="btn-done-link btn-done-kickstarter" href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&amp;utm_source=passnplay&amp;utm_medium=done_cta&amp;utm_campaign=kickstarter" target="_blank" rel="noopener noreferrer">
+                                <img src="../images/notify_me_button.png" alt="" class="btn-done-kickstarter-img" width="320" height="auto" loading="lazy">
+                                <span class="btn-done-kickstarter-label">Had fun? Want the real thing? Kickstarter coming in 2027!</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Player count modal -->
+    <div id="player-count-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="player-count-title">
+        <div class="modal-content modal-content-player-count">
+            <h2 id="player-count-title" class="modal-title">How many players?</h2>
+            <p class="player-count-hint">Pick a mode. You’ll start the first turn right after you tap.</p>
+            <div class="player-count-grid" role="group" aria-label="Player count">
+                <button type="button" class="btn-player-count" data-mode="infinity" data-count="0">∞<span class="btn-sub">Free play</span></button>
+                <button type="button" class="btn-player-count" data-mode="twoP" data-count="2">2<span class="btn-sub">Duels only</span></button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="3">3</button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="4">4</button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="5">5</button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="6">6</button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="7">7</button>
+                <button type="button" class="btn-player-count" data-mode="finite" data-count="8">8</button>
+            </div>
+            <div class="player-count-actions">
+                <button type="button" id="player-count-cancel" class="btn-secondary btn-player-count-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share modal -->
+    <div id="share-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+        <div class="modal-content modal-content-share">
+            <button type="button" id="share-modal-close" class="modal-close-btn" aria-label="Close share">×</button>
+            <h2 id="share-modal-title" class="modal-title">Share The Pass &amp; Play</h2>
+            <div id="share-qrcode" class="share-qrcode" aria-hidden="true"></div>
+            <button type="button" id="share-link-btn" class="btn-primary">Share</button>
+        </div>
+    </div>
+
+    <!-- End session confirm -->
+    <div id="end-session-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="end-session-title">
+        <div class="modal-content">
+            <h2 id="end-session-title" class="modal-title">End session?</h2>
+            <p class="modal-text">You’ll lose progress for this game on the device.</p>
+            <div class="modal-buttons">
+                <button type="button" id="end-session-cancel" class="btn-secondary">Keep playing</button>
+                <button type="button" id="end-session-confirm" class="btn-primary">End session</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Swap Confirmation Modal -->
-    <div id="swap-modal" class="modal">
+    <div id="swap-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="swap-modal-text">
         <div class="modal-content">
             <p id="swap-modal-text" class="modal-text"></p>
             <div class="modal-buttons">
@@ -213,18 +318,19 @@
     </div>
 
     <!-- How to Play Modal -->
-    <div id="how-to-play-modal" class="modal">
+    <div id="how-to-play-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="how-to-play-heading">
         <div class="modal-content modal-content-rules">
             <button id="how-to-play-close-btn" class="modal-close-btn" aria-label="Close">×</button>
-            <div class="rules-content">
-                <h2>33 Seconds of Chaos, Pass and Play App Rules</h2>
+            <div id="rules-multi" class="rules-variant">
+                <div class="rules-content">
+                <h2 id="how-to-play-heading">33 Seconds of Chaos, Pass and Play App Rules</h2>
                 <p class="rules-intro">Can you get everyone to guess 'Banjo' in a Movie Announcer voice? Or while doing the Macarena? Clock's ticking, everyone's shouting. Then a head-to-head Duel or a Mass Duel with the whole table. 33 Seconds of Chaos: The social party game where the cards make it weird. One device. Pass it around.</p>
                 
                 <h3>Quick Start</h3>
                 <ul>
-                    <li>Hand the device to the next player. Tap Start.</li>
+                    <li>Tap <strong>Start!</strong>, pick how many players (or ∞ for free play), then the first turn begins.</li>
                     <li>You get a Word turn, a Duel, or sometimes a Mass Duel.</li>
-                    <li>When you're done, tap Next Player and pass the device.</li>
+                    <li>When you're done, tap <strong>Next player</strong> and pass the device.</li>
                 </ul>
                 
                 <h3>Word Turn</h3>
@@ -301,6 +407,28 @@
                 
                 <p><strong>Ties</strong></p>
                 <p>Run one more duel. Winner takes it.</p>
+                </div>
+            </div>
+            <div id="rules-2p" class="rules-variant pnp-hidden">
+                <div class="rules-content">
+                    <h2 id="how-to-play-heading-2p">Pass &amp; Play — 2 players</h2>
+                    <p class="rules-intro">With two people, every turn is a <strong>Duel</strong>. Word turns and Mass Duels are off. You’ll play <strong>6 duels</strong> (3 rounds × 2 players).</p>
+                    <h3>Quick start</h3>
+                    <ul>
+                        <li>After you pick <strong>2 players</strong>, the first duel appears right away.</li>
+                        <li>Run the duel. When you’re done, tap <strong>Next player</strong> and pass the device.</li>
+                        <li>Use <strong>Tap to reveal</strong> when it shows—category or letter comes from the app so neither dueler peeks early.</li>
+                    </ul>
+                    <h3>Duel (no neutral judge)</h3>
+                    <ol>
+                        <li>The card explains the duel.</li>
+                        <li>You two run it yourselves—no third person needed for these duels.</li>
+                        <li>Agree on a winner, then tap <strong>Next player</strong>.</li>
+                    </ol>
+                    <p>Judge-required duels are removed in 2-player mode. If you need a redo, use <strong>Swap</strong> on the duel card.</p>
+                    <h3>Optional scoring</h3>
+                    <p>Winner of each duel: <strong>+2 points</strong>. High score after 6 duels wins. Ties: run one more duel.</p>
+                </div>
             </div>
             <div class="modal-buttons">
                 <button id="how-to-play-close-btn-bottom" class="btn-primary">Got it</button>
@@ -309,6 +437,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous"></script>
     <script src="data-loader.js"></script>
     <script src="app.js"></script>
 </body>

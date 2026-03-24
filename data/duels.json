@@ -73,6 +73,7 @@
   {
     "title": "Direction Chain",
     "multiCard": false,
+    "requiresJudge": true,
     "text": "Duelers start facing straight ahead. The Judge calls out **LEFT**, **RIGHT**, **UP**, or **DOWN** in **any order** and at **any pace**. Duelers must **turn their head** in that **direction**, returning to **center** afterwards.\\n\\nContinues until exactly one dueler looks incorrectly.",
     "web_description": "The Judge calls directions each beat. Follow and return to center. Ends when one is wrong.",
     "tags": [
@@ -170,6 +171,7 @@
   {
     "title": "Table Curling",
     "multiCard": false,
+    "requiresJudge": true,
     "text": "The Judge picks any **rollable object** (plastic cylinder, pen, marker, chapstick, etc.).\\n\\nDuelers roll **simultaneously**.\\n\\n**Farthest** roll without **falling off the table** wins.\\n\\nIf both fall, redo.",
     "web_description": "The Judge picks a rollable object. Roll together. Farthest without falling wins.",
     "tags": [
@@ -210,6 +212,7 @@
   {
     "title": "Table Cornhole",
     "multiCard": false,
+    "requiresJudge": true,
     "text": "The Judge picks any pair of the same **tossable small objects** (bean bag, coin, eraser, chip, etc.).\\n\\nDuelers stand **2-3 feet from the table**. Both toss the object at the **same time**.\\n\\nObject closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
     "web_description": "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins.",
     "tags": [
@@ -225,8 +228,8 @@
   {
     "title": "Table Bowling",
     "multiCard": false,
-    "text": "Stand a **cylinder** upright at the far end of the table.\n\nDuelers alternate turns tossing a **bean bag** to knock it down from **2-3 feet away**.\n\nMiss - retrieve the bean bag and return to the same spot. If both knock it down in the same round, reset and take a step back. First to knock it down wins.",
-    "web_description": "Take turns tossing a bean bag to knock down a standing cylinder. Step back each tie. First to knock it down wins.",
+    "text": "Stand 2 **cylinders** upright at the far end of the table.\n\nDuelers toss **bean bags** to knock their cylinders down from **2-3 feet away**.\n\nMiss - retrieve the bean bag and return to the same spot. If both knock them down in the same round, reset and take a step back. First to knock their cylinder down wins.",
+    "web_description": "Toss bean bags to knock down a standing cylinder. Step back each tie. First to knock their cylinder down wins.",
     "tags": [
       "main",
       "passnplay",
@@ -303,6 +306,7 @@
   {
     "title": "Drum Chicken Hat",
     "multiCard": false,
+    "requiresJudge": true,
     "text": "The Judge calls **DRUM**, **CHICKEN**, or **HAT** in **any order** and at **any pace**.\\n\\n**DRUM**: two quick table taps.\\n**CHICKEN**: flap elbows twice (arms tucked).\\n**HAT**: touch the top of your head.\\n\\nWrong move, flinching, or waiting too long loses.",
     "web_description": "The Judge calls DRUM/CHICKEN/HAT. Do the matching move. First mistake loses.",
     "tags": [
@@ -348,6 +352,7 @@
   {
     "title": "Dead Center",
     "multiCard": false,
+    "requiresJudge": true,
     "text": "The Judge places a **coin in the center** of the table and hands each Dueler a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nDuelers stand **a few feet from the table**. Both toss at the **same time**.\n\nClosest to the coin wins.\n\nIf tied, redo.",
     "web_description": "Toss a small object closest to the coin. Simultaneous throws. Closest wins. Ties redo.",
     "tags": [

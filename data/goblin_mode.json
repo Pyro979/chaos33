@@ -48,20 +48,6 @@
     ]
   },
   {
-    "title": "Chain Theme Blitz",
-    "minPlayers": 3,
-    "themeCategory": true,
-    "text": "Draw a Word Card and read the **category** aloud.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from that category.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype",
-      "cut"
-    ]
-  },
-  {
     "title": "Chain Alpha Blitz",
     "minPlayers": 3,
     "alphabetic": true,
@@ -76,9 +62,9 @@
     ]
   },
   {
-        "title": "Alpha² Blitz",
-        "minPlayers": 3,
-        "category": true,
+    "title": "Alpha² Blitz",
+    "minPlayers": 3,
+    "category": true,
     "text": "Draw a Word Card and read the **category** aloud.\n\n**Clockwise** from the player who drew this card, players take turns naming items from **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
     "passnplay_text": "**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
     "tags": [
