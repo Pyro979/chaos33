@@ -312,8 +312,8 @@ document.addEventListener("DOMContentLoaded", function () {
         chaosCard.classList.add("is-goblin-mode");
         chaosCard.classList.remove("is-duel");
 
-        if (chaosLabel) chaosLabel.textContent = "Goblin Mode";
-        if (wordLabel) wordLabel.textContent = "Goblin Mode!";
+        if (chaosLabel) chaosLabel.textContent = "Mass Duel";
+        if (wordLabel) wordLabel.textContent = "Mass Duel!";
 
         updateChaosCueChip(null);
 
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
           chaosDescription.innerHTML = descText;
         }
 
-        if (wordText) wordText.innerHTML = "Goblin Mode!<br><span class=\"goblin-word-sub\">everyone plays</span>";
+        if (wordText) wordText.innerHTML = "Mass Duel!<br><span class=\"goblin-word-sub\">everyone plays</span>";
 
       } else {
         // Regular flip

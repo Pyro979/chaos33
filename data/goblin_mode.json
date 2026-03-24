@@ -38,7 +38,7 @@
   {
     "title": "Coin Flip",
     "minPlayers": 3,
-    "text": "Each player places a coin on the **back of their hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins.",
+    "text": "Each player balances a coin on their **thumb**.\n\nFlick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins.",
     "tags": [
       "main",
       "passnplay",
@@ -57,7 +57,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "cut"
     ]
   },
   {
@@ -65,6 +66,7 @@
     "minPlayers": 3,
     "alphabetic": true,
     "text": "Draw a Word Card and read the **category** aloud. The player who drew picks a **letter**. Avoid: J, K, Q, V, X, Y, Z.\n\nStarting with that player and going **clockwise**, each player names one item from that category starting with that letter.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
+    "passnplay_text": "Starting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
     "tags": [
       "main",
       "passnplay",
@@ -74,10 +76,11 @@
     ]
   },
   {
-    "title": "Alpha² Blitz",
-    "minPlayers": 3,
-    "alphabetic": true,
+        "title": "Alpha² Blitz",
+        "minPlayers": 3,
+        "category": true,
     "text": "Draw a Word Card and read the **category** aloud.\n\n**Clockwise** from the player who drew this card, players take turns naming items from **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
+    "passnplay_text": "**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
     "tags": [
       "main",
       "passnplay",
@@ -91,6 +94,7 @@
     "minPlayers": 3,
     "scavenge": true,
     "text": "Draw a Word Card and read the **category** aloud.\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from that category.\n\nNo digital screens. First back wins.",
+    "passnplay_text": "All players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins.",
     "tags": [
       "main",
       "passnplay",

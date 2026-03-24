@@ -115,7 +115,6 @@ body {
     font-weight: 600;
     text-align: center;
     flex-shrink: 0;
-    border-radius: 12px 12px 0 0;
 }
 
 .card-label.duel-label {
@@ -139,7 +138,7 @@ body {
     justify-content: flex-start;
     padding: 1.5rem 1.5rem;
     padding-top: 1.5rem;
-    padding-bottom: 2rem; /* Reduced padding since logo is hidden on short screens */
+    padding-bottom: 4.5rem;
     max-height: none;
 }
 
@@ -169,7 +168,7 @@ body {
 #next-player-screen .intro-logo-link {
     display: block;
     text-align: center;
-    margin-top: 0;
+    margin-top: -50px;
     margin-bottom: 1.5rem;
     text-decoration: none;
     position: relative;
@@ -423,9 +422,6 @@ body {
 }
 
 /* Goblin Mode Card */
-.game-card.goblin-card {
-    border-color: var(--goblin-color);
-}
 
 .card-label.goblin-label {
     background-color: var(--goblin-color);
@@ -461,6 +457,22 @@ body {
     margin-top: 0;
     margin-bottom: 0.5rem;
     white-space: pre-line;
+}
+
+#goblin-reveal-text {
+    font-weight: 600;
+    color: var(--goblin-color);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+}
+
+#goblin-reveal-values {
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.5;
+    text-align: center;
 }
 
 /* Timer Section - Outside Card */
@@ -523,6 +535,10 @@ body {
     margin: 0;
 }
 
+.timer-controls .button-row .btn-next {
+    min-width: 0 !important;
+}
+
 .timer-controls-duel {
     justify-content: stretch;
 }
@@ -531,6 +547,10 @@ body {
     flex: 1;
     width: 100%;
     max-width: none;
+}
+
+.timer-controls-duel .button-row .btn-next-duel {
+    width: auto;
 }
 
 .timer-display-container {
@@ -931,8 +951,45 @@ body {
 
 .button-row {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
     justify-content: center;
     width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.btn-turn-back {
+    flex: 0 0 auto;
+    width: 2.75rem;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    background-color: var(--card-bg);
+    color: var(--muted);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+    font-family: var(--font-body);
+}
+
+.btn-turn-back:hover,
+.btn-turn-back:focus {
+    color: var(--text);
+    border-color: var(--muted);
+    background-color: var(--bg);
+}
+
+.button-row .btn-next,
+.button-row .btn-next-duel {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    width: auto;
 }
 
 .how-to-play-link {
@@ -1073,6 +1130,48 @@ body {
     }
 }
 
+/* Mid-range: 500px-767px: card stays fixed, layout stays tight */
+@media (min-width: 500px) and (max-width: 767px) {
+    .app-container {
+        padding: 1.5rem;
+    }
+
+    .screen {
+        max-width: 420px;
+    }
+
+    .game-card {
+        width: 350px;
+        height: 490px;
+        min-height: unset;
+        max-height: unset;
+        border-radius: 12px;
+    }
+
+    .game-card-intro {
+        width: 350px;
+        max-width: 350px;
+    }
+
+    .game-card-intro .card-content {
+        padding-bottom: 5rem;
+    }
+
+    #next-player-screen .intro-logo-link {
+        margin-top: -65px;
+        width: 350px;
+        max-width: 350px;
+    }
+
+    .card-content {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .modal-content-rules {
+        max-width: 500px;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 767px) {
     .app-container {
@@ -1083,7 +1182,8 @@ body {
         width: 90vw;
         max-width: 350px;
         height: auto;
-        min-height: calc(90vw * 1.4);
+        /* cap min-height to match max-width so they don't fight */
+        min-height: min(calc(90vw * 1.4), 490px);
         max-height: calc(350px * 1.4);
         border-radius: 8px;
     }
@@ -1146,7 +1246,7 @@ body {
 @media (max-width: 425px) {
     .game-card {
         width: 85vw;
-        min-height: calc(85vw * 1.4);
+        min-height: min(calc(85vw * 1.4), 490px);
     }
     
     .word-section {

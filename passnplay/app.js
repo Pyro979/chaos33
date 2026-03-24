@@ -3,9 +3,15 @@
 let currentState = 'next-player'; // 'next-player', 'normal-turn', 'duel'
 let lastScreenType = null; // Track last screen to avoid back-to-back duels
 let screenHistory = []; // Track last 5 screen types to ensure duel at least every 6th card
-let lastChaosPrompt = null;
 let lastWord = null;
-let lastDuel = null;
+
+let duelDeck = null;
+let goblinDeck = null;
+let chaosDeck = null;
+let categoryDeckAlpha = null;
+let categoryDeckScavenge = null;
+let categoryDeckTheme = null;
+let inlineCategoryDecks = null;
 
 // Timer state
 let timerInterval = null;
@@ -19,12 +25,18 @@ let currentChaosPrompt = null;
 let currentWord = null;
 let currentDuel = null;
 let currentGoblinMode = null;
-let lastGoblinMode = null;
 let currentDuelCategory = null;
 let currentDuelLetter = null;
 let currentDuelTrigger = null; // Object with full_text and card_text
 let duelCategoryRevealed = false;
 let duelLetterRevealed = false;
+
+let currentGoblinCategory = null;
+let currentGoblinLetter = null;
+let goblinCategoryRevealed = false;
+
+/** Snapshots of completed turns for Back navigation (LIFO). */
+let turnHistoryStack = [];
 
 const CUE_TO_SLUG = {
   'Give clues in this voice': 'voice',
@@ -62,6 +74,215 @@ function updateChaosCueChip(prompt) {
   chipEl.style.display = '';
 }
 
+function resetShuffleDecks() {
+    duelDeck = createDeck(gameData.duels);
+    goblinDeck = createDeck(gameData.goblinModes);
+    chaosDeck = createDeck(gameData.chaosPrompts);
+    const dc = gameData.duelCategories || {};
+    categoryDeckAlpha = createDeck(dc.alphaBlitz || []);
+    categoryDeckScavenge = createDeck(dc.scavenge || []);
+    categoryDeckTheme = createDeck(dc.themeBlitz || []);
+    inlineCategoryDecks = new Map();
+}
+
+function getInlineDeck(title, categories) {
+    if (!title || !categories || categories.length === 0) return null;
+    if (!inlineCategoryDecks.has(title)) {
+        inlineCategoryDecks.set(title, createDeck([...categories]));
+    }
+    return inlineCategoryDecks.get(title);
+}
+
+function nextDuelCategory(duel) {
+    if (duel.alphabetic) {
+        if (duel.categories && duel.categories.length > 0) {
+            const deck = getInlineDeck(duel.title, duel.categories);
+            return deck ? getNextFromDeck(deck) : null;
+        }
+        return getNextFromDeck(categoryDeckAlpha);
+    }
+    if (duel.title === 'Scavenge') {
+        return getNextFromDeck(categoryDeckScavenge);
+    }
+    if (duel.categories && duel.categories.length > 0) {
+        const deck = getInlineDeck(duel.title, duel.categories);
+        return deck ? getNextFromDeck(deck) : null;
+    }
+    return null;
+}
+
+function nextGoblinCategory(mode) {
+    if (mode.alphabetic || mode.category) {
+        return getNextFromDeck(categoryDeckAlpha);
+    }
+    if (mode.scavenge) {
+        return getNextFromDeck(categoryDeckScavenge);
+    }
+    if (mode.themeCategory) {
+        return getNextFromDeck(categoryDeckTheme);
+    }
+    return null;
+}
+
+function buildTurnSnapshot() {
+    const duelRevealSection = document.getElementById('duel-reveal-section');
+    const goblinRevealSection = document.getElementById('goblin-reveal-section');
+    const countdownEl = document.getElementById('timer-countdown');
+    const timerText = countdownEl ? countdownEl.textContent.trim() : '';
+    const timerWasEmoji = timerText === '⏳' || timerText === '';
+
+    return {
+        screen: currentState,
+        lastScreenType,
+        screenHistory: screenHistory.slice(),
+        lastWord,
+        currentChaosPrompt,
+        currentWord,
+        currentDuel,
+        currentDuelCategory,
+        currentDuelLetter,
+        duelCategoryRevealed,
+        duelLetterRevealed,
+        duelRevealSectionDisplay: duelRevealSection ? duelRevealSection.style.display || '' : 'none',
+        duelRevealValuesHtml: document.getElementById('reveal-values')?.innerHTML || '',
+        currentGoblinMode,
+        currentGoblinCategory,
+        currentGoblinLetter,
+        goblinCategoryRevealed,
+        goblinRevealSectionDisplay: goblinRevealSection ? goblinRevealSection.style.display || '' : 'none',
+        goblinRevealValuesHtml: document.getElementById('goblin-reveal-values')?.innerHTML || '',
+        timerSeconds,
+        progress,
+        timerWasEmoji
+    };
+}
+
+function applyTimerFromSnapshot(snap) {
+    if (snap.timerWasEmoji) {
+        resetTimer();
+        return;
+    }
+    timerSeconds = snap.timerSeconds;
+    progress = snap.progress;
+    timerRunning = false;
+    const countdownEl = document.getElementById('timer-countdown');
+    const timerCircle = document.querySelector('#normal-turn-screen .timer-circle');
+    const flipTimer = document.getElementById('flip-timer');
+    if (countdownEl) {
+        if (timerSeconds > 0) {
+            countdownEl.textContent = String(timerSeconds);
+        } else {
+            countdownEl.textContent = '0';
+        }
+    }
+    if (timerCircle) {
+        const totalSeconds = 33;
+        const progressPercent = ((totalSeconds - timerSeconds) / totalSeconds) * 100;
+        timerCircle.style.strokeDashoffset = String(100 - progressPercent);
+    }
+    if (flipTimer) {
+        flipTimer.classList.toggle('time-up', timerSeconds <= 0);
+    }
+    updateTimerDisplay();
+}
+
+function applyTurnSnapshot(snap) {
+    stopTimer();
+    lastScreenType = snap.lastScreenType;
+    screenHistory = snap.screenHistory.slice();
+    lastWord = snap.lastWord;
+
+    if (snap.screen === 'normal-turn') {
+        currentChaosPrompt = snap.currentChaosPrompt;
+        currentWord = snap.currentWord;
+        document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
+        document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
+        document.getElementById('word-text').textContent = currentWord;
+        updateChaosCueChip(currentChaosPrompt);
+        applyTimerFromSnapshot(snap);
+        showScreen('normal-turn');
+        return;
+    }
+
+    resetTimer();
+
+    if (snap.screen === 'duel') {
+        currentDuel = snap.currentDuel;
+        currentDuelCategory = snap.currentDuelCategory;
+        currentDuelLetter = snap.currentDuelLetter;
+        duelCategoryRevealed = snap.duelCategoryRevealed;
+        duelLetterRevealed = snap.duelLetterRevealed;
+        const duelTriggerEl = document.getElementById('duel-trigger');
+        if (duelTriggerEl) {
+            duelTriggerEl.textContent = 'Choose who you\'re dueling';
+        }
+        document.getElementById('duel-title').textContent = currentDuel.title;
+        document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
+        const revealText = document.getElementById('reveal-text');
+        const revealValues = document.getElementById('reveal-values');
+        const revealBtn = document.getElementById('reveal-btn');
+        const revealSection = document.getElementById('duel-reveal-section');
+        const sectionDisplay = snap.duelRevealSectionDisplay || 'none';
+        revealSection.style.display = sectionDisplay === '' ? 'block' : sectionDisplay;
+        if (snap.duelCategoryRevealed && snap.duelRevealValuesHtml) {
+            revealValues.innerHTML = snap.duelRevealValuesHtml;
+            revealText.style.display = 'none';
+            revealValues.style.display = 'block';
+            revealBtn.style.cursor = 'default';
+        } else {
+            revealText.style.display = 'block';
+            revealValues.style.display = 'none';
+            revealValues.innerHTML = '';
+            revealBtn.style.cursor = sectionDisplay === 'none' ? 'default' : 'pointer';
+        }
+        showScreen('duel');
+        return;
+    }
+
+    if (snap.screen === 'goblin-mode') {
+        currentGoblinMode = snap.currentGoblinMode;
+        currentGoblinCategory = snap.currentGoblinCategory;
+        currentGoblinLetter = snap.currentGoblinLetter;
+        goblinCategoryRevealed = snap.goblinCategoryRevealed;
+        document.getElementById('goblin-title').textContent = currentGoblinMode.title;
+        document.getElementById('goblin-description').innerHTML = formatText(currentGoblinMode.text);
+        const revealSection = document.getElementById('goblin-reveal-section');
+        const goblinRevealText = document.getElementById('goblin-reveal-text');
+        const goblinRevealValues = document.getElementById('goblin-reveal-values');
+        const goblinRevealBtn = document.getElementById('goblin-reveal-btn');
+        const gSectionDisplay = snap.goblinRevealSectionDisplay || 'none';
+        revealSection.style.display = gSectionDisplay === '' ? 'block' : gSectionDisplay;
+        if (snap.goblinCategoryRevealed && snap.goblinRevealValuesHtml) {
+            goblinRevealValues.innerHTML = snap.goblinRevealValuesHtml;
+            goblinRevealText.style.display = 'none';
+            goblinRevealValues.style.display = 'block';
+            goblinRevealBtn.style.cursor = 'default';
+        } else {
+            goblinRevealText.style.display = 'block';
+            goblinRevealValues.style.display = 'none';
+            goblinRevealValues.innerHTML = '';
+            goblinRevealBtn.style.cursor = gSectionDisplay === 'none' ? 'default' : 'pointer';
+        }
+        showScreen('goblin-mode');
+    }
+}
+
+function handleBack() {
+    hideSwapModal();
+    if (turnHistoryStack.length === 0) {
+        if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
+            stopTimer();
+            resetTimer();
+            lastScreenType = null;
+            screenHistory = [];
+            showScreen('next-player');
+        }
+        return;
+    }
+    const snap = turnHistoryStack.pop();
+    applyTurnSnapshot(snap);
+}
+
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     // Load game data
@@ -75,11 +296,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function initializeApp() {
+    resetShuffleDecks();
+
     // Set up event listeners
     document.getElementById('next-player-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-normal-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-duel-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-goblin-btn').addEventListener('click', handleNextPlayer);
+
+    document.querySelectorAll('.btn-turn-back').forEach((btn) => {
+        btn.addEventListener('click', handleBack);
+    });
     
     document.getElementById('swap-btn').addEventListener('click', () => showSwapModal('normal'));
     document.getElementById('swap-duel-btn').addEventListener('click', () => showSwapModal('duel'));
@@ -90,6 +317,7 @@ function initializeApp() {
     document.getElementById('flip-timer').addEventListener('click', startTimer);
     
     document.getElementById('reveal-btn').addEventListener('click', handleReveal);
+    document.getElementById('goblin-reveal-btn').addEventListener('click', handleGoblinReveal);
     
     // How to play modal
     document.getElementById('how-to-play-btn').addEventListener('click', showHowToPlayModal);
@@ -119,12 +347,17 @@ function initializeApp() {
     showScreen('next-player');
     lastScreenType = null; // Reset on initial load
     screenHistory = []; // Reset history on initial load
+    turnHistoryStack = [];
     
     // Initialize timer with clock emoji
     resetTimer();
 }
 
 function handleNextPlayer() {
+    if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
+        turnHistoryStack.push(buildTurnSnapshot());
+    }
+
     // Stop timer if running
     stopTimer();
     resetTimer();
@@ -132,6 +365,11 @@ function handleNextPlayer() {
     // Reset duel reveals
     duelCategoryRevealed = false;
     duelLetterRevealed = false;
+
+    // Reset goblin reveals
+    goblinCategoryRevealed = false;
+    currentGoblinCategory = null;
+    currentGoblinLetter = null;
     
     // Check if we need to force a duel (no duel in past 5 turns)
     const hasDuelInLast5 = screenHistory.some(type => type === 'duel');
@@ -153,7 +391,7 @@ function handleNextPlayer() {
             isDuel = true;
         }
     }
-    
+
     if (isGoblinMode) {
         startGoblinMode();
         lastScreenType = 'goblin-mode';
@@ -186,12 +424,8 @@ function formatText(text) {
 }
 
 function startNormalTurn() {
-    // Get new random items
-    currentChaosPrompt = getRandomItem(gameData.chaosPrompts, lastChaosPrompt);
+    currentChaosPrompt = getNextFromDeck(chaosDeck);
     currentWord = getRandomItem(gameData.words, lastWord);
-    
-    // Update last items
-    lastChaosPrompt = currentChaosPrompt;
     lastWord = currentWord;
     
     // Update UI
@@ -207,21 +441,12 @@ function startNormalTurn() {
 }
 
 function startDuel() {
-    // Get random duel
-    currentDuel = getRandomItem(gameData.duels, lastDuel);
-    lastDuel = currentDuel;
+    currentDuel = getNextFromDeck(duelDeck);
     
-    // Duel! (single cue now)
-    if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-        currentDuelTrigger = gameData.duelTriggers[0];
-    } else {
-        currentDuelTrigger = { full_text: 'Duel!', card_text: 'Duel!' };
-    }
-
     // Update UI
     const duelTriggerEl = document.getElementById('duel-trigger');
-    if (duelTriggerEl && currentDuelTrigger) {
-        duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel!';
+    if (duelTriggerEl) {
+        duelTriggerEl.textContent = 'Choose who you\'re dueling';
     }
     document.getElementById('duel-title').textContent = currentDuel.title;
     document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
@@ -239,9 +464,7 @@ function startDuel() {
     // Determine what to reveal based on duel data fields (not title) so all blitz variants work.
     if (currentDuel.alphabetic) {
         // Alpha Blitz family (alphabetic:true): needs category + letter
-        currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-            ? currentDuel.categories 
-            : gameData.duelCategories.alphaBlitz);
+        currentDuelCategory = nextDuelCategory(currentDuel);
         currentDuelLetter = getRandomLetter();
         revealText.style.display = 'block';
         revealValues.style.display = 'none';
@@ -250,7 +473,7 @@ function startDuel() {
         revealSection.style.display = 'block';
     } else if (currentDuel.title === 'Scavenge') {
         // Scavenge: needs category from the scavenge pool
-        currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
+        currentDuelCategory = nextDuelCategory(currentDuel);
         currentDuelLetter = null;
         revealText.style.display = 'block';
         revealValues.style.display = 'none';
@@ -259,9 +482,7 @@ function startDuel() {
         revealSection.style.display = 'block';
     } else if (currentDuel.categories && currentDuel.categories.length > 0) {
         // Theme Blitz family (non-alphabetic, has categories): needs category only
-        currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-            ? currentDuel.categories 
-            : gameData.duelCategories.themeBlitz);
+        currentDuelCategory = nextDuelCategory(currentDuel);
         currentDuelLetter = null;
         revealText.style.display = 'block';
         revealValues.style.display = 'none';
@@ -283,11 +504,44 @@ function startDuel() {
 }
 
 function startGoblinMode() {
-    currentGoblinMode = getRandomItem(gameData.goblinModes, lastGoblinMode);
-    lastGoblinMode = currentGoblinMode;
+    currentGoblinMode = getNextFromDeck(goblinDeck);
 
     document.getElementById('goblin-title').textContent = currentGoblinMode.title;
     document.getElementById('goblin-description').innerHTML = formatText(currentGoblinMode.text);
+
+    // Set up reveal section based on card flags
+    const revealSection = document.getElementById('goblin-reveal-section');
+    const goblinRevealText = document.getElementById('goblin-reveal-text');
+    const goblinRevealValues = document.getElementById('goblin-reveal-values');
+    const goblinRevealBtn = document.getElementById('goblin-reveal-btn');
+
+    goblinCategoryRevealed = false;
+    goblinRevealText.style.display = 'block';
+    goblinRevealValues.style.display = 'none';
+    goblinRevealValues.innerHTML = '';
+    goblinRevealBtn.style.cursor = 'pointer';
+
+    if (currentGoblinMode.alphabetic) {
+        currentGoblinCategory = nextGoblinCategory(currentGoblinMode);
+        currentGoblinLetter = getRandomLetter();
+        revealSection.style.display = 'block';
+    } else if (currentGoblinMode.category) {
+        currentGoblinCategory = nextGoblinCategory(currentGoblinMode);
+        currentGoblinLetter = null;
+        revealSection.style.display = 'block';
+    } else if (currentGoblinMode.scavenge) {
+        currentGoblinCategory = nextGoblinCategory(currentGoblinMode);
+        currentGoblinLetter = null;
+        revealSection.style.display = 'block';
+    } else if (currentGoblinMode.themeCategory) {
+        currentGoblinCategory = nextGoblinCategory(currentGoblinMode);
+        currentGoblinLetter = null;
+        revealSection.style.display = 'block';
+    } else {
+        currentGoblinCategory = null;
+        currentGoblinLetter = null;
+        revealSection.style.display = 'none';
+    }
 
     showScreen('goblin-mode');
 }
@@ -325,6 +579,29 @@ function handleReveal() {
     }
 }
 
+function handleGoblinReveal() {
+    if (goblinCategoryRevealed || !currentGoblinCategory) return;
+
+    const goblinRevealText = document.getElementById('goblin-reveal-text');
+    const goblinRevealValues = document.getElementById('goblin-reveal-values');
+    const goblinRevealBtn = document.getElementById('goblin-reveal-btn');
+
+    let content = '';
+    if (currentGoblinCategory && currentGoblinLetter) {
+        content = `Category: <span class="reveal-category">${currentGoblinCategory}</span><br>Letter: <span class="reveal-letter">${currentGoblinLetter}</span>`;
+    } else if (currentGoblinCategory) {
+        content = `Category: <span class="reveal-category">${currentGoblinCategory}</span>`;
+    }
+
+    if (content) {
+        goblinRevealValues.innerHTML = content;
+        goblinRevealText.style.display = 'none';
+        goblinRevealValues.style.display = 'block';
+        goblinRevealBtn.style.cursor = 'default';
+        goblinCategoryRevealed = true;
+    }
+}
+
 function showSwapModal(screenType) {
     const modal = document.getElementById('swap-modal');
     const modalText = document.getElementById('swap-modal-text');
@@ -357,7 +634,7 @@ function handleSwapConfirm() {
     
     if (screenType === 'normal') {
         // Swap chaos prompt and word
-        currentChaosPrompt = getRandomItem(gameData.chaosPrompts, currentChaosPrompt);
+        currentChaosPrompt = getNextFromDeck(chaosDeck);
         currentWord = getRandomItem(gameData.words, currentWord);
         
         document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
@@ -369,18 +646,11 @@ function handleSwapConfirm() {
         resetTimer();
     } else {
         // Swap duel
-        currentDuel = getRandomItem(gameData.duels, currentDuel);
+        currentDuel = getNextFromDeck(duelDeck);
         
-        // Duel! (single cue now)
-        if (gameData.duelTriggers && gameData.duelTriggers.length > 0) {
-            currentDuelTrigger = gameData.duelTriggers[0];
-        } else {
-            currentDuelTrigger = { full_text: 'Duel!', card_text: 'Duel!' };
-        }
-
         const duelTriggerEl = document.getElementById('duel-trigger');
-        if (duelTriggerEl && currentDuelTrigger) {
-            duelTriggerEl.textContent = currentDuelTrigger.full_text || currentDuelTrigger.card_text || 'Duel!';
+        if (duelTriggerEl) {
+            duelTriggerEl.textContent = 'Choose who you\'re dueling';
         }
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(currentDuel.description);
@@ -396,9 +666,7 @@ function handleSwapConfirm() {
         const revealSection = document.getElementById('duel-reveal-section');
         
         if (currentDuel.alphabetic) {
-            currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-                ? currentDuel.categories 
-                : gameData.duelCategories.alphaBlitz);
+            currentDuelCategory = nextDuelCategory(currentDuel);
             currentDuelLetter = getRandomLetter();
             revealText.style.display = 'block';
             revealValues.style.display = 'none';
@@ -406,7 +674,7 @@ function handleSwapConfirm() {
             revealBtn.style.cursor = 'pointer';
             revealSection.style.display = 'block';
         } else if (currentDuel.title === 'Scavenge') {
-            currentDuelCategory = getRandomCategory(gameData.duelCategories.scavenge);
+            currentDuelCategory = nextDuelCategory(currentDuel);
             currentDuelLetter = null;
             revealText.style.display = 'block';
             revealValues.style.display = 'none';
@@ -414,9 +682,7 @@ function handleSwapConfirm() {
             revealBtn.style.cursor = 'pointer';
             revealSection.style.display = 'block';
         } else if (currentDuel.categories && currentDuel.categories.length > 0) {
-            currentDuelCategory = getRandomCategory(currentDuel.categories.length > 0 
-                ? currentDuel.categories 
-                : gameData.duelCategories.themeBlitz);
+            currentDuelCategory = nextDuelCategory(currentDuel);
             currentDuelLetter = null;
             revealText.style.display = 'block';
             revealValues.style.display = 'none';

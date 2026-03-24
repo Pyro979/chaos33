@@ -96,7 +96,11 @@ async function loadGameData() {
             .filter(item => item.tags && item.tags.includes('passnplay') && !item.tags.includes('cut'))
             .map(item => ({
                 title: item.title,
-                text: item.text
+                text: item.passnplay_text || item.text,
+                alphabetic: item.alphabetic || false,
+                category: item.category || false,
+                scavenge: item.scavenge || false,
+                themeCategory: item.themeCategory || false
             }));
 
         console.log('=== GAME DATA LOADED ===');
@@ -131,6 +135,42 @@ function getRandomItem(array, lastItem = null) {
     return item;
 }
 
+function shuffleArray(array) {
+    const arr = array.slice();
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+    return arr;
+}
+
+function createDeck(array) {
+    if (!array || array.length === 0) {
+        return { items: [], index: 0 };
+    }
+    return { items: shuffleArray(array), index: 0 };
+}
+
+function getNextFromDeck(deck) {
+    if (!deck || !deck.items || deck.items.length === 0) {
+        return null;
+    }
+    if (deck.index >= deck.items.length) {
+        const lastItem = deck.items[deck.items.length - 1];
+        deck.items = shuffleArray(deck.items);
+        if (deck.items.length > 1 && deck.items[0] === lastItem) {
+            const swapIdx = Math.floor(Math.random() * (deck.items.length - 1)) + 1;
+            const tmp = deck.items[0];
+            deck.items[0] = deck.items[swapIdx];
+            deck.items[swapIdx] = tmp;
+        }
+        deck.index = 0;
+    }
+    return deck.items[deck.index++];
+}
+
 function getRandomLetter() {
     return VALID_LETTERS[Math.floor(Math.random() * VALID_LETTERS.length)];
 }
@@ -142,6 +182,15 @@ function getRandomCategory(categoryList) {
 
 // Export for use in app.js
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { loadGameData, getRandomItem, getRandomLetter, getRandomCategory, gameData };
+    module.exports = {
+        loadGameData,
+        getRandomItem,
+        getRandomLetter,
+        getRandomCategory,
+        shuffleArray,
+        createDeck,
+        getNextFromDeck,
+        gameData
+    };
 }
 

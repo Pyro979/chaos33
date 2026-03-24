@@ -61,7 +61,7 @@
                         <h1 class="card-title">Ready to play<br/>33 Seconds of Chaos?</h1>
                         <div class="intro-text">
                             <p>On your turn, you'll get a <strong>Word</strong> and a <strong>Chaos Prompt</strong> that tells you how to give clues. You have <strong>33 seconds</strong> to get someone to guess the word!</p>
-                            <p>Sometimes you'll trigger a <strong>Duel</strong> instead: a head-to-head challenge for 2 points.</p>
+                            <p>Sometimes you get a head-to-head <strong>Duel</strong> or a <strong>Mass Duel</strong> where everyone plays. Winner gets <strong>2 points</strong> either way.</p>
                             <p>Pass the device to the next player after each turn.</p>
                         </div>
                     </div>
@@ -117,6 +117,7 @@
                             </div>
                         </div>
                         <div class="button-row">
+                            <button type="button" class="btn-turn-back" aria-label="Previous turn">←</button>
                             <button id="next-player-normal-btn" class="btn-primary btn-next">Next player →</button>
                         </div>
                     </div>
@@ -160,6 +161,7 @@
                             </div>
                         </div>
                         <div class="button-row">
+                            <button type="button" class="btn-turn-back" aria-label="Previous turn">←</button>
                             <button id="next-player-duel-btn" class="btn-primary btn-next btn-next-duel">Next Player →</button>
                         </div>
                     </div>
@@ -167,21 +169,29 @@
                 </div>
             </div>
         </div>
-        <!-- Goblin Mode Screen -->
+        <!-- Mass Duel screen -->
         <div id="goblin-mode-screen" class="screen">
             <div class="card-container">
                 <div class="game-card goblin-card">
-                    <div class="card-label goblin-label">Goblin Mode</div>
-                    <div class="goblin-subtitle-banner">Everyone plays! Winner gets 3 points</div>
+                    <div class="card-label goblin-label">Mass Duel</div>
+                    <div class="goblin-subtitle-banner">Everyone plays! Winner gets 2 points</div>
                     <div class="card-content">
                         <h2 id="goblin-title" class="goblin-title"></h2>
                         <p id="goblin-description" class="goblin-description"></p>
+                    </div>
+
+                    <div id="goblin-reveal-section" class="card-bottom-section" style="display:none;">
+                        <button id="goblin-reveal-btn" class="btn-reveal-box">
+                            <span id="goblin-reveal-text">Tap to reveal</span>
+                            <div id="goblin-reveal-values" style="display:none;"></div>
+                        </button>
                     </div>
                 </div>
 
                 <div class="timer-section">
                     <div class="timer-controls timer-controls-duel">
                         <div class="button-row">
+                            <button type="button" class="btn-turn-back" aria-label="Previous turn">←</button>
                             <button id="next-player-goblin-btn" class="btn-primary btn-next btn-next-duel">Next Player →</button>
                         </div>
                     </div>
@@ -208,12 +218,12 @@
             <button id="how-to-play-close-btn" class="modal-close-btn" aria-label="Close">×</button>
             <div class="rules-content">
                 <h2>33 Seconds of Chaos, Pass and Play App Rules</h2>
-                <p class="rules-intro">Can you get everyone to guess 'Banjo' in a Movie Announcer voice? Or while doing the Macarena? Clock's ticking, everyone's shouting. Then suddenly you're in a head-to-head duel of "Flip the Card" with your best friend. 33 Seconds of Chaos: The social party game where the cards make it weird. One device. Pass it around.</p>
+                <p class="rules-intro">Can you get everyone to guess 'Banjo' in a Movie Announcer voice? Or while doing the Macarena? Clock's ticking, everyone's shouting. Then a head-to-head Duel or a Mass Duel with the whole table. 33 Seconds of Chaos: The social party game where the cards make it weird. One device. Pass it around.</p>
                 
                 <h3>Quick Start</h3>
                 <ul>
                     <li>Hand the device to the next player. Tap Start.</li>
-                    <li>The app gives you either a Word turn or a Duel.</li>
+                    <li>You get a Word turn, a Duel, or sometimes a Mass Duel.</li>
                     <li>When you're done, tap Next Player and pass the device.</li>
                 </ul>
                 
@@ -253,8 +263,17 @@
                 <p>Judge's call is final.</p>
                 <p>Some duels (Alpha Blitz, Theme Blitz, Scavenge) hide key info until you tap <strong>Tap to reveal</strong> so nobody gets a head start.</p>
                 
+                <h3>Mass Duel</h3>
+                <ol>
+                    <li>Read the card. <strong>Everyone</strong> plays.</li>
+                    <li>Use <strong>Tap to reveal</strong> when it shows, same as Duels.</li>
+                    <li>Follow the card. Judge or vote if you need a winner.</li>
+                    <li>Winner gets <strong>2 points</strong> (same as a Duel).</li>
+                    <li>Tap Next Player.</li>
+                </ol>
+                
                 <h3>Swap</h3>
-                <p>If a prompt, word, or duel is a bad fit, tap Swap and confirm.</p>
+                <p>If a prompt, word, or duel is a bad fit, tap Swap and confirm. Mass Duels can't be swapped in the app. Agree at the table if you want a redo.</p>
                 
                 <h3>Basic Rules</h3>
                 <p>Unless the prompt says otherwise, you may not:</p>
@@ -274,7 +293,7 @@
                 <ul>
                     <li>Word turn (guessed in time): clue-giver +1, first correct guesser +1</li>
                     <li>Word turn (no guess): nobody scores</li>
-                    <li>Duel: winner +2</li>
+                    <li>Duel or Mass Duel: winner +2</li>
                 </ul>
                 
                 <p><strong>Rounds</strong></p>
