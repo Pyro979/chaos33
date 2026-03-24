@@ -211,7 +211,7 @@ function updateSessionChrome() {
   if (duelNextBtn) {
     if (isFinalDuelChrome()) {
       duelNextBtn.textContent = 'Done!';
-      duelNextBtn.setAttribute('aria-label', 'Done — end session');
+      duelNextBtn.setAttribute('aria-label', 'Done - end session');
     } else {
       duelNextBtn.textContent = 'Next Player →';
       duelNextBtn.setAttribute('aria-label', 'Next player');
@@ -797,7 +797,7 @@ function initializeApp() {
             navigator
                 .share({
                     title: title,
-                    text: 'Chaos 33 — PnP email page',
+                    text: 'Chaos 33 - PnP email page',
                     url: url
                 })
                 .then(function () {
