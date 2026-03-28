@@ -49,7 +49,7 @@ const chaosPrompts = [
     },
     {
         title: "Story Time",
-        description: "Start your clues with \"Once upon a time...\" and tell it like a story.",
+        description: "You can start your clues with \"Once upon a time...\" and tell it like a story.",
         cue: "Every clue must follow this format"
     },
     {
@@ -64,7 +64,7 @@ const chaosPrompts = [
     },
     {
         title: "Movie Announcer",
-        description: "Use an over-the-top movie trailer voice. Start with: \"In a world...\"",
+        description: "Use an over-the-top movie trailer voice. You can start with: \"In a world...\"",
         cue: "Give clues in this voice"
     },
     {
@@ -74,7 +74,7 @@ const chaosPrompts = [
     },
     {
         title: "Excited Kindergartener",
-        description: "Give clues like an overexcited kindergartener telling their parents about this thing. Start with: \"Look what I found...\"",
+        description: "Give clues like an overexcited kindergartener telling their parents about this thing. You can start with: \"Look what I found...\"",
         cue: "Give clues as if you are"
     },
     {
@@ -84,7 +84,7 @@ const chaosPrompts = [
     },
     {
         title: "Infomercial Host",
-        description: "Give clues like a late-night infomercial host who really needs this to sell. Start with: \"But wait, there's more...\"",
+        description: "Give clues like a late-night infomercial host who really needs this to sell. You can start with: \"But wait, there's more...\"",
         cue: "Give clues as if you are"
     },
     {
@@ -94,42 +94,42 @@ const chaosPrompts = [
     },
     {
         title: "Villain Monologue",
-        description: "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
+        description: "Give clues like a villain explaining their plan to the hero. You can start with: \"This is the key to my plan. It...\"",
         cue: "Give clues as if delivering a"
     },
     {
         title: "Clueless Tour Guide",
-        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. Start with: \"And on your left you'll see... uh...\"",
+        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see... uh...\"",
         cue: "Give clues as if you are"
     },
     {
         title: "Careful Mobster",
-        description: "Give clues like a mobster trying not to name the thing directly because the cops are listening. Start with: \"Look, hypothetically speaking...\"",
+        description: "Give clues like a mobster trying not to name the thing directly because the cops are listening. You can start with: \"Look, hypothetically speaking...\"",
         cue: "Give clues as if you are"
     },
     {
         title: "Guided Meditation",
-        description: "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
+        description: "Give clues in a calm, soothing guided-meditation voice. You can start with: \"Inhale through your nose. Now notice...\"",
         cue: "Give clues as if leading a"
     },
     {
         title: "Nature Documentary",
-        description: "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat...\"",
+        description: "Narrate clues like a nature documentary observing a rare creature in the wild. You can start with: \"Here we observe it in its natural habitat...\"",
         cue: "Give clues as if narrating a"
     },
     {
         title: "5-Star Review",
-        description: "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
+        description: "Give clues like you're leaving an over-the-top glowing 5-star review. You can start with: \"I'm obsessed. This thing is...\"",
         cue: "Give clues as if giving a"
     },
     {
         title: "1-Star Review",
-        description: "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
+        description: "Give clues like you're leaving a brutal 1-star complaint review. You can start with: \"If I could give zero stars I would! It is...\"",
         cue: "Give clues as if giving a"
     },
     {
         title: "Bad Salesperson",
-        description: "Give clues like you're trying to sell it, but you're terrible at it. Start with: \"So, uh... this model right here...\"",
+        description: "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, uh... this model right here...\"",
         cue: "Give clues as if you are"
     },
     {
@@ -144,12 +144,12 @@ const chaosPrompts = [
     },
     {
         title: "Country Lawyer",
-        description: "Give clues like a small-town lawyer in a low-budget courtroom drama. Start with: \"Ladies and gentlemen of the jury...\"",
+        description: "Give clues like a small-town lawyer in a low-budget courtroom drama. You can start with: \"Ladies and gentlemen of the jury...\"",
         cue: "Give clues as if you are"
     },
     {
         title: "Game Show Host",
-        description: "Talk like you're announcing what the contestant could win. Big energy. Start with: \"Behind Door Number One, it's...\"",
+        description: "Talk like you're announcing what the contestant could win. Big energy. You can start with: \"Behind Door Number One, it's...\"",
         cue: "Give clues as if you are"
     }
 ];

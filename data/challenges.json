@@ -190,7 +190,7 @@
   {
     "title": "Story Time",
     "cue": "Every clue must follow this format",
-    "text": "Start your clues with \"Once upon a time...\" and tell it like a story.",
+    "text": "You can start your clues with \"Once upon a time...\" and tell it like a story.",
     "example": "\"Once upon a time... a tiny yellow toy floated proudly in the tub.\"",
     "tags": [
       "main",
@@ -237,7 +237,7 @@
   {
     "title": "Movie Announcer",
     "cue": "Give clues in this voice",
-    "text": "Use an over-the-top movie trailer voice. Start with: \"In a world...\"",
+    "text": "Use an over-the-top movie trailer voice. You can start with: \"In a world...\"",
     "example": "\"In a world... where one squeaky toy rules the water...\"",
     "tags": [
       "main",
@@ -333,7 +333,7 @@
   {
     "title": "Excited Kindergartener",
     "cue": "Give clues as if you are",
-    "text": "Give clues like an overexcited kindergartener telling their parents about this thing. Start with: \"Look what I found...\"",
+    "text": "Give clues like an overexcited kindergartener telling their parents about this thing. You can start with: \"Look what I found...\"",
     "example": "\"And THEN it went in the bath and it was yellow and it squeaked and it FLOATED ON THE WATER and it was SO COOL!\"",
     "tags": [
       "web",
@@ -388,7 +388,7 @@
   {
     "title": "Infomercial Host",
     "cue": "Give clues as if you are",
-    "text": "Give clues like a late-night infomercial host who really needs this to sell. Start with: \"But wait, there's more...\"",
+    "text": "Give clues like a late-night infomercial host who really needs this to sell. You can start with: \"But wait, there's more...\"",
     "example": "\"Are YOU tired of boring baths? Try this amazing tiny yellow squeaker that floats on water!\"",
     "tags": [
       "web",
@@ -467,7 +467,7 @@
   {
     "title": "Villain Monologue",
     "cue": "Give clues as if delivering a",
-    "text": "Give clues like a villain explaining their plan to the hero. Start with: \"This is the key to my plan. It...\"",
+    "text": "Give clues like a villain explaining their plan to the hero. You can start with: \"This is the key to my plan. It...\"",
     "example": "\"First, I put this harmless yellow thing in your tub. Then, every squeak reminds you I was here.\"",
     "tags": [
       "web",
@@ -495,7 +495,7 @@
   {
     "title": "Clueless Tour Guide",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. Start with: \"And on your left you'll see... uh...\"",
+    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see... uh...\"",
     "example": "\"And here we see a rare yellow bath relic which, as you can tell, bravely floats beside the humble soap.\"",
     "tags": [
       "web",
@@ -511,7 +511,7 @@
   {
     "title": "Time Traveler: Past",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're a time traveler from the past seeing this for the first time. Start with: \"What manner of witchcraft is this?\"",
+    "text": "Give clues like you're a time traveler from the past seeing this for the first time. You can start with: \"What manner of witchcraft is this?\"",
     "example": "\"In my village, no one owned a tiny yellow creature that rides on water and cries when you squeeze it!\"",
     "tags": [
       "rules",
@@ -524,7 +524,7 @@
   {
     "title": "Time Traveler: Future",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're a time traveler from the future who knows this will destroy (or save) everything. Start with: \"In my timeline, it's always...\"",
+    "text": "Give clues like you're a time traveler from the future who knows this will destroy (or save) everything. You can start with: \"In my timeline, it's always...\"",
     "example": "\"It begins as a harmless yellow toy that floats in the tub... but in my timeline, that squeak is the first warning.\"",
     "tags": [
       "rules",
@@ -549,7 +549,7 @@
   {
     "title": "Spy",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're in a spy movie, passing secret instructions in public. Start with: \"Mission update: the target is...\"",
+    "text": "Give clues like you're in a spy movie, passing secret instructions in public. You can start with: \"Mission update: the target is...\"",
     "example": "\"At 1900 hours, place the small yellow floater in the tub. If it squeaks twice, you know it's the right one.\"",
     "tags": [
       "main",
@@ -561,7 +561,7 @@
   {
     "title": "Careful Mobster",
     "cue": "Give clues as if you are",
-    "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening. Start with: \"Look, hypothetically speaking...\"",
+    "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening. You can start with: \"Look, hypothetically speaking...\"",
     "example": "\"Look, I ain't sayin' nothin'. There's just this little yellow thing that hangs in the tub and makes noise, capisce?\"",
     "tags": [
       "main",
@@ -576,7 +576,7 @@
   {
     "title": "Guided Meditation",
     "cue": "Give clues as if leading a",
-    "text": "Give clues in a calm, soothing guided-meditation voice. Start with: \"Inhale through your nose. Now notice...\"",
+    "text": "Give clues in a calm, soothing guided-meditation voice. You can start with: \"Inhale through your nose. Now notice...\"",
     "example": "\"Breathe in... and notice the small object floating peacefully in warm water...\"",
     "tags": [
       "main",
@@ -590,7 +590,7 @@
   {
     "title": "Nature Documentary",
     "cue": "Give clues as if narrating a",
-    "text": "Narrate clues like a nature documentary observing a rare creature in the wild. Start with: \"Here we observe it in its natural habitat...\"",
+    "text": "Narrate clues like a nature documentary observing a rare creature in the wild. You can start with: \"Here we observe it in its natural habitat...\"",
     "example": "\"Here we observe it in its natural habitat... drifting silently near the bubbles...\"",
     "tags": [
       "main",
@@ -605,7 +605,7 @@
   {
     "title": "5-Star Review",
     "cue": "Give clues as if giving a",
-    "text": "Give clues like you're leaving an over-the-top glowing 5-star review. Start with: \"I'm obsessed. This thing is...\"",
+    "text": "Give clues like you're leaving an over-the-top glowing 5-star review. You can start with: \"I'm obsessed. This thing is...\"",
     "example": "\"Absolutely life-changing. The squeak is immaculate. Would bathe again.\"",
     "tags": [
       "main",
@@ -620,7 +620,7 @@
   {
     "title": "1-Star Review",
     "cue": "Give clues as if giving a",
-    "text": "Give clues like you're leaving a brutal 1-star complaint review. Start with: \"If I could give zero stars I would! It is...\"",
+    "text": "Give clues like you're leaving a brutal 1-star complaint review. You can start with: \"If I could give zero stars I would! It is...\"",
     "example": "\"Terrible. Too squeaky. Floats like it owns the place. Do not recommend.\"",
     "tags": [
       "main",
@@ -648,7 +648,7 @@
   {
     "title": "Sarcastic",
     "cue": "Give clues with this attitude",
-    "text": "Give every clue dripping with sarcasm, like this object personally inconvenienced you. Start with: \"Oh perfect. Exactly what I always wanted.\"",
+    "text": "Give every clue dripping with sarcasm, like this object personally inconvenienced you. You can start with: \"Oh perfect. Exactly what I always wanted.\"",
     "example": "\"Oh yeah, it's SO subtle. Just the loudest squeak on earth.\"",
     "tags": [
       "main",
@@ -660,7 +660,7 @@
   {
     "title": "Bad Salesperson",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're trying to sell it, but you're terrible at it. Start with: \"So, uh... this model right here...\"",
+    "text": "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, uh... this model right here...\"",
     "example": "\"Uh... it's... yellow? It floats. I don't know, just buy it.\"",
     "tags": [
       "main",
@@ -675,7 +675,7 @@
   {
     "title": "Influencer Unboxing",
     "cue": "Give clues as if doing",
-    "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it. Start with: \"Alright guys, we've got a new one today...\"",
+    "text": "Give clues like you're unboxing it on camera. Describe what you see and what you do as you \"open\" it and react to it. You can start with: \"Alright guys, we've got a new one today...\"",
     "example": "\"Okay guys, we're opening it... oh my gosh, it's tiny and YELLOW - listen to that squeak!\"",
     "tags": [
       "main",
@@ -718,7 +718,7 @@
   {
     "title": "Country Lawyer",
     "cue": "Give clues as if you are",
-    "text": "Give clues like a small-town lawyer in a low-budget courtroom drama. Start with: \"Ladies and gentlemen of the jury...\"",
+    "text": "Give clues like a small-town lawyer in a low-budget courtroom drama. You can start with: \"Ladies and gentlemen of the jury...\"",
     "example": "\"Ladies and gentlemen of the jury, I submit to you that this object is small, yellow, and makes a distinctive squeaking sound when compressed.\"",
     "tags": [
       "main",
@@ -733,7 +733,7 @@
   {
     "title": "Game Show Host",
     "cue": "Give clues as if you are",
-    "text": "Talk like you're announcing what the contestant could win. Big energy. Start with: \"Behind Door Number One, it's...\"",
+    "text": "Talk like you're announcing what the contestant could win. Big energy. You can start with: \"Behind Door Number One, it's...\"",
     "example": "\"What do we have for them, Johnny? It's SMALL! It's YELLOW! And it SQUEAKS when you squeeze it!\"",
     "tags": [
       "main",
@@ -748,7 +748,7 @@
   {
     "title": "Reality Show Judge",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're judging a contestant's submission. Confident, dramatic, and direct. Start with: \"Right away, I'm noticing...\"",
+    "text": "Give clues like you're judging a contestant's submission. Confident, dramatic, and direct. You can start with: \"Right away, I'm noticing...\"",
     "example": "\"I'm sorry, but this is just not working for me. It's small, it's yellow, and honestly? It's giving me nothing.\"",
     "tags": [
       "main",
