@@ -1344,6 +1344,41 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 767px) {
+    .hero {
+        padding: 1rem 0 1.5rem;
+    }
+
+    .hero h1 {
+        line-height: 2.25rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content > hr {
+        margin: 0.75rem 0;
+    }
+
+    /* Flex column-reverse: DOM is signup then hero-cards; visually cards/signup (cards on top). */
+    .hero-main-content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .hero-cards .game-box-info {
+        margin-top: 0;
+    }
+
     header {
         position: static;
     }
@@ -1618,6 +1653,11 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem; /* Reduce gap between game-box-info and cards */
+    }
+
+    /* DOM has cards-row before game-box-info; restore stats-above-cards on desktop */
+    .hero-cards .game-box-info {
+        order: -1;
     }
     
     .game-box-info {
