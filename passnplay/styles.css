@@ -121,6 +121,11 @@ body {
     background-color: var(--duel-color);
 }
 
+.card-label.chaos-duel-label {
+    background-color: var(--goblin-color);
+    color: #fff;
+}
+
 /* Card Content */
 .card-content {
     flex: 1;
@@ -306,6 +311,36 @@ body {
 }
 
 /* Word Section - uses .card-bottom-section */
+.word-section.card-bottom-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.word-goblin-kicker {
+    display: none;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--goblin-color);
+    text-align: center;
+    text-transform: none;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.word-section.card-bottom-section:has(.word-text--goblin-mode) {
+    border-color: var(--goblin-color);
+    min-height: 88px;
+    height: auto;
+}
+
+.word-section.card-bottom-section:has(.word-text--goblin-mode) .word-goblin-kicker {
+    display: block;
+}
+
 .word-text {
     font-family: var(--font-header);
     font-size: 2rem;
@@ -317,6 +352,58 @@ body {
     overflow-wrap: break-word;
     margin: 0;
     padding: 0.5rem;
+}
+
+.duel-trigger-card-ui .card-bottom-section {
+    min-height: auto;
+    height: auto;
+    border-color: var(--duel-color);
+}
+
+.duel-trigger-content-ui {
+    text-align: center;
+}
+
+.duel-trigger-ui-goblin {
+    display: block;
+    margin: 0 auto 0.35rem;
+    width: 128px;
+    height: auto;
+    max-width: 42vw;
+}
+
+.duel-trigger-ui-title {
+    color: #c62828;
+    font-size: 2rem;
+    margin: 0.15rem 0;
+}
+
+.duel-trigger-ui-chip {
+    display: inline-block;
+    background: #ffcdd2;
+    color: #b71c1c;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+}
+
+.duel-trigger-fuel-ui {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    text-align: left;
+    margin: 0;
+    padding: 0.55rem 0.75rem 0.5rem;
+    background-color: #e5e5e5;
+    border-top: 1px solid #ccc;
+}
+
+.duel-trigger-fuel-ui .dt-line {
+    margin: 0.12rem 0;
 }
 
 /* Duel Reveal Section - uses .card-bottom-section */
@@ -400,6 +487,12 @@ body {
     background-color: transparent;
 }
 
+.duel-trigger.duel-trigger--chaos-mass {
+    color: var(--goblin-color);
+    border-color: var(--goblin-color);
+    background-color: var(--goblin-bg);
+}
+
 .duel-title {
     font-family: var(--font-header);
     font-size: 1.5rem;
@@ -408,6 +501,10 @@ body {
     margin-bottom: 0.5rem;
     font-weight: 600;
     text-align: center;
+}
+
+#duel-screen .duel-title.duel-title--chaos-prompt {
+    color: var(--accent);
 }
 
 .duel-description {
@@ -1335,8 +1432,8 @@ body {
 }
 
 .modal-content-player-count {
-    max-width: 360px;
-    width: min(100%, 360px);
+    max-width: 400px;
+    width: min(100%, 400px);
 }
 
 .player-count-hint {
@@ -1347,14 +1444,14 @@ body {
     line-height: 1.45;
 }
 
-/* 2×4 grid (tall): two columns, four rows; equal cells */
+/* 3×3 grid: nine mode / player-count cells */
 .player-count-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(3.25rem, 1fr));
     gap: 0.65rem;
     align-items: stretch;
-    min-height: 22rem;
+    min-height: 17.5rem;
 }
 
 .btn-player-count {

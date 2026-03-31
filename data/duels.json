@@ -8,8 +8,8 @@
       "Bring a fish",
       "Bring a red food"
     ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
+    "text": "The **category** is on the **Duel Trigger** card (magnifying-glass line; flip for the list).\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
+    "web_description": "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens.",
     "tags": [
       "rules",
       "main",
@@ -33,8 +33,8 @@
       "Body Parts",
       "Vehicles"
     ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
-    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
+    "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list).\n\nDuelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: **apple pie** is fine, but **apple juice** after is not.",
+    "web_description": "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -58,8 +58,8 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
+    "text": "The **category** is on the **Duel Trigger** card (tags line; flip for the list).\n\nDuelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
+    "web_description": "Category on the Duel trigger card. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -87,77 +87,10 @@
     ]
   },
   {
-    "title": "Scavenge",
-    "categories": [
-      "Bring something soft",
-      "Bring something round",
-      "Bring something wearable",
-      "Bring a fish",
-      "Bring a red food"
-    ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Scavenge",
-    "categories": [
-      "Bring something soft",
-      "Bring something round",
-      "Bring something wearable",
-      "Bring a fish",
-      "Bring a red food"
-    ],
-    "text": "\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
-    "web_description": "First back with a valid physical object or analog image from that category wins. No screens.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
     "title": "Coin Spin",
     "multiCard": false,
-    "text": "Both duelers spin a coin.\\n\\n**Longest continuous spin wins**.\\n\\nFalling off the table counts as stopping. All players must encourage the coins by shouting. Vibe: horse race.",
+    "text": "Both duelers spin a coin.\\n\\n**Longest continuous spin wins**.\\n\\nFalling off the table counts as stopping. Both duelers cheer on their coins. Vibe: horse race.",
     "web_description": "Both spin a coin. Longest spin wins.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Alpha Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
-    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -174,31 +107,6 @@
     "requiresJudge": true,
     "text": "The Judge picks any **rollable object** (plastic cylinder, pen, marker, chapstick, etc.).\\n\\nDuelers roll **simultaneously**.\\n\\n**Farthest** roll without **falling off the table** wins.\\n\\nIf both fall, redo.",
     "web_description": "The Judge picks a rollable object. Roll together. Farthest without falling wins.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Alpha Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "Duelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z. \n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: \"apple pie\" is fine, but \"apple juice\" after is not.",
-    "web_description": "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -239,60 +147,10 @@
     ]
   },
   {
-    "title": "Theme Blitz",
-    "alphabetic": false,
-    "categories": [
-      "Farm animals",
-      "Spices",
-      "Things in a toolbox",
-      "Things that come in pairs",
-      "Things you wear",
-      "Things in a kitchen",
-      "Things that fly",
-      "Things that are round"
-    ],
-    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
     "title": "Backhand Flip",
     "multiCard": false,
-    "text": "Each dueler gets a **pair of similar small objects** (coin, pencil, etc.). Place it flat on the **back of your hand**. \\n\\n**Fling** it about **6-12 inches** into the air, **flip that same hand and catch it**.\\n\\nRepeat **3 times** without dropping. Drops reset count.First to finish wins.",
+    "text": "Each dueler gets a **small flat object** (bean bag, coin, chip, etc.). Place it flat on the **back of your hand**. \\n\\n**Fling** it about **6-12 inches** into the air, **flip that same hand and catch it**.\\n\\nRepeat **3 times** without dropping. First to finish wins.",
     "web_description": "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
-  },
-  {
-    "title": "Theme Blitz",
-    "alphabetic": false,
-    "categories": [
-      "Farm animals",
-      "Spices",
-      "Things in a toolbox",
-      "Things that come in pairs",
-      "Things you wear",
-      "Things in a kitchen",
-      "Things that fly",
-      "Things that are round"
-    ],
-    "text": "Duelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "The Judge names a category. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -337,8 +195,8 @@
   {
     "title": "Card Flip",
     "multiCard": false,
-    "text": "Each dueler places a **card face down, partly off the table edge**.\\n\\nOn 'Go,' flick it upward so it **flips face up onto the table**.\\n\\nRepeat **3 times** without dropping. Drops reset count. First to finish wins.",
-    "web_description": "Flick a card from the table edge. First to land it face-up 3 times wins.",
+    "text": "Each dueler takes **one card from the word deck** (any list card), places it **face down, partly off the table edge**.\\n\\nOn 'Go,' flick it upward so it **flips face up onto the table**.\\n\\nRepeat **3 times** to win.",
+    "web_description": "Use word-deck cards. Flick from the table edge. First to land face-up 3 times wins.",
     "tags": [
       "rules",
       "main",
@@ -366,7 +224,7 @@
   {
     "title": "Coin Flip",
     "multiCard": false,
-    "text": "Place a coin on the **back of your hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins.",
+    "text": "Place a coin on the **back of your hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\n First to **3 catches** wins.",
     "web_description": "Flick a coin off the back of your hand with your thumb and catch it. First to 3 wins.",
     "tags": [
       "main",
@@ -389,8 +247,8 @@
       "Things that fly",
       "Things that are round"
     ],
-    "text": "Duelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "Take turns naming items in the category. 5 seconds per turn. Blank and you lose.",
+    "text": "The **category** is on the **Duel Trigger** card (tags line; flip for the list).\n\nDuelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -402,128 +260,334 @@
     ]
   },
   {
-    "title": "Alternating Theme Blitz",
+    "title": "Alternating Alpha Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list). The **Judge** picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.\n\nNo repeating words across your answers: **apple pie** is fine, but **apple juice** after is not.",
+    "web_description": "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alpha² Blitz",
+    "alphabetic": true,
+    "categories": [
+      "Animals",
+      "Tools",
+      "Places",
+      "Foods",
+      "Sports",
+      "Colors",
+      "Body Parts",
+      "Vehicles"
+    ],
+    "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list).\n\nDuelers take turns naming items **in that category** - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
+    "web_description": "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Star Blitz",
+    "starBlitz": true,
+    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nBoth duelers race to name **3 famous people** who share that first name.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
+    "web_description": "First name on the Duel trigger card. Race to name 3 famous people with that name. Judge settles disputes.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Coin Spin",
+    "text": "Each player spins a coin simultaneously.\n\nLast coin still spinning wins. Falling off the table counts as stopping.\n\nAll players must cheer their coin on.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
     "alphabetic": false,
-    "categories": [
-      "Farm animals",
-      "Spices",
-      "Things in a toolbox",
-      "Things that come in pairs",
-      "Things you wear",
-      "Things in a kitchen",
-      "Things that fly",
-      "Things that are round"
-    ],
-    "text": "Duelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "Take turns naming items in the category. 5 seconds per turn. Blank and you lose.",
-    "tags": [
-      "rules",
-      "main",
-      "web",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
   },
   {
-    "title": "Alternating Alpha Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "The Judge picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose.",
+    "title": "Direction Chain",
+    "text": "Going clockwise starting with the player who drew this card, each player calls a direction - **LEFT**, **RIGHT**, **UP**, or **DOWN** - and everyone turns their head in that direction simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating - you're out. Last player standing wins.",
     "tags": [
-      "rules",
       "main",
-      "web",
       "passnplay",
       "printnplay",
       "drivethru",
       "prototype"
-    ]
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
   },
   {
-    "title": "Alternating Alpha Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "The Judge picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose.",
+    "title": "Dead Center",
+    "text": "Place a **coin in the center** of the table. Each player gets a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nAll players stand **a few feet from the table** and toss at the **same time**.\n\nClosest to the coin wins. If tied, redo.",
     "tags": [
-      "rules",
       "main",
-      "web",
       "passnplay",
       "printnplay",
       "drivethru",
       "prototype"
-    ]
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
   },
   {
-    "title": "Alpha² Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "Duelers take turns naming items - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
-    "web_description": "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose.",
+    "title": "Coin Flip",
+    "text": "Each player balances a coin on their **thumb**.\n\nFlick it into the air and catch it in the **same hand**.\n\n First to **3 catches** wins.",
     "tags": [
-      "rules",
       "main",
-      "web",
       "passnplay",
       "printnplay",
       "drivethru",
       "prototype"
-    ]
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Chain Alpha Blitz",
+    "text": "**Category** is on the **Duel trigger** card (A–Z line). The drawer picks a **letter**.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": true,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
   },
   {
     "title": "Alpha² Blitz",
-    "alphabetic": true,
-    "categories": [
-      "Animals",
-      "Tools",
-      "Places",
-      "Foods",
-      "Sports",
-      "Colors",
-      "Body Parts",
-      "Vehicles"
-    ],
-    "text": "Duelers take turns naming items - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
-    "web_description": "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose.",
+    "text": "**Category** is on the **Duel trigger** card (A–Z line).\n\n**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
     "tags": [
-      "rules",
       "main",
-      "web",
       "passnplay",
       "printnplay",
       "drivethru",
       "prototype"
-    ]
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": true,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Mass Confusion Scavenge",
+    "text": "**Category** is on the **Duel trigger** card (glass line).\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": true,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Monster Mash",
+    "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest.\n**FRANKENSTEIN**: arms out.\n**WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Drum Chicken Hat",
+    "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps.\n**CHICKEN**: flap elbows twice.\n**HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Table Cornhole",
+    "text": "Each player gets a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nAll players stand **2-3 feet from the table** and toss at the **same time**.\n\nClosest to the **far edge** without falling off wins. If all fall, redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Table Curling",
+    "text": "Each player gets a **rollable object** (plastic cylinder, pen, marker, chapstick, etc.).\n\nAll players roll **simultaneously**.\n\n**Farthest** roll without **falling off the table** wins. If all fall, redo.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Backhand Flip",
+    "text": "Each player places a **small flat object** (bean bag, coin, chip, etc.) on the **back of their hand**.\n\nFling it **6-12 inches** into the air, flip that same hand, and catch it.\n\n First to **3** wins.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": false,
+    "chaosDuel": true
+  },
+  {
+    "title": "Sobriety Test",
+    "text": "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on...",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "chaosPrompt": true,
+    "chaosDuel": true
+  },
+  {
+    "title": "Chain Star Blitz",
+    "text": "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the Duel trigger (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": true,
+    "chaosPrompt": false,
+    "chaosDuel": true
   }
 ]

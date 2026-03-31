@@ -1,90 +1,111 @@
 // Data loader for pass-and-play app
-// Loads data from JSON files and filters by 'passnplay' tag
+// Loads data from JSON files (prepared by generate.js copyDataFiles)
 
 let gameData = {
     chaosPrompts: [],
     duels: [],
     words: [],
+    goblinWords: [],
     duelCategories: null,
     duelTriggers: [],
-    goblinModes: []
+    duelTriggerPresets: []
 };
 
 // Letters to avoid for Alpha Blitz
 const AVOID_LETTERS = ['J', 'K', 'Q', 'V', 'X', 'Y', 'Z'];
 const VALID_LETTERS = 'ABCDEFGHILMNOPRSTUW'.split('');
 
+function buildDuelTriggerPresets(categoriesData) {
+    const sc = categoriesData.scavenge || [];
+    const al = categoriesData.alphaBlitz || [];
+    const th = categoriesData.themeBlitz || [];
+    const st = categoriesData.starBlitz || [];
+    const n = Math.max(sc.length, al.length, th.length, st.length, 1);
+    const out = [];
+    for (let i = 0; i < n; i++) {
+        out.push({
+            scavenge: sc[i % sc.length] || '',
+            alphaBlitz: al[i % al.length] || '',
+            themeBlitz: th[i % th.length] || '',
+            starBlitz: st[i % st.length] || ''
+        });
+    }
+    return out;
+}
+
+/** Goblin word pool: legacy string[] or { rank, word }[] → strings sorted by rank. */
+function normalizeGoblinWordsForPlay(entries) {
+    if (!Array.isArray(entries)) return [];
+    const rows = entries.map((e, i) => {
+        if (typeof e === 'string') {
+            return { rank: i + 1, word: e };
+        }
+        const word = e != null && e.word != null ? String(e.word) : '';
+        const rank = e != null && e.rank != null ? Number(e.rank) : i + 1;
+        return { rank, word };
+    });
+    rows.sort((a, b) => a.rank - b.rank);
+    return rows.map((r) => r.word).filter(Boolean);
+}
+
 async function loadGameData() {
     try {
-        // Data files are in chaos33/data/ (accessible as /data/ from site root)
-        // From /passnplay/ the relative path is ../data/
         const basePath = '../data/';
-        
-        // Load all data files (already filtered for passnplay tag by generate.js)
-        const [challengesData, duelsData, wordsData, categoriesData, triggersData, goblinModeData] = await Promise.all([
-            fetch(basePath + 'challenges.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'duels.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
-                console.log('Loading duels.json from:', r.url);
-                return r.json();
-            }).then(data => {
-                console.log('Raw duels.json loaded:', data.length, 'items');
-                console.log('Raw duel titles:', data.map(d => d.title));
-                // Double-check filtering - filter again in case file wasn't properly filtered
-                const filtered = data.filter(item => 
-                    item.tags && item.tags.includes('passnplay') && !item.tags.includes('cut')
-                );
-                console.log('After client-side filter:', filtered.length, 'items');
-                console.log('Filtered duel titles:', filtered.map(d => d.title));
-                if (filtered.length !== data.length) {
-                    console.warn('⚠️ WARNING: Client-side filtering removed', data.length - filtered.length, 'duels that should not be in the file!');
-                }
-                return filtered;
-            }),
-            fetch(basePath + 'words.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'duel_categories.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'duel_triggers.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load duel_triggers.json: ${r.status}`);
-                return r.json();
-            }),
-            fetch(basePath + 'goblin_mode.json').then(r => {
-                if (!r.ok) throw new Error(`Failed to load goblin_mode.json: ${r.status}`);
-                return r.json();
-            })
-        ]);
 
-        // Data is already filtered for passnplay tag by generate.js, just map to format
+        const [challengesData, duelsData, wordsData, categoriesData, triggersData, goblinWordsData] =
+            await Promise.all([
+                fetch(basePath + 'challenges.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load challenges.json: ${r.status}`);
+                    return r.json();
+                }),
+                fetch(basePath + 'duels.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load duels.json: ${r.status}`);
+                    return r.json();
+                }),
+                fetch(basePath + 'words.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load words.json: ${r.status}`);
+                    return r.json();
+                }),
+                fetch(basePath + 'duel_categories.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load duel_categories.json: ${r.status}`);
+                    return r.json();
+                }),
+                fetch(basePath + 'duel_triggers.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load duel_triggers.json: ${r.status}`);
+                    return r.json();
+                }),
+                fetch(basePath + 'goblin_words.json').then(r => {
+                    if (!r.ok) throw new Error(`Failed to load goblin_words.json: ${r.status}`);
+                    return r.json();
+                })
+            ]);
+
         gameData.chaosPrompts = challengesData.map(item => ({
             title: item.title,
             description: item.text,
             cue: item.cue
         }));
 
-        // Data is already filtered for passnplay tag by generate.js, just map to format
         gameData.duels = duelsData.map(item => ({
             title: item.title,
             description: item.text || item.web_description || '',
             categories: item.categories || [],
             alphabetic: item.alphabetic || false,
-            requiresJudge: Boolean(item.requiresJudge)
+            requiresJudge: Boolean(item.requiresJudge),
+            chaosDuel: Boolean(item.chaosDuel),
+            chaosPrompt: item.chaosPrompt || false,
+            minPlayers: item.minPlayers,
+            category: item.category || false,
+            scavenge: item.scavenge || false,
+            themeCategory: item.themeCategory || false,
+            starBlitz: item.starBlitz || false
         }));
 
-        // Extract words (single word list)
         gameData.words = wordsData[0]?.words || [];
-
-        // Store duel categories
+        gameData.goblinWords = normalizeGoblinWordsForPlay(goblinWordsData.words || []);
         gameData.duelCategories = categoriesData;
-        
-        // Store Duel! cues (filter for main tag)
+        gameData.duelTriggerPresets = buildDuelTriggerPresets(categoriesData);
+
         gameData.duelTriggers = triggersData
             .filter(item => item.tags && item.tags.includes('main') && !item.tags.includes('cut'))
             .map(item => ({
@@ -92,29 +113,12 @@ async function loadGameData() {
                 full_text: item.text || item.card_text || ''
             }));
 
-        // Store Goblin Mode cards (filter for passnplay tag)
-        gameData.goblinModes = goblinModeData
-            .filter(item => item.tags && item.tags.includes('passnplay') && !item.tags.includes('cut'))
-            .map(item => ({
-                title: item.title,
-                text: item.passnplay_text || item.text,
-                alphabetic: item.alphabetic || false,
-                category: item.category || false,
-                scavenge: item.scavenge || false,
-                themeCategory: item.themeCategory || false
-            }));
-
         console.log('=== GAME DATA LOADED ===');
         console.log('Chaos Prompts:', gameData.chaosPrompts.length);
-        console.log('Chaos Prompts titles:', gameData.chaosPrompts.map(p => p.title));
-        console.log('\nDuels:', gameData.duels.length);
-        console.log('Duel titles:', gameData.duels.map(d => d.title));
-        console.log('All duel data:', gameData.duels);
-        console.log('\nWords:', gameData.words.length);
-        console.log('Sample words:', gameData.words.slice(0, 10));
-        console.log('\nDuel Categories:', gameData.duelCategories);
-        console.log('\nDuel! cues:', gameData.duelTriggers.length);
-        console.log('Duel! cue texts:', gameData.duelTriggers.map(t => t.full_text || t.card_text));
+        console.log('Duels (incl. Chaos Duels):', gameData.duels.length);
+        console.log('Words:', gameData.words.length);
+        console.log('Goblin words:', gameData.goblinWords.length);
+        console.log('Duel trigger presets:', gameData.duelTriggerPresets.length);
         console.log('========================');
 
         return gameData;
@@ -127,12 +131,12 @@ async function loadGameData() {
 function getRandomItem(array, lastItem = null) {
     if (array.length === 0) return null;
     if (array.length === 1) return array[0];
-    
+
     let item;
     do {
         item = array[Math.floor(Math.random() * array.length)];
     } while (item === lastItem && array.length > 1);
-    
+
     return item;
 }
 
@@ -181,7 +185,6 @@ function getRandomCategory(categoryList) {
     return categoryList[Math.floor(Math.random() * categoryList.length)];
 }
 
-// Export for use in app.js
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         loadGameData,
@@ -194,4 +197,3 @@ if (typeof module !== 'undefined' && module.exports) {
         gameData
     };
 }
-

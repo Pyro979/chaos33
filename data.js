@@ -29,7 +29,7 @@ const chaosPrompts = [
     },
     {
         title: "You",
-        description: "You are the answer. Describe yourself.",
+        description: "You are the answer. Describe yourself from the view point of the Word.",
         cue: "Give clues by describing"
     },
     {
@@ -99,7 +99,7 @@ const chaosPrompts = [
     },
     {
         title: "Clueless Tour Guide",
-        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see... uh...\"",
+        description: "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see...\"",
         cue: "Give clues as if you are"
     },
     {
@@ -129,7 +129,7 @@ const chaosPrompts = [
     },
     {
         title: "Bad Salesperson",
-        description: "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, uh... this model right here...\"",
+        description: "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, this model right here...\"",
         cue: "Give clues as if you are"
     },
     {
@@ -157,275 +157,107 @@ const chaosPrompts = [
 const chaosDuels = [
     {
         title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
+        description: "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
+        description: "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
+        description: "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
+        description: "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens."
     },
     {
         title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
+        description: "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens."
     },
     {
         title: "Alpha Blitz: Animals",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Tools",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Places",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Foods",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Sports",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Colors",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Body Parts",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Alpha Blitz: Vehicles",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying."
     },
     {
         title: "Theme Blitz: Farm animals",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Spices",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a toolbox",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that come in pairs",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things you wear",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things in a kitchen",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that fly",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Theme Blitz: Things that are round",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
+        description: "Category on the Duel trigger card. Race to name 3 items in it. No copying."
     },
     {
         title: "Direction Chain",
         description: "The Judge calls directions each beat. Follow and return to center. Ends when one is wrong."
     },
     {
-        title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring something soft",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring something round",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring something wearable",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring a fish",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
-        title: "Scavenge: Bring a red food",
-        description: "First back with a valid physical object or analog image from that category wins. No screens."
-    },
-    {
         title: "Coin Spin",
         description: "Both spin a coin. Longest spin wins."
-    },
-    {
-        title: "Alpha Blitz: Animals",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Tools",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Places",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Foods",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Sports",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Colors",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Body Parts",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Vehicles",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
     },
     {
         title: "Table Curling",
         description: "The Judge picks a rollable object. Roll together. Farthest without falling wins."
     },
     {
-        title: "Alpha Blitz: Animals",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Tools",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Places",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Foods",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Sports",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Colors",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Body Parts",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
-        title: "Alpha Blitz: Vehicles",
-        description: "The Judge picks a letter. Race to name 3 items in that category starting with it. No copying."
-    },
-    {
         title: "Table Cornhole",
         description: "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins."
     },
     {
-        title: "Theme Blitz: Farm animals",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Spices",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things in a toolbox",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that come in pairs",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things you wear",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things in a kitchen",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that fly",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that are round",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
         title: "Backhand Flip",
         description: "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins."
-    },
-    {
-        title: "Theme Blitz: Farm animals",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Spices",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things in a toolbox",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that come in pairs",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things you wear",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things in a kitchen",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that fly",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
-    },
-    {
-        title: "Theme Blitz: Things that are round",
-        description: "The Judge names a category. Race to name 3 items in it. No copying."
     },
     {
         title: "Drum Chicken Hat",
@@ -437,199 +269,107 @@ const chaosDuels = [
     },
     {
         title: "Card Flip",
-        description: "Flick a card from the table edge. First to land it face-up 3 times wins."
+        description: "Use word-deck cards. Flick from the table edge. First to land face-up 3 times wins."
     },
     {
         title: "Alternating Theme Blitz: Farm animals",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Spices",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things in a toolbox",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things that come in pairs",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things you wear",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things in a kitchen",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things that fly",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Theme Blitz: Things that are round",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Farm animals",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Spices",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things in a toolbox",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things that come in pairs",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things you wear",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things in a kitchen",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things that fly",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Theme Blitz: Things that are round",
-        description: "Take turns naming items in the category. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Animals",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Tools",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Places",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Foods",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Sports",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Colors",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Body Parts",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alpha Blitz: Vehicles",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Animals",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Tools",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Places",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Foods",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Sports",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Colors",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Body Parts",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alternating Alpha Blitz: Vehicles",
-        description: "The Judge picks a letter. Take turns naming items starting with it. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Animals",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Tools",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Places",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Foods",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Sports",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Colors",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Body Parts",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alpha² Blitz: Vehicles",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        description: "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose."
     },
     {
-        title: "Alpha² Blitz: Animals",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Tools",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Places",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Foods",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Sports",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Colors",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Body Parts",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
-    },
-    {
-        title: "Alpha² Blitz: Vehicles",
-        description: "Take turns naming items in alphabetical order. 5 seconds per turn. Blank and you lose."
+        title: "Star Blitz",
+        description: "First name on the Duel trigger card. Race to name 3 famous people with that name. Judge settles disputes."
     }
 ];
 
@@ -1229,7 +969,7 @@ const goblinModeCards = [
     },
     {
         title: "Card Flip",
-        text: "Each player takes a **Word Card** and places it **face down, partly off the table edge**.\n\nOn 'Go,' flick it upward so it **flips face up onto the table**.\n\nDrops reset your count. First to **3** wins. Return cards to the deck after."
+        text: "Each player takes **one card** (grab from the Word Deck if you don't have any yet) and places it **face down, partly off the table edge**.\n\nOn 'Go,' flick it upward so it **flips face up onto the table**.\n\n First to **3** wins. Return cards if you took any."
     },
     {
         title: "Dead Center",
@@ -1237,19 +977,19 @@ const goblinModeCards = [
     },
     {
         title: "Coin Flip",
-        text: "Each player balances a coin on their **thumb**.\n\nFlick it into the air and catch it in the **same hand**.\n\nDrops reset your count. First to **3 catches** wins."
+        text: "Each player balances a coin on their **thumb**.\n\nFlick it into the air and catch it in the **same hand**.\n\n First to **3 catches** wins."
     },
     {
         title: "Chain Alpha Blitz",
-        text: "Starting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins."
+        text: "**Category** is on the **Duel trigger** card (A–Z line). The drawer picks a **letter**.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins."
     },
     {
         title: "Alpha² Blitz",
-        text: "**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins."
+        text: "**Category** is on the **Duel trigger** card (A–Z line).\n\n**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins."
     },
     {
         title: "Mass Confusion Scavenge",
-        text: "All players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins."
+        text: "**Category** is on the **Duel trigger** card (glass line).\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins."
     },
     {
         title: "Monster Mash",
@@ -1269,6 +1009,14 @@ const goblinModeCards = [
     },
     {
         title: "Backhand Flip",
-        text: "Each player places a **small flat object** (bean bag, coin, chip, etc.) on the **back of their hand**.\n\nFling it **6-12 inches** into the air, flip that same hand, and catch it.\n\nDrops reset your count. First to **3** wins."
+        text: "Each player places a **small flat object** (bean bag, coin, chip, etc.) on the **back of their hand**.\n\nFling it **6-12 inches** into the air, flip that same hand, and catch it.\n\n First to **3** wins."
+    },
+    {
+        title: "Sobriety Test",
+        text: "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on..."
+    },
+    {
+        title: "Chain Star Blitz",
+        text: "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the Duel trigger (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**."
     }
 ];

@@ -38,7 +38,8 @@
       "passnplay",
       "main",
       "drivethru",
-      "improv"
+      "improv",
+      "drivethru_supress_temp"
     ]
   },
   {
@@ -98,13 +99,14 @@
       "printnplay",
       "web",
       "drivethru",
-      "improv"
+      "improv",
+      "drivethru_supress_temp"
     ]
   },
   {
     "title": "You",
     "cue": "Give clues by describing",
-    "text": "You are the answer. Describe yourself.",
+    "text": "You are the answer. Describe yourself from the view point of the Word. Example (Rubber Duck): \"I float in the bath. I'm small and yellow. I squeak.\"",
     "example": "\"I float in the bath. I'm small and yellow. I squeak.\"",
     "tags": [
       "rules",
@@ -156,7 +158,8 @@
       "passnplay",
       "main",
       "drivethru",
-      "improv"
+      "improv",
+      "drivethru_supress_temp"
     ]
   },
   {
@@ -320,7 +323,7 @@
   {
     "title": "Slow-Mo Dance",
     "cue": "Give clues while doing this",
-    "text": "Pick any simple dance move and do it in slow motion while you clue.",
+    "text": "Pick any simple dance move and do it in slow motion while you give clues. When in doubt disco.",
     "example": "\"It - (slow move) - floats - (slow move) - in - water...\"",
     "tags": [
       "main",
@@ -495,7 +498,7 @@
   {
     "title": "Clueless Tour Guide",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see... uh...\"",
+    "text": "Give clues like you're a tour guide who has never seen this object before, but must pretend you know everything about it. You can start with: \"And on your left you'll see...\"",
     "example": "\"And here we see a rare yellow bath relic which, as you can tell, bravely floats beside the humble soap.\"",
     "tags": [
       "web",
@@ -518,7 +521,8 @@
       "main",
       "passnplay",
       "drivethru",
-      "improv"
+      "improv",
+      "drivethru_supress_temp"
     ]
   },
   {
@@ -531,7 +535,8 @@
       "main",
       "passnplay",
       "drivethru",
-      "improv"
+      "improv",
+      "drivethru_supress_temp"
     ]
   },
   {
@@ -660,7 +665,7 @@
   {
     "title": "Bad Salesperson",
     "cue": "Give clues as if you are",
-    "text": "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, uh... this model right here...\"",
+    "text": "Give clues like you're trying to sell it, but you're terrible at it. You can start with: \"So, this model right here...\"",
     "example": "\"Uh... it's... yellow? It floats. I don't know, just buy it.\"",
     "tags": [
       "main",
