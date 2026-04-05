@@ -23,13 +23,18 @@ const chaosPrompts = [
         cue: "Give clues using only"
     },
     {
+        title: "Sobriety Test",
+        description: "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on...",
+        cue: "Give clues while doing this"
+    },
+    {
         title: "Deep Serious",
         description: "Use a low, overly serious tone.",
         cue: "Give clues in this voice"
     },
     {
         title: "You",
-        description: "You are the answer. Describe yourself from the view point of the Word.",
+        description: "You are the answer. Describe yourself from the view point of the Word. Example (Rubber Duck): \"I float in the bath. I'm small and yellow. I squeak.\"",
         cue: "Give clues by describing"
     },
     {
@@ -1010,10 +1015,6 @@ const goblinModeCards = [
     {
         title: "Backhand Flip",
         text: "Each player places a **small flat object** (bean bag, coin, chip, etc.) on the **back of their hand**.\n\nFling it **6-12 inches** into the air, flip that same hand, and catch it.\n\n First to **3** wins."
-    },
-    {
-        title: "Sobriety Test",
-        text: "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on..."
     },
     {
         title: "Chain Star Blitz",

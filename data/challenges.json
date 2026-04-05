@@ -89,6 +89,20 @@
     ]
   },
   {
+    "title": "Sobriety Test",
+    "cue": "Give clues while doing this",
+    "text": "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on...",
+    "tags": [
+      "main",
+      "passnplay",
+      "printnplay",
+      "web",
+      "drivethru",
+      "physical",
+      "prototype"
+    ]
+  },
+  {
     "title": "Deep Serious",
     "cue": "Give clues in this voice",
     "text": "Use a low, overly serious tone.",

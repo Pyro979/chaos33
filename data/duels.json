@@ -553,25 +553,6 @@
     "chaosDuel": true
   },
   {
-    "title": "Sobriety Test",
-    "text": "Touch your **nose** with your **left** index finger while pointing your **right** index finger straight out. Then switch - **right** to nose, **left** pointing out.\n\nAnd so on...",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
-    "minPlayers": 3,
-    "alphabetic": false,
-    "category": false,
-    "scavenge": false,
-    "themeCategory": false,
-    "starBlitz": false,
-    "chaosPrompt": true,
-    "chaosDuel": true
-  },
-  {
     "title": "Chain Star Blitz",
     "text": "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the Duel trigger (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
     "tags": [
