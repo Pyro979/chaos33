@@ -9,7 +9,7 @@
       "Bring a red food"
     ],
     "text": "The **category** is on the **Duel Trigger** card (magnifying-glass line; flip for the list).\\n\\nFirst dueler to return with a valid **physical object** or **analog image** from that category wins.\\n\\nNo digital screens allowed.",
-    "web_description": "Category is on the Duel trigger card. First back with a valid object from that category wins. No screens.",
+    "web_description": "Category is on the Challenge! card. First back with a valid object from that category wins. No screens.",
     "tags": [
       "rules",
       "main",
@@ -34,7 +34,7 @@
       "Vehicles"
     ],
     "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list).\n\nDuelers race to name **3 unique, valid items** in that category that start with a **letter chosen by the Judge**.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.\n\nNo repeating words across your answers: **apple pie** is fine, but **apple juice** after is not.",
-    "web_description": "Category on the Duel trigger card. The Judge picks a letter. Race to name 3 items starting with it. No copying.",
+    "web_description": "Category on the Challenge! card. The Judge picks a letter. Race to name 3 items starting with it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -59,7 +59,7 @@
       "Things that are round"
     ],
     "text": "The **category** is on the **Duel Trigger** card (tags line; flip for the list).\n\nDuelers race to name **3 unique, valid items** in that category.\n\nDon't copy the other dueler. If both duelers say the exact same item at the same time, that item doesn't count for either of them.",
-    "web_description": "Category on the Duel trigger card. Race to name 3 items in it. No copying.",
+    "web_description": "Category on the Challenge! card. Race to name 3 items in it. No copying.",
     "tags": [
       "rules",
       "main",
@@ -248,7 +248,7 @@
       "Things that are round"
     ],
     "text": "The **category** is on the **Duel Trigger** card (tags line; flip for the list).\n\nDuelers take turns naming items in that category - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "Category on the Duel trigger card. Take turns naming items. 5 seconds per turn. Blank and you lose.",
+    "web_description": "Category on the Challenge! card. Take turns naming items. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -273,7 +273,7 @@
       "Vehicles"
     ],
     "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list). The **Judge** picks a letter.\n\nAvoid: J, K, Q, V, X, Y, Z.\n\nDuelers take turns naming items in that category starting with that letter - **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.\n\nNo repeating words across your answers: **apple pie** is fine, but **apple juice** after is not.",
-    "web_description": "Category on the Duel trigger card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose.",
+    "web_description": "Category on the Challenge! card. The Judge picks a letter. Take turns naming items. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -298,7 +298,7 @@
       "Vehicles"
     ],
     "text": "The **category** is on the **Duel Trigger** card (A–Z line; flip for the list).\n\nDuelers take turns naming items **in that category** - **one at a time, back and forth** - in alphabetical order. First answer starts with **A**, next with **B**, and so on.\n\nYou have **5 seconds** per turn. No skipping letters - if yours is tough, that's the game. Blank and you lose.",
-    "web_description": "Category on the Duel trigger card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose.",
+    "web_description": "Category on the Challenge! card. Take turns naming items in that category A, B, C…. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -313,7 +313,7 @@
     "title": "Star Blitz",
     "starBlitz": true,
     "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nBoth duelers race to name **3 famous people** who share that first name.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
-    "web_description": "First name on the Duel trigger card. Race to name 3 famous people with that name. Judge settles disputes.",
+    "web_description": "First name on the Challenge! card. Race to name 3 famous people with that name. Judge settles disputes.",
     "tags": [
       "rules",
       "main",
@@ -332,7 +332,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -370,7 +371,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -389,7 +391,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -402,7 +405,7 @@
   },
   {
     "title": "Chain Alpha Blitz",
-    "text": "**Category** is on the **Duel trigger** card (A–Z line). The drawer picks a **letter**.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
+    "text": "**Category** is on the **Challenge!** card (A–Z line). The drawer picks a **letter**.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
     "tags": [
       "main",
       "passnplay",
@@ -421,7 +424,7 @@
   },
   {
     "title": "Alpha² Blitz",
-    "text": "**Category** is on the **Duel trigger** card (A–Z line).\n\n**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
+    "text": "**Category** is on the **Challenge!** card (A–Z line).\n\n**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
     "tags": [
       "main",
       "passnplay",
@@ -440,7 +443,7 @@
   },
   {
     "title": "Mass Confusion Scavenge",
-    "text": "**Category** is on the **Duel trigger** card (glass line).\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins.",
+    "text": "**Category** is on the **Challenge!** card (glass line).\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins.",
     "tags": [
       "main",
       "passnplay",
@@ -503,7 +506,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -522,7 +526,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -541,7 +546,8 @@
       "passnplay",
       "printnplay",
       "drivethru",
-      "prototype"
+      "prototype",
+      "dexterity"
     ],
     "minPlayers": 3,
     "alphabetic": false,
@@ -554,7 +560,7 @@
   },
   {
     "title": "Chain Star Blitz",
-    "text": "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the Duel trigger (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
+    "text": "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the **Challenge!** card (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
     "tags": [
       "main",
       "passnplay",

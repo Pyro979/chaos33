@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Track flip count to alternate between regular and duel flips
   let flipCount = 0;
 
-  // Shuffle arrays for duels and Duel! cues
+  // Shuffle arrays for duels and Showdown! (duel trigger) cues
   function shuffleArray(array) {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chaosCard.classList.remove("is-goblin-mode");
 
         if (chaosLabel) chaosLabel.textContent = "Duel";
-        if (wordLabel) wordLabel.textContent = "Duel!";
+        if (wordLabel) wordLabel.textContent = "Showdown!";
 
         updateChaosCueChip(null);
 
@@ -303,7 +303,11 @@ document.addEventListener("DOMContentLoaded", function () {
           chaosDescription.innerHTML = descriptionWithBreaks;
         }
 
-        if (wordText) wordText.textContent = duelTrigger;
+        if (wordText) {
+          wordText.innerHTML =
+            duelTrigger +
+            '<br><span class="goblin-word-sub">Reveal a Duel Card. If it\'s a 2 Player Duel, choose your opponent.</span>';
+        }
 
       } else if (flipType === 2) {
         // Goblin Mode flip - all-play challenge
@@ -336,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chaosCard.classList.remove("is-goblin-mode");
 
         if (chaosLabel) chaosLabel.textContent = "Chaos Prompt";
-        if (wordLabel) wordLabel.textContent = "Word";
+        if (wordLabel) wordLabel.textContent = "Words";
 
         const randomChaos = getRandomItem(chaosPrompts);
         const randomWord = getRandomItem(wordList);

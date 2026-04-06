@@ -209,7 +209,7 @@ function syncDuelScreenChrome(duel) {
       label.classList.remove('duel-label');
       label.classList.add('chaos-duel-label');
     } else {
-      label.textContent = 'Duel';
+      label.textContent = '2 Player Duel';
       label.classList.remove('chaos-duel-label');
       label.classList.add('duel-label');
     }
@@ -247,21 +247,26 @@ function formatDuelDescriptionForSession(description) {
   // Physical deck references ("Duel Trigger card", A–Z line, etc.) do not apply in Pass & Play.
   text = text
     .replace(
-      /The \*\*category\*\* is on the \*\*Duel Trigger\*\* card \([^)]*\)\.?/gi,
-      'The **category** is under **Tap to reveal** below—open it when everyone is ready.'
+      /The \*\*category\*\* is on the \*\*Duel [Tt]rigger\*\* card \([^)]*\)\.?/gi,
+      'The **category** is under **Tap to reveal** below - open it when everyone is ready.'
     )
     .replace(
-      /The \*\*first name\*\* is on the \*\*Duel Trigger\*\* card \([^)]*\)\.?/gi,
-      'The **first name** is under **Tap to reveal** below—open it when everyone is ready.'
+      /The \*\*first name\*\* is on the \*\*Duel [Tt]rigger\*\* card \([^)]*\)\.?/gi,
+      'The **first name** is under **Tap to reveal** below - open it when everyone is ready.'
     )
     .replace(
-      /\*\*Category\*\* is on the \*\*Duel trigger\*\* card \([^)]*\)\.?/gi,
-      '**Category** is under **Tap to reveal** below—open it when everyone is ready.'
+      /\*\*Category\*\* is on the \*\*Duel [Tt]rigger\*\* card \([^)]*\)\.?/gi,
+      '**Category** is under **Tap to reveal** below - open it when everyone is ready.'
     )
-    .replace(/from the Duel trigger \(star line\)\.?/gi, 'from **Tap to reveal** below.')
-    .replace(/Category is on the Duel trigger card\.?/gi, 'The category is under **Tap to reveal** below.')
-    .replace(/Category on the Duel trigger card\.?/gi, 'The category is under **Tap to reveal** below.')
-    .replace(/First name on the Duel trigger card\.?/gi, 'The first name is under **Tap to reveal** below.');
+    .replace(
+      /\*\*Category\*\* is on the \*\*Challenge!\*\* card \([^)]*\)\.?/gi,
+      '**Category** is under **Tap to reveal** below - open it when everyone is ready.'
+    )
+    .replace(/from the Duel [Tt]rigger \(star line\)\.?/gi, 'from **Tap to reveal** below.')
+    .replace(/from the \*\*Challenge!\*\* card \(star line\)\.?/gi, 'from **Tap to reveal** below.')
+    .replace(/Category is on the Duel [Tt]rigger card\.?/gi, 'The category is under **Tap to reveal** below.')
+    .replace(/Category on the Duel [Tt]rigger card\.?/gi, 'The category is under **Tap to reveal** below.')
+    .replace(/First name on the Duel [Tt]rigger card\.?/gi, 'The first name is under **Tap to reveal** below.');
   if (sessionMode === 'twoP') {
     text = text
       .replace(/\*\*letter chosen by the Judge\*\*/gi, '**the letter shown below**')
