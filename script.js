@@ -1,3 +1,167 @@
+/**
+ * Mobile visual explainer: 7 PNG slides, auto-advance every 33s (no visible timer),
+ * preload slides 2–7 after slide 1 loads; auto-advance stops permanently on any click.
+ * First user interaction (mobile) sends interacted_with_mobile_rules to GA4 + FB pixel.
+ */
+function initVisualExplainerCarousel() {
+  const root = document.querySelector(".visual-explainer-carousel");
+  if (!root) return;
+
+  const imgBtn = root.querySelector(".rules-carousel-image-btn");
+  const img = document.getElementById("rules-carousel-img");
+  const prevBtns = root.querySelectorAll(".rules-carousel-prev");
+  const nextBtns = root.querySelectorAll(".rules-carousel-next");
+  const currentEls = root.querySelectorAll(".rules-carousel-current");
+
+  if (
+    !imgBtn ||
+    !img ||
+    prevBtns.length === 0 ||
+    nextBtns.length === 0 ||
+    currentEls.length === 0
+  ) {
+    return;
+  }
+
+  const TOTAL = 7;
+  const SLIDE_PREFIX =
+    root.getAttribute("data-rules-slide-prefix") ||
+    "images/mobile_rules/instructions_multi_page_";
+  const SLIDE_MS = 33000;
+
+  let index = 0;
+  let autoAdvanceTimeoutId = null;
+  let userStoppedAuto = false;
+  let hasStartedAuto = false;
+  let preloaded = false;
+  let mobileRulesAnalyticsSent = false;
+
+  const mq = window.matchMedia("(max-width: 767px)");
+
+  function trackMobileRulesInteractionOnce() {
+    if (mobileRulesAnalyticsSent || !mq.matches) return;
+    mobileRulesAnalyticsSent = true;
+    if (typeof gtag === "function") {
+      gtag("event", "interacted_with_mobile_rules", {
+        event_category: "visual_explainer",
+      });
+    }
+    if (typeof fbq === "function") {
+      fbq("trackCustom", "interacted_with_mobile_rules");
+    }
+  }
+
+  function slideUrl(i) {
+    return `${SLIDE_PREFIX}${i + 1}.png`;
+  }
+
+  function updateSlide() {
+    img.src = slideUrl(index);
+    img.alt = `How to play: visual instructions, step ${index + 1} of ${TOTAL}`;
+    const n = String(index + 1);
+    currentEls.forEach(function (el) {
+      el.textContent = n;
+    });
+  }
+
+  function preloadRemaining() {
+    if (preloaded) return;
+    preloaded = true;
+    for (let i = 1; i < TOTAL; i++) {
+      const pre = new Image();
+      pre.src = slideUrl(i);
+    }
+  }
+
+  function clearAutoAdvance() {
+    if (autoAdvanceTimeoutId !== null) {
+      clearTimeout(autoAdvanceTimeoutId);
+      autoAdvanceTimeoutId = null;
+    }
+  }
+
+  function stopAutoAdvance() {
+    userStoppedAuto = true;
+    clearAutoAdvance();
+  }
+
+  function scheduleAutoAdvance() {
+    if (userStoppedAuto || !mq.matches) return;
+    clearAutoAdvance();
+    autoAdvanceTimeoutId = setTimeout(function () {
+      autoAdvanceTimeoutId = null;
+      index = (index + 1) % TOTAL;
+      updateSlide();
+      if (!userStoppedAuto && mq.matches) {
+        scheduleAutoAdvance();
+      }
+    }, SLIDE_MS);
+  }
+
+  function goNext() {
+    index = (index + 1) % TOTAL;
+    updateSlide();
+  }
+
+  function goPrev() {
+    index = (index - 1 + TOTAL) % TOTAL;
+    updateSlide();
+  }
+
+  function onUserInteract() {
+    trackMobileRulesInteractionOnce();
+    stopAutoAdvance();
+  }
+
+  prevBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      onUserInteract();
+      goPrev();
+    });
+  });
+
+  nextBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      onUserInteract();
+      goNext();
+    });
+  });
+
+  imgBtn.addEventListener("click", function () {
+    onUserInteract();
+    goNext();
+  });
+
+  img.addEventListener("load", function () {
+    if (index === 0) preloadRemaining();
+  });
+  if (img.complete) preloadRemaining();
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (
+          entry.isIntersecting &&
+          mq.matches &&
+          !hasStartedAuto &&
+          !userStoppedAuto
+        ) {
+          hasStartedAuto = true;
+          scheduleAutoAdvance();
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  observer.observe(root);
+
+  mq.addEventListener("change", function () {
+    if (!mq.matches) {
+      clearAutoAdvance();
+    }
+  });
+}
+
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Set current year in footer
@@ -5,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+
+  initVisualExplainerCarousel();
 
   // Card Demo Data
   // Data is loaded from data.js (generated from source JSON files)

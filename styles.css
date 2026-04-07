@@ -626,21 +626,123 @@ nav {
     display: block;
 }
 
-.visual-explainer-heading {
+.visual-explainer-block {
     margin-top: 2rem;
-    font-family: var(--font-header);
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent);
-    font-weight: 700;
 }
 
-/* Hide Visual Explainer and its nav item on mobile only */
+/* Visual explainer: full image on tablet+, swipe-style carousel on mobile */
+.visual-explainer-carousel {
+    display: none;
+}
+
+.visual-explainer-desktop {
+    display: block;
+}
+
 @media (max-width: 767px) {
-    .visual-explainer-block,
-    .visual-explainer-nav-item {
-        display: none !important;
+    .visual-explainer-desktop {
+        display: none;
     }
+
+    .visual-explainer-carousel {
+        display: block;
+    }
+}
+
+.rules-carousel-inner {
+    position: relative;
+    margin-top: 1rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.rules-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.rules-carousel-controls .rules-carousel-counter {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+.rules-carousel-viewport {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.rules-carousel-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: white;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.rules-carousel-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.rules-carousel-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.rules-carousel-btn:active {
+    transform: scale(0.96);
+}
+
+.rules-carousel-btn i {
+    font-size: 1.1rem;
+}
+
+.rules-carousel-image-btn {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.rules-carousel-image-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.rules-carousel-image-btn img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: block;
+}
+
+.rules-carousel-counter {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
 }
 
 /* What's Inside Section */

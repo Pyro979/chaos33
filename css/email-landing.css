@@ -3,6 +3,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Fixed ConvertKit / captcha widgets often sit on the viewport bottom */
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
 }
 
 .email-page {
@@ -11,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1.75rem 2rem;
     min-height: 100vh;
 }
 
@@ -129,7 +133,7 @@ body {
 
 @media (max-width: 480px) {
     .email-page {
-        padding: 1rem 1rem;
+        padding: 1rem 1.25rem 2.25rem;
     }
     
     .email-header {
