@@ -57,6 +57,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome (carousel controls) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -91,9 +94,35 @@
             </div>
 
             <div class="visual-explainer-block">
-                <h2 class="visual-explainer-heading">Visual Explainer</h2>
-                <div>
+                <div class="visual-explainer-desktop">
                     <img src="../images/instructions_web.jpg" alt="How to play 33 Seconds of Chaos - instructions showing the three card types: Duel, Word, and Chaos decks" class="instructions-img" loading="lazy" width="1152" height="1535">
+                </div>
+                <div class="visual-explainer-carousel" role="region" aria-roledescription="carousel" aria-label="Visual explainer slides" data-rules-slide-prefix="../images/mobile_rules/instructions_multi_page_">
+                    <div class="rules-carousel-inner">
+                        <div class="rules-carousel-controls">
+                            <button type="button" class="rules-carousel-btn rules-carousel-prev" aria-label="Previous slide">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <p class="rules-carousel-counter" aria-live="polite"><span class="rules-carousel-current">1</span> / 7</p>
+                            <button type="button" class="rules-carousel-btn rules-carousel-next" aria-label="Next slide">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="rules-carousel-viewport">
+                            <button type="button" class="rules-carousel-image-btn" aria-label="Next slide">
+                                <img id="rules-carousel-img" src="../images/mobile_rules/instructions_multi_page_1.png" alt="How to play: visual instructions, step 1 of 7" width="900" height="1200" decoding="async">
+                            </button>
+                        </div>
+                        <div class="rules-carousel-controls" aria-hidden="true">
+                            <button type="button" class="rules-carousel-btn rules-carousel-prev" aria-label="Previous slide" tabindex="-1">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <p class="rules-carousel-counter"><span class="rules-carousel-current">1</span> / 7</p>
+                            <button type="button" class="rules-carousel-btn rules-carousel-next" aria-label="Next slide" tabindex="-1">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,5 +130,7 @@
     
     <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     <script src="../js/update-form-button.js?v=c54b97c"></script>
+    <script src="../data.js?v=c54b97c"></script>
+    <script src="../script.js?v=c54b97c" defer></script>
 </body>
 </html>
