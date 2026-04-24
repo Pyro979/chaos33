@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mischievous Vibes Entertainment | Links</title>
+    <meta name="description" content="All official Mischievous Vibes Entertainment links in one place.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --card: #ffffff;
+            --text: #121418;
+            --muted: #606774;
+            --brand: #00b686;
+            --brand-dark: #028663;
+            --border: #dde3ea;
+            --shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background:
+                repeating-conic-gradient(
+                    from -72deg at center,
+                    rgba(205, 129, 255, 0.14) 0deg 9deg,
+                    rgba(166, 92, 238, 0.14) 9deg 18deg
+                ),
+                radial-gradient(circle at center, rgba(224, 175, 255, 0.26) 0, rgba(224, 175, 255, 0) 48%),
+                radial-gradient(circle at center, rgba(149, 75, 222, 0.24) 0, rgba(149, 75, 222, 0) 74%),
+                linear-gradient(165deg, #bc74f7 0%, #a157ea 52%, #8d45da 100%);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            position: relative;
+        }
+
+        .links-card {
+            width: min(100%, 520px);
+            background:
+                radial-gradient(circle at 10% 8%, rgba(148, 217, 180, 0.2) 0, rgba(148, 217, 180, 0) 34%),
+                radial-gradient(circle at 88% 90%, rgba(213, 236, 150, 0.16) 0, rgba(213, 236, 150, 0) 30%),
+                linear-gradient(170deg, #f6fcf7 0%, #fbfefd 34%, #ffffff 100%);
+            border: 1px solid #d7e2ef;
+            border-radius: calc(var(--radius) + 8px);
+            box-shadow: 0 26px 56px rgba(40, 16, 78, 0.28);
+            padding: 28px 20px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .logo-wrap {
+            width: 118px;
+            height: 118px;
+            border-radius: 22px;
+            background: #ffffff;
+            border: 2px solid #d7e2ef;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 16px;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 0;
+            background: #fff;
+        }
+
+        .profile h1 {
+            font-size: 1.45rem;
+            margin: 12px 0 6px;
+            line-height: 1.25;
+        }
+
+        .profile p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .links-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .links-section-title {
+            margin: 14px 2px 2px;
+            font-size: 0.76rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #6e7888;
+            text-align: center;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid #d7e2ef;
+            background: #ffffff;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+        }
+
+        .link-btn i {
+            width: 18px;
+            text-align: center;
+            color: var(--brand-dark);
+        }
+
+        .link-btn-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.2;
+            gap: 2px;
+        }
+
+        .link-btn-label {
+            font-size: 0.98rem;
+            font-weight: 700;
+        }
+
+        .link-btn-sub {
+            font-size: 0.76rem;
+            color: #6d7787;
+            font-weight: 500;
+        }
+
+        .link-btn:hover,
+        .link-btn:focus-visible {
+            transform: translateY(-1px);
+            border-color: #9cd8c7;
+            background: #f6fffc;
+            box-shadow: 0 8px 18px rgba(2, 134, 99, 0.14);
+            outline: none;
+        }
+
+        .link-btn.primary {
+            background: #ffffff;
+            border: 1px solid #d7e2ef;
+            color: var(--text);
+        }
+
+        .link-btn.primary i {
+            color: var(--brand-dark);
+        }
+
+        .link-btn.primary:hover,
+        .link-btn.primary:focus-visible {
+            background: #f6fffc;
+            border-color: #9cd8c7;
+            box-shadow: 0 8px 18px rgba(2, 134, 99, 0.14);
+        }
+
+        .link-btn.cta {
+            background: #ffffff;
+            border: 1px solid #d7e2ef;
+            color: var(--text);
+        }
+
+        .link-btn.cta i {
+            color: #4f5dff;
+        }
+
+        .link-btn.cta:hover,
+        .link-btn.cta:focus-visible {
+            background: #f4f6ff;
+            border-color: #b8c4ff;
+            box-shadow: 0 8px 18px rgba(79, 93, 255, 0.16);
+        }
+
+        .link-btn.website i { color: #1992ff; }
+        .link-btn.instagram i { color: #d62976; }
+        .link-btn.facebook i { color: #1877f2; }
+        .link-btn.youtube i { color: #ff1f1f; }
+        .link-btn.discord i { color: #5865f2; }
+
+        @media (max-width: 460px) {
+            .links-card {
+                padding: 24px 14px 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main class="links-card">
+        <section class="profile" aria-label="Profile header">
+            <div class="logo-wrap">
+                <img src="/images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="logo">
+            </div>
+            <h1>Mischievous Vibes Entertainment</h1>
+            <p>Creator of crazy fun party games.</p>
+        </section>
+
+        <nav class="links-list" aria-label="Social and project links">
+            <p class="links-section-title">Play the Game</p>
+            <a class="link-btn primary" href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=links&utm_medium=button&utm_campaign=kickstarter" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-rocket"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Kickstarter</span>
+                    <span class="link-btn-sub">Follow for launch and campaign updates</span>
+                </span>
+            </a>
+            <a class="link-btn cta" href="https://www.mischievousvibes.com/pnp/?utm_source=links&utm_medium=button&utm_campaign=printnplay" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-print"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Print-n-Play</span>
+                    <span class="link-btn-sub">Download free PDFs and try at home</span>
+                </span>
+            </a>
+            <a class="link-btn cta" href="https://www.mischievousvibes.com/passnplay/?utm_source=links&utm_medium=button&utm_campaign=passnplay" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Pass-n-Play</span>
+                    <span class="link-btn-sub">Play instantly in your mobile browser</span>
+                </span>
+            </a>
+            <p class="links-section-title">Connect</p>
+            <a class="link-btn website" href="https://www.mischievousvibes.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-globe"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Personal Website</span>
+                    <span class="link-btn-sub">News, details, and everything else</span>
+                </span>
+            </a>
+            <a class="link-btn instagram" href="https://www.instagram.com/mischievous_vibes_games/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Instagram</span>
+                    <span class="link-btn-sub">Clips, updates, and behind the scenes</span>
+                </span>
+            </a>
+            <a class="link-btn facebook" href="https://www.facebook.com/profile.php?id=61584619064057" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Facebook</span>
+                    <span class="link-btn-sub">Community posts and announcements</span>
+                </span>
+            </a>
+            <a class="link-btn youtube" href="https://www.youtube.com/@MischievousVibes" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">YouTube</span>
+                    <span class="link-btn-sub">Watch gameplay and party chaos in action</span>
+                </span>
+            </a>
+            <a class="link-btn discord" href="https://discord.gg/mtecRAxGxZ" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-discord"></i>
+                <span class="link-btn-content">
+                    <span class="link-btn-label">Discord</span>
+                    <span class="link-btn-sub">Join the community and chat with players</span>
+                </span>
+            </a>
+        </nav>
+
+    </main>
+</body>
+</html>
