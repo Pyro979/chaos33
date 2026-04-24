@@ -92,7 +92,8 @@ async function loadGameData() {
             categories: item.categories || [],
             alphabetic: item.alphabetic || false,
             requiresJudge: Boolean(item.requiresJudge),
-            chaosDuel: Boolean(item.chaosDuel),
+            // Source JSON uses massDuel (copyDataFiles); legacy rows may use chaosDuel
+            chaosDuel: Boolean(item.chaosDuel) || Boolean(item.massDuel),
             chaosPrompt: item.chaosPrompt || false,
             minPlayers: item.minPlayers,
             category: item.category || false,

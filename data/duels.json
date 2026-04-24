@@ -342,7 +342,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Direction Chain",
@@ -361,7 +361,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Dead Center",
@@ -381,7 +381,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Coin Flip",
@@ -401,7 +401,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Chain Alpha Blitz",
@@ -420,7 +420,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Alpha² Blitz",
@@ -439,7 +439,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Mass Confusion Scavenge",
@@ -458,7 +458,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Monster Mash",
@@ -477,7 +477,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Drum Chicken Hat",
@@ -496,7 +496,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Table Cornhole",
@@ -516,7 +516,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Table Curling",
@@ -536,7 +536,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Backhand Flip",
@@ -556,7 +556,7 @@
     "themeCategory": false,
     "starBlitz": false,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   },
   {
     "title": "Chain Star Blitz",
@@ -575,6 +575,6 @@
     "themeCategory": false,
     "starBlitz": true,
     "chaosPrompt": false,
-    "chaosDuel": true
+    "massDuel": true
   }
 ]
