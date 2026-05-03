@@ -99,7 +99,8 @@ async function loadGameData() {
             category: item.category || false,
             scavenge: item.scavenge || false,
             themeCategory: item.themeCategory || false,
-            starBlitz: item.starBlitz || false
+            starBlitz: item.starBlitz || false,
+            alphamousBlitz: item.alphamousBlitz || false
         }));
 
         gameData.words = wordsData[0]?.words || [];

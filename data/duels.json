@@ -325,6 +325,51 @@
     ]
   },
   {
+    "title": "Alphamous Blitz",
+    "alphamousBlitz": true,
+    "text": "The **judge** calls out any **letter**.\n\nBoth duelers race to name **3 famous people** whose first or last name starts with that letter.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
+    "web_description": "Judge calls a letter. Race to name 3 famous people whose first or last name starts with that letter. Judge settles disputes.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Star Blitz",
+    "starBlitz": true,
+    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nDuelers take turns naming famous people who share that first name — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "First name on the Challenge! card. Take turns naming famous people with that name. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
+    "title": "Alternating Alphamous Blitz",
+    "alphamousBlitz": true,
+    "text": "The **judge** calls out any **letter**.\n\nDuelers take turns naming famous people whose first or last name starts with that letter — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "Judge calls a letter. Take turns naming famous people whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose.",
+    "tags": [
+      "rules",
+      "main",
+      "web",
+      "passnplay",
+      "printnplay",
+      "drivethru",
+      "prototype"
+    ]
+  },
+  {
     "title": "Coin Spin",
     "text": "Each player spins a coin simultaneously.\n\nLast coin still spinning wins. Falling off the table counts as stopping.\n\nAll players must cheer their coin on.",
     "tags": [
@@ -341,6 +386,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -360,6 +406,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -380,6 +427,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -400,6 +448,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -419,6 +468,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -438,6 +488,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -457,6 +508,7 @@
     "scavenge": true,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -476,6 +528,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -495,6 +548,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -515,6 +569,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -535,6 +590,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -555,6 +611,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": false,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   },
@@ -574,6 +631,7 @@
     "scavenge": false,
     "themeCategory": false,
     "starBlitz": true,
+    "alphamousBlitz": false,
     "chaosPrompt": false,
     "massDuel": true
   }
