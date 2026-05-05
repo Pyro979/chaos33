@@ -34,9 +34,6 @@ let duelLetterRevealed = false;
 /** Lines from virtual Duel trigger card (Scavenge / Alpha / Theme / Star) until duel turn ends */
 let currentDuelTriggerFuel = null;
 
-/** Every 5th word-list turn uses Goblin pool (matches physical cards) */
-let wordListTurnIndex = 0;
-
 /** Snapshots of completed turns for Back navigation (LIFO). */
 let turnHistoryStack = [];
 
@@ -410,7 +407,6 @@ function applySessionChoice(mode, count) {
   lastScreenType = null;
   screenHistory = [];
   resetShuffleDecks();
-  wordListTurnIndex = 0;
   currentDuelTriggerFuel = null;
   closePlayerCountModalCommit();
   trackKeyEvent('passnplay_session_start', {
@@ -516,7 +512,6 @@ function handleDoneRestart() {
   lastScreenType = null;
   screenHistory = [];
   lastWord = null;
-  wordListTurnIndex = 0;
   currentDuelTriggerFuel = null;
   history.replaceState({ pnpLaunch: true }, '');
   modalStack = [];
@@ -690,7 +685,6 @@ function buildTurnSnapshot() {
                   starBlitz: currentDuelTriggerFuel.starBlitz
               }
             : null,
-        wordTextGoblin: document.getElementById('word-text')?.classList.contains('word-text--goblin-mode'),
         timerSeconds,
         progress,
         timerWasEmoji
@@ -739,7 +733,7 @@ function applyTurnSnapshot(snap) {
         document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
         const wt = document.getElementById('word-text');
         wt.textContent = currentWord;
-        wt.classList.toggle('word-text--goblin-mode', Boolean(snap.wordTextGoblin));
+        wt.classList.remove('word-text--goblin-mode');
         updateChaosCueChip(currentChaosPrompt);
         applyTimerFromSnapshot(snap);
         showScreen('normal-turn');
@@ -1164,20 +1158,14 @@ function formatText(text) {
 
 function startNormalTurn() {
     currentChaosPrompt = getNextFromDeck(chaosDeck);
-    wordListTurnIndex += 1;
-    const useGoblin =
-        gameData.goblinWords &&
-        gameData.goblinWords.length > 0 &&
-        wordListTurnIndex % 5 === 0;
-    const pool = useGoblin ? gameData.goblinWords : gameData.words;
-    currentWord = getRandomItem(pool, lastWord);
+    currentWord = getRandomItem(gameData.words, lastWord);
     lastWord = currentWord;
 
     document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
     document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
     const wt = document.getElementById('word-text');
     wt.textContent = currentWord;
-    wt.classList.toggle('word-text--goblin-mode', Boolean(useGoblin));
+    wt.classList.remove('word-text--goblin-mode');
     updateChaosCueChip(currentChaosPrompt);
 
     resetTimer();
@@ -1354,17 +1342,12 @@ function handleSwapConfirm() {
     if (screenType === 'normal') {
         currentChaosPrompt = getNextFromDeck(chaosDeck);
         const wt = document.getElementById('word-text');
-        const wasGoblin = wt.classList.contains('word-text--goblin-mode');
-        const pool =
-            wasGoblin && gameData.goblinWords && gameData.goblinWords.length > 0
-                ? gameData.goblinWords
-                : gameData.words;
-        currentWord = getRandomItem(pool, currentWord);
+        currentWord = getRandomItem(gameData.words, currentWord);
 
         document.getElementById('chaos-title').textContent = currentChaosPrompt.title;
         document.getElementById('chaos-description').innerHTML = formatText(currentChaosPrompt.description);
         wt.textContent = currentWord;
-        wt.classList.toggle('word-text--goblin-mode', wasGoblin);
+        wt.classList.remove('word-text--goblin-mode');
         updateChaosCueChip(currentChaosPrompt);
 
         resetTimer();
