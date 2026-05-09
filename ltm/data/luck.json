@@ -1,0 +1,82 @@
+[
+  {
+    "id": "L01",
+    "name": "Lucky Break",
+    "title": "Lucky Break",
+    "flavor": "It shouldn't have worked. It did.",
+    "text": "Discard one held Misery. Discard this.",
+    "effect": { "discardHeldMisery": 1, "discardSelf": true }
+  },
+  {
+    "id": "L02",
+    "name": "Clear Head",
+    "title": "Clear Head",
+    "flavor": "For a moment everything is obvious.",
+    "text": "Discard one held Misery. Discard this.",
+    "effect": { "discardHeldMisery": 1, "discardSelf": true }
+  },
+  {
+    "id": "L03",
+    "name": "Good Timing",
+    "title": "Good Timing",
+    "flavor": "You arrive at exactly the right moment.",
+    "text": "Reduce next event cost by 2, minimum 0. Discard.",
+    "effect": { "reduceNextEventCost": 2, "discardSelf": true }
+  },
+  {
+    "id": "L04",
+    "name": "Second Wind",
+    "title": "Second Wind",
+    "flavor": "You didn't know you had it in you.",
+    "text": "Reduce next event cost by 2, minimum 0. Discard.",
+    "effect": { "reduceNextEventCost": 2, "discardSelf": true }
+  },
+  {
+    "id": "L05",
+    "name": "Premonition",
+    "title": "Premonition",
+    "flavor": "Something tells you to slow down.",
+    "text": "Look ahead: see next Road card without resolving. To skip it: discard 1 additional Luck. Discard this after use.",
+    "effect": { "lookAhead": 1, "skipExtraLuckCost": 1, "discardSelf": true }
+  },
+  {
+    "id": "L06",
+    "name": "Familiar Ground",
+    "title": "Familiar Ground",
+    "flavor": "You've been here before. In a dream maybe.",
+    "text": "Look ahead: see next Road card without resolving. To skip it: discard 1 additional Luck. Discard this after use.",
+    "effect": { "lookAhead": 1, "skipExtraLuckCost": 1, "discardSelf": true }
+  },
+  {
+    "id": "L07",
+    "name": "Found Strength",
+    "title": "Found Strength",
+    "flavor": "You rest for a moment. Just a moment.",
+    "text": "Restore 2 Drive. Discard.",
+    "effect": { "restoreDrive": 2, "discardSelf": true }
+  },
+  {
+    "id": "L08",
+    "name": "Small Mercy",
+    "title": "Small Mercy",
+    "flavor": "The road gives you something back.",
+    "text": "Restore 2 Drive. Discard.",
+    "effect": { "restoreDrive": 2, "discardSelf": true }
+  },
+  {
+    "id": "L09",
+    "name": "Right Place",
+    "title": "Right Place",
+    "flavor": "You almost walked past it.",
+    "text": "Draw 2 Road Finds keep 1. Discard.",
+    "effect": { "drawRoadFindsKeep": 2, "discardSelf": true }
+  },
+  {
+    "id": "L10",
+    "name": "Let It Go",
+    "title": "Let It Go",
+    "flavor": "You put it down. You feel better.",
+    "text": "Discard one held Misery and restore 1 Drive. If holding no Misery: restore 1 Drive only. Discard this.",
+    "effect": { "discardMiseryOrRestore": true, "restoreDrive": 1, "discardSelf": true }
+  }
+]

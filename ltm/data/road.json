@@ -1,0 +1,224 @@
+[
+  {
+    "id": "R01",
+    "kind": "event",
+    "name": "Event",
+    "title": "Loose Debris",
+    "flavor": "The road is worse than it looks.",
+    "text": "Event [Cost 1]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 1 }
+  },
+  {
+    "id": "R02",
+    "kind": "event",
+    "name": "Event",
+    "title": "Strange Smell",
+    "flavor": "You don't stop to find out what it is.",
+    "text": "Event [Cost 1. Draw Misery.]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 1, "afterPay": ["drawMisery"] }
+  },
+  {
+    "id": "R03",
+    "kind": "event",
+    "name": "Event",
+    "title": "Blocked Underpass",
+    "flavor": "Someone tried to barricade it. They didn't finish.",
+    "text": "Event [Cost 2]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 2 }
+  },
+  {
+    "id": "R04",
+    "kind": "event",
+    "name": "Event",
+    "title": "Abandoned Checkpoint",
+    "flavor": "The uniforms are still there. The people aren't.",
+    "text": "Event [Cost 2. Draw Misery.]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 2, "afterPay": ["drawMisery"] }
+  },
+  {
+    "id": "R05",
+    "kind": "event",
+    "name": "Event",
+    "title": "Overturned Truck",
+    "flavor": "Whatever they were carrying, some of it survived.",
+    "text": "Event [Cost 2. Draw Road Find.]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 2, "afterPay": ["drawRoadFind"] }
+  },
+  {
+    "id": "R06",
+    "kind": "event",
+    "name": "Event",
+    "title": "Collapsed Bridge Section",
+    "flavor": "Getting across costs everything you have.",
+    "text": "Event [Cost 3]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 3 }
+  },
+  {
+    "id": "R07",
+    "kind": "event",
+    "name": "Event",
+    "title": "Something In The Trees",
+    "flavor": "It keeps pace with you for a while. Then it doesn't.",
+    "text": "Event [Cost 3. Draw Misery.]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 3, "afterPay": ["drawMisery"] }
+  },
+  {
+    "id": "R08",
+    "kind": "choice",
+    "name": "Choice",
+    "title": "Guard Dog",
+    "flavor": "It's not vicious. It's territorial. There's a difference.",
+    "text": "Choice [Pay 2 Drive OR discard 1 item.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "choice",
+      "options": [{ "payDrive": 2 }, { "discardItems": 1 }]
+    }
+  },
+  {
+    "id": "R09",
+    "kind": "choice",
+    "name": "Choice",
+    "title": "Locked Gate",
+    "flavor": "There's always a way through if you look hard enough.",
+    "text": "Choice [Pay 1 Drive OR discard 1 item. Draw Luck.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "choice",
+      "options": [{ "payDrive": 1 }, { "discardItems": 1 }],
+      "afterResolve": ["drawLuck"]
+    }
+  },
+  {
+    "id": "R10",
+    "kind": "choice",
+    "name": "Choice",
+    "title": "Militia Roadblock",
+    "flavor": "They have a flag you don't recognize and rules you didn't agree to.",
+    "text": "Choice [Pay 3 Drive OR discard 2 items.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "choice",
+      "options": [{ "payDrive": 3 }, { "discardItems": 2 }]
+    }
+  },
+  {
+    "id": "R11",
+    "kind": "people",
+    "name": "People",
+    "title": "Desperate Stranger",
+    "flavor": "You can't help everyone. You tell yourself this.",
+    "text": "People [Cost 1. Draw Misery.]",
+    "oneTime": false,
+    "resolve": { "type": "payDrive", "amount": 1, "afterPay": ["drawMisery"] }
+  },
+  {
+    "id": "R12",
+    "kind": "people",
+    "name": "People",
+    "title": "Armed Group",
+    "flavor": "They want what you have. The question is how much.",
+    "text": "People [Cost 2 OR discard 1 item.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "peopleOr",
+      "payDrive": 2,
+      "orDiscardItems": 1
+    }
+  },
+  {
+    "id": "R13",
+    "kind": "people",
+    "name": "People",
+    "title": "Helpful Survivor",
+    "flavor": "Someone who still believes in something.",
+    "text": "People [Cost 0. Draw Luck.] ONE-TIME",
+    "oneTime": true,
+    "resolve": { "type": "payDrive", "amount": 0, "afterPay": ["drawLuck"] }
+  },
+  {
+    "id": "R14",
+    "kind": "people",
+    "name": "People",
+    "title": "Injured Person",
+    "flavor": "You stop. You shouldn't have stopped.",
+    "text": "People [Cost 1. Draw Road Find. Draw Misery.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "payDrive",
+      "amount": 1,
+      "afterPay": ["drawRoadFind", "drawMisery"]
+    }
+  },
+  {
+    "id": "R15",
+    "kind": "people",
+    "name": "People",
+    "title": "Trading Opportunity",
+    "flavor": "Fair trade. Nothing on this road is fair.",
+    "text": "People [Choice: Discard 1 item, draw 2 Road Finds keep 1. OR pass at no cost.]",
+    "oneTime": false,
+    "resolve": {
+      "type": "r15choice",
+      "branchA": { "discardItems": 1, "then": ["drawRoadFindsKeep", 2] },
+      "branchB": { "pass": true }
+    }
+  },
+  {
+    "id": "R16",
+    "kind": "resource",
+    "name": "Resource",
+    "title": "Ransacked Store",
+    "flavor": "They missed a few things.",
+    "text": "Resource [Draw 2 Road Finds keep 1.]",
+    "oneTime": false,
+    "resolve": { "type": "free", "actions": [["drawRoadFindsKeep", 2]] }
+  },
+  {
+    "id": "R17",
+    "kind": "resource",
+    "name": "Resource",
+    "title": "Unlocked Car",
+    "flavor": "You sit in the seat for a moment. It still smells like someone's life.",
+    "text": "Resource [Draw 1 Road Find. Restore 1 Drive.]",
+    "oneTime": false,
+    "resolve": { "type": "free", "actions": [["drawRoadFind"], ["restoreDrive", 1]] }
+  },
+  {
+    "id": "R18",
+    "kind": "restore",
+    "name": "Restore",
+    "title": "Warm Shelter",
+    "flavor": "Someone left it ready. You try not to think about why.",
+    "text": "Restore [Gain 2 Drive.] ONE-TIME",
+    "oneTime": true,
+    "resolve": { "type": "free", "actions": [["restoreDrive", 2]] }
+  },
+  {
+    "id": "R19",
+    "kind": "restore",
+    "name": "Restore",
+    "title": "Hidden Cache",
+    "flavor": "Whoever left this wanted someone to find it.",
+    "text": "Restore [Gain 1 Drive. Draw Luck.]",
+    "oneTime": false,
+    "resolve": { "type": "free", "actions": [["restoreDrive", 1], ["drawLuck"]] }
+  },
+  {
+    "id": "R20",
+    "kind": "atmospheric",
+    "name": "Atmospheric",
+    "title": "Open Road",
+    "flavor": "Just road. Just sky. Just you.",
+    "text": "Atmospheric [No effect.]",
+    "oneTime": false,
+    "resolve": { "type": "none" }
+  }
+]

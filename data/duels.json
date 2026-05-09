@@ -138,13 +138,7 @@
     "multiCard": false,
     "text": "Stand 2 **cylinders** upright at the far end of the table.\n\nDuelers toss **bean bags** to knock their cylinders down from **2-3 feet away**.\n\nMiss - retrieve the bean bag and return to the same spot. If both knock them down in the same round, reset and take a step back. First to knock their cylinder down wins.",
     "web_description": "Toss bean bags to knock down a standing cylinder. Step back each tie. First to knock their cylinder down wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"]
   },
   {
     "title": "Backhand Flip",
@@ -213,26 +207,14 @@
     "requiresJudge": true,
     "text": "The Judge places a **coin in the center** of the table and hands each Dueler a **small tossable object** (bean bag, coin, eraser, chip, etc.).\n\nDuelers stand **a few feet from the table**. Both toss at the **same time**.\n\nClosest to the coin wins.\n\nIf tied, redo.",
     "web_description": "Toss a small object closest to the coin. Simultaneous throws. Closest wins. Ties redo.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"]
   },
   {
     "title": "Coin Flip",
     "multiCard": false,
     "text": "Place a coin on the **back of your hand**.\n\nUsing only your **thumb**, flick it into the air and catch it in the **same hand**.\n\n First to **3 catches** wins.",
     "web_description": "Flick a coin off the back of your hand with your thumb and catch it. First to 3 wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ]
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"]
   },
   {
     "title": "Alternating Theme Blitz",
@@ -393,13 +375,7 @@
   {
     "title": "Direction Chain",
     "text": "Going clockwise starting with the player who drew this card, each player calls a direction - **LEFT**, **RIGHT**, **UP**, or **DOWN** - and everyone turns their head in that direction simultaneously, then returns to **center**.\n\nWrong direction, flinching, or hesitating - you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": false,
@@ -455,13 +431,7 @@
   {
     "title": "Chain Alpha Blitz",
     "text": "**Category** is on the **Challenge!** card (A–Z line). The drawer picks a **letter**.\n\nStarting with the player who drew this card and going **clockwise**, each player names one item from the **category** starting with the **letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": true,
     "category": false,
@@ -475,13 +445,7 @@
   {
     "title": "Alpha² Blitz",
     "text": "**Category** is on the **Challenge!** card (A–Z line).\n\n**Clockwise** from the player who drew this card, players take turns naming items from the **category** in alphabetical order - first **A**, then **B**, and so on.\n\nYou have **5 seconds** per turn. Too long and you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": true,
@@ -495,13 +459,7 @@
   {
     "title": "Mass Confusion Scavenge",
     "text": "**Category** is on the **Challenge!** card (glass line).\n\nAll players race simultaneously to return with a valid **physical object** or **analog image** from the **category**.\n\nNo digital screens. First back wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": false,
@@ -515,13 +473,7 @@
   {
     "title": "Monster Mash",
     "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**VAMPIRE**: cross arms on chest.\n**FRANKENSTEIN**: arms out.\n**WEREWOLF**: hands like claws.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": false,
@@ -535,13 +487,7 @@
   {
     "title": "Drum Chicken Hat",
     "text": "**Clockwise** from the player who drew this card, each player calls a move and everyone performs it simultaneously.\n\n**DRUM**: two quick table taps.\n**CHICKEN**: flap elbows twice.\n**HAT**: touch the top of your head.\n\nWrong move, flinching, or hesitating - you're out. Last player standing wins.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": false,
@@ -618,13 +564,7 @@
   {
     "title": "Chain Star Blitz",
     "text": "Going **clockwise** from the player who drew, each player names a different famous person with the **first name** from the **Challenge!** card (star line).\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
-    "tags": [
-      "main",
-      "passnplay",
-      "printnplay",
-      "drivethru",
-      "prototype"
-    ],
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
     "minPlayers": 3,
     "alphabetic": false,
     "category": false,
@@ -632,6 +572,20 @@
     "themeCategory": false,
     "starBlitz": true,
     "alphamousBlitz": false,
+    "chaosPrompt": false,
+    "massDuel": true
+  },
+  {
+    "title": "Chain Alphamous Blitz",
+    "text": "The drawer picks any **letter**.\n\nGoing **clockwise** from the player who drew, each player names a different famous person whose **first or last name starts with that letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
+    "tags": ["main", "passnplay", "printnplay", "drivethru", "prototype"],
+    "minPlayers": 3,
+    "alphabetic": false,
+    "category": false,
+    "scavenge": false,
+    "themeCategory": false,
+    "starBlitz": false,
+    "alphamousBlitz": true,
     "chaosPrompt": false,
     "massDuel": true
   }

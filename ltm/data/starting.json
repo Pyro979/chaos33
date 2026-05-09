@@ -1,0 +1,166 @@
+[
+  {
+    "id": "S01",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Water Bottle",
+    "title": "Water Bottle",
+    "flavor": "You rationed it too long. Drinking it now costs you something else.",
+    "text": "[1 slot. Restore 2 Drive, discard. On use: trigger one held Misery if any.]",
+    "charges": 1,
+    "abilities": {
+      "use": [
+        { "restoreDrive": 2 },
+        { "discardSelf": true },
+        { "triggerHeldMisery": true }
+      ]
+    }
+  },
+  {
+    "id": "S02",
+    "deck": "starting",
+    "slots": 1,
+    "name": "First Aid Kit",
+    "title": "First Aid Kit",
+    "flavor": "Sealed. Fully stocked. Someone packed this carefully.",
+    "text": "[1 slot. Restore 3 Drive, discard. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 3 }, { "discardSelf": true }],
+      "pickup": [{ "drawLuck": true }]
+    }
+  },
+  {
+    "id": "S03",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Compass",
+    "title": "Compass",
+    "flavor": "Doesn't tell you what's ahead. Just which way you're going.",
+    "text": "[1 slot. Once per Run: look ahead 1 card. No skip available.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "lookAhead": 1, "noSkip": true }]
+    }
+  },
+  {
+    "id": "S04",
+    "deck": "starting",
+    "slots": 0,
+    "name": "Lighter",
+    "title": "Lighter",
+    "flavor": "Half full. Enough.",
+    "text": "[0 slots. Reduce next event cost by 1, discard. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceNextEventCost": 1 }, { "discardSelf": true }],
+      "pickup": [{ "drawLuck": true }]
+    }
+  },
+  {
+    "id": "S05",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Energy Bar",
+    "title": "Energy Bar",
+    "flavor": "Tastes like nothing. Does the job.",
+    "text": "[1 slot each. Restore 1 Drive per use, discard. Carry up to 3.]",
+    "charges": 3,
+    "abilities": {
+      "use": [{ "restoreDrive": 1 }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "S06",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Crowbar",
+    "title": "Crowbar",
+    "flavor": "Useful in ways you'd rather not think about.",
+    "text": "[1 slot. Reduce any event cost by 1 per use.]",
+    "charges": 99,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 1 }]
+    }
+  },
+  {
+    "id": "S07",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Rope",
+    "title": "Rope",
+    "flavor": "Twenty feet. More than enough for most things.",
+    "text": "[1 slot. Bypass one obstacle event, discard. On forced discard: spend 1 Luck to keep instead.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "bypassObstacle": true }, { "discardSelf": true }],
+      "forcedDiscard": [{ "spendLuckOrDiscard": 1 }]
+    }
+  },
+  {
+    "id": "S08",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Flashlight",
+    "title": "Flashlight",
+    "flavor": "The batteries won't last. Use it when it counts.",
+    "text": "[1 slot. Reduce next event cost by 2, discard.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceNextEventCost": 2 }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "S09",
+    "deck": "starting",
+    "slots": 2,
+    "name": "Sleeping Bag",
+    "title": "Sleeping Bag",
+    "flavor": "Leaving it behind is harder than it should be.",
+    "text": "[2 slots. Restore 3 Drive, discard. On voluntary discard: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 3 }, { "discardSelf": true }],
+      "voluntaryDiscard": [{ "drawMisery": true }]
+    }
+  },
+  {
+    "id": "S10",
+    "deck": "starting",
+    "slots": 0,
+    "name": "Pocket Knife",
+    "title": "Pocket Knife",
+    "flavor": "Small enough to forget you have it. Until you need it.",
+    "text": "[0 slots. Reduce any event cost by 1, discard.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 1 }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "S11",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Backpack",
+    "title": "Backpack",
+    "flavor": "Someone's name is written inside. You don't read it.",
+    "text": "[1 slot. Grants 3 extra slots for Run. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "pickup": [{ "grantSlots": 3 }, { "drawLuck": true }]
+    }
+  },
+  {
+    "id": "S12",
+    "deck": "starting",
+    "slots": 1,
+    "name": "Painkillers",
+    "title": "Painkillers",
+    "flavor": "More than you should take. Less than you want to.",
+    "text": "[1 slot. Restore 1 Drive. Draw Luck. Discard.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 1 }, { "drawLuck": true }, { "discardSelf": true }]
+    }
+  }
+]

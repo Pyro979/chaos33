@@ -1,0 +1,82 @@
+[
+  {
+    "id": "M01",
+    "name": "On Edge",
+    "title": "On Edge",
+    "flavor": "You flinch at everything now.",
+    "text": "Next negative event costs 1 additional Drive. Discard after triggered.",
+    "effect": { "nextNegativeEventPlus": 1 }
+  },
+  {
+    "id": "M02",
+    "name": "Bad Feeling",
+    "title": "Bad Feeling",
+    "flavor": "You can't shake it.",
+    "text": "Next negative event costs 1 additional Drive. Discard after triggered.",
+    "effect": { "nextNegativeEventPlus": 1 }
+  },
+  {
+    "id": "M03",
+    "name": "Dread",
+    "title": "Dread",
+    "flavor": "Something is wrong. You don't know what.",
+    "text": "Next negative event costs 1 additional Drive. If holding no Luck when drawn: lose 1 Drive immediately also. Discard after triggered.",
+    "effect": { "nextNegativeEventPlus": 1, "loseDriveIfNoLuckOnDraw": 1 }
+  },
+  {
+    "id": "M04",
+    "name": "Stumble",
+    "title": "Stumble",
+    "flavor": "You lose time. You lose ground.",
+    "text": "Lose 1 Drive immediately. Discard.",
+    "effect": { "loseDriveImmediate": 1, "discardSelf": true }
+  },
+  {
+    "id": "M05",
+    "name": "Panic",
+    "title": "Panic",
+    "flavor": "Just for a moment. Long enough.",
+    "text": "Lose 1 Drive immediately. Discard.",
+    "effect": { "loseDriveImmediate": 1, "discardSelf": true }
+  },
+  {
+    "id": "M06",
+    "name": "Intrusive Thought",
+    "title": "Intrusive Thought",
+    "flavor": "You almost had it together.",
+    "text": "Discard one Luck at random. If holding no Luck: lose 1 Drive instead. Discard.",
+    "effect": { "discardRandomLuckOrLoseDrive": true }
+  },
+  {
+    "id": "M07",
+    "name": "Dropped",
+    "title": "Dropped",
+    "flavor": "You don't notice until it's too late.",
+    "text": "Discard one item at random. If holding no items: lose 2 Drive instead. Discard.",
+    "effect": { "discardRandomItemOrLoseDrive": 2 }
+  },
+  {
+    "id": "M08",
+    "name": "Heavy Legs",
+    "title": "Heavy Legs",
+    "flavor": "The road is longer than it was.",
+    "text": "Next Drive restoration reduced by 1, minimum 0. Discard after triggered.",
+    "effect": { "nextRestorePenalty": 1 }
+  },
+  {
+    "id": "M09",
+    "name": "Wrong Turn",
+    "title": "Wrong Turn",
+    "flavor": "You backtrack. Something is waiting.",
+    "text": "Push back 1 Road card. Resolve if repeating event. Skip if one-time cleared. Discard.",
+    "effect": { "pushBackRoad": 1 }
+  },
+  {
+    "id": "M10",
+    "name": "Frozen",
+    "title": "Frozen",
+    "flavor": "You know what you should do. You can't do it.",
+    "text": "Cannot use, spend, or discard Luck cards until next event fully resolved. Discard after event.",
+    "effect": { "blockLuckUntilEventDone": true }
+  }
+]

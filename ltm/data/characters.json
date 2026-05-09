@@ -1,0 +1,65 @@
+[
+  {
+    "id": "C01",
+    "name": "The Nurse",
+    "drive": 7,
+    "slots": 6,
+    "startingDraw": { "finds": 2, "luck": 2, "misery": 1 },
+    "specialText": "Once per Run restore 1 additional Drive when using any restore item.",
+    "special": { "nurseExtraRestore": true }
+  },
+  {
+    "id": "C02",
+    "name": "The Convict",
+    "drive": 8,
+    "slots": 6,
+    "startingDraw": { "finds": 1, "luck": 2, "misery": 1 },
+    "specialText": "Once per Run reveal cost of one people event before deciding to spend resources.",
+    "special": { "convictRevealPeople": true }
+  },
+  {
+    "id": "C03",
+    "name": "The Librarian",
+    "drive": 6,
+    "slots": 5,
+    "startingDraw": { "finds": 2, "luck": 1, "misery": 1 },
+    "specialText": "Starts each Run with S03 (look ahead item) guaranteed in loadout draft.",
+    "special": { "librarianS03": true }
+  },
+  {
+    "id": "C04",
+    "name": "The Backpacker",
+    "drive": 6,
+    "slots": 5,
+    "startingDraw": { "finds": 1, "luck": 2, "misery": 2 },
+    "specialText": "Zero slot items cost nothing to carry and are never randomly discarded by Misery.",
+    "special": { "backpackerZeroSlotImmunity": true }
+  },
+  {
+    "id": "C05",
+    "name": "The Boxer",
+    "drive": 10,
+    "slots": 6,
+    "startingDraw": { "finds": 1, "luck": 1, "misery": 2 },
+    "specialText": "Drive restoration from all sources reduced by 1, minimum 0.",
+    "special": { "boxerRestorePenalty": true }
+  },
+  {
+    "id": "C06",
+    "name": "The Prepper",
+    "drive": 7,
+    "slots": 8,
+    "startingDraw": { "finds": 3, "luck": 1, "misery": 2 },
+    "specialText": "Sees 8 Starting Loadout cards instead of 5 when drafting.",
+    "special": { "prepperLoadoutCount": 8 }
+  },
+  {
+    "id": "C07",
+    "name": "The National Guardsman",
+    "drive": 8,
+    "slots": 7,
+    "startingDraw": { "finds": 2, "luck": 1, "misery": 1 },
+    "specialText": "Once per Run reduce one hazard event cost by 2.",
+    "special": { "guardsmanHazardDiscount": true }
+  }
+]

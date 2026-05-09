@@ -1,0 +1,205 @@
+[
+  {
+    "id": "F01",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Abandoned Duffel",
+    "title": "Abandoned Duffel",
+    "flavor": "Heavy. You don't look inside until you have to.",
+    "text": "[1 slot. Reduce any event cost by 1, discard. On pickup: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 1 }, { "discardSelf": true }],
+      "pickup": [{ "drawMisery": true }]
+    }
+  },
+  {
+    "id": "F02",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Pharmacy Scraps",
+    "title": "Pharmacy Scraps",
+    "flavor": "Not what you needed. Close enough.",
+    "text": "[1 slot. Reduce any event cost by 1, discard. On use: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 1 }, { "drawLuck": true }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "F03",
+    "deck": "finds",
+    "slots": 0,
+    "name": "Loose Change",
+    "title": "Loose Change",
+    "flavor": "Worthless now. Somehow still reassuring.",
+    "text": "[0 slots. Reduce any event cost by 1, discard. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 1 }, { "discardSelf": true }],
+      "pickup": [{ "drawLuck": true }]
+    }
+  },
+  {
+    "id": "F04",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Police Baton",
+    "title": "Police Baton",
+    "flavor": "You pick it up. You don't feel good about it.",
+    "text": "[1 slot. Reduce event cost by 2, discard. On pickup: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 2 }, { "discardSelf": true }],
+      "pickup": [{ "drawMisery": true }]
+    }
+  },
+  {
+    "id": "F05",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Go Bag",
+    "title": "Go Bag",
+    "flavor": "Someone packed this for exactly this situation. They didn't make it here.",
+    "text": "[1 slot. Reduce event cost by 2, discard. On use: play one held Luck card for free if any.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reduceAnyEventCost": 2 }, { "playLuckFreeIfHeld": true }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "F06",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Canned Goods",
+    "title": "Canned Goods",
+    "flavor": "Eating in a place like this feels wrong.",
+    "text": "[1 slot. Restore 2 Drive, discard. On use: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 2 }, { "drawMisery": true }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "F07",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Field Dressing",
+    "title": "Field Dressing",
+    "flavor": "Military issue. Still in the wrapper.",
+    "text": "[1 slot. Restore 2 Drive, discard. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 2 }, { "discardSelf": true }],
+      "pickup": [{ "drawLuck": true }]
+    }
+  },
+  {
+    "id": "F08",
+    "deck": "finds",
+    "slots": 0,
+    "name": "Energy Drink",
+    "title": "Energy Drink",
+    "flavor": "You find three of them rolling around in a ditch.",
+    "text": "[0 slots. Restore 1 Drive, discard. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 1 }, { "discardSelf": true }],
+      "pickup": [{ "drawLuck": true }]
+    }
+  },
+  {
+    "id": "F09",
+    "deck": "finds",
+    "slots": 2,
+    "name": "Shopping Cart Of Supplies",
+    "title": "Shopping Cart Of Supplies",
+    "flavor": "Someone spent time gathering all of this. You spend thirty seconds taking it.",
+    "text": "[2 slots. Restore 4 Drive, discard. On pickup: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "restoreDrive": 4 }, { "discardSelf": true }],
+      "pickup": [{ "drawMisery": true }]
+    }
+  },
+  {
+    "id": "F10",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Bolt Cutters",
+    "title": "Bolt Cutters",
+    "flavor": "Heavy but worth it. Don't let go of these.",
+    "text": "[1 slot. Bypass one obstacle event, discard. On forced discard: spend 1 Luck to keep.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "bypassObstacle": true }, { "discardSelf": true }],
+      "forcedDiscard": [{ "spendLuckOrDiscard": 1 }]
+    }
+  },
+  {
+    "id": "F11",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Work Belt",
+    "title": "Work Belt",
+    "flavor": "Everything you need, right where you need it.",
+    "text": "[1 slot. Bypass one obstacle event, discard. On use: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "bypassObstacle": true }, { "drawLuck": true }, { "discardSelf": true }]
+    }
+  },
+  {
+    "id": "F12",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Road Atlas",
+    "title": "Road Atlas",
+    "flavor": "Someone has circled things in red. Some of the circles make sense.",
+    "text": "[1 slot. Look ahead up to 2 cards without resolving. To skip next card: discard 1 additional Luck. Discard after use.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "lookAhead": 2, "skipExtraLuckCost": 1 }]
+    }
+  },
+  {
+    "id": "F13",
+    "deck": "finds",
+    "slots": 1,
+    "name": "Luggage Cart",
+    "title": "Luggage Cart",
+    "flavor": "Wheels still work. You feel ridiculous. You don't care.",
+    "text": "[1 slot. Grants 2 extra slots for remainder of Run. On pickup: draw Luck.]",
+    "charges": 1,
+    "abilities": {
+      "pickup": [{ "grantSlots": 2 }, { "drawLuck": true }]
+    }
+  },
+  {
+    "id": "F14",
+    "deck": "finds",
+    "slots": 2,
+    "name": "Utility Vest",
+    "title": "Utility Vest",
+    "flavor": "Pockets everywhere. Something in one of them you didn't put there.",
+    "text": "[2 slots. Reduce all event costs by 1 for remainder of Run. On pickup: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "pickup": [{ "auraAllEventsMinus": 1 }, { "drawMisery": true }]
+    }
+  },
+  {
+    "id": "F15",
+    "deck": "finds",
+    "slots": 0,
+    "name": "Someone's Wallet",
+    "title": "Someone's Wallet",
+    "flavor": "The ID is still inside. You use the cash. You keep the ID.",
+    "text": "[0 slots. Reduce people event cost by 2, discard. On voluntary discard: draw Misery.]",
+    "charges": 1,
+    "abilities": {
+      "use": [{ "reducePeopleCost": 2 }, { "discardSelf": true }],
+      "voluntaryDiscard": [{ "drawMisery": true }]
+    }
+  }
+]
