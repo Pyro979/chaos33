@@ -7,7 +7,7 @@
 (function() {
     'use strict';
 
-    var CONVENTION_DEFAULT = 'dexlite_2026';
+    var CONVENTION_DEFAULT = 'ottocon_2026';
 
     function getPath() {
         return typeof window !== 'undefined' ? (window.location.pathname || '') : '';
