@@ -1,6 +1,6 @@
 /**
- * Luck in the Time of Misery — core game engine (RULES_IMPL v1 in resolution.js).
- * Balance: F14 aura — monitor; Boxer restore penalty — monitor; M10 + forced discard — intentional.
+ * Luck in the Time of Misery - core game engine (RULES_IMPL v1 in resolution.js).
+ * Balance: F14 aura - monitor; Boxer restore penalty - monitor; M10 + forced discard - intentional.
  */
 
 import { shuffle, randomPick } from './rng.js';

@@ -1,5 +1,5 @@
 /**
- * RULES_IMPL (v1) — see plan: negative event = Event/People that spend Drive if unpaid;
+ * RULES_IMPL (v1) - see plan: negative event = Event/People that spend Drive if unpaid;
  * obstacle = kind event && base Drive cost > 0; People cost = numeric Drive before discounts.
  */
 

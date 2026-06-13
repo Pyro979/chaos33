@@ -168,7 +168,7 @@ function header(pb, flightRuns) {
       <div class="site-header__intro">
         <h1 style="margin:0">Luck in the Time of Misery</h1>
         <p class="small" style="margin:0.25rem 0 0">Flight runs this attempt: <strong>${flightRuns}</strong>
-        · Personal best (lowest runs): <strong>${pb != null ? pb : '—'}</strong></p>
+        · Personal best (lowest runs): <strong>${pb != null ? pb : '-'}</strong></p>
       </div>
       <div class="site-header__actions">
         <button type="button" class="btn btn-secondary" id="btn-reset-flight">New flight</button>
@@ -225,7 +225,7 @@ function renderDraft(pb, flightRuns) {
   return `
     ${header(pb, flightRuns)}
     <section class="panel">
-      <h2 style="margin-top:0">Starting loadout — ${esc(ch.name)}</h2>
+      <h2 style="margin-top:0">Starting loadout - ${esc(ch.name)}</h2>
       <p class="small">Pick cards up to ${ch.slots} slots total (selected ${slots} / ${ch.slots}). Tap a card to toggle. Full text below each id.</p>
       <div class="draft-grid">
         ${pool
@@ -305,7 +305,7 @@ function renderRoadStripOnly(pb, flightRuns) {
         <div>
           <strong>${esc(r.character.name)}</strong>${luckBlk}
         </div>
-        <div class="stat"><strong>Road</strong> — card ${Math.min(state.roadIndex + 1, 20)} / 20</div>
+        <div class="stat"><strong>Road</strong> - card ${Math.min(state.roadIndex + 1, 20)} / 20</div>
       </div>
       ${roadSlotsHtml()}
       ${
@@ -321,7 +321,7 @@ function renderRoadFab() {
   return `<button type="button" class="ltm-fab" id="btn-fab-flip" aria-label="Flip next road card"><span class="ltm-fab__arrow" aria-hidden="true">→</span><span class="ltm-fab__text">Next</span></button>`;
 }
 
-/** Items / Luck / Misery — shown below road (and below effect panel when resolving). */
+/** Items / Luck / Misery - shown below road (and below effect panel when resolving). */
 function renderHandPanel(pb, flightRuns) {
   const r = state.run;
   const padFab = state.phase === 'road' ? 'style="padding-bottom:4.5rem"' : '';
@@ -413,13 +413,13 @@ function renderResolve() {
       <section class="panel resolve-form resolve-panel">
         <h2 style="margin-top:0">Resolve</h2>
         ${themedRoadCardHtml(def)}
-        ${pr.convictReveal ? `<p class="small">Convict: reveal cost — base Drive portion ≈ <strong>${pr.peopleCostReveal ?? '?'}</strong></p>` : ''}
+        ${pr.convictReveal ? `<p class="small">Convict: reveal cost - base Drive portion ≈ <strong>${pr.peopleCostReveal ?? '?'}</strong></p>` : ''}
         ${pr.guardsmanAvailable ? `<button type="button" class="btn btn-secondary" id="btn-guardsman">Use Guardsman (−2 hazard)</button>` : ''}
         ${pr.convictReveal ? `<button type="button" class="btn btn-secondary" id="btn-convict">Reveal people cost (once)</button>` : ''}
         <label>Reduce next event cost (already queued) <input type="number" id="opt-next" min="0" value="0" /></label>
         <label>Reduce this event (any-item pool) <input type="number" id="opt-any" min="0" value="0" /></label>
         ${obstacle ? `<label><input type="checkbox" id="opt-bypass-check" /> Bypass obstacle with item</label>
-          <select id="opt-bypass"><option value="">—</option>${state.run.items
+          <select id="opt-bypass"><option value="">-</option>${state.run.items
             .filter((i) => {
               const d = state.catalog.startingById[i.defId] || state.catalog.findsById[i.defId];
               return d.abilities?.use?.some((x) => x.bypassObstacle);
@@ -439,7 +439,7 @@ function renderResolve() {
       <section class="panel resolve-panel">
         <h2 style="margin-top:0">Choice</h2>
         ${themedRoadCardHtml(def)}
-        ${ov ? `<p class="tag-misery">Cannot fulfill either branch — click Overflow.</p>` : ''}
+        ${ov ? `<p class="tag-misery">Cannot fulfill either branch - click Overflow.</p>` : ''}
         <div class="row">
           <button type="button" class="btn" id="btn-ch-0">Pay Drive option</button>
           <button type="button" class="btn btn-secondary" id="btn-ch-1">Discard items option</button>
@@ -454,7 +454,7 @@ function renderResolve() {
       <section class="panel resolve-panel">
         <h2 style="margin-top:0">People</h2>
         ${themedRoadCardHtml(def)}
-        ${ov ? `<p class="tag-misery">Cannot pay or discard — use Overflow.</p>` : ''}
+        ${ov ? `<p class="tag-misery">Cannot pay or discard - use Overflow.</p>` : ''}
         <label><input type="checkbox" id="opt-f15" /> F15 people −2</label>
         <div class="row">
           <button type="button" class="btn" id="btn-po-pay">Pay Drive</button>
@@ -621,7 +621,7 @@ function renderWin(pb) {
     <section class="panel win-banner">
       <h2>Flight complete</h2>
       <p>Runs taken (lower is better): <strong>${runs}</strong></p>
-      <p class="small">Personal best: ${pb != null ? pb : '—'}</p>
+      <p class="small">Personal best: ${pb != null ? pb : '-'}</p>
       <button type="button" class="btn" id="btn-new-flight">New flight</button>
     </section>
   `;
