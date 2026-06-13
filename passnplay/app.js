@@ -124,18 +124,41 @@ function pickCategoryLineForDuel(duel) {
   return nextDuelCategory(duel);
 }
 
-/** Populates duel-trigger UI; used when restoring history to goblin-mode only (forward flow skips that screen). */
-function startDuelTriggerScreen() {
-  currentDuelTriggerFuel = getNextFromDeck(duelTriggerPresetDeck);
-  if (!currentDuelTriggerFuel) {
-    currentDuelTriggerFuel = emptyDuelTriggerFuel();
-  }
-  const f = currentDuelTriggerFuel;
-  const box = document.getElementById('duel-trigger-fuel-ui');
-  if (box) {
-    box.innerHTML = htmlDuelTriggerFuelLines(f);
-  }
-  showScreen('goblin-mode');
+function formatOrdinalPnp(text) {
+    if (!text) return '';
+    return text.replace(/(\d+)(st|nd|rd|th)\b/gi, '$1<sup>$2</sup>');
+}
+
+function renderDuelIconsCombinedPnp(side, duelIs1st) {
+    const arrow = side === 'right' ? 'fa-arrow-right' : 'fa-arrow-left';
+    const userIcon = `<i class="fa-solid fa-user"></i>`;
+    const gavelIcon = `<i class="fa-solid fa-gavel"></i>`;
+    const currentIcon = `<i class="fa-solid fa-user-check"></i>`;
+
+    const wrap = (content, isCurrent = false) => 
+        `<div class="icon-square${isCurrent ? ' current-player-square' : ''}">${content}</div>`;
+
+    const currentSq = wrap(currentIcon, true);
+    const duelSq = wrap(userIcon);
+    const judgeSq = `<div class="icon-square judge-square">${gavelIcon}</div>`;
+
+    let iconsHtml = '';
+    if (side === 'right') {
+        iconsHtml = currentSq + ` <i class="fa-solid ${arrow} duel-arrow"></i> `;
+        if (duelIs1st) {
+            iconsHtml += duelSq + judgeSq;
+        } else {
+            iconsHtml += judgeSq + duelSq;
+        }
+    } else {
+        if (duelIs1st) {
+            iconsHtml = judgeSq + duelSq;
+        } else {
+            iconsHtml = duelSq + judgeSq;
+        }
+        iconsHtml += ` <i class="fa-solid ${arrow} duel-arrow"></i> ` + currentSq;
+    }
+    return iconsHtml;
 }
 
 function newEventId() {
@@ -191,52 +214,66 @@ function maxTurnsForSession() {
 }
 
 function syncDuelScreenChrome(duel) {
-  const label = document.getElementById('duel-screen-label');
-  const triggerEl = document.getElementById('duel-trigger');
-  const titleEl = document.getElementById('duel-title');
-  const cardEl = document.querySelector('#duel-screen .game-card.duel-card');
-  const isPrompt = Boolean(duel && duel.chaosPrompt);
-  const isMassChaos = Boolean(duel && duel.chaosDuel && !duel.chaosPrompt);
-  if (label) {
-    if (isPrompt) {
-      label.textContent = 'Chaos Prompt';
-      label.classList.remove('duel-label', 'chaos-duel-label');
-    } else if (isMassChaos) {
-      label.textContent = 'Chaos Duel';
-      label.classList.remove('duel-label');
-      label.classList.add('chaos-duel-label');
-    } else {
-      label.textContent = '2 Player Duel';
-      label.classList.remove('chaos-duel-label');
-      label.classList.add('duel-label');
+    const label = document.getElementById('duel-screen-label');
+    const triggerEl = document.getElementById('duel-trigger');
+    const assignmentEl = document.getElementById('duel-assignment-ui');
+    const titleEl = document.getElementById('duel-title');
+    const cardEl = document.querySelector('#duel-screen .game-card.duel-card');
+    const isPrompt = Boolean(duel && duel.chaosPrompt);
+    const isMassChaos = Boolean(duel && duel.chaosDuel && !duel.chaosPrompt);
+
+    if (label) {
+        if (isPrompt) {
+            label.textContent = 'Chaos Prompt';
+            label.classList.remove('duel-label', 'mass-duel-label');
+        } else if (isMassChaos) {
+            label.textContent = 'Mass Duel';
+            label.classList.remove('duel-label');
+            label.classList.add('mass-duel-label');
+        } else {
+            label.textContent = '2 Player Duel';
+            label.classList.remove('mass-duel-label');
+            label.classList.add('duel-label');
+        }
     }
-  }
-  if (titleEl) {
-    titleEl.classList.toggle('duel-title--chaos-prompt', isPrompt);
-  }
-  if (cardEl) {
-    cardEl.classList.toggle('chaos-prompt-mass-card', isPrompt);
-  }
-  if (triggerEl) {
-    if (isPrompt) {
-      triggerEl.style.display = 'none';
-      triggerEl.textContent = '';
-      triggerEl.classList.remove('duel-trigger--chaos-mass');
-    } else if (isMassChaos) {
-      triggerEl.style.display = '';
-      triggerEl.textContent = 'Everyone plays';
-      triggerEl.classList.add('duel-trigger--chaos-mass');
-    } else {
-      triggerEl.classList.remove('duel-trigger--chaos-mass');
-      if (sessionMode === 'twoP') {
-        triggerEl.style.display = 'none';
-        triggerEl.textContent = '';
-      } else {
-        triggerEl.style.display = '';
-        triggerEl.textContent = 'Choose who you\'re dueling';
-      }
+    if (titleEl) {
+        titleEl.classList.toggle('duel-title--chaos-prompt', isPrompt);
     }
-  }
+    if (cardEl) {
+        cardEl.classList.toggle('chaos-prompt-mass-card', isPrompt);
+    }
+
+    if (triggerEl) {
+        if (isPrompt || isMassChaos || sessionMode === 'twoP') {
+            triggerEl.style.display = isMassChaos ? '' : 'none';
+            triggerEl.textContent = isMassChaos ? 'Everyone plays' : '';
+            triggerEl.classList.toggle('duel-trigger--chaos-mass', isMassChaos);
+            if (assignmentEl) assignmentEl.style.display = 'none';
+        } else {
+            // 2 Player Duel in 3+ player game
+            triggerEl.style.display = 'none';
+            if (assignmentEl && currentDuelTriggerFuel) {
+                assignmentEl.style.display = 'flex';
+                const f = currentDuelTriggerFuel;
+                const duelTextEl = document.getElementById('duel-assignment-duel-text');
+                const judgeTextEl = document.getElementById('duel-assignment-judge-text');
+                const duelIconsEl = document.getElementById('duel-assignment-duel-icons');
+                const judgeIconsEl = document.getElementById('duel-assignment-judge-icons');
+
+                if (duelTextEl && judgeTextEl && duelIconsEl && judgeIconsEl) {
+                    duelTextEl.innerHTML = 'Opponent: ' + formatOrdinalPnp(escHtmlPnp(f.opponent || 'choose opponent'));
+                    judgeTextEl.innerHTML = 'Judge: ' + formatOrdinalPnp(escHtmlPnp(f.judge || 'neutral player'));
+                    duelIconsEl.innerHTML = renderDuelIconsCombinedPnp(f.side || 'right', f.duelIs1st !== false);
+                    judgeIconsEl.style.display = 'none';
+                    assignmentEl.style.display = 'flex';
+                }
+            } else if (triggerEl) {
+                triggerEl.style.display = '';
+                triggerEl.textContent = 'Choose who you\'re dueling';
+                triggerEl.classList.remove('duel-trigger--chaos-mass');
+            }
+        }
+    }
 }
 
 function formatDuelDescriptionForSession(description) {
@@ -314,7 +351,7 @@ function modalPush(name) {
 function updateSessionChrome() {
   const maxT = maxTurnsForSession();
   const infinity = !Number.isFinite(maxT);
-  ['normal', 'duel', 'goblin'].forEach(function (suffix) {
+  ['normal', 'duel'].forEach(function (suffix) {
     const wrap = document.getElementById('session-progress-' + suffix);
     if (!wrap) return;
     if (
@@ -564,7 +601,7 @@ function isTwoPlayerDuelEligible(d) {
   return true;
 }
 
-/** Head-to-head + Chaos Duels pool for infinity, finite, and duelsInfinity (minPlayers vs playerCount, 2× chaos weight). */
+/** Head-to-head + Mass Duels pool for infinity, finite, and duelsInfinity (minPlayers vs playerCount, 2× chaos weight). */
 function buildMultiPlayerDuelPool(all) {
   function filterByMinPlayers(deck) {
     if (playerCount == null) return deck;
@@ -682,7 +719,11 @@ function buildTurnSnapshot() {
                   scavenge: currentDuelTriggerFuel.scavenge,
                   alphaBlitz: currentDuelTriggerFuel.alphaBlitz,
                   themeBlitz: currentDuelTriggerFuel.themeBlitz,
-                  starBlitz: currentDuelTriggerFuel.starBlitz
+                  starBlitz: currentDuelTriggerFuel.starBlitz,
+                  opponent: currentDuelTriggerFuel.opponent,
+                  judge: currentDuelTriggerFuel.judge,
+                  side: currentDuelTriggerFuel.side,
+                  duelIs1st: currentDuelTriggerFuel.duelIs1st
               }
             : null,
         timerSeconds,
@@ -748,6 +789,18 @@ function applyTurnSnapshot(snap) {
         currentDuelLetter = snap.currentDuelLetter;
         duelCategoryRevealed = snap.duelCategoryRevealed;
         duelLetterRevealed = snap.duelLetterRevealed;
+        currentDuelTriggerFuel = snap.duelTriggerFuel
+            ? {
+                  scavenge: snap.duelTriggerFuel.scavenge,
+                  alphaBlitz: snap.duelTriggerFuel.alphaBlitz,
+                  themeBlitz: snap.duelTriggerFuel.themeBlitz,
+                  starBlitz: snap.duelTriggerFuel.starBlitz,
+                  opponent: snap.duelTriggerFuel.opponent,
+                  judge: snap.duelTriggerFuel.judge,
+                  side: snap.duelTriggerFuel.side,
+                  duelIs1st: snap.duelTriggerFuel.duelIs1st
+              }
+            : null;
         document.getElementById('duel-title').textContent = currentDuel.title;
         document.getElementById('duel-description').innerHTML = formatText(
             formatDuelDescriptionForSession(currentDuel.description)
@@ -773,23 +826,6 @@ function applyTurnSnapshot(snap) {
         showScreen('duel');
         return;
     }
-
-    if (snap.screen === 'goblin-mode') {
-        currentDuelTriggerFuel = snap.duelTriggerFuel
-            ? {
-                  scavenge: snap.duelTriggerFuel.scavenge,
-                  alphaBlitz: snap.duelTriggerFuel.alphaBlitz,
-                  themeBlitz: snap.duelTriggerFuel.themeBlitz,
-                  starBlitz: snap.duelTriggerFuel.starBlitz
-              }
-            : null;
-        const f = currentDuelTriggerFuel || emptyDuelTriggerFuel();
-        const box = document.getElementById('duel-trigger-fuel-ui');
-        if (box) {
-            box.innerHTML = htmlDuelTriggerFuelLines(f);
-        }
-        showScreen('goblin-mode');
-    }
 }
 
 function handleBack() {
@@ -798,7 +834,7 @@ function handleBack() {
         return;
     }
     if (turnHistoryStack.length === 0) {
-        if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
+        if (currentState === 'normal-turn' || currentState === 'duel') {
             stopTimer();
             resetTimer();
             lastScreenType = null;
@@ -868,10 +904,6 @@ function initializeApp() {
     document.getElementById('player-count-cancel').addEventListener('click', closePlayerCountModal);
     document.getElementById('next-player-normal-btn').addEventListener('click', handleNextPlayer);
     document.getElementById('next-player-duel-btn').addEventListener('click', handleNextPlayer);
-    document.getElementById('next-player-goblin-btn').addEventListener('click', handleNextPlayer);
-    document.getElementById('duel-trigger-continue-btn').addEventListener('click', function () {
-        startDuel();
-    });
 
     document.querySelectorAll('.btn-player-count').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -913,10 +945,6 @@ function initializeApp() {
         showHowToPlayModal();
     });
     document.getElementById('how-to-play-link-duel').addEventListener('click', function (e) {
-        e.preventDefault();
-        showHowToPlayModal();
-    });
-    document.getElementById('how-to-play-link-goblin').addEventListener('click', function (e) {
         e.preventDefault();
         showHowToPlayModal();
     });
@@ -999,7 +1027,19 @@ function initializeApp() {
 }
 
 function dealNextTurn() {
-    if (sessionMode === 'twoP' || sessionMode === 'duelsInfinity') {
+    if (sessionMode === 'twoP') {
+        currentDuelTriggerFuel = getNextFromDeck(duelTriggerPresetDeck);
+        if (!currentDuelTriggerFuel) {
+            currentDuelTriggerFuel = emptyDuelTriggerFuel();
+        }
+        startDuel();
+        lastScreenType = 'duel';
+        screenHistory.push('duel');
+        if (screenHistory.length > 5) screenHistory.shift();
+        return;
+    }
+
+    if (sessionMode === 'duelsInfinity') {
         currentDuelTriggerFuel = getNextFromDeck(duelTriggerPresetDeck);
         if (!currentDuelTriggerFuel) {
             currentDuelTriggerFuel = emptyDuelTriggerFuel();
@@ -1012,19 +1052,19 @@ function dealNextTurn() {
     }
 
     const hasDuelInLast5 = screenHistory.some(function (type) {
-        return type === 'duel' || type === 'duel-trigger';
+        return type === 'duel';
     });
     const mustForceDuel = screenHistory.length >= 5 && !hasDuelInLast5;
-    let showTrigger = false;
+    let showDuel = false;
     if (mustForceDuel) {
-        showTrigger = true;
-    } else if (lastScreenType !== 'duel' && lastScreenType !== 'duel-trigger' && lastScreenType !== null) {
+        showDuel = true;
+    } else if (lastScreenType !== 'duel' && lastScreenType !== null) {
         if (Math.random() < 1 / 3) {
-            showTrigger = true;
+            showDuel = true;
         }
     }
 
-    if (showTrigger) {
+    if (showDuel) {
         currentDuelTriggerFuel = getNextFromDeck(duelTriggerPresetDeck);
         if (!currentDuelTriggerFuel) {
             currentDuelTriggerFuel = emptyDuelTriggerFuel();
@@ -1092,7 +1132,7 @@ function handleNextPlayer() {
         return;
     }
 
-    if (currentState === 'normal-turn' || currentState === 'duel' || currentState === 'goblin-mode') {
+    if (currentState === 'normal-turn' || currentState === 'duel') {
         turnHistoryStack.push(buildTurnSnapshot());
     }
 
@@ -1115,8 +1155,7 @@ function handleNextPlayer() {
 
     const fromPlay =
         currentState === 'normal-turn' ||
-        currentState === 'duel' ||
-        currentState === 'goblin-mode';
+        currentState === 'duel';
 
     if (fromPlay) {
         turnsCompleted++;
@@ -1215,11 +1254,14 @@ function startDuel() {
             currentDuel.scavenge ||
             currentDuel.category ||
             currentDuel.themeCategory ||
-            currentDuel.starBlitz);
+            currentDuel.starBlitz ||
+            currentDuel.alphamousBlitz);
 
     if (chaosNeedsReveal) {
         if (currentDuel.alphabetic) {
             showReveal(pickCategoryLineForDuel(currentDuel), getRandomLetter());
+        } else if (currentDuel.alphamousBlitz) {
+            showReveal(null, getRandomLetter());
         } else {
             showReveal(pickCategoryLineForDuel(currentDuel), null);
         }
@@ -1227,6 +1269,10 @@ function startDuel() {
         showReveal(pickCategoryLineForDuel(currentDuel), getRandomLetter());
     } else if (currentDuel.title === 'Scavenge') {
         showReveal(pickCategoryLineForDuel(currentDuel), null);
+    } else if (currentDuel.starBlitz || currentDuel.title === 'Star Blitz' || currentDuel.title === 'Alternating Star Blitz') {
+        showReveal(pickCategoryLineForDuel(currentDuel), null);
+    } else if (currentDuel.alphamousBlitz || currentDuel.title === 'Alphamous Blitz' || currentDuel.title === 'Alternating Alphamous Blitz') {
+        showReveal(null, getRandomLetter());
     } else if (currentDuel.categories && currentDuel.categories.length > 0) {
         showReveal(pickCategoryLineForDuel(currentDuel), null);
     } else {
@@ -1258,8 +1304,15 @@ function handleReveal() {
         // Alpha Blitz: show both category and letter
         content = `Category: <span class="reveal-category">${currentDuelCategory}</span><br>Letter: <span class="reveal-letter">${currentDuelLetter}</span>`;
     } else if (currentDuelCategory) {
-        // Theme Blitz or Scavenge: show category only
-        content = `Category: <span class="reveal-category">${currentDuelCategory}</span>`;
+        // Theme Blitz, Scavenge, or Star Blitz
+        let label = 'Category';
+        if (currentDuel.starBlitz || currentDuel.title?.includes('Star Blitz')) {
+            label = 'First Name';
+        }
+        content = `${label}: <span class="reveal-category">${currentDuelCategory}</span>`;
+    } else if (currentDuelLetter) {
+        // Alphamous Blitz
+        content = `Letter: <span class="reveal-letter">${currentDuelLetter}</span>`;
     }
     // If neither, content stays empty (blank space)
     
@@ -1385,11 +1438,14 @@ function handleSwapConfirm() {
                 currentDuel.scavenge ||
                 currentDuel.category ||
                 currentDuel.themeCategory ||
-                currentDuel.starBlitz);
+                currentDuel.starBlitz ||
+                currentDuel.alphamousBlitz);
 
         if (chaosNeedsReveal) {
             if (currentDuel.alphabetic) {
                 showRevealSwap(pickCategoryLineForDuel(currentDuel), getRandomLetter());
+            } else if (currentDuel.alphamousBlitz) {
+                showRevealSwap(null, getRandomLetter());
             } else {
                 showRevealSwap(pickCategoryLineForDuel(currentDuel), null);
             }
@@ -1397,6 +1453,10 @@ function handleSwapConfirm() {
             showRevealSwap(pickCategoryLineForDuel(currentDuel), getRandomLetter());
         } else if (currentDuel.title === 'Scavenge') {
             showRevealSwap(pickCategoryLineForDuel(currentDuel), null);
+        } else if (currentDuel.starBlitz || currentDuel.title === 'Star Blitz' || currentDuel.title === 'Alternating Star Blitz') {
+            showRevealSwap(pickCategoryLineForDuel(currentDuel), null);
+        } else if (currentDuel.alphamousBlitz || currentDuel.title === 'Alphamous Blitz' || currentDuel.title === 'Alternating Alphamous Blitz') {
+            showRevealSwap(null, getRandomLetter());
         } else if (currentDuel.categories && currentDuel.categories.length > 0) {
             showRevealSwap(pickCategoryLineForDuel(currentDuel), null);
         } else {

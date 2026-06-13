@@ -21,9 +21,22 @@ function buildDuelTriggerPresets(categoriesData) {
     const th = categoriesData.themeBlitz || [];
     const st = categoriesData.starBlitz || [];
     const n = Math.max(sc.length, al.length, th.length, st.length, 1);
+    
+    const opponentConfigs = [
+        { opponent: '2nd player to the right', judge: 'player to the right', side: 'right', duelIs1st: false },
+        { opponent: 'player to the right', judge: '2nd player to the right', side: 'right', duelIs1st: true },
+        { opponent: '2nd player to the left', judge: 'player to the left', side: 'left', duelIs1st: false },
+        { opponent: 'player to the left', judge: '2nd player to the left', side: 'left', duelIs1st: true }
+    ];
+
     const out = [];
     for (let i = 0; i < n; i++) {
+        const config = opponentConfigs[i % opponentConfigs.length];
         out.push({
+            opponent: config.opponent,
+            judge: config.judge,
+            side: config.side,
+            duelIs1st: config.duelIs1st,
             scavenge: sc[i % sc.length] || '',
             alphaBlitz: al[i % al.length] || '',
             themeBlitz: th[i % th.length] || '',
@@ -103,7 +116,13 @@ async function loadGameData() {
             alphamousBlitz: item.alphamousBlitz || false
         }));
 
-        gameData.words = wordsData[0]?.words || [];
+        if (Array.isArray(wordsData) && Array.isArray(wordsData[0])) {
+            // New bucketed structure: flatten all buckets (generate.js filters to first 3)
+            gameData.words = wordsData.reduce((acc, b) => acc.concat(b), []);
+        } else {
+            // Legacy structure
+            gameData.words = wordsData[0]?.words || [];
+        }
         gameData.goblinWords = normalizeGoblinWordsForPlay(goblinWordsData.words || []);
         gameData.duelCategories = categoriesData;
         gameData.duelTriggerPresets = buildDuelTriggerPresets(categoriesData);
@@ -117,7 +136,7 @@ async function loadGameData() {
 
         console.log('=== GAME DATA LOADED ===');
         console.log('Chaos Prompts:', gameData.chaosPrompts.length);
-        console.log('Duels (incl. Chaos Duels):', gameData.duels.length);
+        console.log('Duels (incl. Mass Duels):', gameData.duels.length);
         console.log('Words:', gameData.words.length);
         console.log('Goblin words:', gameData.goblinWords.length);
         console.log('Duel trigger presets:', gameData.duelTriggerPresets.length);

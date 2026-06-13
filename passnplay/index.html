@@ -76,7 +76,7 @@
                         <h1 class="card-title">Ready to play<br/>33 Seconds of Chaos?</h1>
                         <div id="intro-text-default" class="intro-text">
                             <p>On your turn, you'll get a <strong>Word</strong> and a <strong>Chaos Prompt</strong> that tells you how to give clues. You have <strong>33 seconds</strong> to get someone to guess the word!</p>
-                            <p>Sometimes your turn is a <strong>Duel</strong> instead of a word: pick your opponent, then the app draws from the <strong>Duel deck</strong>. You might get a head-to-head duel or a <strong>Chaos Duel</strong> where everyone plays. Category or letter may hide under <strong>Tap to reveal</strong>. Winner gets <strong>2 points</strong> either way.</p>
+                            <p>Sometimes your turn is a <strong>Duel</strong> instead of a word: the app assigns your opponent and a judge, then draws from the <strong>Duel deck</strong>. You might get a head-to-head duel or a <strong>Mass Duel</strong> where everyone plays. Category or letter may hide under <strong>Tap to reveal</strong>. Winner gets <strong>2 points</strong> either way.</p>
                             <p>Pass the device to the next player after each turn.</p>
                         </div>
                         <div id="intro-text-2p" class="intro-text pnp-hidden">
@@ -84,7 +84,7 @@
                             <p>Pass the device to the other player after each duel. Play <strong>6 duels</strong> (3 rounds × 2 players), then you’re done.</p>
                         </div>
                         <div id="intro-text-duels-infinity" class="intro-text pnp-hidden">
-                            <p><strong>∞ Duels only:</strong> every turn is a <strong>Duel</strong> from the full app deck-head-to-head, judge-required, and <strong>Chaos Duels</strong> when they come up. No word turns.</p>
+                            <p><strong>∞ Duels only:</strong> every turn is a <strong>Duel</strong> from the full app deck-head-to-head, judge-required, and <strong>Mass Duels</strong> when they come up. No word turns.</p>
                             <p>Use <strong>Tap to reveal</strong> when it shows. Pass the device after each duel. Play as long as you like.</p>
                         </div>
                     </div>
@@ -164,6 +164,14 @@
                     <div class="card-content">
                         <h2 id="duel-title" class="duel-title"></h2>
                         <div id="duel-trigger" class="duel-trigger"></div>
+                        <div id="duel-assignment-ui" class="duel-trigger-assignment-ui" style="display: none;">
+                            <div class="assignment-text-group">
+                                <div id="duel-assignment-duel-text" class="assignment-text"></div>
+                                <div id="duel-assignment-judge-text" class="assignment-text"></div>
+                            </div>
+                            <div id="duel-assignment-duel-icons" class="duel-icons-row"></div>
+                            <div id="duel-assignment-judge-icons" class="duel-icons-row" style="display: none;"></div>
+                        </div>
                         <p id="duel-description" class="duel-description"></p>
                     </div>
                     
@@ -201,38 +209,6 @@
                 </div>
             </div>
         </div>
-        <!-- Duel trigger (Word deck) - then draw from Duel deck -->
-        <div id="goblin-mode-screen" class="screen">
-            <div class="card-container">
-                <div class="game-card duel-trigger-card-ui">
-                    <div class="card-label duel-label">Showdown!</div>
-                    <div class="card-content duel-trigger-content-ui">
-                        <img src="../images/gobbo/red-goblin-head.png" alt="" class="duel-trigger-ui-goblin" width="128" height="128">
-                        <h2 class="duel-trigger-ui-title">Showdown!</h2>
-                        <div class="duel-trigger-ui-chip">Reveal a Duel Card. If it's a 2 Player Duel, choose your opponent.</div>
-                    </div>
-                    <div id="duel-trigger-fuel-ui" class="duel-trigger-fuel-ui" aria-label="Duel categories"></div>
-                    <div class="card-bottom-section">
-                        <button type="button" id="duel-trigger-continue-btn" class="btn-primary btn-next" style="width:100%;">Draw duel card</button>
-                    </div>
-                </div>
-
-                <div class="timer-section">
-                    <div class="timer-controls timer-controls-duel">
-                        <div class="button-row">
-                            <button type="button" class="btn-turn-back" aria-label="Previous turn">←</button>
-                            <button id="next-player-goblin-btn" class="btn-secondary btn-next" style="display:none;">Next</button>
-                        </div>
-                    </div>
-                    <a href="#" id="how-to-play-link-goblin" class="how-to-play-link">How to play</a>
-                    <div id="session-progress-goblin" class="session-progress pnp-hidden" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" aria-label="Session progress">
-                        <div class="session-progress-track"><div id="session-progress-fill-goblin" class="session-progress-fill"></div></div>
-                        <span id="session-progress-label-goblin" class="session-progress-label"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Handoff screen -->
         <div id="handoff-screen" class="screen handoff-screen">
             <div class="handoff-inner" aria-live="polite">
@@ -329,7 +305,7 @@
             <div id="rules-multi" class="rules-variant">
                 <div class="rules-content">
                 <h2 id="how-to-play-heading">33 Seconds of Chaos, Pass and Play App Rules</h2>
-                <p class="rules-intro">Can you get everyone to guess 'Banjo' in a Movie Announcer voice? Or while doing the Macarena? Clock's ticking, everyone's shouting. The app mixes <strong>Word</strong> turns with <strong>Duels</strong>-sometimes head-to-head, sometimes a <strong>Chaos Duel</strong> with the whole table. 33 Seconds of Chaos: The social party game where the cards make it weird. One device. Pass it around.</p>
+                <p class="rules-intro">Can you get everyone to guess 'Banjo' in a Movie Announcer voice? Or while doing the Macarena? Clock's ticking, everyone's shouting. The app mixes <strong>Word</strong> turns with <strong>Duels</strong>-sometimes head-to-head, sometimes a <strong>Mass Duel</strong> with the whole table. 33 Seconds of Chaos: The social party game where the cards make it weird. One device. Pass it around.</p>
                 
                 <h3>Quick Start</h3>
                 <ul>
@@ -364,8 +340,7 @@
                 
                 <h3>Duel</h3>
                 <ol>
-                    <li>The screen tells you who duels.</li>
-                    <li>Choose a Judge (someone not dueling).</li>
+                    <li>The screen tells you who duels and who the judge is.</li>
                     <li>The Judge reads the duel out loud and runs it.</li>
                     <li>Duel until the Judge declares a winner.</li>
                     <li>Tap Next Player.</li>
@@ -374,7 +349,7 @@
                 <p>Judge's call is final.</p>
                 <p>Some duels (Alpha Blitz, Theme Blitz, Scavenge) hide key info until you tap <strong>Tap to reveal</strong> so nobody gets a head start.</p>
                 
-                <h3>Chaos Duel</h3>
+                <h3>Mass Duel</h3>
                 <ol>
                     <li>These are drawn from the in-app <strong>Duel deck</strong>. Category, letter, or first name may sit under <strong>Tap to reveal</strong>-same as other Duels.</li>
                     <li>Read the card. <strong>Everyone</strong> plays.</li>
@@ -405,7 +380,7 @@
                 <ul>
                     <li>Word turn (guessed in time): clue-giver +1, first correct guesser +1</li>
                     <li>Word turn (no guess): nobody scores</li>
-                    <li>Duel or Chaos Duel: winner +2</li>
+                    <li>Duel or Mass Duel: winner +2</li>
                 </ul>
                 
                 <p><strong>Rounds</strong></p>
@@ -418,7 +393,7 @@
             <div id="rules-duels-infinity" class="rules-variant pnp-hidden">
                 <div class="rules-content">
                     <h2 id="how-to-play-heading-duels-infinity">Pass &amp; Play  -  ∞ Duels only</h2>
-                    <p class="rules-intro">Every turn is a <strong>Duel</strong>. No word turns. The app uses the <strong>full duel deck</strong>, including judge-required head-to-head duels and <strong>Chaos Duels</strong> (everyone plays). Play as long as you like.</p>
+                    <p class="rules-intro">Every turn is a <strong>Duel</strong>. No word turns. The app uses the <strong>full duel deck</strong>, including judge-required head-to-head duels and <strong>Mass Duels</strong> (everyone plays). Play as long as you like.</p>
                     <h3>Quick start</h3>
                     <ul>
                         <li>After you pick <strong>∞ Duels only</strong>, the first duel appears right away.</li>
@@ -428,7 +403,7 @@
                     <h3>How this differs from <strong>2 · No judge · 6 duels</strong></h3>
                     <p>Two-player mode is exactly <strong>six</strong> duels, head-to-head only, with <strong>no judge</strong> required. ∞ Duels only is open-ended and can deal any duel in the app, including ones that need a judge or the whole table.</p>
                     <h3>Optional scoring</h3>
-                    <p>Agree at the table how you want to score. Many groups use <strong>+2</strong> for the winner of each duel or Chaos Duel.</p>
+                    <p>Agree at the table how you want to score. Many groups use <strong>+2</strong> for the winner of each duel or Mass Duel.</p>
                 </div>
             </div>
             <div id="rules-2p" class="rules-variant pnp-hidden">
