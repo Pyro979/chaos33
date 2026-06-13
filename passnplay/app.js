@@ -85,7 +85,7 @@ function escHtmlPnp(s) {
 }
 
 function emptyDuelTriggerFuel() {
-  return { scavenge: '', alphaBlitz: '', themeBlitz: '', starBlitz: '' };
+  return { scavenge: '', alphaBlitz: '', themeBlitz: '', themeBlitz2: '', themeBlitz3: '', starBlitz: '' };
 }
 
 function htmlDuelTriggerFuelLines(f) {
@@ -94,14 +94,20 @@ function htmlDuelTriggerFuelLines(f) {
     '<div class="dt-line"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> ' +
     escHtmlPnp(f.scavenge) +
     '</div>' +
+    '<div class="dt-line"><i class="fa-solid fa-star" aria-hidden="true"></i> ' +
+    escHtmlPnp(f.starBlitz) +
+    '</div>' +
     '<div class="dt-line"><i class="fa-solid fa-arrow-down-a-z" aria-hidden="true"></i> ' +
     escHtmlPnp(f.alphaBlitz) +
     '</div>' +
-    '<div class="dt-line"><i class="fa-solid fa-tags" aria-hidden="true"></i> ' +
+    '<div class="dt-line"><i class="fa-solid fa-tags" aria-hidden="true"></i><sup>1</sup> ' +
     escHtmlPnp(f.themeBlitz) +
     '</div>' +
-    '<div class="dt-line"><i class="fa-solid fa-star" aria-hidden="true"></i> ' +
-    escHtmlPnp(f.starBlitz) +
+    '<div class="dt-line"><i class="fa-solid fa-tags" aria-hidden="true"></i><sup>2</sup> ' +
+    escHtmlPnp(f.themeBlitz2) +
+    '</div>' +
+    '<div class="dt-line"><i class="fa-solid fa-tags" aria-hidden="true"></i><sup>3</sup> ' +
+    escHtmlPnp(f.themeBlitz3) +
     '</div>'
   );
 }
@@ -113,7 +119,14 @@ function pickCategoryLineForDuel(duel) {
       return currentDuelTriggerFuel.starBlitz || null;
     }
     if (duel.alphabetic) return currentDuelTriggerFuel.alphaBlitz || null;
-    if (duel.categories && duel.categories.length > 0) return currentDuelTriggerFuel.themeBlitz || null;
+    if (duel.categories && duel.categories.length > 0) {
+      if (currentDuelTriggerFuel.themeBlitz && currentDuelTriggerFuel.themeBlitz2 && currentDuelTriggerFuel.themeBlitz3) {
+        const themes = [currentDuelTriggerFuel.themeBlitz, currentDuelTriggerFuel.themeBlitz2, currentDuelTriggerFuel.themeBlitz3];
+        // For Pass-n-Play, pick one randomly.
+        return themes[Math.floor(Math.random() * themes.length)];
+      }
+      return currentDuelTriggerFuel.themeBlitz || null;
+    }
     if (duel.chaosDuel) {
       if (duel.scavenge) return currentDuelTriggerFuel.scavenge || null;
       if (duel.starBlitz) return currentDuelTriggerFuel.starBlitz || null;
@@ -1259,14 +1272,20 @@ function startDuel() {
 
     if (chaosNeedsReveal) {
         if (currentDuel.alphabetic) {
-            showReveal(pickCategoryLineForDuel(currentDuel), getRandomLetter());
+            const letter = (currentDuel.title?.includes('Alpha² Blitz') || currentDuel.title?.includes('Alpha2 Blitz')) 
+                ? null 
+                : getRandomLetter();
+            showReveal(pickCategoryLineForDuel(currentDuel), letter);
         } else if (currentDuel.alphamousBlitz) {
             showReveal(null, getRandomLetter());
         } else {
             showReveal(pickCategoryLineForDuel(currentDuel), null);
         }
     } else if (currentDuel.alphabetic) {
-        showReveal(pickCategoryLineForDuel(currentDuel), getRandomLetter());
+        const letter = (currentDuel.title?.includes('Alpha² Blitz') || currentDuel.title?.includes('Alpha2 Blitz')) 
+            ? null 
+            : getRandomLetter();
+        showReveal(pickCategoryLineForDuel(currentDuel), letter);
     } else if (currentDuel.title === 'Scavenge') {
         showReveal(pickCategoryLineForDuel(currentDuel), null);
     } else if (currentDuel.starBlitz || currentDuel.title === 'Star Blitz' || currentDuel.title === 'Alternating Star Blitz') {
@@ -1309,6 +1328,7 @@ function handleReveal() {
         if (currentDuel.starBlitz || currentDuel.title?.includes('Star Blitz')) {
             label = 'First Name';
         }
+        
         content = `${label}: <span class="reveal-category">${currentDuelCategory}</span>`;
     } else if (currentDuelLetter) {
         // Alphamous Blitz

@@ -374,19 +374,19 @@ const chaosDuels = [
     },
     {
         title: "Star Blitz",
-        description: "First name on the Challenge! card. Race to name 3 famous people with that name. Judge settles disputes."
+        description: "First name on the Challenge! card. Race to name 3 famous people or fictional characters with that name. Judge settles disputes."
     },
     {
         title: "Alphamous Blitz",
-        description: "Judge calls a letter. Race to name 3 famous people whose first or last name starts with that letter. Judge settles disputes."
+        description: "Judge calls a letter. Race to name 3 famous people or fictional characters whose first or last name starts with that letter. Judge settles disputes."
     },
     {
         title: "Alternating Star Blitz",
-        description: "First name on the Challenge! card. Take turns naming famous people with that name. 5 seconds per turn. Blank and you lose."
+        description: "First name on the Challenge! card. Take turns naming famous people or fictional characters with that name. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alphamous Blitz",
-        description: "Judge calls a letter. Take turns naming famous people whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose."
+        description: "Judge calls a letter. Take turns naming famous people or fictional characters whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose."
     }
 ];
 
@@ -496,7 +496,6 @@ const wordList = [
     "Ice Fishing",
     "Jukebox",
     "Junk Mail",
-    "Laser Tag",
     "Lava Lamp",
     "Leaf Blower",
     "Letter Opener",
@@ -532,7 +531,6 @@ const wordList = [
     "Post-it Notes",
     "Pothole",
     "Prank",
-    "Private Investigator",
     "Pro Wrestler",
     "Pufferfish",
     "Puppeteer",

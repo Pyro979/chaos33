@@ -312,8 +312,8 @@
   {
     "title": "Star Blitz",
     "starBlitz": true,
-    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nBoth duelers race to name **3 famous people** who share that first name.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
-    "web_description": "First name on the Challenge! card. Race to name 3 famous people with that name. Judge settles disputes.",
+    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nBoth duelers race to name **3 famous people or fictional characters** who share that first name.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
+    "web_description": "First name on the Challenge! card. Race to name 3 famous people or fictional characters with that name. Judge settles disputes.",
     "tags": [
       "rules",
       "main",
@@ -327,8 +327,8 @@
   {
     "title": "Alphamous Blitz",
     "alphamousBlitz": true,
-    "text": "The **judge** calls out any **letter**.\n\nBoth duelers race to name **3 famous people** whose first or last name starts with that letter.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
-    "web_description": "Judge calls a letter. Race to name 3 famous people whose first or last name starts with that letter. Judge settles disputes.",
+    "text": "The **judge** calls out any **letter**.\n\nBoth duelers race to name **3 famous people or fictional characters** whose first or last name starts with that letter.\n\nFirst to name 3 wins. Disputed names = **judge decides**.",
+    "web_description": "Judge calls a letter. Race to name 3 famous people or fictional characters whose first or last name starts with that letter. Judge settles disputes.",
     "tags": [
       "rules",
       "main",
@@ -342,8 +342,8 @@
   {
     "title": "Alternating Star Blitz",
     "starBlitz": true,
-    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nDuelers take turns naming famous people who share that first name — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "First name on the Challenge! card. Take turns naming famous people with that name. 5 seconds per turn. Blank and you lose.",
+    "text": "The **first name** is on the **Duel Trigger** card (star line; flip for the list).\n\nDuelers take turns naming famous people or fictional characters who share that first name — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "First name on the Challenge! card. Take turns naming famous people or fictional characters with that name. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -357,8 +357,8 @@
   {
     "title": "Alternating Alphamous Blitz",
     "alphamousBlitz": true,
-    "text": "The **judge** calls out any **letter**.\n\nDuelers take turns naming famous people whose first or last name starts with that letter — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
-    "web_description": "Judge calls a letter. Take turns naming famous people whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose.",
+    "text": "The **judge** calls out any **letter**.\n\nDuelers take turns naming famous people or fictional characters whose first or last name starts with that letter — **one at a time, back and forth**.\n\nYou have **5 seconds** per turn. No repeats. Blank and you lose.",
+    "web_description": "Judge calls a letter. Take turns naming famous people or fictional characters whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose.",
     "tags": [
       "rules",
       "main",
@@ -371,7 +371,7 @@
   },
   {
     "title": "Chain Alphamous Blitz",
-    "text": "The drawer picks any **letter**.\n\nGoing **clockwise** from the player who drew, each player names a different famous person whose **first or last name starts with that letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
+    "text": "The drawer picks any **letter**.\n\nGoing **clockwise** from the player who drew, each player names a different famous person or fictional character whose **first or last name starts with that letter**.\n\nHesitate, repeat, or blank - you're out. Last player standing wins.\n\nDisputed names = **group vote**.",
     "tags": [
       "main",
       "passnplay",

@@ -40,6 +40,8 @@ function buildDuelTriggerPresets(categoriesData) {
             scavenge: sc[i % sc.length] || '',
             alphaBlitz: al[i % al.length] || '',
             themeBlitz: th[i % th.length] || '',
+            themeBlitz2: th[(i + 1) % th.length] || '',
+            themeBlitz3: th[(i + 2) % th.length] || '',
             starBlitz: st[i % st.length] || ''
         });
     }
