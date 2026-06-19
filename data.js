@@ -4,7 +4,7 @@
 const chaosPrompts = [
     {
         title: "The Robot Dance",
-        description: "Do the robot dance while giving clues.",
+        description: "Do the robot dance while giving clues. The clues should still be verbal.",
         cue: "Give clues while doing this"
     },
     {
@@ -64,7 +64,7 @@ const chaosPrompts = [
     },
     {
         title: "Jumping Jacks",
-        description: "Give clues while doing jumping jacks.",
+        description: "Give clues while doing jumping jacks. The clues should still be verbal.",
         cue: "Give clues while doing this"
     },
     {
@@ -374,19 +374,19 @@ const chaosDuels = [
     },
     {
         title: "Star Blitz",
-        description: "First name on the Challenge! card. Race to name 3 famous people or fictional characters with that name. Judge settles disputes."
+        description: "First name on the Challenge! card. Race to name **3 famous people or fictional characters** with that name. Judge settles disputes."
     },
     {
         title: "Alphamous Blitz",
-        description: "Judge calls a letter. Race to name 3 famous people or fictional characters whose first or last name starts with that letter. Judge settles disputes."
+        description: "Judge calls a letter. Race to name **3 famous people or fictional characters** whose first or last name starts with that letter. Judge settles disputes."
     },
     {
         title: "Alternating Star Blitz",
-        description: "First name on the Challenge! card. Take turns naming famous people or fictional characters with that name. 5 seconds per turn. Blank and you lose."
+        description: "First name on the Challenge! card. Take turns naming **famous people or fictional characters** with that name. 5 seconds per turn. Blank and you lose."
     },
     {
         title: "Alternating Alphamous Blitz",
-        description: "Judge calls a letter. Take turns naming famous people or fictional characters whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose."
+        description: "Judge calls a letter. Take turns naming **famous people or fictional characters** whose first or last name starts with that letter. 5 seconds per turn. Blank and you lose."
     }
 ];
 

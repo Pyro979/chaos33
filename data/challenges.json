@@ -16,7 +16,7 @@
   {
     "title": "The Robot Dance",
     "cue": "Give clues while doing this",
-    "text": "Do the robot dance while giving clues.",
+    "text": "Do the robot dance while giving clues. The clues should still be verbal.",
     "example": "\"It's... small... yellow...\" *jerky arm movements*",
     "tags": [
       "main",
@@ -238,7 +238,7 @@
   {
     "title": "Jumping Jacks",
     "cue": "Give clues while doing this",
-    "text": "Give clues while doing jumping jacks.",
+    "text": "Give clues while doing jumping jacks. The clues should still be verbal.",
     "example": "\"It - *jump* - is - *jump* - a - *jump* - floating toy!\"",
     "tags": [
       "rules",
@@ -295,7 +295,7 @@
   {
     "title": "Macarena",
     "cue": "Give clues while doing this",
-    "text": "Give clues while doing the Macarena.",
+    "text": "Give clues while doing the Macarena. The clues should still be verbal.",
     "example": "\"This - (pose) - little - (pose) - floater - (pose) - squeaks - (pose).\"",
     "tags": [
       "main",
@@ -337,7 +337,7 @@
   {
     "title": "Slow-Mo Dance",
     "cue": "Give clues while doing this",
-    "text": "Pick any simple dance move and do it in slow motion while you give clues. When in doubt disco.",
+    "text": "Pick any simple dance move and do it in slow motion while you give clues. When in doubt disco. The clues should still be verbal.",
     "example": "\"It - (slow move) - floats - (slow move) - in - water...\"",
     "tags": [
       "main",
