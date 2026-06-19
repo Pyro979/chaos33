@@ -261,6 +261,10 @@ const chaosDuels = [
         description: "The Judge picks 2 matching tossables. Toss together. Closest to far edge without falling wins."
     },
     {
+        title: "Table Bocce",
+        description: "Duelers each roll a d12 from the same edge. Closest to far edge without falling off wins."
+    },
+    {
         title: "Backhand Flip",
         description: "Flip a small object off the back of your hand and catch it. First to complete 3 clean flips wins."
     },
