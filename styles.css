@@ -1826,6 +1826,21 @@ footer a:hover {
     }
 }
 
+/* Testimonial GIF */
+.testimonial-gif-container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.testimonial-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px var(--shadow);
+}
+
 /* Accessibility */
 button:focus,
 a:focus,

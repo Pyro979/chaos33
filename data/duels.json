@@ -137,7 +137,7 @@
     "title": "Table Bocce",
     "multiCard": false,
     "requiresJudge": true,
-    "text": "Duelers each take a d12 die and, standing at the same edge of the table, roll the dice at the **same time** toward the far edge.\\n\\nWhoever gets closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
+    "text": "Duelers each take a **d12 die** and, standing at the same edge of the table, roll the dice at the **same time** toward the **far edge**.\\n\\nWhoever gets closest to the **far edge of the table** without falling off wins.\\n\\nIf both fall, redo.",
     "web_description": "Duelers each roll a d12 from the same edge. Closest to far edge without falling off wins.",
     "tags": [
       "rules",
