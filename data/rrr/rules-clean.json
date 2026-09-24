@@ -1,0 +1,278 @@
+[
+  {
+    "title": "Everything Around It",
+    "text": "Describe the things, places, or context around the answer instead of describing the answer itself.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "What It's Not",
+    "text": "Give clues only by saying what the answer isn't.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "Senses",
+    "text": "Describe the answer using only sight, sound, smell, taste, or touch.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "You",
+    "text": "You are the answer. Give clues about yourself from the answer's point of view.",
+    "multipliable": true,
+    "tags": [
+      "perspective"
+    ]
+  },
+  {
+    "title": "Adjective + Noun + Verb",
+    "text": "Each clue must be exactly three words: adjective + noun + verb.",
+    "multipliable": true,
+    "tags": [
+      "language",
+      "structure"
+    ]
+  },
+  {
+    "title": "Three Words",
+    "text": "Each clue must be exactly three words.",
+    "multipliable": true,
+    "tags": [
+      "word-count"
+    ]
+  },
+  {
+    "title": "Questions Only",
+    "text": "Every clue must be phrased as a question.",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "One-Syllable Words",
+    "text": "Use only one-syllable words. If the table isn't sure about a word, decide quickly and keep moving.",
+    "multipliable": true,
+    "tags": [
+      "language"
+    ]
+  },
+  {
+    "title": "Adjectives & Nouns Only",
+    "text": "Use only adjectives and nouns in your clues.",
+    "multipliable": true,
+    "tags": [
+      "language"
+    ]
+  },
+  {
+    "title": "Verbs & Nouns Only",
+    "text": "Use only verbs and nouns in your clues.",
+    "multipliable": true,
+    "tags": [
+      "language"
+    ]
+  },
+  {
+    "title": "Comparisons",
+    "text": "Describe properties of the answer only by comparing them to something else, such as size, weight, texture, brightness, speed, or another quality.",
+    "multipliable": true,
+    "tags": [
+      "comparison"
+    ]
+  },
+  {
+    "title": "Two Pieces",
+    "text": "Each clue must have exactly two parts separated by a brief pause.",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "Checklist Inspection",
+    "text": "Give each clue like an inspection checklist: say a feature, then say \"check.\"",
+    "multipliable": false,
+    "tags": [
+      "format"
+    ]
+  },
+  {
+    "title": "It's Like, But Not That",
+    "text": "Every clue must use the format: \"It's like ___, but not that.\"",
+    "multipliable": true,
+    "tags": [
+      "comparison",
+      "structure"
+    ]
+  },
+  {
+    "title": "Trade-Offs Only",
+    "text": "Every clue must use the format: \"Great for ___, terrible for ___.\"",
+    "multipliable": false,
+    "tags": [
+      "comparison",
+      "structure"
+    ]
+  },
+  {
+    "title": "Safety Warnings",
+    "text": "Every clue must sound like a warning label or safety instruction.",
+    "multipliable": false,
+    "tags": [
+      "format"
+    ]
+  },
+  {
+    "title": "No Physical Description",
+    "text": "Do not describe what the answer looks like, including its shape, size, color, or physical features.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "No Function",
+    "text": "Do not describe what the answer does or what people use it for.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "Appearance Only",
+    "text": "Describe only what the answer looks like, including its shape, size, color, or physical features.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "Function Only",
+    "text": "Describe only what the answer does or what people use it for.",
+    "multipliable": true,
+    "tags": [
+      "information"
+    ]
+  },
+  {
+    "title": "Can / Can't",
+    "text": "Every clue must use the format: \"It can ___, but it can't ___.\"",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "You Find It...",
+    "text": "Every clue must use the format: \"You find it [at/in/with] ___.\"",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "You Can ___ It",
+    "text": "Every clue must use the format: \"You can ___ it.\"",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "It Has ___",
+    "text": "Every clue must use the format: \"It has ___.\"",
+    "multipliable": true,
+    "tags": [
+      "structure"
+    ]
+  },
+  {
+    "title": "Best At / Worst At",
+    "text": "Alternate clues in order: \"Best at...\" then \"Worst at...\" and repeat.",
+    "multipliable": false,
+    "tags": [
+      "alternating",
+      "structure"
+    ]
+  },
+  {
+    "title": "Most Likely / Least Likely",
+    "text": "Alternate clues in order: \"Most likely to...\" then \"Least likely to...\" and repeat.",
+    "multipliable": false,
+    "tags": [
+      "alternating",
+      "structure"
+    ]
+  },
+  {
+    "title": "Two Words",
+    "text": "Each clue must be exactly two words.",
+    "multipliable": true,
+    "tags": [
+      "word-count"
+    ]
+  },
+  {
+    "title": "Build a Clue",
+    "text": "Start with a one-word clue. Your next clue must be exactly two words, then three, then four, and so on.",
+    "multipliable": false,
+    "tags": [
+      "word-count",
+      "progressive"
+    ],
+    "status": "maybe"
+  },
+  {
+    "title": "Ingredients / Nutrition Label",
+    "text": "Describe what the answer is made of as if you're reading an ingredients list or nutrition label. Literal and made-up ingredients are both allowed.",
+    "starter": "Contains...",
+    "multipliable": false,
+    "tags": [
+      "format"
+    ]
+  },
+  {
+    "title": "Motto / Slogan",
+    "text": "Give every clue as a motto, slogan, or tagline for the answer.",
+    "multipliable": false,
+    "tags": [
+      "format"
+    ]
+  },
+  {
+    "title": "Clickbait Headline",
+    "text": "Give every clue as a ridiculous clickbait headline about the answer.",
+    "starter": "You won't believe...",
+    "multipliable": false,
+    "tags": [
+      "format"
+    ]
+  },
+  {
+    "title": "Good News / Bad News",
+    "text": "Alternate clues in order: \"Good news...\" then \"Bad news...\" and repeat.",
+    "multipliable": false,
+    "tags": [
+      "alternating",
+      "structure"
+    ]
+  },
+  {
+    "title": "Quick Start Guide",
+    "text": "Describe how to use or interact with the answer as numbered quick-start instructions.",
+    "starter": "Step 1...",
+    "multipliable": false,
+    "tags": [
+      "format",
+      "sequence"
+    ]
+  }
+]
