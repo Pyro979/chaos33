@@ -1,602 +1,752 @@
 [
-  [
-    "Light Bulb",
-    "Great Wall"
-  ],
-  [
-    "Cobra",
-    "Sarcasm"
-  ],
-  [
-    "Watermelon",
-    "Eavesdrop"
-  ],
-  [
-    "Corn On the Cob",
-    "Silence"
-  ],
-  [
-    "Toast",
-    "Karma"
-  ],
-  [
-    "Hamburger",
-    "Stubborn"
-  ],
-  [
-    "Rainbow",
-    "Easter Island"
-  ],
-  [
-    "Seahorse",
-    "Gut Feeling"
-  ],
-  [
-    "Cactus",
-    "Extension Cord"
-  ],
-  [
-    "Ceiling Fan",
-    "Constellation"
-  ],
-  [
-    "Igloo",
-    "Awkward"
-  ],
-  [
-    "Campfire",
-    "Mischievous"
-  ],
-  [
-    "Bowling Pin",
-    "Underdog"
-  ],
-  [
-    "Pineapple",
-    "Mine Cart"
-  ],
-  [
-    "Dog Leash",
-    "Decoy"
-  ],
-  [
-    "Tent",
-    "Peer Pressure"
-  ],
-  [
-    "Candy Cane",
-    "Stethoscope"
-  ],
-  [
-    "French Fries",
-    "Electricity"
-  ],
-  [
-    "Banana Peel",
-    "Camouflage"
-  ],
-  [
-    "Pancakes",
-    "Pacifier"
-  ],
-  [
-    "Motorcycle",
-    "Snoop"
-  ],
-  [
-    "Teddy Bear",
-    "Treasure Chest"
-  ],
-  [
-    "Shark",
-    "Secret"
-  ],
-  [
-    "Wallet",
-    "Blacksmith"
-  ],
-  [
-    "Baby Bottle",
-    "Dusk"
-  ],
-  [
-    "Soccer Ball",
-    "Coincidence"
-  ],
-  [
-    "Car Tire",
-    "Nosy"
-  ],
-  [
-    "Bagel",
-    "Internet"
-  ],
-  [
-    "Eagle",
-    "Pandora's Box"
-  ],
-  [
-    "Bowling Ball",
-    "Letter Opener"
-  ],
-  [
-    "Camel",
-    "Fortune Cookie"
-  ],
-  [
-    "Ice Cube",
-    "Stonehenge"
-  ],
-  [
-    "Jacket",
-    "Ashtray"
-  ],
-  [
-    "Waffle",
-    "Water Bed"
-  ],
-  [
-    "Avocado",
-    "Metal Detector"
-  ],
-  [
-    "Basketball Hoop",
-    "Windshield Wiper"
-  ],
-  [
-    "Spider",
-    "Mullet"
-  ],
-  [
-    "Suitcase",
-    "Echo"
-  ],
-  [
-    "Gorilla",
-    "Password"
-  ],
-  [
-    "Giraffe",
-    "Wind Chime"
-  ],
-  [
-    "Monkey",
-    "Puppeteer"
-  ],
-  [
-    "Penguin",
-    "Feud"
-  ],
-  [
-    "Blender",
-    "Pufferfish"
-  ],
-  [
-    "Baseball Cap",
-    "Lava Lamp"
-  ],
-  [
-    "Fireworks",
-    "Shady"
-  ],
-  [
-    "Sandwich",
-    "Gargoyle"
-  ],
-  [
-    "Sword",
-    "Luck"
-  ],
-  [
-    "Octopus",
-    "Rumor"
-  ],
-  [
-    "Mailbox",
-    "Procrastinate"
-  ],
-  [
-    "Taco",
-    "Hypnosis"
-  ],
-  [
-    "Trophy",
-    "Pinwheel"
-  ],
-  [
-    "Light Switch",
-    "Cliffhanger"
-  ],
-  [
-    "Keyboard",
-    "Macarena"
-  ],
-  [
-    "Cell Phone",
-    "Windmill"
-  ],
-  [
-    "Diaper",
-    "Unicycle"
-  ],
-  [
-    "Piano",
-    "Math"
-  ],
-  [
-    "Robot",
-    "Spider Web"
-  ],
-  [
-    "Stapler",
-    "Mirage"
-  ],
-  [
-    "Canoe",
-    "Applause"
-  ],
-  [
-    "Hot Dog",
-    "Bermuda Triangle"
-  ],
-  [
-    "Snowman",
-    "Solar Panel"
-  ],
-  [
-    "Fire Truck",
-    "Black Hole"
-  ],
-  [
-    "Drums",
-    "Bacteria"
-  ],
-  [
-    "Flashlight",
-    "Vanilla"
-  ],
-  [
-    "Desk Lamp",
-    "Platypus"
-  ],
-  [
-    "Strawberry",
-    "Solar Eclipse"
-  ],
-  [
-    "Baseball Bat",
-    "Goldfish Bowl"
-  ],
-  [
-    "Burrito",
-    "Bonsai Tree"
-  ],
-  [
-    "Compass",
-    "Mimic"
-  ],
-  [
-    "Bandage",
-    "Hairball"
-  ],
-  [
-    "Ambulance",
-    "Hallucination"
-  ],
-  [
-    "Lollipop",
-    "Oxygen"
-  ],
-  [
-    "Peanut",
-    "Smoke Detector"
-  ],
-  [
-    "Parrot",
-    "Domino Effect"
-  ],
-  [
-    "Laptop",
-    "Easel"
-  ],
-  [
-    "Umbrella",
-    "Daydream"
-  ],
-  [
-    "Hair Brush",
-    "Quicksand"
-  ],
-  [
-    "Battery",
-    "Drawbridge"
-  ],
-  [
-    "Popcorn",
-    "Wedding Ring"
-  ],
-  [
-    "Tiger",
-    "Brain Freeze"
-  ],
-  [
-    "Pumpkin",
-    "Whine"
-  ],
-  [
-    "Pickle",
-    "Milestone"
-  ],
-  [
-    "Pizza",
-    "Traffic Jam"
-  ],
-  [
-    "Sofa",
-    "North Pole"
-  ],
-  [
-    "Birthday Cake",
-    "Jukebox"
-  ],
-  [
-    "Toothbrush",
-    "Gold Rush"
-  ],
-  [
-    "Ketchup",
-    "Chandelier"
-  ],
-  [
-    "Fishing Rod",
-    "Snowblower"
-  ],
-  [
-    "Baseball Glove",
-    "Ice Fishing"
-  ],
-  [
-    "Sushi",
-    "Shooting Star"
-  ],
-  [
-    "Printer",
-    "Ski Goggles"
-  ],
-  [
-    "Kangaroo",
-    "Dark Ages"
-  ],
-  [
-    "Glue",
-    "Mumble"
-  ],
-  [
-    "Pillow",
-    "Archaeologist"
-  ],
-  [
-    "Scorpion",
-    "Loophole"
-  ],
-  [
-    "Mittens",
-    "Grudge"
-  ],
-  [
-    "Thermometer",
-    "Reflection"
-  ],
-  [
-    "Sweater",
-    "Traffic Cone"
-  ],
-  [
-    "Yo-Yo",
-    "Hover"
-  ],
-  [
-    "Snowboard",
-    "Superstition"
-  ],
-  [
-    "Sunglasses",
-    "Whisper"
-  ],
-  [
-    "Porcupine",
-    "Dilemma"
-  ],
-  [
-    "Bow Tie",
-    "Squint"
-  ],
-  [
-    "Hummingbird",
-    "Sneaky"
-  ],
-  [
-    "Jellyfish",
-    "Reputation"
-  ],
-  [
-    "Lobster",
-    "Taunt"
-  ],
-  [
-    "Newspaper",
-    "Goosebumps"
-  ],
-  [
-    "Parachute",
-    "Amnesia"
-  ],
-  [
-    "Telescope",
-    "Orchestra"
-  ],
-  [
-    "Paper Plane",
-    "Gossip"
-  ],
-  [
-    "Sandcastle",
-    "Brainstorm"
-  ],
-  [
-    "Armadillo",
-    "Blind Spot"
-  ],
-  [
-    "Squirrel",
-    "Chicken Dance"
-  ],
-  [
-    "Door Knob",
-    "Accordion"
-  ],
-  [
-    "Violin",
-    "Paranoia"
-  ],
-  [
-    "Chameleon",
-    "Restless"
-  ],
-  [
-    "Pretzel",
-    "X-ray"
-  ],
-  [
-    "Cotton Candy",
-    "Chemistry"
-  ],
-  [
-    "Shoelace",
-    "Water Fountain"
-  ],
-  [
-    "Zebra",
-    "Barcode"
-  ],
-  [
-    "Microphone",
-    "Tree Stump"
-  ],
-  [
-    "Sunflower",
-    "Beaker"
-  ],
-  [
-    "Zipper",
-    "Skeleton Key"
-  ],
-  [
-    "Whistle",
-    "Pothole"
-  ],
-  [
-    "Rocket Ship",
-    "Betrayal"
-  ],
-  [
-    "Computer Mouse",
-    "Chaos"
-  ],
-  [
-    "Magnet",
-    "Tripod"
-  ],
-  [
-    "Saxophone",
-    "Vocabulary"
-  ],
-  [
-    "Water Bottle",
-    "Kaleidoscope"
-  ],
-  [
-    "Earbuds",
-    "Déjà vu"
-  ],
-  [
-    "Polar Bear",
-    "Irony"
-  ],
-  [
-    "Lawnmower",
-    "Ice Age"
-  ],
-  [
-    "Caterpillar",
-    "Alcatraz"
-  ],
-  [
-    "Trampoline",
-    "Smug"
-  ],
-  [
-    "Unicorn",
-    "Midas Touch"
-  ],
-  [
-    "Lunchbox",
-    "Gravity"
-  ],
-  [
-    "Bunk Bed",
-    "Clown Car"
-  ],
-  [
-    "Hot Air Balloon",
-    "Murphy's Law"
-  ],
-  [
-    "Flamingo",
-    "Feisty"
-  ],
-  [
-    "Ice Skate",
-    "Taxidermy"
-  ],
-  [
-    "Confetti",
-    "Post-it Notes"
-  ],
-  [
-    "Binoculars",
-    "Scarecrow"
-  ],
-  [
-    "Tornado",
-    "Scapegoat"
-  ],
-  [
-    "Seashell",
-    "Curiosity"
-  ],
-  [
-    "Volcano",
-    "Trojan Horse"
-  ],
-  [
-    "Golf Ball",
-    "Solar System"
-  ],
-  [
-    "Kayak",
-    "Butterfly Effect"
-  ],
-  [
-    "Vase",
-    "Harmonica"
-  ],
-  [
-    "Chimney",
-    "Evolution"
-  ],
-  [
-    "Funnel",
-    "Hyper"
-  ]
+  {
+    "ruleWord": "Light Bulb",
+    "roleWord": "Great Wall",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Cobra",
+    "roleWord": "Sarcasm",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Watermelon",
+    "roleWord": "Eavesdrop",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Corn On the Cob",
+    "roleWord": "Silence",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Toast",
+    "roleWord": "Karma",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Hamburger",
+    "roleWord": "Stubborn",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Rainbow",
+    "roleWord": "Easter Island",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Seahorse",
+    "roleWord": "Gut Feeling",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Cactus",
+    "roleWord": "Extension Cord",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Ceiling Fan",
+    "roleWord": "Constellation",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Igloo",
+    "roleWord": "Awkward",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Campfire",
+    "roleWord": "Mischievous",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Bowling Pin",
+    "roleWord": "Underdog",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Pineapple",
+    "roleWord": "Mine Cart",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Dog Leash",
+    "roleWord": "Decoy",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Tent",
+    "roleWord": "Peer Pressure",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Candy Cane",
+    "roleWord": "Stethoscope",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "French Fries",
+    "roleWord": "Electricity",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Banana Peel",
+    "roleWord": "Camouflage",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Pancakes",
+    "roleWord": "Pacifier",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Motorcycle",
+    "roleWord": "Snoop",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Teddy Bear",
+    "roleWord": "Treasure Chest",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Shark",
+    "roleWord": "Secret",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Wallet",
+    "roleWord": "Blacksmith",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Baby Bottle",
+    "roleWord": "Dusk",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Soccer Ball",
+    "roleWord": "Coincidence",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Car Tire",
+    "roleWord": "Nosy",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Bagel",
+    "roleWord": "Internet",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Eagle",
+    "roleWord": "Pandora's Box",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Bowling Ball",
+    "roleWord": "Letter Opener",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Camel",
+    "roleWord": "Fortune Cookie",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Ice Cube",
+    "roleWord": "Stonehenge",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Jacket",
+    "roleWord": "Ashtray",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Waffle",
+    "roleWord": "Water Bed",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Avocado",
+    "roleWord": "Metal Detector",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Basketball Hoop",
+    "roleWord": "Windshield Wiper",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Spider",
+    "roleWord": "Mullet",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Suitcase",
+    "roleWord": "Echo",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Gorilla",
+    "roleWord": "Password",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Giraffe",
+    "roleWord": "Wind Chime",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Monkey",
+    "roleWord": "Puppeteer",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Penguin",
+    "roleWord": "Feud",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Blender",
+    "roleWord": "Pufferfish",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Baseball Cap",
+    "roleWord": "Lava Lamp",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Fireworks",
+    "roleWord": "Shady",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Sandwich",
+    "roleWord": "Gargoyle",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sword",
+    "roleWord": "Luck",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Octopus",
+    "roleWord": "Rumor",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Mailbox",
+    "roleWord": "Procrastinate",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Taco",
+    "roleWord": "Hypnosis",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Trophy",
+    "roleWord": "Pinwheel",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Light Switch",
+    "roleWord": "Cliffhanger",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Keyboard",
+    "roleWord": "Macarena",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Cell Phone",
+    "roleWord": "Windmill",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Diaper",
+    "roleWord": "Unicycle",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Piano",
+    "roleWord": "Math",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Robot",
+    "roleWord": "Spider Web",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Stapler",
+    "roleWord": "Mirage",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Canoe",
+    "roleWord": "Applause",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Hot Dog",
+    "roleWord": "Bermuda Triangle",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Snowman",
+    "roleWord": "Solar Panel",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Fire Truck",
+    "roleWord": "Black Hole",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Drums",
+    "roleWord": "Bacteria",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Flashlight",
+    "roleWord": "Vanilla",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Desk Lamp",
+    "roleWord": "Platypus",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Strawberry",
+    "roleWord": "Solar Eclipse",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Baseball Bat",
+    "roleWord": "Goldfish Bowl",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Burrito",
+    "roleWord": "Bonsai Tree",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Compass",
+    "roleWord": "Mimic",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Bandage",
+    "roleWord": "Hairball",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Ambulance",
+    "roleWord": "Hallucination",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Lollipop",
+    "roleWord": "Oxygen",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Peanut",
+    "roleWord": "Smoke Detector",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Parrot",
+    "roleWord": "Domino Effect",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Laptop",
+    "roleWord": "Easel",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Umbrella",
+    "roleWord": "Daydream",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Hair Brush",
+    "roleWord": "Quicksand",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Battery",
+    "roleWord": "Drawbridge",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Popcorn",
+    "roleWord": "Wedding Ring",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Tiger",
+    "roleWord": "Brain Freeze",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Pumpkin",
+    "roleWord": "Whine",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Pickle",
+    "roleWord": "Milestone",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Pizza",
+    "roleWord": "Traffic Jam",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Sofa",
+    "roleWord": "North Pole",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Birthday Cake",
+    "roleWord": "Jukebox",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Toothbrush",
+    "roleWord": "Gold Rush",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Ketchup",
+    "roleWord": "Chandelier",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Fishing Rod",
+    "roleWord": "Snowblower",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Baseball Glove",
+    "roleWord": "Ice Fishing",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sushi",
+    "roleWord": "Shooting Star",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Printer",
+    "roleWord": "Ski Goggles",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Kangaroo",
+    "roleWord": "Dark Ages",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Glue",
+    "roleWord": "Mumble",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Pillow",
+    "roleWord": "Archaeologist",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Scorpion",
+    "roleWord": "Loophole",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Mittens",
+    "roleWord": "Grudge",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Thermometer",
+    "roleWord": "Reflection",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sweater",
+    "roleWord": "Traffic Cone",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Yo-Yo",
+    "roleWord": "Hover",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Snowboard",
+    "roleWord": "Superstition",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sunglasses",
+    "roleWord": "Whisper",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Porcupine",
+    "roleWord": "Dilemma",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Bow Tie",
+    "roleWord": "Squint",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Hummingbird",
+    "roleWord": "Sneaky",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Jellyfish",
+    "roleWord": "Reputation",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Lobster",
+    "roleWord": "Taunt",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Newspaper",
+    "roleWord": "Goosebumps",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Parachute",
+    "roleWord": "Amnesia",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Telescope",
+    "roleWord": "Orchestra",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Paper Plane",
+    "roleWord": "Gossip",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sandcastle",
+    "roleWord": "Brainstorm",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Armadillo",
+    "roleWord": "Blind Spot",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Squirrel",
+    "roleWord": "Chicken Dance",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Door Knob",
+    "roleWord": "Accordion",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Violin",
+    "roleWord": "Paranoia",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Chameleon",
+    "roleWord": "Restless",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Pretzel",
+    "roleWord": "X-ray",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Cotton Candy",
+    "roleWord": "Chemistry",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Shoelace",
+    "roleWord": "Water Fountain",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Zebra",
+    "roleWord": "Barcode",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Microphone",
+    "roleWord": "Tree Stump",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Sunflower",
+    "roleWord": "Beaker",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Zipper",
+    "roleWord": "Skeleton Key",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Whistle",
+    "roleWord": "Pothole",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Rocket Ship",
+    "roleWord": "Betrayal",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Computer Mouse",
+    "roleWord": "Chaos",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Magnet",
+    "roleWord": "Tripod",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Saxophone",
+    "roleWord": "Vocabulary",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Water Bottle",
+    "roleWord": "Kaleidoscope",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Earbuds",
+    "roleWord": "Déjà vu",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Polar Bear",
+    "roleWord": "Irony",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Lawnmower",
+    "roleWord": "Ice Age",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Caterpillar",
+    "roleWord": "Alcatraz",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Trampoline",
+    "roleWord": "Smug",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Unicorn",
+    "roleWord": "Midas Touch",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Lunchbox",
+    "roleWord": "Gravity",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Bunk Bed",
+    "roleWord": "Clown Car",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Hot Air Balloon",
+    "roleWord": "Murphy's Law",
+    "driveThru120": true
+  },
+  {
+    "ruleWord": "Flamingo",
+    "roleWord": "Feisty",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Ice Skate",
+    "roleWord": "Taxidermy",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Confetti",
+    "roleWord": "Post-it Notes",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Binoculars",
+    "roleWord": "Scarecrow",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Tornado",
+    "roleWord": "Scapegoat",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Seashell",
+    "roleWord": "Curiosity",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Volcano",
+    "roleWord": "Trojan Horse",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Golf Ball",
+    "roleWord": "Solar System",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Kayak",
+    "roleWord": "Butterfly Effect",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Vase",
+    "roleWord": "Harmonica",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Chimney",
+    "roleWord": "Evolution",
+    "driveThru120": false
+  },
+  {
+    "ruleWord": "Funnel",
+    "roleWord": "Hyper",
+    "driveThru120": false
+  }
 ]

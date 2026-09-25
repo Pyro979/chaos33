@@ -1,151 +1,468 @@
 {
-    "scavenge": [
-        "Has a barcode",
-        "Has an expiration date",
-        "Has a warning label",
-        "Has instructions",
-        "A receipt",
-        "Has a price tag",
-        "Has a serial number",
-        "Uses batteries",
-        "Is rechargeable",
-        "Has a remote",
-        "Lights up",
-        "Rattles when shaken",
-        "Has a magnet",
-        "Has Velcro",
-        "Has a clip",
-        "Has a hook",
-        "Has a hinge",
-        "Has a screw",
-        "Has a spring",
-        "Has a lid",
-        "Has a cap",
-        "Has a handle",
-        "Has wheels",
-        "Is edible",
-        "Is shiny",
-        "Is reflective",
-        "Is striped",
-        "Has a logo",
-        "Has a mascot",
-        "Has a map",
-        "Has a QR code"
-    ],
-    "alphaBlitz": [
-        "Animals",
-        "Foods",
-        "Drinks",
-        "Tools",
-        "Household Objects",
-        "Office Items",
-        "School Items",
-        "Toys",
-        "Sports Items",
-        "Clothing",
-        "Jobs",
-        "Hobby Related",
-        "Music Related",
-        "Geographical Locations",
-        "Movies/TV Shows",
-        "Fictional Creatures",
-        "Plants",
-        "Brands",
-        "Famous People",
-        "Fictional Characters"
-    ],
-    "themeBlitz": [
-        "Flying animals",
-        "Breakfast foods",
-        "Kitchen items",
-        "Travel essentials",
-        "Glass items",
-        "Bathroom items",
-        "Sweet things",
-        "Green things",
-        "Outdoor activities",
-        "Desk items",
-        "Park items",
-        "Wheeled things",
-        "Underwater life",
-        "Farm things",
-        "Freezer items",
-        "Classroom items",
-        "Garage items",
-        "Toolbox items",
-        "Junk drawer items",
-        "Camping gear",
-        "Beach gear",
-        "Picnic items",
-        "Party supplies",
-        "Sleepover items",
-        "Coffee shop items",
-        "Restaurant orders",
-        "Grocery items",
-        "Movie theater items",
-        "Sports game items",
-        "Concert items",
-        "Loud things",
-        "Quiet things",
-        "Tiny things",
-        "Huge things",
-        "Spicy things",
-        "Winged things",
-        "Swimming things",
-        "Crawling things",
-        "Night animals",
-        "Baby animals",
-        "Clawed things",
-        "Scaly things",
-        "Stinging things",
-        "Finger foods",
-        "Airport things",
-        "Dentist items",
-        "Gym items",
-        "Wedding items",
-        "Library items",
-        "Gas station items",
-        "Hotel items",
-        "Carnival items",
-        "Handled things",
-        "With a button",
-        "Unlockable things"
-    ],
-    "starBlitz": [
-        "James",
-        "Mary",
-        "John",
-        "Robert",
-        "Jennifer",
-        "Michael",
-        "Emma",
-        "William",
-        "Elizabeth",
-        "David",
-        "Richard",
-        "Joseph",
-        "Jessica",
-        "Thomas",
-        "Sarah",
-        "Charles",
-        "George",
-        "Chris",
-        "Lisa",
-        "Daniel",
-        "Matthew",
-        "Kevin",
-        "Anthony",
-        "Mark",
-        "Sandra",
-        "Ashley",
-        "Steven",
-        "Ryan",
-        "Paul",
-        "Emily",
-        "Andrew",
-        "Anna",
-        "Joshua",
-        "Michelle",
-        "Nick"
-    ]
+  "alphaBlitz": [
+    {
+      "category": "Animals",
+      "letter": "S",
+      "driveThru120": true
+    },
+    {
+      "category": "Foods",
+      "letter": "C",
+      "driveThru120": true
+    },
+    {
+      "category": "Drinks",
+      "letter": "P",
+      "driveThru120": false
+    },
+    {
+      "category": "Tools",
+      "letter": "H",
+      "driveThru120": false
+    },
+    {
+      "category": "Household Objects",
+      "letter": "B",
+      "driveThru120": true
+    },
+    {
+      "category": "Office Items",
+      "letter": "T",
+      "driveThru120": false
+    },
+    {
+      "category": "School Items",
+      "letter": "M",
+      "driveThru120": false
+    },
+    {
+      "category": "Toys",
+      "letter": "D",
+      "driveThru120": false
+    },
+    {
+      "category": "Sports Items",
+      "letter": "R",
+      "driveThru120": false
+    },
+    {
+      "category": "Clothing",
+      "letter": "F",
+      "driveThru120": false
+    },
+    {
+      "category": "Jobs",
+      "letter": "L",
+      "driveThru120": true
+    },
+    {
+      "category": "Hobby Related",
+      "letter": "W",
+      "driveThru120": false
+    },
+    {
+      "category": "Music Related",
+      "letter": "G",
+      "driveThru120": false
+    },
+    {
+      "category": "Geographical Locations",
+      "letter": "A",
+      "driveThru120": true
+    },
+    {
+      "category": "Movies/TV Shows",
+      "letter": "N",
+      "driveThru120": false
+    },
+    {
+      "category": "Fictional Creatures",
+      "letter": "D",
+      "driveThru120": false
+    },
+    {
+      "category": "Plants",
+      "letter": "R",
+      "driveThru120": false
+    },
+    {
+      "category": "Brands",
+      "letter": "M",
+      "driveThru120": false
+    },
+    {
+      "category": "Famous People",
+      "letter": "A",
+      "driveThru120": false
+    },
+    {
+      "category": "Fictional Characters",
+      "letter": "L",
+      "driveThru120": true
+    }
+  ],
+  "themeBlitz": [
+    {
+      "value": "Flying animals",
+      "driveThru120": false
+    },
+    {
+      "value": "Breakfast foods",
+      "driveThru120": true
+    },
+    {
+      "value": "Kitchen items",
+      "driveThru120": true
+    },
+    {
+      "value": "Travel essentials",
+      "driveThru120": false
+    },
+    {
+      "value": "Glass items",
+      "driveThru120": false
+    },
+    {
+      "value": "Bathroom items",
+      "driveThru120": false
+    },
+    {
+      "value": "Sweet things",
+      "driveThru120": false
+    },
+    {
+      "value": "Green things",
+      "driveThru120": false
+    },
+    {
+      "value": "Outdoor activities",
+      "driveThru120": false
+    },
+    {
+      "value": "Desk items",
+      "driveThru120": false
+    },
+    {
+      "value": "Park items",
+      "driveThru120": false
+    },
+    {
+      "value": "Wheeled things",
+      "driveThru120": false
+    },
+    {
+      "value": "Underwater life",
+      "driveThru120": false
+    },
+    {
+      "value": "Farm things",
+      "driveThru120": false
+    },
+    {
+      "value": "Freezer items",
+      "driveThru120": false
+    },
+    {
+      "value": "Classroom items",
+      "driveThru120": false
+    },
+    {
+      "value": "Garage items",
+      "driveThru120": false
+    },
+    {
+      "value": "Toolbox items",
+      "driveThru120": false
+    },
+    {
+      "value": "Junk drawer items",
+      "driveThru120": true
+    },
+    {
+      "value": "Camping gear",
+      "driveThru120": false
+    },
+    {
+      "value": "Beach gear",
+      "driveThru120": false
+    },
+    {
+      "value": "Picnic items",
+      "driveThru120": false
+    },
+    {
+      "value": "Party supplies",
+      "driveThru120": true
+    },
+    {
+      "value": "Sleepover items",
+      "driveThru120": false
+    },
+    {
+      "value": "Coffee shop items",
+      "driveThru120": false
+    },
+    {
+      "value": "Restaurant orders",
+      "driveThru120": false
+    },
+    {
+      "value": "Grocery items",
+      "driveThru120": false
+    },
+    {
+      "value": "Movie theater items",
+      "driveThru120": false
+    },
+    {
+      "value": "Sports game items",
+      "driveThru120": false
+    },
+    {
+      "value": "Concert items",
+      "driveThru120": false
+    },
+    {
+      "value": "Loud things",
+      "driveThru120": true
+    },
+    {
+      "value": "Quiet things",
+      "driveThru120": false
+    },
+    {
+      "value": "Tiny things",
+      "driveThru120": false
+    },
+    {
+      "value": "Huge things",
+      "driveThru120": false
+    },
+    {
+      "value": "Spicy things",
+      "driveThru120": false
+    },
+    {
+      "value": "Winged things",
+      "driveThru120": false
+    },
+    {
+      "value": "Swimming things",
+      "driveThru120": false
+    },
+    {
+      "value": "Crawling things",
+      "driveThru120": false
+    },
+    {
+      "value": "Night animals",
+      "driveThru120": false
+    },
+    {
+      "value": "Baby animals",
+      "driveThru120": false
+    },
+    {
+      "value": "Clawed things",
+      "driveThru120": false
+    },
+    {
+      "value": "Scaly things",
+      "driveThru120": false
+    },
+    {
+      "value": "Stinging things",
+      "driveThru120": false
+    },
+    {
+      "value": "Finger foods",
+      "driveThru120": false
+    },
+    {
+      "value": "Airport things",
+      "driveThru120": true
+    },
+    {
+      "value": "Dentist items",
+      "driveThru120": false
+    },
+    {
+      "value": "Gym items",
+      "driveThru120": false
+    },
+    {
+      "value": "Wedding items",
+      "driveThru120": false
+    },
+    {
+      "value": "Library items",
+      "driveThru120": false
+    },
+    {
+      "value": "Gas station items",
+      "driveThru120": false
+    },
+    {
+      "value": "Hotel items",
+      "driveThru120": false
+    },
+    {
+      "value": "Carnival items",
+      "driveThru120": false
+    },
+    {
+      "value": "Handled things",
+      "driveThru120": false
+    },
+    {
+      "value": "With a button",
+      "driveThru120": false
+    },
+    {
+      "value": "Unlockable things",
+      "driveThru120": false
+    }
+  ],
+  "starBlitz": [
+    {
+      "value": "James",
+      "driveThru120": true
+    },
+    {
+      "value": "Mary",
+      "driveThru120": false
+    },
+    {
+      "value": "John",
+      "driveThru120": false
+    },
+    {
+      "value": "Robert",
+      "driveThru120": false
+    },
+    {
+      "value": "Jennifer",
+      "driveThru120": false
+    },
+    {
+      "value": "Michael",
+      "driveThru120": true
+    },
+    {
+      "value": "Emma",
+      "driveThru120": false
+    },
+    {
+      "value": "William",
+      "driveThru120": false
+    },
+    {
+      "value": "Elizabeth",
+      "driveThru120": false
+    },
+    {
+      "value": "David",
+      "driveThru120": false
+    },
+    {
+      "value": "Richard",
+      "driveThru120": false
+    },
+    {
+      "value": "Joseph",
+      "driveThru120": false
+    },
+    {
+      "value": "Jessica",
+      "driveThru120": false
+    },
+    {
+      "value": "Thomas",
+      "driveThru120": false
+    },
+    {
+      "value": "Sarah",
+      "driveThru120": false
+    },
+    {
+      "value": "Charles",
+      "driveThru120": false
+    },
+    {
+      "value": "George",
+      "driveThru120": false
+    },
+    {
+      "value": "Chris",
+      "driveThru120": true
+    },
+    {
+      "value": "Lisa",
+      "driveThru120": false
+    },
+    {
+      "value": "Daniel",
+      "driveThru120": false
+    },
+    {
+      "value": "Matthew",
+      "driveThru120": false
+    },
+    {
+      "value": "Kevin",
+      "driveThru120": false
+    },
+    {
+      "value": "Anthony",
+      "driveThru120": false
+    },
+    {
+      "value": "Mark",
+      "driveThru120": false
+    },
+    {
+      "value": "Sandra",
+      "driveThru120": false
+    },
+    {
+      "value": "Ashley",
+      "driveThru120": false
+    },
+    {
+      "value": "Steven",
+      "driveThru120": false
+    },
+    {
+      "value": "Ryan",
+      "driveThru120": false
+    },
+    {
+      "value": "Paul",
+      "driveThru120": false
+    },
+    {
+      "value": "Emily",
+      "driveThru120": false
+    },
+    {
+      "value": "Andrew",
+      "driveThru120": false
+    },
+    {
+      "value": "Anna",
+      "driveThru120": false
+    },
+    {
+      "value": "Joshua",
+      "driveThru120": false
+    },
+    {
+      "value": "Michelle",
+      "driveThru120": false
+    },
+    {
+      "value": "Nick",
+      "driveThru120": false
+    }
+  ]
 }

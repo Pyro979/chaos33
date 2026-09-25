@@ -4,14 +4,16 @@
     "text": "Give clues in a **stiff, robotic voice**.",
     "tags": [
       "delivery"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "High-Pitched",
     "text": "Give clues in a **high, squeaky voice**.",
     "tags": [
       "delivery"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Story Time",
@@ -19,7 +21,8 @@
     "starter": "Once upon a time...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Movie Announcer",
@@ -28,14 +31,16 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Singing",
     "text": "**Sing all your clues.** Pick any genre; they do not have to rhyme.",
     "tags": [
       "delivery"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Excited Kindergartener",
@@ -43,14 +48,16 @@
     "starter": "Look what I found...",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Talking to the Cutest Puppy",
     "text": "Give clues like you're talking to the **cutest puppy ever** and it understands every word.",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Infomercial Host",
@@ -59,21 +66,24 @@
     "tags": [
       "persona",
       "sales"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Favorite Thing Ever",
     "text": "Give clues like this is your **absolute favorite thing in the world**.",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Totally Unsure",
     "text": "Give clues like you're **very unsure**, using words like maybe, probably, kinda, and sort of.",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Villain Monologue",
@@ -82,7 +92,8 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Clueless Tour Guide",
@@ -91,14 +102,16 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Forbidden Secret",
     "text": "Give clues like you're sharing a **huge secret you're not supposed to reveal**.",
     "tags": [
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Spy",
@@ -107,7 +120,8 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Careful Mobster",
@@ -116,7 +130,8 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Guided Meditation",
@@ -125,7 +140,8 @@
     "tags": [
       "media-format",
       "delivery"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Nature Documentary",
@@ -134,7 +150,8 @@
     "tags": [
       "media-format",
       "persona"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "5-Star Review",
@@ -143,7 +160,8 @@
     "tags": [
       "media-format",
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "1-Star Review",
@@ -152,7 +170,8 @@
     "tags": [
       "media-format",
       "attitude"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Sarcastic",
@@ -160,7 +179,8 @@
     "starter": "Oh perfect. Exactly what I always wanted.",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Bad Salesperson",
@@ -169,7 +189,8 @@
     "tags": [
       "persona",
       "sales"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Influencer Unboxing",
@@ -178,21 +199,24 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Cartoon or Video Game Character",
     "text": "Pick any **cartoon or video-game character** and give clues in their voice and attitude.",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Your Favorite Impression",
     "text": "Do your **go-to impression** and keep it going while you give clues.",
     "tags": [
       "delivery"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Country Lawyer",
@@ -200,7 +224,8 @@
     "starter": "Ladies and gentlemen of the jury...",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Game Show Host",
@@ -209,7 +234,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Reality Show Judge",
@@ -218,7 +244,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Breaking News",
@@ -226,7 +253,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Conspiracy Theorist",
@@ -234,7 +262,8 @@
     "tags": [
       "persona",
       "attitude"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Crime Scene Investigator",
@@ -242,7 +271,8 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Spokesperson",
@@ -250,7 +280,8 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Press Conference",
@@ -258,7 +289,8 @@
     "tags": [
       "scenario",
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Scientist Announcing a Discovery",
@@ -267,14 +299,16 @@
     "tags": [
       "persona",
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Historian",
     "text": "Give clues like you're explaining **how this thing changed the world**.",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Documentary Interview",
@@ -282,7 +316,8 @@
     "tags": [
       "media-format",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Public Apology",
@@ -290,21 +325,24 @@
     "tags": [
       "media-format",
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Training Video",
     "text": "Give clues like you're **teaching a new employee** how to deal with this thing.",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Public Service Announcement",
     "text": "Give clues like you're making an **important public announcement** about this thing.",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Suspicious",
@@ -312,7 +350,8 @@
     "starter": "I don't know what this thing is up to, but...",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Scary Story",
@@ -320,7 +359,8 @@
     "starter": "It all started when...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Morning Radio Giveaway",
@@ -329,7 +369,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Kids' Show Character",
@@ -338,7 +379,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Wedding Toast",
@@ -347,7 +389,8 @@
     "tags": [
       "scenario",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Dating Profile",
@@ -355,7 +398,8 @@
     "starter": "About me...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Late-Night Guest Introduction",
@@ -364,7 +408,8 @@
     "tags": [
       "persona",
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Show and Tell",
@@ -372,7 +417,8 @@
     "starter": "For show and tell, I brought something that...",
     "tags": [
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "I Don't Know What It's Called",
@@ -380,7 +426,8 @@
     "starter": "I'm looking for this thing that...",
     "tags": [
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "It's Real!",
@@ -389,7 +436,8 @@
     "tags": [
       "scenario",
       "attitude"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Totally Safe",
@@ -398,7 +446,8 @@
     "tags": [
       "scenario",
       "sales"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Humblebrag",
@@ -406,7 +455,8 @@
     "starter": "Oh, it only...",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Return Counter",
@@ -414,7 +464,8 @@
     "starter": "Yeah, I'd like to return this...",
     "tags": [
       "scenario"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "You Have to See This",
@@ -422,7 +473,8 @@
     "starter": "Dude, you know what I just found out about?",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Online Classified Ad",
@@ -431,7 +483,8 @@
     "tags": [
       "media-format",
       "sales"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Textbook Entry",
@@ -439,7 +492,8 @@
     "starter": "This is commonly defined as...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Museum Plaque",
@@ -447,7 +501,8 @@
     "starter": "On display here is...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Missing Poster",
@@ -455,7 +510,8 @@
     "starter": "Have you seen...?",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Repair Manual",
@@ -463,7 +519,8 @@
     "starter": "If yours is having trouble...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Résumé",
@@ -471,7 +528,8 @@
     "starter": "Experienced professional with a proven track record of...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Product Recall",
@@ -479,7 +537,8 @@
     "starter": "If you own one of these, please stop using it immediately...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "FAQ",
@@ -487,7 +546,8 @@
     "starter": "Frequently asked question: what happens if...?",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "FBI Case File",
@@ -496,7 +556,8 @@
     "tags": [
       "media-format",
       "scenario"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Modern Art Critic",
@@ -504,7 +565,8 @@
     "starter": "What the artist is really exploring here is...",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Sommelier",
@@ -512,7 +574,8 @@
     "starter": "You'll notice hints of...",
     "tags": [
       "persona"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Ancient Prophecy",
@@ -520,7 +583,8 @@
     "starter": "The prophecy spoke of...",
     "tags": [
       "media-format"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Future Archaeologist",
@@ -529,7 +593,8 @@
     "tags": [
       "persona",
       "time"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "SkyMall Catalog",
@@ -539,7 +604,8 @@
       "media-format",
       "sales"
     ],
-    "status": "maybe"
+    "status": "maybe",
+    "driveThru120": false
   },
   {
     "title": "Lost & Found",
@@ -548,7 +614,8 @@
     "tags": [
       "scenario"
     ],
-    "status": "maybe"
+    "status": "maybe",
+    "driveThru120": false
   },
   {
     "title": "It's Not Weird",
@@ -556,7 +623,8 @@
     "starter": "Okay, I know how this looks, but...",
     "tags": [
       "attitude"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Pawn Shop",
@@ -565,7 +633,8 @@
     "tags": [
       "scenario",
       "sales"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Shark Tank",
@@ -574,7 +643,8 @@
     "tags": [
       "scenario",
       "sales"
-    ]
+    ],
+    "driveThru120": false
   },
   {
     "title": "Caveman Speak",
@@ -583,6 +653,7 @@
     "tags": [
       "persona",
       "delivery"
-    ]
+    ],
+    "driveThru120": true
   }
 ]

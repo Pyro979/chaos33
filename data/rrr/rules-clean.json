@@ -5,7 +5,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "What It's Not",
@@ -13,7 +14,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Senses",
@@ -21,7 +23,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "You",
@@ -29,7 +32,8 @@
     "multipliable": true,
     "tags": [
       "perspective"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Adjective + Noun + Verb",
@@ -40,7 +44,8 @@
     "tags": [
       "language",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Three Words",
@@ -48,7 +53,8 @@
     "multipliable": true,
     "tags": [
       "word-count"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Questions Only",
@@ -56,7 +62,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "One-Syllable Words",
@@ -64,7 +71,8 @@
     "multipliable": true,
     "tags": [
       "language"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Adjectives & Nouns Only",
@@ -74,7 +82,8 @@
     "multipliable": true,
     "tags": [
       "language"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Verbs & Nouns Only",
@@ -84,7 +93,8 @@
     "multipliable": true,
     "tags": [
       "language"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Comparisons",
@@ -92,7 +102,8 @@
     "multipliable": true,
     "tags": [
       "comparison"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Two Pieces",
@@ -100,7 +111,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Checklist Inspection",
@@ -108,7 +120,8 @@
     "multipliable": false,
     "tags": [
       "format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "It's Like, But Not That",
@@ -117,7 +130,8 @@
     "tags": [
       "comparison",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Trade-Offs Only",
@@ -126,7 +140,8 @@
     "tags": [
       "comparison",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Safety Warnings",
@@ -134,7 +149,8 @@
     "multipliable": false,
     "tags": [
       "format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "No Physical Description",
@@ -142,7 +158,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "No Function",
@@ -150,7 +167,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Appearance Only",
@@ -158,7 +176,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Function Only",
@@ -166,7 +185,8 @@
     "multipliable": true,
     "tags": [
       "information"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Can / Can't",
@@ -174,7 +194,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "You Find It...",
@@ -182,7 +203,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "You Can ____ It",
@@ -190,7 +212,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "It Has ____",
@@ -198,7 +221,8 @@
     "multipliable": true,
     "tags": [
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Best At / Worst At",
@@ -207,7 +231,8 @@
     "tags": [
       "alternating",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Most Likely / Least Likely",
@@ -216,7 +241,8 @@
     "tags": [
       "alternating",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Two Words",
@@ -224,7 +250,8 @@
     "multipliable": true,
     "tags": [
       "word-count"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Build a Clue",
@@ -234,7 +261,7 @@
       "word-count",
       "progressive"
     ],
-    "status": "maybe"
+    "driveThru120": true
   },
   {
     "title": "Ingredients / Nutrition Label",
@@ -243,7 +270,8 @@
     "multipliable": false,
     "tags": [
       "format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Motto / Slogan",
@@ -251,7 +279,8 @@
     "multipliable": false,
     "tags": [
       "format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Clickbait Headline",
@@ -260,7 +289,8 @@
     "multipliable": false,
     "tags": [
       "format"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Good News / Bad News",
@@ -269,7 +299,8 @@
     "tags": [
       "alternating",
       "structure"
-    ]
+    ],
+    "driveThru120": true
   },
   {
     "title": "Quick Start Guide",
@@ -279,6 +310,7 @@
     "tags": [
       "format",
       "sequence"
-    ]
+    ],
+    "driveThru120": true
   }
 ]
