@@ -1,21 +1,21 @@
 [
   {
     "title": "Robot",
-    "text": "Give clues in a stiff, robotic voice.",
+    "text": "Give clues in a **stiff, robotic voice**.",
     "tags": [
       "delivery"
     ]
   },
   {
     "title": "High-Pitched",
-    "text": "Give clues in a high, squeaky voice.",
+    "text": "Give clues in a **high, squeaky voice**.",
     "tags": [
       "delivery"
     ]
   },
   {
     "title": "Story Time",
-    "text": "Tell your clues like a story.",
+    "text": "Tell your clues **like a story**.",
     "starter": "Once upon a time...",
     "tags": [
       "media-format"
@@ -23,7 +23,7 @@
   },
   {
     "title": "Movie Announcer",
-    "text": "Give clues like an over-the-top movie-trailer announcer.",
+    "text": "Give clues like an **over-the-top movie-trailer announcer**.",
     "starter": "In a world...",
     "tags": [
       "persona",
@@ -32,14 +32,14 @@
   },
   {
     "title": "Singing",
-    "text": "Sing all your clues. Pick any genre; they don't have to rhyme.",
+    "text": "**Sing all your clues.** Pick any genre; they do not have to rhyme.",
     "tags": [
       "delivery"
     ]
   },
   {
     "title": "Excited Kindergartener",
-    "text": "Give clues like an overexcited kindergartener telling their parents about this thing.",
+    "text": "Give clues like an **overexcited kindergartener** telling their parents about this thing.",
     "starter": "Look what I found...",
     "tags": [
       "persona"
@@ -47,14 +47,14 @@
   },
   {
     "title": "Talking to the Cutest Puppy",
-    "text": "Give clues like you're talking to the cutest puppy ever and it understands every word.",
+    "text": "Give clues like you're talking to the **cutest puppy ever** and it understands every word.",
     "tags": [
       "persona"
     ]
   },
   {
     "title": "Infomercial Host",
-    "text": "Give clues like a late-night infomercial host who really needs this thing to sell.",
+    "text": "Give clues like a **late-night infomercial host** who really needs this thing to sell.",
     "starter": "But wait, there's more...",
     "tags": [
       "persona",
@@ -63,21 +63,21 @@
   },
   {
     "title": "Favorite Thing Ever",
-    "text": "Give clues like this is your absolute favorite thing in the world.",
+    "text": "Give clues like this is your **absolute favorite thing in the world**.",
     "tags": [
       "attitude"
     ]
   },
   {
     "title": "Totally Unsure",
-    "text": "Give clues like you're very unsure, using words like maybe, probably, kinda, and sort of.",
+    "text": "Give clues like you're **very unsure**, using words like maybe, probably, kinda, and sort of.",
     "tags": [
       "attitude"
     ]
   },
   {
     "title": "Villain Monologue",
-    "text": "Give clues like a villain explaining their plan to the hero.",
+    "text": "Give clues like a **villain explaining their plan** to the hero.",
     "starter": "This is the key to my plan...",
     "tags": [
       "persona",
@@ -86,7 +86,7 @@
   },
   {
     "title": "Clueless Tour Guide",
-    "text": "Give clues like a tour guide who has never seen this thing before but has to pretend they know everything about it.",
+    "text": "Give clues like a **tour guide who's never seen this thing before** but has to pretend they know it.",
     "starter": "And on your left you'll see...",
     "tags": [
       "persona",
@@ -95,14 +95,14 @@
   },
   {
     "title": "Forbidden Secret",
-    "text": "Give clues like you're sharing a huge secret you're absolutely not supposed to reveal.",
+    "text": "Give clues like you're sharing a **huge secret you're not supposed to reveal**.",
     "tags": [
       "scenario"
     ]
   },
   {
     "title": "Spy",
-    "text": "Give clues like you're in a spy movie, passing secret instructions in public.",
+    "text": "Give clues like you're in a **spy movie**, passing secret instructions in public.",
     "starter": "Mission update: the target is...",
     "tags": [
       "persona",
@@ -111,7 +111,7 @@
   },
   {
     "title": "Careful Mobster",
-    "text": "Give clues like a mobster trying not to name the thing directly because the cops are listening.",
+    "text": "Give clues like a **mobster avoiding the thing's name** because the cops are listening.",
     "starter": "Look, hypothetically speaking...",
     "tags": [
       "persona",
@@ -120,7 +120,7 @@
   },
   {
     "title": "Guided Meditation",
-    "text": "Give clues like you're leading a calm, soothing guided meditation.",
+    "text": "Give clues like you're leading a **calm, soothing guided meditation**.",
     "starter": "Inhale through your nose. Now notice...",
     "tags": [
       "media-format",
@@ -129,7 +129,7 @@
   },
   {
     "title": "Nature Documentary",
-    "text": "Give clues like you're narrating a nature documentary observing a rare specimen in the wild.",
+    "text": "Give clues like you're narrating a **nature documentary** about a rare specimen in the wild.",
     "starter": "Here we observe it in its natural habitat...",
     "tags": [
       "media-format",
@@ -138,7 +138,7 @@
   },
   {
     "title": "5-Star Review",
-    "text": "Give clues like you're leaving an over-the-top glowing 5-star review.",
+    "text": "Give clues like you're leaving an **over-the-top 5-star review**.",
     "starter": "I'm obsessed. This thing is...",
     "tags": [
       "media-format",
@@ -147,7 +147,7 @@
   },
   {
     "title": "1-Star Review",
-    "text": "Give clues like you're leaving a brutal 1-star complaint review.",
+    "text": "Give clues like you're leaving a **brutal 1-star complaint**.",
     "starter": "If I could give zero stars I would...",
     "tags": [
       "media-format",
@@ -156,7 +156,7 @@
   },
   {
     "title": "Sarcastic",
-    "text": "Give every clue dripping with sarcasm, like this thing personally inconvenienced you.",
+    "text": "Give every clue **dripping with sarcasm**, like this thing personally inconvenienced you.",
     "starter": "Oh perfect. Exactly what I always wanted.",
     "tags": [
       "attitude"
@@ -164,7 +164,7 @@
   },
   {
     "title": "Bad Salesperson",
-    "text": "Give clues like you're trying to sell this thing, but you're terrible at it.",
+    "text": "Give clues like you're **trying to sell this thing**, but you're terrible at it.",
     "starter": "So, this model right here...",
     "tags": [
       "persona",
@@ -173,7 +173,7 @@
   },
   {
     "title": "Influencer Unboxing",
-    "text": "Give clues like you're unboxing this thing on camera and reacting to it as you go.",
+    "text": "Give clues like you're **unboxing this thing on camera** and reacting as you go.",
     "starter": "Alright guys, we've got a new one today...",
     "tags": [
       "persona",
@@ -182,21 +182,21 @@
   },
   {
     "title": "Cartoon or Video Game Character",
-    "text": "Pick any cartoon or video-game character and give clues in their voice and attitude.",
+    "text": "Pick any **cartoon or video-game character** and give clues in their voice and attitude.",
     "tags": [
       "persona"
     ]
   },
   {
     "title": "Your Favorite Impression",
-    "text": "Do your go-to impression and keep it going while you give clues.",
+    "text": "Do your **go-to impression** and keep it going while you give clues.",
     "tags": [
       "delivery"
     ]
   },
   {
     "title": "Country Lawyer",
-    "text": "Give clues like a small-town lawyer in a low-budget courtroom drama.",
+    "text": "Give clues like a **small-town lawyer in a low-budget courtroom drama**.",
     "starter": "Ladies and gentlemen of the jury...",
     "tags": [
       "persona"
@@ -204,7 +204,7 @@
   },
   {
     "title": "Game Show Host",
-    "text": "Give clues like an over-the-top game-show host announcing what the contestant could win.",
+    "text": "Give clues like an **over-the-top game-show host** announcing what the contestant could win.",
     "starter": "Behind Door Number One, it's...",
     "tags": [
       "persona",
@@ -213,7 +213,7 @@
   },
   {
     "title": "Reality Show Judge",
-    "text": "Give clues like you're judging a contestant's submission: confident, dramatic, and direct.",
+    "text": "Give clues like you're **judging a contestant's submission**: confident, dramatic, and direct.",
     "starter": "Right away, I'm noticing...",
     "tags": [
       "persona",
@@ -221,8 +221,8 @@
     ]
   },
   {
-    "title": "Breaking News Reporter",
-    "text": "Give clues like you're reporting urgent breaking news happening right now.",
+    "title": "Breaking News",
+    "text": "Give clues like you're a **newscaster** reporting **urgent breaking news** happening right now.",
     "tags": [
       "persona",
       "media-format"
@@ -230,7 +230,7 @@
   },
   {
     "title": "Conspiracy Theorist",
-    "text": "Give clues like you've uncovered the secret truth about this thing that \"they\" don't want people to know.",
+    "text": "Give clues like you uncovered the **secret truth** about this thing that \"they\" do not want people to know.",
     "tags": [
       "persona",
       "attitude"
@@ -238,7 +238,7 @@
   },
   {
     "title": "Crime Scene Investigator",
-    "text": "Give clues like this thing was found at a crime scene and you're describing the evidence.",
+    "text": "Give clues like this thing was **found at a crime scene** and you're describing the evidence.",
     "tags": [
       "persona",
       "scenario"
@@ -246,7 +246,7 @@
   },
   {
     "title": "Spokesperson",
-    "text": "Give clues like you're speaking on behalf of this thing after something has gone wrong.",
+    "text": "Give clues like you're **speaking on behalf of this thing** after something has gone wrong.",
     "tags": [
       "persona",
       "scenario"
@@ -254,7 +254,7 @@
   },
   {
     "title": "Press Conference",
-    "text": "Give clues like you're answering reporters about a developing situation involving this thing.",
+    "text": "Give clues like you're **answering reporters** about a developing situation involving this thing.",
     "tags": [
       "scenario",
       "media-format"
@@ -262,7 +262,7 @@
   },
   {
     "title": "Scientist Announcing a Discovery",
-    "text": "Give clues like you're a scientist announcing a newly discovered thing that doesn't even have a name yet.",
+    "text": "Give clues like a **scientist announcing a newly discovered thing** that does not have a name yet.",
     "starter": "We don't have a name for it yet, but...",
     "tags": [
       "persona",
@@ -271,14 +271,14 @@
   },
   {
     "title": "Historian",
-    "text": "Give clues like you're explaining how this thing changed the world.",
+    "text": "Give clues like you're explaining **how this thing changed the world**.",
     "tags": [
       "persona"
     ]
   },
   {
     "title": "Documentary Interview",
-    "text": "Give clues like you're looking back years later on how this thing changed your life.",
+    "text": "Give clues like you're **looking back years later** on how this thing changed your life.",
     "tags": [
       "media-format",
       "scenario"
@@ -286,7 +286,7 @@
   },
   {
     "title": "Public Apology",
-    "text": "Give clues like you're publicly apologizing for an incident involving this thing.",
+    "text": "Give clues like you're **publicly apologizing** for an incident involving this thing.",
     "tags": [
       "media-format",
       "scenario"
@@ -294,21 +294,21 @@
   },
   {
     "title": "Training Video",
-    "text": "Give clues like you're teaching a new employee how to deal with this thing.",
+    "text": "Give clues like you're **teaching a new employee** how to deal with this thing.",
     "tags": [
       "media-format"
     ]
   },
   {
     "title": "Public Service Announcement",
-    "text": "Give clues like you're making an important announcement about this thing and what everyone should know about it.",
+    "text": "Give clues like you're making an **important public announcement** about this thing.",
     "tags": [
       "media-format"
     ]
   },
   {
     "title": "Suspicious",
-    "text": "Give clues like you absolutely do not trust this thing.",
+    "text": "Give clues like you **absolutely do not trust this thing**.",
     "starter": "I don't know what this thing is up to, but...",
     "tags": [
       "attitude"
@@ -316,7 +316,7 @@
   },
   {
     "title": "Scary Story",
-    "text": "Give clues like this thing is at the center of a scary story.",
+    "text": "Give clues like this thing is at the center of a **scary story**.",
     "starter": "It all started when...",
     "tags": [
       "media-format"
@@ -324,7 +324,7 @@
   },
   {
     "title": "Morning Radio Giveaway",
-    "text": "Give clues like a morning radio DJ describing the prize a lucky caller could win.",
+    "text": "Give clues like a **morning radio DJ** describing the prize a lucky caller could win.",
     "starter": "Caller number ten could win...",
     "tags": [
       "persona",
@@ -333,7 +333,7 @@
   },
   {
     "title": "Kids' Show Character",
-    "text": "Give clues like a cheerful character on a kids' show teaching the audience about this thing.",
+    "text": "Give clues like a **cheerful kids' show character** teaching the audience about this thing.",
     "starter": "Hey, kids! Did you know...",
     "tags": [
       "persona",
@@ -342,7 +342,7 @@
   },
   {
     "title": "Wedding Toast",
-    "text": "Give clues like this thing is getting married and you're giving a heartfelt wedding toast about it.",
+    "text": "Give clues like this thing is **getting married** and you're giving a heartfelt wedding toast.",
     "starter": "I've known this one for years...",
     "tags": [
       "scenario",
@@ -351,7 +351,7 @@
   },
   {
     "title": "Dating Profile",
-    "text": "Give clues like you're writing this thing's dating profile.",
+    "text": "Give clues like you're writing this thing's **dating profile**.",
     "starter": "About me...",
     "tags": [
       "media-format"
@@ -359,7 +359,7 @@
   },
   {
     "title": "Late-Night Guest Introduction",
-    "text": "Give clues like a late-night host introducing this thing as tonight's very special guest.",
+    "text": "Give clues like a **late-night host introducing this thing** as tonight's special guest.",
     "starter": "Our next guest is known for...",
     "tags": [
       "persona",
@@ -368,7 +368,7 @@
   },
   {
     "title": "Show and Tell",
-    "text": "Give clues like you're a second grader who brought this thing to show and tell.",
+    "text": "Give clues like a **second grader at show and tell** describing this thing.",
     "starter": "For show and tell, I brought something that...",
     "tags": [
       "scenario"
@@ -376,7 +376,7 @@
   },
   {
     "title": "I Don't Know What It's Called",
-    "text": "Give clues like you're in a store trying to buy this thing, but you don't know what it's called.",
+    "text": "Give clues like you're **trying to buy this thing without knowing its name**.",
     "starter": "I'm looking for this thing that...",
     "tags": [
       "scenario"
@@ -384,7 +384,7 @@
   },
   {
     "title": "It's Real!",
-    "text": "Give clues like everyone thinks this thing is just a myth, but you know it's real.",
+    "text": "Give clues like **everyone thinks this thing is a myth**, but you know it is real.",
     "starter": "I know this sounds crazy, but...",
     "tags": [
       "scenario",
@@ -393,7 +393,7 @@
   },
   {
     "title": "Totally Safe",
-    "text": "Give clues like this thing is obviously dangerous, but you're trying to convince someone it's perfectly safe so they'll take it off your hands.",
+    "text": "Give clues like this thing is **obviously dangerous**, but you're convincing someone it is perfectly safe.",
     "starter": "Trust me, it's completely safe...",
     "tags": [
       "scenario",
@@ -402,7 +402,7 @@
   },
   {
     "title": "Humblebrag",
-    "text": "Give clues like this thing is incredibly impressive, but you're acting like it's really no big deal.",
+    "text": "Give clues like this thing is **incredibly impressive**, but you're acting like it is no big deal.",
     "starter": "Oh, it only...",
     "tags": [
       "attitude"
@@ -410,7 +410,7 @@
   },
   {
     "title": "Return Counter",
-    "text": "Give clues like you're trying to return this thing and explaining why you absolutely don't want it anymore.",
+    "text": "Give clues like you're **trying to return this thing** and explaining why you do not want it anymore.",
     "starter": "Yeah, I'd like to return this...",
     "tags": [
       "scenario"
@@ -418,7 +418,7 @@
   },
   {
     "title": "You Have to See This",
-    "text": "Give clues like you just discovered this thing and can't believe nobody told you about it sooner.",
+    "text": "Give clues like you **just discovered this thing** and cannot believe nobody told you sooner.",
     "starter": "Dude, you know what I just found out about?",
     "tags": [
       "attitude"
@@ -426,7 +426,7 @@
   },
   {
     "title": "Online Classified Ad",
-    "text": "Give clues like you're writing an online classified ad for this thing.",
+    "text": "Give clues like you're writing an **online classified ad** for this thing.",
     "starter": "For sale: lightly used...",
     "tags": [
       "media-format",
@@ -435,7 +435,7 @@
   },
   {
     "title": "Textbook Entry",
-    "text": "Give clues like this thing is being formally described in a textbook.",
+    "text": "Give clues like this thing is being **formally described in a textbook**.",
     "starter": "This is commonly defined as...",
     "tags": [
       "media-format"
@@ -443,7 +443,7 @@
   },
   {
     "title": "Museum Plaque",
-    "text": "Give clues like this thing is on display in a museum and you're reading the plaque beside it.",
+    "text": "Give clues like this thing is **on display in a museum** and you're reading its plaque.",
     "starter": "On display here is...",
     "tags": [
       "media-format"
@@ -451,7 +451,7 @@
   },
   {
     "title": "Missing Poster",
-    "text": "Give clues like you're making a missing poster for this thing.",
+    "text": "Give clues like you're making a **missing poster** for this thing.",
     "starter": "Have you seen...?",
     "tags": [
       "media-format"
@@ -459,7 +459,7 @@
   },
   {
     "title": "Repair Manual",
-    "text": "Give clues like you're reading from a repair manual explaining what's wrong with this thing and how to fix it.",
+    "text": "Give clues like you're reading a **repair manual** explaining what is wrong and how to fix it.",
     "starter": "If yours is having trouble...",
     "tags": [
       "media-format"
@@ -467,7 +467,7 @@
   },
   {
     "title": "Résumé",
-    "text": "Give clues like you're reading the executive summary from this thing's résumé.",
+    "text": "Give clues like you're reading the **executive summary from this thing's resume**.",
     "starter": "Experienced professional with a proven track record of...",
     "tags": [
       "media-format"
@@ -475,7 +475,7 @@
   },
   {
     "title": "Product Recall",
-    "text": "Give clues like this thing has been recalled and you're explaining why.",
+    "text": "Give clues like this thing has been **recalled** and you're explaining why.",
     "starter": "If you own one of these, please stop using it immediately...",
     "tags": [
       "media-format"
@@ -483,7 +483,7 @@
   },
   {
     "title": "FAQ",
-    "text": "Give clues as questions and answers from this thing's FAQ page.",
+    "text": "Give clues as **questions and answers from this thing's FAQ page**.",
     "starter": "Frequently asked question: what happens if...?",
     "tags": [
       "media-format"
@@ -491,7 +491,7 @@
   },
   {
     "title": "FBI Case File",
-    "text": "Give clues like you're reading from this thing's confidential FBI case file.",
+    "text": "Give clues like you're reading this thing's **confidential FBI case file**.",
     "starter": "Subject is known to...",
     "tags": [
       "media-format",
@@ -500,7 +500,7 @@
   },
   {
     "title": "Modern Art Critic",
-    "text": "Give clues like this thing is a profound piece of modern art and you're explaining what it means.",
+    "text": "Give clues like this thing is **profound modern art** and you're explaining what it means.",
     "starter": "What the artist is really exploring here is...",
     "tags": [
       "persona"
@@ -508,7 +508,7 @@
   },
   {
     "title": "Sommelier",
-    "text": "Give clues like you're at a wine tasting, carefully describing this thing's qualities like a fine wine.",
+    "text": "Give clues like a **sommelier**, carefully describing this thing's qualities like a fine wine.",
     "starter": "You'll notice hints of...",
     "tags": [
       "persona"
@@ -516,7 +516,7 @@
   },
   {
     "title": "Ancient Prophecy",
-    "text": "Give clues like this thing was foretold in an ancient prophecy.",
+    "text": "Give clues like this thing was **foretold in an ancient prophecy**.",
     "starter": "The prophecy spoke of...",
     "tags": [
       "media-format"
@@ -524,8 +524,8 @@
   },
   {
     "title": "Future Archaeologist",
-    "text": "Give clues like you're an archaeologist 200 years in the future who has just uncovered this thing and is explaining what people in our time used it for.",
-    "starter": "Our best guess is that people in the 2020s used this to...",
+    "text": "Give clues like an **archaeologist 200 years in the future** explaining how people in our time used this.",
+    "starter": "People in the early 2000s used this to...",
     "tags": [
       "persona",
       "time"
@@ -533,7 +533,7 @@
   },
   {
     "title": "SkyMall Catalog",
-    "text": "Give clues like this thing is being featured in an over-the-top mail-order catalog.",
+    "text": "Give clues like this thing is featured in an **over-the-top mail-order catalog**.",
     "starter": "Introducing...",
     "tags": [
       "media-format",
@@ -543,7 +543,7 @@
   },
   {
     "title": "Lost & Found",
-    "text": "Give clues like you're at a lost-and-found desk trying to describe this thing you lost.",
+    "text": "Give clues like you're at a **lost-and-found desk** describing this thing you lost.",
     "starter": "I'm looking for something I lost...",
     "tags": [
       "scenario"
@@ -552,7 +552,7 @@
   },
   {
     "title": "It's Not Weird",
-    "text": "Give clues like everyone else thinks this thing is weird, but you think it's perfectly normal.",
+    "text": "Give clues like **everyone else thinks this thing is weird**, but you think it is perfectly normal.",
     "starter": "Okay, I know how this looks, but...",
     "tags": [
       "attitude"
@@ -560,7 +560,7 @@
   },
   {
     "title": "Pawn Shop",
-    "text": "Give clues like you're trying to convince a skeptical pawn-shop owner that this thing is much more valuable than they think.",
+    "text": "Give clues like you're convincing a **skeptical pawn-shop owner** this thing is more valuable than they think.",
     "starter": "You don't understand what I've got here...",
     "tags": [
       "scenario",
@@ -569,7 +569,7 @@
   },
   {
     "title": "Shark Tank",
-    "text": "Give clues like you're pitching this thing to a panel of skeptical investors and trying to convince them it's the next big thing.",
+    "text": "Give clues like you're **pitching this thing to skeptical investors** as the next big thing.",
     "starter": "Sharks, I'm here today asking you to invest in...",
     "tags": [
       "scenario",
@@ -578,7 +578,7 @@
   },
   {
     "title": "Caveman Speak",
-    "text": "Give clues like a caveman who just discovered this thing and is doing their best to explain it using very simple words and sentences.",
+    "text": "Give clues like a **caveman who just discovered this thing**, using very simple words and sentences.",
     "starter": "Me find strange thing. Thing...",
     "tags": [
       "persona",
