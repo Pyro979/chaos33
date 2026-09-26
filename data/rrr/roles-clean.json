@@ -1,5 +1,7 @@
 [
   {
+    "id": "ro-001",
+    "version": 1,
     "title": "Robot",
     "text": "Give clues in a **stiff, robotic voice**.",
     "tags": [
@@ -8,6 +10,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-002",
+    "version": 1,
     "title": "High-Pitched",
     "text": "Give clues in a **high, squeaky voice**.",
     "tags": [
@@ -16,6 +20,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-003",
+    "version": 1,
     "title": "Story Time",
     "text": "Tell your clues **like a story**.",
     "starter": "Once upon a time...",
@@ -25,6 +31,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-004",
+    "version": 1,
     "title": "Movie Announcer",
     "text": "Give clues like an **over-the-top movie-trailer announcer**.",
     "starter": "In a world...",
@@ -35,6 +43,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-005",
+    "version": 1,
     "title": "Singing",
     "text": "**Sing all your clues.** Pick any genre; they do not have to rhyme.",
     "tags": [
@@ -43,6 +53,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-006",
+    "version": 1,
     "title": "Excited Kindergartener",
     "text": "Give clues like an **overexcited kindergartener** telling their parents about this thing.",
     "starter": "Look what I found...",
@@ -52,6 +64,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-007",
+    "version": 1,
     "title": "Talking to the Cutest Puppy",
     "text": "Give clues like you're talking to the **cutest puppy ever** and it understands every word.",
     "tags": [
@@ -60,6 +74,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-008",
+    "version": 1,
     "title": "Infomercial Host",
     "text": "Give clues like a **late-night infomercial host** who really needs this thing to sell.",
     "starter": "But wait, there's more...",
@@ -70,6 +86,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-009",
+    "version": 1,
     "title": "Favorite Thing Ever",
     "text": "Give clues like this is your **absolute favorite thing in the world**.",
     "tags": [
@@ -78,6 +96,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-010",
+    "version": 1,
     "title": "Totally Unsure",
     "text": "Give clues like you're **very unsure**, using words like maybe, probably, kinda, and sort of.",
     "tags": [
@@ -86,6 +106,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-011",
+    "version": 1,
     "title": "Villain Monologue",
     "text": "Give clues like a **villain explaining their plan** to the hero.",
     "starter": "This is the key to my plan...",
@@ -96,6 +118,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-012",
+    "version": 1,
     "title": "Clueless Tour Guide",
     "text": "Give clues like a **tour guide who's never seen this thing before** but has to pretend they know it.",
     "starter": "And on your left you'll see...",
@@ -106,6 +130,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-013",
+    "version": 1,
     "title": "Forbidden Secret",
     "text": "Give clues like you're sharing a **huge secret you're not supposed to reveal**.",
     "tags": [
@@ -114,6 +140,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-014",
+    "version": 1,
     "title": "Spy",
     "text": "Give clues like you're in a **spy movie**, passing secret instructions in public.",
     "starter": "Mission update: the target is...",
@@ -124,6 +152,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-015",
+    "version": 1,
     "title": "Careful Mobster",
     "text": "Give clues like a **mobster avoiding the thing's name** because the cops are listening.",
     "starter": "Look, hypothetically speaking...",
@@ -134,6 +164,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-016",
+    "version": 1,
     "title": "Guided Meditation",
     "text": "Give clues like you're leading a **calm, soothing guided meditation**.",
     "starter": "Inhale through your nose. Now notice...",
@@ -144,6 +176,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-017",
+    "version": 1,
     "title": "Nature Documentary",
     "text": "Give clues like you're narrating a **nature documentary** about a rare specimen in the wild.",
     "starter": "Here we observe it in its natural habitat...",
@@ -154,6 +188,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-018",
+    "version": 1,
     "title": "5-Star Review",
     "text": "Give clues like you're leaving an **over-the-top 5-star review**.",
     "starter": "I'm obsessed. This thing is...",
@@ -164,6 +200,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-019",
+    "version": 1,
     "title": "1-Star Review",
     "text": "Give clues like you're leaving a **brutal 1-star complaint**.",
     "starter": "If I could give zero stars I would...",
@@ -174,6 +212,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-020",
+    "version": 1,
     "title": "Sarcastic",
     "text": "Give every clue **dripping with sarcasm**, like this thing personally inconvenienced you.",
     "starter": "Oh perfect. Exactly what I always wanted.",
@@ -183,6 +223,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-021",
+    "version": 1,
     "title": "Bad Salesperson",
     "text": "Give clues like you're **trying to sell this thing**, but you're terrible at it.",
     "starter": "So, this model right here...",
@@ -193,6 +235,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-022",
+    "version": 1,
     "title": "Influencer Unboxing",
     "text": "Give clues like you're **unboxing this thing on camera** and reacting as you go.",
     "starter": "Alright guys, we've got a new one today...",
@@ -203,6 +247,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-023",
+    "version": 1,
     "title": "Cartoon or Video Game Character",
     "text": "Pick any **cartoon or video-game character** and give clues in their voice and attitude.",
     "tags": [
@@ -211,6 +257,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-024",
+    "version": 1,
     "title": "Your Favorite Impression",
     "text": "Do your **go-to impression** and keep it going while you give clues.",
     "tags": [
@@ -219,6 +267,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-025",
+    "version": 1,
     "title": "Country Lawyer",
     "text": "Give clues like a **small-town lawyer in a low-budget courtroom drama**.",
     "starter": "Ladies and gentlemen of the jury...",
@@ -228,6 +278,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-026",
+    "version": 1,
     "title": "Game Show Host",
     "text": "Give clues like an **over-the-top game-show host** announcing what the contestant could win.",
     "starter": "Behind Door Number One, it's...",
@@ -238,6 +290,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-027",
+    "version": 1,
     "title": "Reality Show Judge",
     "text": "Give clues like you're **judging a contestant's submission**: confident, dramatic, and direct.",
     "starter": "Right away, I'm noticing...",
@@ -248,6 +302,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-028",
+    "version": 1,
     "title": "Breaking News",
     "text": "Give clues like you're a **newscaster** reporting **urgent breaking news** happening right now.",
     "tags": [
@@ -257,6 +313,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-029",
+    "version": 1,
     "title": "Conspiracy Theorist",
     "text": "Give clues like you uncovered the **secret truth** about this thing that \"they\" do not want people to know.",
     "tags": [
@@ -266,6 +324,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-030",
+    "version": 1,
     "title": "Crime Scene Investigator",
     "text": "Give clues like this thing was **found at a crime scene** and you're describing the evidence.",
     "tags": [
@@ -275,6 +335,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-031",
+    "version": 1,
     "title": "Spokesperson",
     "text": "Give clues like you're **speaking on behalf of this thing** after something has gone wrong.",
     "tags": [
@@ -284,6 +346,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-032",
+    "version": 1,
     "title": "Press Conference",
     "text": "Give clues like you're **answering reporters** about a developing situation involving this thing.",
     "tags": [
@@ -293,6 +357,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-033",
+    "version": 1,
     "title": "Scientist Announcing a Discovery",
     "text": "Give clues like a **scientist announcing a newly discovered thing** that does not have a name yet.",
     "starter": "We don't have a name for it yet, but...",
@@ -303,6 +369,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-034",
+    "version": 1,
     "title": "Historian",
     "text": "Give clues like you're explaining **how this thing changed the world**.",
     "tags": [
@@ -311,6 +379,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-035",
+    "version": 1,
     "title": "Documentary Interview",
     "text": "Give clues like you're **looking back years later** on how this thing changed your life.",
     "tags": [
@@ -320,6 +390,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-036",
+    "version": 1,
     "title": "Public Apology",
     "text": "Give clues like you're **publicly apologizing** for an incident involving this thing.",
     "tags": [
@@ -329,6 +401,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-037",
+    "version": 1,
     "title": "Training Video",
     "text": "Give clues like you're **teaching a new employee** how to deal with this thing.",
     "tags": [
@@ -337,6 +411,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-038",
+    "version": 1,
     "title": "Public Service Announcement",
     "text": "Give clues like you're making an **important public announcement** about this thing.",
     "tags": [
@@ -345,6 +421,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-039",
+    "version": 1,
     "title": "Suspicious",
     "text": "Give clues like you **absolutely do not trust this thing**.",
     "starter": "I don't know what this thing is up to, but...",
@@ -354,6 +432,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-040",
+    "version": 1,
     "title": "Scary Story",
     "text": "Give clues like this thing is at the center of a **scary story**.",
     "starter": "It all started when...",
@@ -363,6 +443,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-041",
+    "version": 1,
     "title": "Morning Radio Giveaway",
     "text": "Give clues like a **morning radio DJ** describing the prize a lucky caller could win.",
     "starter": "Caller number ten could win...",
@@ -373,6 +455,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-042",
+    "version": 1,
     "title": "Kids' Show Character",
     "text": "Give clues like a **cheerful kids' show character** teaching the audience about this thing.",
     "starter": "Hey, kids! Did you know...",
@@ -383,6 +467,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-043",
+    "version": 1,
     "title": "Wedding Toast",
     "text": "Give clues like this thing is **getting married** and you're giving a heartfelt wedding toast.",
     "starter": "I've known this one for years...",
@@ -393,6 +479,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-044",
+    "version": 1,
     "title": "Dating Profile",
     "text": "Give clues like you're writing this thing's **dating profile**.",
     "starter": "About me...",
@@ -402,6 +490,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-045",
+    "version": 1,
     "title": "Late-Night Guest Introduction",
     "text": "Give clues like a **late-night host introducing this thing** as tonight's special guest.",
     "starter": "Our next guest is known for...",
@@ -412,6 +502,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-046",
+    "version": 1,
     "title": "Show and Tell",
     "text": "Give clues like a **second grader at show and tell** describing this thing.",
     "starter": "For show and tell, I brought something that...",
@@ -421,6 +513,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-047",
+    "version": 1,
     "title": "I Don't Know What It's Called",
     "text": "Give clues like you're **trying to buy this thing without knowing its name**.",
     "starter": "I'm looking for this thing that...",
@@ -430,6 +524,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-048",
+    "version": 1,
     "title": "It's Real!",
     "text": "Give clues like **everyone thinks this thing is a myth**, but you know it is real.",
     "starter": "I know this sounds crazy, but...",
@@ -440,6 +536,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-049",
+    "version": 1,
     "title": "Totally Safe",
     "text": "Give clues like this thing is **obviously dangerous**, but you're convincing someone it is perfectly safe.",
     "starter": "Trust me, it's completely safe...",
@@ -450,6 +548,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-050",
+    "version": 1,
     "title": "Humblebrag",
     "text": "Give clues like this thing is **incredibly impressive**, but you're acting like it is no big deal.",
     "starter": "Oh, it only...",
@@ -459,6 +559,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-051",
+    "version": 1,
     "title": "Return Counter",
     "text": "Give clues like you're **trying to return this thing** and explaining why you do not want it anymore.",
     "starter": "Yeah, I'd like to return this...",
@@ -468,6 +570,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-052",
+    "version": 1,
     "title": "You Have to See This",
     "text": "Give clues like you **just discovered this thing** and cannot believe nobody told you sooner.",
     "starter": "Dude, you know what I just found out about?",
@@ -477,6 +581,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-053",
+    "version": 1,
     "title": "Online Classified Ad",
     "text": "Give clues like you're writing an **online classified ad** for this thing.",
     "starter": "For sale: lightly used...",
@@ -487,6 +593,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-054",
+    "version": 1,
     "title": "Textbook Entry",
     "text": "Give clues like this thing is being **formally described in a textbook**.",
     "starter": "This is commonly defined as...",
@@ -496,6 +604,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-055",
+    "version": 1,
     "title": "Museum Plaque",
     "text": "Give clues like this thing is **on display in a museum** and you're reading its plaque.",
     "starter": "On display here is...",
@@ -505,6 +615,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-056",
+    "version": 1,
     "title": "Missing Poster",
     "text": "Give clues like you're making a **missing poster** for this thing.",
     "starter": "Have you seen...?",
@@ -514,6 +626,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-057",
+    "version": 1,
     "title": "Repair Manual",
     "text": "Give clues like you're reading a **repair manual** explaining what is wrong and how to fix it.",
     "starter": "If yours is having trouble...",
@@ -523,6 +637,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-058",
+    "version": 1,
     "title": "Résumé",
     "text": "Give clues like you're reading the **executive summary from this thing's resume**.",
     "starter": "Experienced professional with a proven track record of...",
@@ -532,6 +648,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-059",
+    "version": 1,
     "title": "Product Recall",
     "text": "Give clues like this thing has been **recalled** and you're explaining why.",
     "starter": "If you own one of these, please stop using it immediately...",
@@ -541,6 +659,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-060",
+    "version": 1,
     "title": "FAQ",
     "text": "Give clues as **questions and answers from this thing's FAQ page**.",
     "starter": "Frequently asked question: what happens if...?",
@@ -550,6 +670,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-061",
+    "version": 1,
     "title": "FBI Case File",
     "text": "Give clues like you're reading this thing's **confidential FBI case file**.",
     "starter": "Subject is known to...",
@@ -560,6 +682,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-062",
+    "version": 1,
     "title": "Modern Art Critic",
     "text": "Give clues like this thing is **profound modern art** and you're explaining what it means.",
     "starter": "What the artist is really exploring here is...",
@@ -569,6 +693,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-063",
+    "version": 1,
     "title": "Sommelier",
     "text": "Give clues like a **sommelier**, carefully describing this thing's qualities like a fine wine.",
     "starter": "You'll notice hints of...",
@@ -578,6 +704,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-064",
+    "version": 1,
     "title": "Ancient Prophecy",
     "text": "Give clues like this thing was **foretold in an ancient prophecy**.",
     "starter": "The prophecy spoke of...",
@@ -587,6 +715,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-065",
+    "version": 1,
     "title": "Future Archaeologist",
     "text": "Give clues like an **archaeologist 200 years in the future** explaining how people in our time used this.",
     "starter": "People in the early 2000s used this to...",
@@ -597,6 +727,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-066",
+    "version": 1,
     "title": "SkyMall Catalog",
     "text": "Give clues like this thing is featured in an **over-the-top mail-order catalog**.",
     "starter": "Introducing...",
@@ -608,6 +740,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-067",
+    "version": 1,
     "title": "Lost & Found",
     "text": "Give clues like you're at a **lost-and-found desk** describing this thing you lost.",
     "starter": "I'm looking for something I lost...",
@@ -618,6 +752,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-068",
+    "version": 1,
     "title": "It's Not Weird",
     "text": "Give clues like **everyone else thinks this thing is weird**, but you think it is perfectly normal.",
     "starter": "Okay, I know how this looks, but...",
@@ -627,6 +763,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-069",
+    "version": 1,
     "title": "Pawn Shop",
     "text": "Give clues like you're convincing a **skeptical pawn-shop owner** this thing is more valuable than they think.",
     "starter": "You don't understand what I've got here...",
@@ -637,6 +775,8 @@
     "driveThru120": true
   },
   {
+    "id": "ro-070",
+    "version": 1,
     "title": "Shark Tank",
     "text": "Give clues like you're **pitching this thing to skeptical investors** as the next big thing.",
     "starter": "Sharks, I'm here today asking you to invest in...",
@@ -647,6 +787,8 @@
     "driveThru120": false
   },
   {
+    "id": "ro-071",
+    "version": 1,
     "title": "Caveman Speak",
     "text": "Give clues like a **caveman who just discovered this thing**, using very simple words and sentences.",
     "starter": "Me find strange thing. Thing...",

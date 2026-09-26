@@ -1,5 +1,7 @@
 [
   {
+    "id": "ru-001",
+    "version": 1,
     "title": "Everything Around It",
     "text": "Describe the **things, places, or context around the answer** instead of describing the answer itself.",
     "multipliable": true,
@@ -9,6 +11,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-002",
+    "version": 1,
     "title": "What It's Not",
     "text": "Give clues only by saying **what the answer isn't**.",
     "multipliable": true,
@@ -18,6 +22,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-003",
+    "version": 1,
     "title": "Senses",
     "text": "Describe the answer using **only sight, sound, smell, taste, or touch**.",
     "multipliable": true,
@@ -27,6 +33,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-004",
+    "version": 1,
     "title": "You",
     "text": "**You are the answer.** Give clues about yourself from the **answer's point of view**.",
     "multipliable": true,
@@ -36,6 +44,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-005",
+    "version": 1,
     "title": "Adjective + Noun + Verb",
     "text": "Each clue must be **exactly three words: adjective + noun + verb**.",
     "starter": "**Adjective** describes.\n**Noun** names.\n**Verb** shows action.",
@@ -48,6 +58,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-006",
+    "version": 1,
     "title": "Three Words",
     "text": "Each clue must be **exactly three words**.",
     "multipliable": true,
@@ -57,6 +69,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-007",
+    "version": 1,
     "title": "Questions Only",
     "text": "Every clue must be **phrased as a question**.",
     "multipliable": true,
@@ -66,6 +80,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-008",
+    "version": 1,
     "title": "One-Syllable Words",
     "text": "Use **only one-syllable words** as clues.",
     "multipliable": true,
@@ -75,6 +91,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-009",
+    "version": 1,
     "title": "Adjectives & Nouns Only",
     "text": "Use **only adjectives and nouns** in your clues.",
     "starter": "**Adjective** describes.\n**Noun** names a person, place, or thing.",
@@ -86,6 +104,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-010",
+    "version": 1,
     "title": "Verbs & Nouns Only",
     "text": "Use **only verbs and nouns** in your clues.",
     "starter": "**Verb** shows action.\n**Noun** names a person, place, or thing.",
@@ -97,6 +117,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-011",
+    "version": 1,
     "title": "Comparisons",
     "text": "Describe the answer **only through comparisons**: size, weight, texture, brightness, speed, or another quality.",
     "multipliable": true,
@@ -106,6 +128,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-012",
+    "version": 1,
     "title": "Two Pieces",
     "text": "Each clue must have **exactly two parts**, separated by a brief pause.",
     "multipliable": true,
@@ -115,6 +139,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-013",
+    "version": 1,
     "title": "Checklist Inspection",
     "text": "Give each clue like an **inspection checklist**: say a feature, then say **\"check.\"**",
     "multipliable": false,
@@ -124,6 +150,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-014",
+    "version": 1,
     "title": "It's Like, But Not That",
     "text": "Every clue must use: **\"It's like ____, but not that.\"**",
     "multipliable": true,
@@ -134,6 +162,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-015",
+    "version": 1,
     "title": "Trade-Offs Only",
     "text": "Every clue must use: **\"Great for ____, terrible for ____.\"**",
     "multipliable": false,
@@ -144,6 +174,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-016",
+    "version": 1,
     "title": "Safety Warnings",
     "text": "Every clue must sound like a **warning label or safety instruction**.",
     "multipliable": false,
@@ -153,6 +185,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-017",
+    "version": 1,
     "title": "No Physical Description",
     "text": "**Do not describe what the answer looks like**: no shape, size, color, or physical features.",
     "multipliable": true,
@@ -162,6 +196,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-018",
+    "version": 1,
     "title": "No Function",
     "text": "**Do not describe what the answer does** or what people **use it for**.",
     "multipliable": true,
@@ -171,6 +207,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-019",
+    "version": 1,
     "title": "Appearance Only",
     "text": "Describe **only what the answer looks like**: shape, size, color, or physical features.",
     "multipliable": true,
@@ -180,6 +218,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-020",
+    "version": 1,
     "title": "Function Only",
     "text": "Describe **only what the answer does** or what people use it for.",
     "multipliable": true,
@@ -189,6 +229,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-021",
+    "version": 1,
     "title": "Can / Can't",
     "text": "Every clue must use: **\"It can ____, but it can't ____.\"**",
     "multipliable": true,
@@ -198,6 +240,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-022",
+    "version": 1,
     "title": "You Find It...",
     "text": "Every clue must use: **\"You find it [at/in/with] ____.\"**",
     "multipliable": true,
@@ -207,6 +251,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-023",
+    "version": 1,
     "title": "You Can ____ It",
     "text": "Every clue must use: **\"You can ____ it.\"**",
     "multipliable": true,
@@ -216,6 +262,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-024",
+    "version": 1,
     "title": "It Has ____",
     "text": "Every clue must use: **\"It has ____.\"**",
     "multipliable": true,
@@ -225,6 +273,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-025",
+    "version": 1,
     "title": "Best At / Worst At",
     "text": "Alternate clues: **\"Best at...\"** then **\"Worst at...\"** and repeat.",
     "multipliable": false,
@@ -235,6 +285,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-026",
+    "version": 1,
     "title": "Most Likely / Least Likely",
     "text": "Alternate clues: **\"Most likely to...\"** then **\"Least likely to...\"** and repeat.",
     "multipliable": false,
@@ -245,6 +297,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-027",
+    "version": 1,
     "title": "Two Words",
     "text": "Each clue must be **exactly two words**.",
     "multipliable": true,
@@ -254,6 +308,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-028",
+    "version": 1,
     "title": "Build a Clue",
     "text": "Start with a **one-word clue**. Then use exactly **two words, three words, four words**, and so on.",
     "multipliable": false,
@@ -264,6 +320,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-029",
+    "version": 1,
     "title": "Ingredients / Nutrition Label",
     "text": "Describe what the answer is made of like an **ingredients list or nutrition label**. Literal and made-up ingredients are allowed.",
     "starter": "Contains...",
@@ -274,6 +332,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-030",
+    "version": 1,
     "title": "Motto / Slogan",
     "text": "Give every clue as a **motto, slogan, or tagline** for the answer.",
     "multipliable": false,
@@ -283,6 +343,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-031",
+    "version": 1,
     "title": "Clickbait Headline",
     "text": "Give every clue as a **ridiculous clickbait headline** about the answer.",
     "starter": "You won't believe...",
@@ -293,6 +355,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-032",
+    "version": 1,
     "title": "Good News / Bad News",
     "text": "Alternate clues: **\"Good news...\"** then **\"Bad news...\"** and repeat.",
     "multipliable": false,
@@ -303,6 +367,8 @@
     "driveThru120": true
   },
   {
+    "id": "ru-033",
+    "version": 1,
     "title": "Quick Start Guide",
     "text": "Describe how to use or interact with the answer as **numbered quick-start instructions**.",
     "starter": "Step 1...",
