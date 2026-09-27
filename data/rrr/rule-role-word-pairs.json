@@ -4,1049 +4,1049 @@
     "version": 1,
     "ruleWord": "Light Bulb",
     "roleWord": "Great Wall",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-2",
     "version": 1,
     "ruleWord": "Cobra",
     "roleWord": "Sarcasm",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-3",
     "version": 1,
     "ruleWord": "Watermelon",
     "roleWord": "Eavesdrop",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-4",
     "version": 1,
     "ruleWord": "Corn On the Cob",
     "roleWord": "Silence",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-5",
     "version": 1,
     "ruleWord": "Toast",
     "roleWord": "Karma",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-6",
     "version": 1,
     "ruleWord": "Hamburger",
     "roleWord": "Stubborn",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-7",
     "version": 1,
     "ruleWord": "Rainbow",
     "roleWord": "Easter Island",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-8",
     "version": 1,
     "ruleWord": "Seahorse",
     "roleWord": "Gut Feeling",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-9",
     "version": 1,
     "ruleWord": "Cactus",
     "roleWord": "Extension Cord",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-10",
     "version": 1,
     "ruleWord": "Ceiling Fan",
     "roleWord": "Constellation",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-11",
     "version": 1,
     "ruleWord": "Igloo",
     "roleWord": "Awkward",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-12",
     "version": 1,
     "ruleWord": "Campfire",
     "roleWord": "Mischievous",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-13",
     "version": 1,
     "ruleWord": "Bowling Pin",
     "roleWord": "Underdog",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-14",
     "version": 1,
     "ruleWord": "Pineapple",
     "roleWord": "Mine Cart",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-15",
     "version": 1,
     "ruleWord": "Dog Leash",
     "roleWord": "Decoy",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-16",
     "version": 1,
     "ruleWord": "Tent",
     "roleWord": "Peer Pressure",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-17",
     "version": 1,
     "ruleWord": "Candy Cane",
     "roleWord": "Stethoscope",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-18",
     "version": 1,
     "ruleWord": "French Fries",
     "roleWord": "Electricity",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-19",
     "version": 1,
     "ruleWord": "Banana Peel",
     "roleWord": "Camouflage",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-20",
     "version": 1,
     "ruleWord": "Pancakes",
     "roleWord": "Pacifier",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-21",
     "version": 1,
     "ruleWord": "Motorcycle",
     "roleWord": "Snoop",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-22",
     "version": 1,
     "ruleWord": "Teddy Bear",
     "roleWord": "Treasure Chest",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-23",
     "version": 1,
     "ruleWord": "Shark",
     "roleWord": "Secret",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-24",
     "version": 1,
     "ruleWord": "Wallet",
     "roleWord": "Blacksmith",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-25",
     "version": 1,
     "ruleWord": "Baby Bottle",
     "roleWord": "Dusk",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-26",
     "version": 1,
     "ruleWord": "Soccer Ball",
     "roleWord": "Coincidence",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-27",
     "version": 1,
     "ruleWord": "Car Tire",
     "roleWord": "Nosy",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-28",
     "version": 1,
     "ruleWord": "Bagel",
     "roleWord": "Internet",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-29",
     "version": 1,
     "ruleWord": "Eagle",
     "roleWord": "Pandora's Box",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-30",
     "version": 1,
     "ruleWord": "Bowling Ball",
     "roleWord": "Letter Opener",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-31",
     "version": 1,
     "ruleWord": "Camel",
     "roleWord": "Fortune Cookie",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-32",
     "version": 1,
     "ruleWord": "Ice Cube",
     "roleWord": "Stonehenge",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-33",
     "version": 1,
     "ruleWord": "Jacket",
     "roleWord": "Ashtray",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-34",
     "version": 1,
     "ruleWord": "Waffle",
     "roleWord": "Water Bed",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-35",
     "version": 1,
     "ruleWord": "Avocado",
     "roleWord": "Metal Detector",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-36",
     "version": 1,
     "ruleWord": "Basketball Hoop",
     "roleWord": "Windshield Wiper",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-37",
     "version": 1,
     "ruleWord": "Spider",
     "roleWord": "Mullet",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-38",
     "version": 1,
     "ruleWord": "Suitcase",
     "roleWord": "Echo",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-39",
     "version": 1,
     "ruleWord": "Gorilla",
     "roleWord": "Password",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-40",
     "version": 1,
     "ruleWord": "Giraffe",
     "roleWord": "Wind Chime",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-41",
     "version": 1,
     "ruleWord": "Monkey",
     "roleWord": "Puppeteer",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-42",
     "version": 1,
     "ruleWord": "Penguin",
     "roleWord": "Feud",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-43",
     "version": 1,
     "ruleWord": "Blender",
     "roleWord": "Pufferfish",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-44",
     "version": 1,
     "ruleWord": "Baseball Cap",
     "roleWord": "Lava Lamp",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-45",
     "version": 1,
     "ruleWord": "Fireworks",
     "roleWord": "Shady",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-46",
     "version": 1,
     "ruleWord": "Sandwich",
     "roleWord": "Gargoyle",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-47",
     "version": 1,
     "ruleWord": "Sword",
     "roleWord": "Luck",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-48",
     "version": 1,
     "ruleWord": "Octopus",
     "roleWord": "Rumor",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-49",
     "version": 1,
     "ruleWord": "Mailbox",
     "roleWord": "Procrastinate",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-50",
     "version": 1,
     "ruleWord": "Taco",
     "roleWord": "Hypnosis",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-51",
     "version": 1,
     "ruleWord": "Trophy",
     "roleWord": "Pinwheel",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-52",
     "version": 1,
     "ruleWord": "Light Switch",
     "roleWord": "Cliffhanger",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-53",
     "version": 1,
     "ruleWord": "Keyboard",
     "roleWord": "Macarena",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-54",
     "version": 1,
     "ruleWord": "Cell Phone",
     "roleWord": "Windmill",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-55",
     "version": 1,
     "ruleWord": "Diaper",
     "roleWord": "Unicycle",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-56",
     "version": 1,
     "ruleWord": "Piano",
     "roleWord": "Math",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-57",
     "version": 1,
     "ruleWord": "Robot",
     "roleWord": "Spider Web",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-58",
     "version": 1,
     "ruleWord": "Stapler",
     "roleWord": "Mirage",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-59",
     "version": 1,
     "ruleWord": "Canoe",
     "roleWord": "Applause",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-60",
     "version": 1,
     "ruleWord": "Hot Dog",
     "roleWord": "Bermuda Triangle",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-61",
     "version": 1,
     "ruleWord": "Snowman",
     "roleWord": "Solar Panel",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-62",
     "version": 1,
     "ruleWord": "Fire Truck",
     "roleWord": "Black Hole",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-63",
     "version": 1,
     "ruleWord": "Drums",
     "roleWord": "Bacteria",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-64",
     "version": 1,
     "ruleWord": "Flashlight",
     "roleWord": "Vanilla",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-65",
     "version": 1,
     "ruleWord": "Desk Lamp",
     "roleWord": "Platypus",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-66",
     "version": 1,
     "ruleWord": "Strawberry",
     "roleWord": "Solar Eclipse",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-67",
     "version": 1,
     "ruleWord": "Baseball Bat",
     "roleWord": "Goldfish Bowl",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-68",
     "version": 1,
     "ruleWord": "Burrito",
     "roleWord": "Bonsai Tree",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-69",
     "version": 1,
     "ruleWord": "Compass",
     "roleWord": "Mimic",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-70",
     "version": 1,
     "ruleWord": "Bandage",
     "roleWord": "Hairball",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-71",
     "version": 1,
     "ruleWord": "Ambulance",
     "roleWord": "Hallucination",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-72",
     "version": 1,
     "ruleWord": "Lollipop",
     "roleWord": "Oxygen",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-73",
     "version": 1,
     "ruleWord": "Peanut",
     "roleWord": "Smoke Detector",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-74",
     "version": 1,
     "ruleWord": "Parrot",
     "roleWord": "Domino Effect",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-75",
     "version": 1,
     "ruleWord": "Laptop",
     "roleWord": "Easel",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-76",
     "version": 1,
     "ruleWord": "Umbrella",
     "roleWord": "Daydream",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-77",
     "version": 1,
     "ruleWord": "Hair Brush",
     "roleWord": "Quicksand",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-78",
     "version": 1,
     "ruleWord": "Battery",
     "roleWord": "Drawbridge",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-79",
     "version": 1,
     "ruleWord": "Popcorn",
     "roleWord": "Wedding Ring",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-80",
     "version": 1,
     "ruleWord": "Tiger",
     "roleWord": "Brain Freeze",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-81",
     "version": 1,
     "ruleWord": "Pumpkin",
     "roleWord": "Whine",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-82",
     "version": 1,
     "ruleWord": "Pickle",
     "roleWord": "Milestone",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-83",
     "version": 1,
     "ruleWord": "Pizza",
     "roleWord": "Traffic Jam",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-84",
     "version": 1,
     "ruleWord": "Sofa",
     "roleWord": "North Pole",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-85",
     "version": 1,
     "ruleWord": "Birthday Cake",
     "roleWord": "Jukebox",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-86",
     "version": 1,
     "ruleWord": "Toothbrush",
     "roleWord": "Gold Rush",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-87",
     "version": 1,
     "ruleWord": "Ketchup",
     "roleWord": "Chandelier",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-88",
     "version": 1,
     "ruleWord": "Fishing Rod",
     "roleWord": "Snowblower",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-89",
     "version": 1,
     "ruleWord": "Baseball Glove",
     "roleWord": "Ice Fishing",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-90",
     "version": 1,
     "ruleWord": "Sushi",
     "roleWord": "Shooting Star",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-91",
     "version": 1,
     "ruleWord": "Printer",
     "roleWord": "Ski Goggles",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-92",
     "version": 1,
     "ruleWord": "Kangaroo",
     "roleWord": "Dark Ages",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-93",
     "version": 1,
     "ruleWord": "Glue",
     "roleWord": "Mumble",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-94",
     "version": 1,
     "ruleWord": "Pillow",
     "roleWord": "Archaeologist",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-95",
     "version": 1,
     "ruleWord": "Scorpion",
     "roleWord": "Loophole",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-96",
     "version": 1,
     "ruleWord": "Mittens",
     "roleWord": "Grudge",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-97",
     "version": 1,
     "ruleWord": "Thermometer",
     "roleWord": "Reflection",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-98",
     "version": 1,
     "ruleWord": "Sweater",
     "roleWord": "Traffic Cone",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-99",
     "version": 1,
     "ruleWord": "Yo-Yo",
     "roleWord": "Hover",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-100",
     "version": 1,
     "ruleWord": "Snowboard",
     "roleWord": "Superstition",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-101",
     "version": 1,
     "ruleWord": "Sunglasses",
     "roleWord": "Whisper",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-102",
     "version": 1,
     "ruleWord": "Porcupine",
     "roleWord": "Dilemma",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-103",
     "version": 1,
     "ruleWord": "Bow Tie",
     "roleWord": "Squint",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-104",
     "version": 1,
     "ruleWord": "Hummingbird",
     "roleWord": "Sneaky",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-105",
     "version": 1,
     "ruleWord": "Jellyfish",
     "roleWord": "Reputation",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-106",
     "version": 1,
     "ruleWord": "Lobster",
     "roleWord": "Taunt",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-107",
     "version": 1,
     "ruleWord": "Newspaper",
     "roleWord": "Goosebumps",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-108",
     "version": 1,
     "ruleWord": "Parachute",
     "roleWord": "Amnesia",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-109",
     "version": 1,
     "ruleWord": "Telescope",
     "roleWord": "Orchestra",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-110",
     "version": 1,
     "ruleWord": "Paper Plane",
     "roleWord": "Gossip",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-111",
     "version": 1,
     "ruleWord": "Sandcastle",
     "roleWord": "Brainstorm",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-112",
     "version": 1,
     "ruleWord": "Armadillo",
     "roleWord": "Blind Spot",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-113",
     "version": 1,
     "ruleWord": "Squirrel",
     "roleWord": "Chicken Dance",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-114",
     "version": 1,
     "ruleWord": "Door Knob",
     "roleWord": "Accordion",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-115",
     "version": 1,
     "ruleWord": "Violin",
     "roleWord": "Paranoia",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-116",
     "version": 1,
     "ruleWord": "Chameleon",
     "roleWord": "Restless",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-117",
     "version": 1,
     "ruleWord": "Pretzel",
     "roleWord": "X-ray",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-118",
     "version": 1,
     "ruleWord": "Cotton Candy",
     "roleWord": "Chemistry",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-119",
     "version": 1,
     "ruleWord": "Shoelace",
     "roleWord": "Water Fountain",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-120",
     "version": 1,
     "ruleWord": "Zebra",
     "roleWord": "Barcode",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-121",
     "version": 1,
     "ruleWord": "Microphone",
     "roleWord": "Tree Stump",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-122",
     "version": 1,
     "ruleWord": "Sunflower",
     "roleWord": "Beaker",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-123",
     "version": 1,
     "ruleWord": "Zipper",
     "roleWord": "Skeleton Key",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-124",
     "version": 1,
     "ruleWord": "Whistle",
     "roleWord": "Pothole",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-125",
     "version": 1,
     "ruleWord": "Rocket Ship",
     "roleWord": "Betrayal",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-126",
     "version": 1,
     "ruleWord": "Computer Mouse",
     "roleWord": "Chaos",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-127",
     "version": 1,
     "ruleWord": "Magnet",
     "roleWord": "Tripod",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-128",
     "version": 1,
     "ruleWord": "Saxophone",
     "roleWord": "Vocabulary",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-129",
     "version": 1,
     "ruleWord": "Water Bottle",
     "roleWord": "Kaleidoscope",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-130",
     "version": 1,
     "ruleWord": "Earbuds",
     "roleWord": "Déjà vu",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-131",
     "version": 1,
     "ruleWord": "Polar Bear",
     "roleWord": "Irony",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-132",
     "version": 1,
     "ruleWord": "Lawnmower",
     "roleWord": "Ice Age",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-133",
     "version": 1,
     "ruleWord": "Caterpillar",
     "roleWord": "Alcatraz",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-134",
     "version": 1,
     "ruleWord": "Trampoline",
     "roleWord": "Smug",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-135",
     "version": 1,
     "ruleWord": "Unicorn",
     "roleWord": "Midas Touch",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-136",
     "version": 1,
     "ruleWord": "Lunchbox",
     "roleWord": "Gravity",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-137",
     "version": 1,
     "ruleWord": "Bunk Bed",
     "roleWord": "Clown Car",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-138",
     "version": 1,
     "ruleWord": "Hot Air Balloon",
     "roleWord": "Murphy's Law",
-    "driveThru120": true
+    "driveThru140": true
   },
   {
     "id": "tm-139",
     "version": 1,
     "ruleWord": "Flamingo",
     "roleWord": "Feisty",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-140",
     "version": 1,
     "ruleWord": "Ice Skate",
     "roleWord": "Taxidermy",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-141",
     "version": 1,
     "ruleWord": "Confetti",
     "roleWord": "Post-it Notes",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-142",
     "version": 1,
     "ruleWord": "Binoculars",
     "roleWord": "Scarecrow",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-143",
     "version": 1,
     "ruleWord": "Tornado",
     "roleWord": "Scapegoat",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-144",
     "version": 1,
     "ruleWord": "Seashell",
     "roleWord": "Curiosity",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-145",
     "version": 1,
     "ruleWord": "Volcano",
     "roleWord": "Trojan Horse",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-146",
     "version": 1,
     "ruleWord": "Golf Ball",
     "roleWord": "Solar System",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-147",
     "version": 1,
     "ruleWord": "Kayak",
     "roleWord": "Butterfly Effect",
-    "driveThru120": false
+    "driveThru140": true
   },
   {
     "id": "tm-148",
     "version": 1,
     "ruleWord": "Vase",
     "roleWord": "Harmonica",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-149",
     "version": 1,
     "ruleWord": "Chimney",
     "roleWord": "Evolution",
-    "driveThru120": false
+    "driveThru140": false
   },
   {
     "id": "tm-150",
     "version": 1,
     "ruleWord": "Funnel",
     "roleWord": "Hyper",
-    "driveThru120": false
+    "driveThru140": false
   }
 ]
