@@ -338,7 +338,7 @@
     "id": "ro-31",
     "version": 1,
     "title": "Spokesperson",
-    "text": "Give clues like you're **speaking on behalf of this thing** after something has gone wrong.",
+    "text": "Defend this thing after it caused a minor disaster.",
     "tags": [
       "persona",
       "scenario"
@@ -360,7 +360,7 @@
     "id": "ro-33",
     "version": 1,
     "title": "Scientist Announcing a Discovery",
-    "text": "Give clues like a **scientist announcing a newly discovered thing** that does not have a name yet.",
+    "text": "Announce this thing as a new, not-yet-named discovery.",
     "starter": "We don't have a name for it yet, but...",
     "tags": [
       "persona",
@@ -393,7 +393,7 @@
     "id": "ro-36",
     "version": 1,
     "title": "Public Apology",
-    "text": "Give clues like you're **publicly apologizing** for an incident involving this thing.",
+    "text": "Give clues like this thing is about to get canceled.",
     "tags": [
       "media-format",
       "scenario"
@@ -640,7 +640,7 @@
     "id": "ro-58",
     "version": 1,
     "title": "Résumé",
-    "text": "Give clues like you're reading the **executive summary from this thing's resume**.",
+    "text": "Give clues like you're reading the **executive summary** from this thing's resume.",
     "starter": "Experienced professional with a proven track record of...",
     "tags": [
       "media-format"
@@ -718,7 +718,7 @@
     "id": "ro-65",
     "version": 1,
     "title": "Future Archaeologist",
-    "text": "Give clues like an **archaeologist 200 years in the future** explaining how people in our time used this.",
+    "text": "As an archaeologist 200 years from now, explain how we used this thing.",
     "starter": "People in the early 2000s used this to...",
     "tags": [
       "persona",
@@ -766,7 +766,7 @@
     "id": "ro-69",
     "version": 1,
     "title": "Pawn Shop",
-    "text": "Give clues like you're convincing a **skeptical pawn-shop owner** this thing is more valuable than they think.",
+    "text": "You're desperate to pawn this thing; the owner thinks it's junk.",
     "starter": "You don't understand what I've got here...",
     "tags": [
       "scenario",

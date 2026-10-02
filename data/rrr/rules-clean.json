@@ -323,7 +323,7 @@
     "id": "ru-29",
     "version": 1,
     "title": "Ingredients / Nutrition Label",
-    "text": "Describe what the answer is made of like an **ingredients list or nutrition label**. Literal and made-up ingredients are allowed.",
+    "text": "List this thing's ingredients. Real or made-up, your call.",
     "starter": "Contains...",
     "multipliable": false,
     "tags": [
