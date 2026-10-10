@@ -79,15 +79,15 @@
     },
     {
       "id": "rb-67",
-      "version": 1,
-      "category": "Hobby Related",
+      "version": 2,
+      "category": "Hobby Related Items",
       "letter": "W",
       "driveThru140": false
     },
     {
       "id": "rb-68",
-      "version": 1,
-      "category": "Music Related",
+      "version": 2,
+      "category": "Music Related Items",
       "letter": "G",
       "driveThru140": false
     },
@@ -216,8 +216,8 @@
     },
     {
       "id": "rb-13",
-      "version": 1,
-      "value": "Underwater life",
+      "version": 2,
+      "value": "Underwater creatures",
       "driveThru140": false
     },
     {
@@ -258,14 +258,14 @@
     },
     {
       "id": "rb-20",
-      "version": 1,
-      "value": "Camping gear",
+      "version": 2,
+      "value": "Camping items",
       "driveThru140": false
     },
     {
       "id": "rb-21",
-      "version": 1,
-      "value": "Beach gear",
+      "version": 2,
+      "value": "Beach items",
       "driveThru140": false
     },
     {
@@ -384,8 +384,8 @@
     },
     {
       "id": "rb-41",
-      "version": 1,
-      "value": "Clawed things",
+      "version": 2,
+      "value": "Thing with claws",
       "driveThru140": false
     },
     {

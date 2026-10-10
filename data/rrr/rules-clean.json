@@ -34,8 +34,8 @@
   },
   {
     "id": "ru-4",
-    "version": 1,
-    "title": "You",
+    "version": 2,
+    "title": "POV",
     "text": "**You are the answer.** Give clues about yourself from the **answer's point of view**.",
     "multipliable": true,
     "tags": [
@@ -59,9 +59,9 @@
   },
   {
     "id": "ru-6",
-    "version": 1,
+    "version": 2,
     "title": "Three Words",
-    "text": "Each clue must be **exactly three words**.",
+    "text": "Each clue must be a group of **exactly three words**.",
     "multipliable": true,
     "tags": [
       "word-count"
@@ -124,17 +124,6 @@
     "multipliable": true,
     "tags": [
       "comparison"
-    ],
-    "driveThru140": true
-  },
-  {
-    "id": "ru-12",
-    "version": 1,
-    "title": "Two Pieces",
-    "text": "Each clue must have **exactly two parts**, separated by a brief pause.",
-    "multipliable": true,
-    "tags": [
-      "structure"
     ],
     "driveThru140": true
   },
@@ -298,9 +287,9 @@
   },
   {
     "id": "ru-27",
-    "version": 1,
+    "version": 2,
     "title": "Two Words",
-    "text": "Each clue must be **exactly two words**.",
+    "text": "Each clue must be a group of **exactly two words**.",
     "multipliable": true,
     "tags": [
       "word-count"
@@ -372,6 +361,18 @@
     "title": "Quick Start Guide",
     "text": "Describe how to use or interact with the answer as **numbered quick-start instructions**.",
     "starter": "Step 1...",
+    "multipliable": false,
+    "tags": [
+      "format",
+      "sequence"
+    ],
+    "driveThru140": true
+  },
+  {
+    "id": "ru-34",
+    "version": 2,
+    "title": "Day in the life of…",
+    "text": "Describe a **typical day in the answer’s life**.",
     "multipliable": false,
     "tags": [
       "format",

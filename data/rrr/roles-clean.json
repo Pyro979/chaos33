@@ -303,58 +303,63 @@
   },
   {
     "id": "ro-28",
-    "version": 1,
+    "version": 2,
     "title": "Breaking News",
     "text": "Give clues like you're a **newscaster** reporting **urgent breaking news** happening right now.",
     "tags": [
       "persona",
       "media-format"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "This just in..."
   },
   {
     "id": "ro-29",
-    "version": 1,
+    "version": 3,
     "title": "Conspiracy Theorist",
     "text": "Give clues like you uncovered the **secret truth** about this thing that \"they\" do not want people to know.",
     "tags": [
       "persona",
       "attitude"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "That’s what they want you to believe. The truth is..."
   },
   {
     "id": "ro-30",
-    "version": 1,
+    "version": 3,
     "title": "Crime Scene Investigator",
     "text": "Give clues like this thing was **found at a crime scene** and you're describing the evidence.",
     "tags": [
       "persona",
       "scenario"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "Exhibit C appears to be..."
   },
   {
     "id": "ro-31",
-    "version": 1,
+    "version": 2,
     "title": "Spokesperson",
     "text": "Defend this thing after it caused a minor disaster.",
     "tags": [
       "persona",
       "scenario"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "What is being alleged here is..."
   },
   {
     "id": "ro-32",
-    "version": 1,
+    "version": 3,
     "title": "Press Conference",
     "text": "Give clues like you're **answering reporters** about a developing situation involving this thing.",
     "tags": [
       "scenario",
       "media-format"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "I’ll take questions at the end. What we know so far is..."
   },
   {
     "id": "ro-33",
@@ -370,24 +375,26 @@
   },
   {
     "id": "ro-34",
-    "version": 1,
+    "version": 3,
     "title": "Historian",
     "text": "Give clues like you're explaining **how this thing changed the world**.",
     "tags": [
       "persona"
     ],
-    "driveThru140": false
+    "driveThru140": false,
+    "starter": "This changed the course of history because..."
   },
   {
     "id": "ro-35",
-    "version": 1,
+    "version": 3,
     "title": "Documentary Interview",
     "text": "Give clues like you're **looking back years later** on how this thing changed your life.",
     "tags": [
       "media-format",
       "scenario"
     ],
-    "driveThru140": false
+    "driveThru140": false,
+    "starter": "I didn’t realize it at the time, but..."
   },
   {
     "id": "ro-36",
@@ -402,23 +409,25 @@
   },
   {
     "id": "ro-37",
-    "version": 1,
+    "version": 4,
     "title": "Training Video",
     "text": "Give clues like you're **teaching a new employee** how to deal with this thing.",
     "tags": [
       "media-format"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "Let’s walk through the proper procedure for..."
   },
   {
     "id": "ro-38",
-    "version": 1,
+    "version": 2,
     "title": "Public Service Announcement",
     "text": "Give clues like you're making an **important public announcement** about this thing.",
     "tags": [
       "media-format"
     ],
-    "driveThru140": true
+    "driveThru140": true,
+    "starter": "For your safety, please be aware that..."
   },
   {
     "id": "ro-39",
@@ -433,10 +442,10 @@
   },
   {
     "id": "ro-40",
-    "version": 1,
+    "version": 2,
     "title": "Scary Story",
-    "text": "Give clues like this thing is at the center of a **scary story**.",
-    "starter": "It all started when...",
+    "text": "Give clues like you're talking about this at the bonfire at camp.",
+    "starter": "It was a dark and stormy night...",
     "tags": [
       "media-format"
     ],
