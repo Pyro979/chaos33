@@ -116,7 +116,7 @@
     "version": 1,
     "ruleWord": "Candy Cane",
     "roleWord": "Stethoscope",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-18",
@@ -151,7 +151,7 @@
     "version": 1,
     "ruleWord": "Teddy Bear",
     "roleWord": "Treasure Chest",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-23",
@@ -193,7 +193,7 @@
     "version": 1,
     "ruleWord": "Bagel",
     "roleWord": "Internet",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-29",
@@ -214,7 +214,7 @@
     "version": 1,
     "ruleWord": "Camel",
     "roleWord": "Fortune Cookie",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-32",
@@ -305,7 +305,7 @@
     "version": 1,
     "ruleWord": "Baseball Cap",
     "roleWord": "Lava Lamp",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-45",
@@ -319,7 +319,7 @@
     "version": 1,
     "ruleWord": "Sandwich",
     "roleWord": "Gargoyle",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-47",
@@ -424,7 +424,7 @@
     "version": 1,
     "ruleWord": "Snowman",
     "roleWord": "Solar Panel",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-62",
@@ -473,7 +473,7 @@
     "version": 1,
     "ruleWord": "Burrito",
     "roleWord": "Bonsai Tree",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-69",
@@ -543,7 +543,7 @@
     "version": 1,
     "ruleWord": "Battery",
     "roleWord": "Drawbridge",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-79",
@@ -648,7 +648,7 @@
     "version": 3,
     "ruleWord": "Glue",
     "roleWord": "Shadow",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-94",
@@ -837,7 +837,7 @@
     "version": 1,
     "ruleWord": "Zebra",
     "roleWord": "Barcode",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-121",
@@ -900,7 +900,7 @@
     "version": 1,
     "ruleWord": "Water Bottle",
     "roleWord": "Kaleidoscope",
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "tm-130",

@@ -161,7 +161,7 @@
       "persona",
       "scenario"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-16",
@@ -381,7 +381,7 @@
     "tags": [
       "persona"
     ],
-    "driveThru140": false,
+    "driveThru140": true,
     "starter": "This changed the course of history because..."
   },
   {
@@ -393,7 +393,7 @@
       "media-format",
       "scenario"
     ],
-    "driveThru140": false,
+    "driveThru140": true,
     "starter": "I didn’t realize it at the time, but..."
   },
   {
@@ -438,7 +438,7 @@
     "tags": [
       "attitude"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-40",
@@ -587,7 +587,7 @@
     "tags": [
       "attitude"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-53",
@@ -599,7 +599,7 @@
       "media-format",
       "sales"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-54",
@@ -610,7 +610,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-55",
@@ -621,7 +621,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-56",
@@ -632,7 +632,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-57",
@@ -643,7 +643,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-58",
@@ -654,7 +654,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-59",
@@ -676,7 +676,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-61",
@@ -699,7 +699,7 @@
     "tags": [
       "persona"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-63",
@@ -710,7 +710,7 @@
     "tags": [
       "persona"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-64",
@@ -721,7 +721,7 @@
     "tags": [
       "media-format"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-65",
@@ -769,7 +769,7 @@
     "tags": [
       "attitude"
     ],
-    "driveThru140": false
+    "driveThru140": true
   },
   {
     "id": "ro-69",
