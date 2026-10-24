@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BX2363LX"></script>
     <script>
@@ -12,14 +12,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-M8BX2363LX');
-      
+
       // Track thank you page view and conversion
       (function() {
         const urlParams = new URLSearchParams(window.location.search);
         const utmSource = urlParams.get('utm_source') || '(direct)';
         const utmMedium = urlParams.get('utm_medium') || '(none)';
         const utmCampaign = urlParams.get('utm_campaign') || 'email_signup';
-        
+
         // Track page view with UTM parameters
         gtag('event', 'page_view', {
           'utm_source': utmSource,
@@ -27,7 +27,7 @@
           'utm_campaign': utmCampaign,
           'page_location': window.location.href
         });
-        
+
         // Track conversion event
         gtag('event', 'conversion', {
           'event_category': 'email_signup',
@@ -75,28 +75,28 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <title>Thank You! | 33 Seconds of Chaos</title>
+    <title>Thank You! | Riff 'n Rumble</title>
     <meta name="description" content="Thank you for signing up! Check out our Print & Play download and Kickstarter campaign.">
-    
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles.css?v=c54b97c">
-    
+
     <style>
         body {
             background-color: var(--bg);
@@ -104,19 +104,19 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         /* Override any purple link colors */
         .thank-you-page .action-box a:visited {
             color: white !important;
         }
-        
+
         .thank-you-page h1,
         .thank-you-page h2,
         .thank-you-page h3,
         .thank-you-page p {
             color: var(--text) !important;
         }
-        
+
         .thank-you-page {
             flex: 1;
             display: flex;
@@ -126,20 +126,20 @@
             padding: 2rem 1.5rem;
             min-height: 100vh;
         }
-        
+
         .thank-you-container {
             max-width: 900px;
             width: 100%;
             text-align: center;
         }
-        
+
         .thank-you-logo {
             display: block;
             margin: 0 auto 1.5rem;
             max-width: 150px;
             height: auto;
         }
-        
+
         .thank-you-header {
             font-family: var(--font-header);
             font-size: 3rem;
@@ -147,14 +147,14 @@
             margin: 0 0 2rem 0;
             font-weight: 700;
         }
-        
+
         .action-boxes {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 2rem;
             margin: 2rem 0;
         }
-        
+
         .action-box {
             background-color: var(--card-bg);
             border: 4px solid var(--accent);
@@ -169,16 +169,16 @@
             text-decoration: none;
             color: inherit;
         }
-        
+
         .action-box:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 16px var(--shadow-hover);
         }
-        
+
         .action-box:visited {
             color: inherit;
         }
-        
+
         .action-box-header {
             font-family: var(--font-header);
             font-size: 1.2rem;
@@ -186,26 +186,26 @@
             font-weight: 700;
             margin: 0;
         }
-        
+
         .kickstarter-button {
             display: inline-block;
             transition: transform 0.2s ease;
         }
-        
+
         .action-box:hover .kickstarter-button {
             transform: translateY(-2px);
         }
-        
+
         .action-box:active .kickstarter-button {
             transform: translateY(0);
         }
-        
+
         .kickstarter-image {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .pnp-button {
             display: inline-flex;
             align-items: center;
@@ -220,21 +220,21 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
             box-shadow: 0 2px 8px var(--shadow);
         }
-        
+
         .action-box:hover .pnp-button {
             background-color: #ff9933;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px var(--shadow-hover);
         }
-        
+
         .action-box:active .pnp-button {
             transform: translateY(0);
         }
-        
+
         .pnp-button .fa-file-pdf {
             font-size: 1.5rem;
         }
-        
+
         .homepage-link {
             color: var(--text) !important;
             text-decoration: none;
@@ -243,62 +243,62 @@
             margin-top: 2rem;
             display: block;
         }
-        
+
         .homepage-link:visited {
             color: var(--text) !important;
         }
-        
+
         .homepage-link:hover {
             color: var(--accent) !important;
             text-decoration: underline;
         }
-        
+
         .homepage-link:visited:hover {
             color: var(--accent) !important;
         }
-        
+
         .nowrap {
             white-space: nowrap;
         }
-        
+
         @media (max-width: 768px) {
             .action-boxes {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-            
+
             .action-box {
                 padding: 1.5rem;
             }
-            
+
             .action-box-header {
                 font-size: 1.25rem;
             }
-            
+
             .pnp-button {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             .thank-you-page {
                 padding: 1.5rem 1rem;
             }
-            
+
             .thank-you-header {
                 font-size: 2.25rem;
             }
-            
+
             .thank-you-logo {
                 max-width: 120px;
             }
-            
+
             .action-box {
                 padding: 1.25rem;
             }
         }
-        
+
         @media (min-width: 768px) {
             .thank-you-header {
                 font-size: 3.5rem;
@@ -310,31 +310,31 @@
     <div class="thank-you-page">
         <div class="thank-you-container">
             <img src="../images/MVE_sm_black_text.png" alt="Mischievous Vibes Entertainment logo" class="thank-you-logo" width="150" height="75" loading="eager">
-            
+
             <h1 class="thank-you-header">Thank You!</h1>
-            
+
             <div class="action-boxes">
                 <!-- Kickstarter Section (Left) - whole box is clickable -->
-                <a class="action-box" 
+                <a class="action-box"
                    id="kickstarter-link"
-                   href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=thank_you&utm_medium=link&utm_campaign=kickstarter" 
+                   href="https://www.kickstarter.com/projects/33chaos/110087663?ref=d4rk8j&utm_source=thank_you&utm_medium=link&utm_campaign=kickstarter"
                    target="_blank"
                    rel="noopener noreferrer">
                     <h2 class="action-box-header">Wanna eventually play this with your friends and family?<br/>Follow Us on <span style="color: var(--accent);">Kickstarter</span>!</h2>
                     <span class="kickstarter-button">
-                        <img src="../images/notify_me_button.png" 
-                             alt="Notify me on launch - Kickstarter" 
+                        <img src="../images/notify_me_button.png"
+                             alt="Notify me on launch - Kickstarter"
                              class="kickstarter-image"
                              width="400"
                              height="auto">
                     </span>
                 </a>
-                
+
                 <!-- Print & Play Download Section - whole box is clickable -->
-                <a class="action-box" 
+                <a class="action-box"
                    id="pnp-link"
-                   href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download" 
-                   target="_blank" 
+                   href="https://pyro979.itch.io/33-seconds-of-chaos-pnp?utm_source=thank_you&utm_medium=link&utm_campaign=pnp_download"
+                   target="_blank"
                    rel="noopener noreferrer">
                     <h2 class="action-box-header">Want to play now?<br/>Download the free preview <span class="nowrap">Print & Play</span><br>(multiple formats)</h2>
                     <span class="pnp-button">
@@ -342,11 +342,11 @@
                         <span>Download PDFs</span>
                     </span>
                 </a>
-                
+
                 <!-- Pass & Play Section - whole box is clickable -->
-                <a class="action-box" 
+                <a class="action-box"
                    id="passnplay-link"
-                   href="/passnplay/?utm_source=thank_you&utm_medium=link&utm_campaign=passnplay" 
+                   href="/passnplay/?utm_source=thank_you&utm_medium=link&utm_campaign=passnplay"
                    target="_blank"
                    rel="noopener noreferrer">
                     <h2 class="action-box-header">Want to play right now but have no printer?<br/>Use the free mobile <span class="nowrap">Pass & Play</span></h2>
@@ -360,19 +360,19 @@
             <div class="visual-explainer-block">
                 <h2 class="visual-explainer-heading">Visual Explainer</h2>
                 <div>
-                    <img src="../images/instructions_web.jpg" alt="How to play 33 Seconds of Chaos - instructions showing the three card types: Duel, Word, and Chaos decks" class="instructions-img" loading="lazy" width="1152" height="1535">
+                    <img src="../images/instructions_web.jpg" alt="How to play Riff 'n Rumble - instructions showing the three card types: Duel, Word, and Chaos decks" class="instructions-img" loading="lazy" width="1152" height="1535">
                 </div>
             </div>
-            
+
             <div class="testimonial-gif-container">
                 <img src="../images/testimonials.gif" alt="Playtester testimonial: 'I loved how the fun immediately showed itself. I love the playfulness between all the players, I love how quickly it moves. It does exactly what a great party game should do.' - AM" class="testimonial-gif" loading="lazy">
             </div>
-            
+
             <!-- Homepage Link -->
             <a href="/" class="homepage-link">Back to homepage</a>
         </div>
     </div>
-    
+
     <script>
         // Track PnP link click
         const pnpLink = document.getElementById('pnp-link');
@@ -385,7 +385,7 @@
                 });
             }
         });
-        
+
         // Track Kickstarter link click
         const kickstarterLink = document.getElementById('kickstarter-link');
         kickstarterLink.addEventListener('click', function() {
@@ -397,7 +397,7 @@
                 });
             }
         });
-        
+
         // Track Pass & Play link click
         const passnplayLink = document.getElementById('passnplay-link');
         if (passnplayLink) {

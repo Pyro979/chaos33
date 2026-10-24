@@ -1,6 +1,6 @@
-# 33 Seconds of Chaos - Pass & Play
+# Riff 'n Rumble - Pass & Play
 
-A pass-and-play web app for "33 Seconds of Chaos" that runs entirely in the browser.
+A pass-and-play web app for "Riff 'n Rumble" that runs entirely in the browser.
 
 ## Overview
 

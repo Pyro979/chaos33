@@ -1,6 +1,6 @@
-# 33 Seconds of Chaos
+# Riff 'n Rumble
 
-33 Seconds of Chaos is a fast-paced social party game where you give clues under weird constraints. Movie announcer one turn, adjectives and nouns the next, or duels like Flip Card and racing to name three breakfast items.
+Riff 'n Rumble is a fast-paced social party game where you give clues under weird constraints. Movie announcer one turn, adjectives and nouns the next, or duels like Flip Card and racing to name three breakfast items.
 
 ## Live Site
 
