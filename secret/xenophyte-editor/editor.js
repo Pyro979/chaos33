@@ -222,6 +222,12 @@
   $('name').addEventListener('change', () => { const name = $('name').value.trim() || 'New level'; commit(() => { state.name = name; }); });
   $('background').addEventListener('change', () => { const background = $('background').value; commit(() => { state.backgroundId = background; }); });
   $('load').addEventListener('click', () => openMap($('preset').value));
+  function stepMap(delta) {
+    const options = [...$('preset').options], index = options.findIndex(option => option.value === $('preset').value);
+    openMap(options[(index + delta + options.length) % options.length].value);
+  }
+  $('prev-map').addEventListener('click', () => stepMap(-1));
+  $('next-map').addEventListener('click', () => stepMap(1));
   $('clear').addEventListener('click', () => { commit(() => { state.pieces = {}; state.whiteDice = []; selected = null; }); message('Field cleared. Undo restores your items.'); });
   function undo() { if (!past.length) return; future.push(clone(state)); state = past.pop(); selected = null; render(); message('Change undone.'); }
   function redo() { if (!future.length) return; past.push(clone(state)); state = future.pop(); selected = null; render(); message('Change restored.'); }
@@ -237,6 +243,7 @@
     if (window.XenophytePlayback.active) return;
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName)) return;
     if (event.key === 'Escape') { selected = null; tool = null; syncSelection(); }
+    if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && !event.ctrlKey && !event.metaKey && !event.altKey) { event.preventDefault(); stepMap(event.key === 'ArrowLeft' ? -1 : 1); }
     if ((event.key === 'Delete' || event.key === 'Backspace') && selected) { event.preventDefault(); commit(() => { remove(selected); selected = null; }); }
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') { event.preventDefault(); saveMap(event.shiftKey); }
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'z') { event.preventDefault(); event.shiftKey ? redo() : undo(); }
